@@ -1,0 +1,57 @@
+{
+  "pipeline_version": "0.8.0",
+  "calibrations": [
+    {
+      "set": "santur-2026-11-12",
+      "instrument": "santur",
+      "median_err_cents": 1.51,
+      "p90_err_cents": 3.02,
+      "recall": 0.975,
+      "false_per_take": 0.0,
+      "improv": {
+        "median_err_cents": 1.44,
+        "recall": 0.808,
+        "false_per_take": 0.0
+      }
+    },
+    {
+      "set": "setar-2026-11-11",
+      "instrument": "setar",
+      "median_err_cents": 2.38,
+      "p90_err_cents": 7.69,
+      "recall": 1.0,
+      "false_per_take": 0.5,
+      "improv": {
+        "median_err_cents": 4.59,
+        "recall": 0.929,
+        "false_per_take": 0.0
+      }
+    }
+  ],
+  "progression": {
+    "overall": {
+      "recall": 0.991,
+      "precision": 0.875,
+      "label_acc": 0.928,
+      "register_acc": 0.906,
+      "transition_cosine": 0.939,
+      "top_pitch_ok": 0.917,
+      "ends_on_tonic": 1.0
+    },
+    "by_instrument": {
+      "santur": {
+        "recall": 0.981,
+        "precision": 0.755,
+        "label_acc": 0.856,
+        "register_acc": 0.814
+      },
+      "setar": {
+        "recall": 1.0,
+        "precision": 0.995,
+        "label_acc": 1.0,
+        "register_acc": 0.998
+      }
+    },
+    "cases": 12
+  }
+}
