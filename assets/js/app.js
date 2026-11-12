@@ -2,10 +2,10 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=6";
-import { drawTimeline, progressionTables } from "./progression.js?v=6";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=6";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=6";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=8";
+import { drawTimeline, progressionTables } from "./progression.js?v=8";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=8";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=8";
 
 const app = document.getElementById("app");
 const side = document.getElementById("side");
@@ -42,6 +42,8 @@ function allTracks() {
   return out;
 }
 
+const instrumentsOf = (m) => [...new Set([m.instrument, ...m.albums.flatMap((a) => a.tracks.map((t) => t.instrument))]
+  .filter(Boolean))].join(", ");
 const draftBadge = (t) => (t.review !== "approved" ? '<span class="badge draft">draft</span>' : "");
 const trackLink = (t) => `<a href="#/track/${esc(t.key)}">${esc(t.title)}</a>${draftBadge(t)}`;
 const tonicCell = (t) => (t.has_result ? `${esc(t.tonic_label)} · ${fmt(t.tonic_hz, 2)} Hz` : '<span class="muted">not analysed</span>');
@@ -142,7 +144,7 @@ function pageHome() {
   const masters = catalog.masters.map((m) => {
     const n = m.albums.reduce((k, a) => k + a.tracks.length, 0);
     return `<div class="card"><h3><a href="#/master/${esc(m.id)}">${esc(m.name)}</a>${fa(m.name_fa)}</h3>
-      <div class="muted">${esc(m.instrument || "")}${m.years ? ` · ${esc(m.years)}` : ""} · ${m.albums.length} album(s) · ${n} track(s)</div></div>`;
+      <div class="muted">${esc(instrumentsOf(m))}${m.years ? ` · ${esc(m.years)}` : ""} · ${m.albums.length} album(s) · ${n} track(s)</div></div>`;
   }).join("");
   const used = catalog.dastgahs.map((d) => ({ d, n: all.filter((x) => x.track.dastgah === d.id).length }))
     .filter((x) => x.n);
@@ -173,10 +175,12 @@ function pageMaster(id) {
   const tonicRows = mine.filter((x) => x.track.has_result).map(({ album, track }) => `<tr>
       <td>${trackLink(track)}</td><td>${esc(album.title)}</td><td>${esc(album.release_date || "")}</td>
       <td><a href="#/dastgah/${esc(track.dastgah)}">${esc(dastgah(track.dastgah).name)}</a></td>
-      <td>${esc(track.tonic_label)}</td><td class="num">${fmt(track.tonic_hz, 2)}</td></tr>`).join("");
+      <td>${esc(track.tonic_label)}</td><td class="num">${fmt(track.tonic_hz, 2)}</td>
+      <td class="num">${track.tuning_offset_cents === undefined || track.tuning_offset_cents === null ? "—" :
+        `${track.tuning_offset_cents > 0 ? "+" : ""}${fmt(track.tuning_offset_cents, 0)}`}</td></tr>`).join("");
   return crumbs([["#/", "Home"], [null, esc(m.name)]]) +
     `<h1>${esc(m.name)}${fa(m.name_fa)}</h1>
-     <div class="muted">${esc(m.instrument || "")}${m.years ? ` · ${esc(m.years)}` : ""}</div>
+     <div class="muted">${esc(instrumentsOf(m))}${m.years ? ` · ${esc(m.years)}` : ""}</div>
      ${m.bio ? `<p>${esc(m.bio)}</p>` : ""}
      ${m.links && m.links.length ? `<p>${extLinks(m.links)}</p>` : ""}
      <p><strong>Dastgahs recorded:</strong> ${ds.map((d) => `<a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}`).join(" · ")}</p>
@@ -185,7 +189,7 @@ function pageMaster(id) {
        <p class="muted">Did the master hold a fixed pitch over the years? Absolute Hz is as recorded: old
        transfers can run slightly fast or slow.</p>
        <div class="table-wrap"><table><thead><tr><th>Track</th><th>Album</th><th>Released</th><th>Dastgah</th>
-       <th>Tonic</th><th class="num">Hz</th></tr></thead><tbody>${tonicRows}</tbody></table></div>` : ""}`;
+       <th>Tonic</th><th class="num">Hz</th><th class="num">¢ from A440</th></tr></thead><tbody>${tonicRows}</tbody></table></div>` : ""}`;
 }
 
 function pageAlbum(mid, aid) {
@@ -291,6 +295,17 @@ async function pageDastgah(id) {
       <tbody>${list}</tbody></table></div>`;
 }
 
+// Persian music has no fixed pitch: the tonic is named on its customary note and the
+// instrument's distance from A4 = 440 Hz is reported separately.
+function tuningLine(t) {
+  if (t.tuning_offset_cents === undefined || t.tuning_offset_cents === null) return "";
+  const off = t.tuning_offset_cents;
+  const near = Math.abs(off) < 5;
+  return `<p class="muted">${near ? "Tuned at concert pitch" : `Tuned ${off > 0 ? "+" : ""}${fmt(off, 0)} ¢ from concert pitch`}
+    (A4 ≈ ${fmt(t.reference_a4_hz, 1)} Hz). Persian music has no fixed pitch, so the tonic is named on its
+    customary note and the other notes are named from it.</p>`;
+}
+
 // timestamped link for sources that support it (YouTube); otherwise none
 function atTime(links, s) {
   const yt = (links || []).find((l) => l.kind === "youtube");
@@ -310,7 +325,7 @@ async function pageTrack(key) {
   const links = extLinks(track.links);
   let html = head + prevNext(hit) + `<h1>${esc(track.title)}${draftBadge(track)}</h1>
     <dl class="kv">
-      <dt>Master</dt><dd><a href="#/master/${esc(master.id)}">${esc(master.name)}</a>${fa(master.name_fa)} · ${esc(master.instrument || "")}</dd>
+      <dt>Master</dt><dd><a href="#/master/${esc(master.id)}">${esc(master.name)}</a>${fa(master.name_fa)} · ${esc(track.instrument || master.instrument || "")}</dd>
       <dt>Album</dt><dd><a href="#/album/${esc(master.id)}/${esc(album.id)}">${esc(album.title)}</a>${album.release_date ? ` <span class="muted">(${esc(album.release_date)})</span>` : ""}</dd>
       <dt>Dastgah</dt><dd><a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}</dd>
       ${(track.gushe || []).length ? `<dt>Gushe-ha</dt><dd>${track.gushe.map((g) => `${esc(g.name)}${fa(g.name_fa)}`).join(" · ")}</dd>` : ""}
@@ -377,6 +392,7 @@ async function pageTrack(key) {
 
     <h2>Tonic</h2>
     <p><strong>${esc(c.tonic.label)}</strong> · ${fmt(c.tonic.hz, 2)} Hz${c.tonic.ci95_hz ? ` <span class="muted">(95 % CI ${fmt(c.tonic.ci95_hz[0], 2)}–${fmt(c.tonic.ci95_hz[1], 2)})</span>` : ""}</p>
+    ${tuningLine(c.tonic)}
 
     <h2>Scale</h2>
     <p class="muted">Measured degrees (top row, with 95 % CI whiskers) against the nearest values of three theory models.
@@ -419,7 +435,7 @@ async function pageTrack(key) {
     “${esc(c.matrix.preset)}” (${c.matrix.n_runs} runs, ${esc(c.matrix.families.join(", "))}) · ${esc(c.generated_at)} ·
     <a href="#/method">method</a></p>` + prevNext(hit);
 
-  afterRender = () => wireTrack(c, master.instrument);
+  afterRender = () => wireTrack(c, track.instrument || master.instrument);
   return html;
 }
 

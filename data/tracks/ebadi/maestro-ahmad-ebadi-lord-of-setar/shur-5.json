@@ -11,7 +11,8 @@
     "review": "approved",
     "links": [],
     "gushe": [],
-    "notes": "Tagged title: Dastgahe Shur 5."
+    "notes": "Tagged title: Dastgahe Shur 5.",
+    "instrument": null
   },
   "master": {
     "id": "ebadi",
@@ -29,9 +30,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.8.1",
+    "pipeline_version": "0.9.0",
     "track": "ebadi/maestro-ahmad-ebadi-lord-of-setar/shur-5",
-    "generated_at": "2026-11-12T14:08:39+00:00",
+    "generated_at": "2026-11-12T15:32:16+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -49,8 +50,10 @@
     "tonic": {
       "hz": 412.431,
       "cents_abs": 787.98,
-      "label": "Ab4",
+      "label": "G4",
       "label_source": "catalog-hint",
+      "tuning_offset_cents": 88.0,
+      "reference_a4_hz": 462.94,
       "support": 0.783,
       "ci95_hz": [
         411.915,
@@ -120,7 +123,7 @@
         "by_family": {
           "E3": 40.93
         },
-        "label": "Ak",
+        "label": "Gs",
         "cents_from_tonic": 40.93,
         "cents_abs": 828.91,
         "ci95_cents": [
@@ -156,7 +159,7 @@
           "E2": 74.82,
           "E3": 72.86
         },
-        "label": "Ak",
+        "label": "Gs",
         "cents_from_tonic": 74.8,
         "cents_abs": 862.78,
         "ci95_cents": [
@@ -193,7 +196,7 @@
           "E2": 140.54,
           "E3": 125.44
         },
-        "label": "As",
+        "label": "Ak",
         "cents_from_tonic": 140.6,
         "cents_abs": 928.58,
         "ci95_cents": [
@@ -228,7 +231,7 @@
         "by_family": {
           "E2": 252.82
         },
-        "label": "Bk",
+        "label": "As",
         "cents_from_tonic": 252.82,
         "cents_abs": 1040.8,
         "ci95_cents": null,
@@ -258,7 +261,7 @@
           "E2": 283.05,
           "E3": 294.16
         },
-        "label": "B",
+        "label": "Bb",
         "cents_from_tonic": 282.96,
         "cents_abs": 1070.94,
         "ci95_cents": [
@@ -294,7 +297,7 @@
           "E2": 313.21,
           "E3": 318.43
         },
-        "label": "B",
+        "label": "Bb",
         "cents_from_tonic": 313.21,
         "cents_abs": 1101.19,
         "ci95_cents": [
@@ -314,22 +317,11 @@
               488.531,
               490.064
             ],
-            "frames": 870,
+            "frames": 884,
             "notes": 42,
             "method": "f0-track",
             "families": [
               "E2",
-              "E3"
-            ]
-          },
-          {
-            "octave": 5,
-            "hz": 499.569,
-            "ci95_hz": null,
-            "frames": 14,
-            "notes": null,
-            "method": "f0-track",
-            "families": [
               "E3"
             ]
           }
@@ -342,7 +334,7 @@
           "E2": 497.87,
           "E3": 479.53
         },
-        "label": "Db",
+        "label": "C",
         "cents_from_tonic": 497.48,
         "cents_abs": 85.46,
         "ci95_cents": [
@@ -405,7 +397,7 @@
         "by_family": {
           "E2": 781.61
         },
-        "label": "E",
+        "label": "Eb",
         "cents_from_tonic": 781.61,
         "cents_abs": 369.59,
         "ci95_cents": [
@@ -441,7 +433,7 @@
           "E2": 991.55,
           "E3": 999.51
         },
-        "label": "Gb",
+        "label": "F",
         "cents_from_tonic": 991.92,
         "cents_abs": 579.9,
         "ci95_cents": [
@@ -490,7 +482,7 @@
         "by_family": {
           "E3": 1037.36
         },
-        "label": "Gk",
+        "label": "Fs",
         "cents_from_tonic": 1037.36,
         "cents_abs": 625.34,
         "ci95_cents": [
@@ -526,7 +518,7 @@
           "E2": 1197.68,
           "E3": 1195.59
         },
-        "label": "Ab",
+        "label": "G",
         "cents_from_tonic": 1197.68,
         "cents_abs": 785.66,
         "ci95_cents": [
@@ -561,7 +553,7 @@
       "degrees": [
         {
           "degree": 1,
-          "label": "Ab",
+          "label": "G",
           "cents_from_tonic": 0.0,
           "pitch_id": "p11",
           "support": 1.0,
@@ -569,7 +561,7 @@
         },
         {
           "degree": 2,
-          "label": "As",
+          "label": "Ak",
           "cents_from_tonic": 140.6,
           "pitch_id": "p03",
           "support": 0.94,
@@ -577,7 +569,7 @@
         },
         {
           "degree": 3,
-          "label": "B",
+          "label": "Bb",
           "cents_from_tonic": 282.96,
           "pitch_id": "p05",
           "support": 0.94,
@@ -585,7 +577,7 @@
         },
         {
           "degree": 4,
-          "label": "Db",
+          "label": "C",
           "cents_from_tonic": 497.48,
           "pitch_id": "p07",
           "support": 0.88,
@@ -593,7 +585,7 @@
         },
         {
           "degree": 5,
-          "label": "E",
+          "label": "Eb",
           "cents_from_tonic": 781.61,
           "pitch_id": "p08",
           "support": 0.5,
@@ -601,7 +593,7 @@
         },
         {
           "degree": 6,
-          "label": "Gb",
+          "label": "F",
           "cents_from_tonic": 991.92,
           "pitch_id": "p09",
           "support": 1.0,
@@ -620,7 +612,7 @@
         {
           "degree": 1,
           "pitch_id": "p01",
-          "label": "Ak",
+          "label": "Gs",
           "cents_from_tonic": 40.93,
           "support": 0.24,
           "status": "tentative",
@@ -629,7 +621,7 @@
         {
           "degree": 2,
           "pitch_id": "p02",
-          "label": "Ak",
+          "label": "Gs",
           "cents_from_tonic": 74.8,
           "support": 0.94,
           "status": "confirmed",
@@ -638,7 +630,7 @@
         {
           "degree": 3,
           "pitch_id": "p06",
-          "label": "B",
+          "label": "Bb",
           "cents_from_tonic": 313.21,
           "support": 0.62,
           "status": "confirmed",
@@ -647,7 +639,7 @@
         {
           "degree": 6,
           "pitch_id": "p10",
-          "label": "Gk",
+          "label": "Fs",
           "cents_from_tonic": 1037.36,
           "support": 0.12,
           "status": "tentative",
@@ -678,7 +670,7 @@
           "hz": 364.018,
           "cents_from_tonic": 983.8,
           "register_cents": -216.2,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -694,7 +686,7 @@
           "hz": 412.622,
           "cents_from_tonic": 0.8,
           "register_cents": 0.8,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -710,7 +702,7 @@
           "hz": 365.436,
           "cents_from_tonic": 990.6,
           "register_cents": -209.4,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -726,7 +718,7 @@
           "hz": 410.89,
           "cents_from_tonic": 1193.5,
           "register_cents": -6.5,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -742,7 +734,7 @@
           "hz": 412.494,
           "cents_from_tonic": 0.3,
           "register_cents": 0.3,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 6,
           "agree_indep": 2,
           "main": true,
@@ -758,7 +750,7 @@
           "hz": 323.257,
           "cents_from_tonic": 778.2,
           "register_cents": -421.8,
-          "label": "E4",
+          "label": "Eb4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -774,7 +766,7 @@
           "hz": 296.483,
           "cents_from_tonic": 628.6,
           "register_cents": -571.4,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -790,7 +782,7 @@
           "hz": 273.172,
           "cents_from_tonic": 486.8,
           "register_cents": -713.2,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -806,7 +798,7 @@
           "hz": 243.603,
           "cents_from_tonic": 288.5,
           "register_cents": -911.5,
-          "label": "B3",
+          "label": "Bb3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -822,7 +814,7 @@
           "hz": 136.952,
           "cents_from_tonic": 491.4,
           "register_cents": -1908.6,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -838,7 +830,7 @@
           "hz": 136.84,
           "cents_from_tonic": 490.0,
           "register_cents": -1910.0,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -854,7 +846,7 @@
           "hz": 413.078,
           "cents_from_tonic": 2.7,
           "register_cents": 2.7,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -870,7 +862,7 @@
           "hz": 364.953,
           "cents_from_tonic": 988.3,
           "register_cents": -211.7,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -886,7 +878,7 @@
           "hz": 411.26,
           "cents_from_tonic": 1195.1,
           "register_cents": -4.9,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -902,7 +894,7 @@
           "hz": 412.046,
           "cents_from_tonic": 1198.4,
           "register_cents": -1.6,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -918,7 +910,7 @@
           "hz": 364.674,
           "cents_from_tonic": 986.9,
           "register_cents": -213.1,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -934,7 +926,7 @@
           "hz": 365.201,
           "cents_from_tonic": 989.4,
           "register_cents": -210.6,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -950,7 +942,7 @@
           "hz": 409.886,
           "cents_from_tonic": 1189.3,
           "register_cents": -10.7,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 6,
           "agree_indep": 2,
           "main": true,
@@ -966,7 +958,7 @@
           "hz": 411.617,
           "cents_from_tonic": 1196.6,
           "register_cents": -3.4,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -982,7 +974,7 @@
           "hz": 365.952,
           "cents_from_tonic": 993.0,
           "register_cents": -207.0,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -998,7 +990,7 @@
           "hz": 408.996,
           "cents_from_tonic": 1185.5,
           "register_cents": -14.5,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1014,7 +1006,7 @@
           "hz": 365.963,
           "cents_from_tonic": 993.1,
           "register_cents": -206.9,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1030,7 +1022,7 @@
           "hz": 364.255,
           "cents_from_tonic": 985.0,
           "register_cents": -215.0,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1046,7 +1038,7 @@
           "hz": 364.051,
           "cents_from_tonic": 984.0,
           "register_cents": -216.0,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1062,7 +1054,7 @@
           "hz": 488.72,
           "cents_from_tonic": 293.8,
           "register_cents": 293.8,
-          "label": "B4",
+          "label": "Bb4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1078,7 +1070,7 @@
           "hz": 488.222,
           "cents_from_tonic": 292.1,
           "register_cents": 292.1,
-          "label": "B4",
+          "label": "Bb4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1094,7 +1086,7 @@
           "hz": 365.136,
           "cents_from_tonic": 989.1,
           "register_cents": -210.9,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1110,7 +1102,7 @@
           "hz": 411.891,
           "cents_from_tonic": 1197.7,
           "register_cents": -2.3,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1126,7 +1118,7 @@
           "hz": 410.817,
           "cents_from_tonic": 1193.2,
           "register_cents": -6.8,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1142,7 +1134,7 @@
           "hz": 488.341,
           "cents_from_tonic": 292.5,
           "register_cents": 292.5,
-          "label": "B4",
+          "label": "Bb4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1158,7 +1150,7 @@
           "hz": 492.711,
           "cents_from_tonic": 307.9,
           "register_cents": 307.9,
-          "label": "B4",
+          "label": "Bb4",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -1174,7 +1166,7 @@
           "hz": 448.561,
           "cents_from_tonic": 145.4,
           "register_cents": 145.4,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1190,7 +1182,7 @@
           "hz": 484.568,
           "cents_from_tonic": 279.1,
           "register_cents": 279.1,
-          "label": "B4",
+          "label": "Bb4",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -1206,7 +1198,7 @@
           "hz": 550.205,
           "cents_from_tonic": 499.0,
           "register_cents": 499.0,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1222,7 +1214,7 @@
           "hz": 447.659,
           "cents_from_tonic": 141.9,
           "register_cents": 141.9,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1238,7 +1230,7 @@
           "hz": 448.002,
           "cents_from_tonic": 143.2,
           "register_cents": 143.2,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1254,7 +1246,7 @@
           "hz": 364.969,
           "cents_from_tonic": 988.3,
           "register_cents": -211.7,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1270,7 +1262,7 @@
           "hz": 444.598,
           "cents_from_tonic": 130.0,
           "register_cents": 130.0,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1286,7 +1278,7 @@
           "hz": 447.197,
           "cents_from_tonic": 140.1,
           "register_cents": 140.1,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1302,7 +1294,7 @@
           "hz": 448.439,
           "cents_from_tonic": 144.9,
           "register_cents": 144.9,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1318,7 +1310,7 @@
           "hz": 364.696,
           "cents_from_tonic": 987.0,
           "register_cents": -213.0,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1334,7 +1326,7 @@
           "hz": 445.075,
           "cents_from_tonic": 131.9,
           "register_cents": 131.9,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1350,7 +1342,7 @@
           "hz": 445.972,
           "cents_from_tonic": 135.4,
           "register_cents": 135.4,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1366,7 +1358,7 @@
           "hz": 448.401,
           "cents_from_tonic": 144.8,
           "register_cents": 144.8,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1382,7 +1374,7 @@
           "hz": 452.016,
           "cents_from_tonic": 158.7,
           "register_cents": 158.7,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1398,7 +1390,7 @@
           "hz": 182.631,
           "cents_from_tonic": 989.7,
           "register_cents": -1410.3,
-          "label": "Gb3",
+          "label": "F3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1414,7 +1406,7 @@
           "hz": 449.491,
           "cents_from_tonic": 149.0,
           "register_cents": 149.0,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1430,7 +1422,7 @@
           "hz": 449.096,
           "cents_from_tonic": 147.4,
           "register_cents": 147.4,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1446,7 +1438,7 @@
           "hz": 447.508,
           "cents_from_tonic": 141.3,
           "register_cents": 141.3,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1462,7 +1454,7 @@
           "hz": 487.668,
           "cents_from_tonic": 290.1,
           "register_cents": 290.1,
-          "label": "B4",
+          "label": "Bb4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1478,7 +1470,7 @@
           "hz": 550.806,
           "cents_from_tonic": 500.9,
           "register_cents": 500.9,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1494,7 +1486,7 @@
           "hz": 553.949,
           "cents_from_tonic": 510.7,
           "register_cents": 510.7,
-          "label": "Db5",
+          "label": "C5",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -1510,7 +1502,7 @@
           "hz": 182.145,
           "cents_from_tonic": 985.1,
           "register_cents": -1414.9,
-          "label": "Gb3",
+          "label": "F3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1526,7 +1518,7 @@
           "hz": 491.378,
           "cents_from_tonic": 303.2,
           "register_cents": 303.2,
-          "label": "B4",
+          "label": "Bb4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1542,7 +1534,7 @@
           "hz": 554.577,
           "cents_from_tonic": 512.7,
           "register_cents": 512.7,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1558,7 +1550,7 @@
           "hz": 498.126,
           "cents_from_tonic": 326.8,
           "register_cents": 326.8,
-          "label": "B5",
+          "label": "Bb4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1574,7 +1566,7 @@
           "hz": 495.754,
           "cents_from_tonic": 318.6,
           "register_cents": 318.6,
-          "label": "B4",
+          "label": "Bb4",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -1590,7 +1582,7 @@
           "hz": 447.859,
           "cents_from_tonic": 142.7,
           "register_cents": 142.7,
-          "label": "As4",
+          "label": "Ak4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1606,7 +1598,7 @@
           "hz": 414.286,
           "cents_from_tonic": 7.8,
           "register_cents": 7.8,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1622,7 +1614,7 @@
           "hz": 410.942,
           "cents_from_tonic": 1193.7,
           "register_cents": -6.3,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1638,7 +1630,7 @@
           "hz": 412.951,
           "cents_from_tonic": 2.2,
           "register_cents": 2.2,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1654,7 +1646,7 @@
           "hz": 417.008,
           "cents_from_tonic": 19.1,
           "register_cents": 19.1,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 2,
           "agree_indep": 0,
           "main": true,
@@ -1670,7 +1662,7 @@
           "hz": 411.656,
           "cents_from_tonic": 1196.7,
           "register_cents": -3.3,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1686,7 +1678,7 @@
           "hz": 366.553,
           "cents_from_tonic": 995.8,
           "register_cents": -204.2,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1702,7 +1694,7 @@
           "hz": 411.482,
           "cents_from_tonic": 1196.0,
           "register_cents": -4.0,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1718,7 +1710,7 @@
           "hz": 413.956,
           "cents_from_tonic": 6.4,
           "register_cents": 6.4,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -1734,7 +1726,7 @@
           "hz": 412.479,
           "cents_from_tonic": 0.2,
           "register_cents": 0.2,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1750,7 +1742,7 @@
           "hz": 413.781,
           "cents_from_tonic": 5.7,
           "register_cents": 5.7,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1766,7 +1758,7 @@
           "hz": 364.936,
           "cents_from_tonic": 988.2,
           "register_cents": -211.8,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -1782,7 +1774,7 @@
           "hz": 412.35,
           "cents_from_tonic": 1199.7,
           "register_cents": -0.3,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1798,7 +1790,7 @@
           "hz": 415.709,
           "cents_from_tonic": 13.7,
           "register_cents": 13.7,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1814,7 +1806,7 @@
           "hz": 412.325,
           "cents_from_tonic": 1199.6,
           "register_cents": -0.4,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -1830,7 +1822,7 @@
           "hz": 417.278,
           "cents_from_tonic": 20.2,
           "register_cents": 20.2,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1846,7 +1838,7 @@
           "hz": 412.436,
           "cents_from_tonic": 0.0,
           "register_cents": 0.0,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1862,7 +1854,7 @@
           "hz": 366.495,
           "cents_from_tonic": 995.6,
           "register_cents": -204.4,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -1878,7 +1870,7 @@
           "hz": 413.296,
           "cents_from_tonic": 3.6,
           "register_cents": 3.6,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -1894,7 +1886,7 @@
           "hz": 412.114,
           "cents_from_tonic": 1198.7,
           "register_cents": -1.3,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -1910,7 +1902,7 @@
           "hz": 411.777,
           "cents_from_tonic": 1197.3,
           "register_cents": -2.7,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -1926,7 +1918,7 @@
           "hz": 412.658,
           "cents_from_tonic": 1.0,
           "register_cents": 1.0,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -1942,7 +1934,7 @@
           "hz": 431.583,
           "cents_from_tonic": 78.6,
           "register_cents": 78.6,
-          "label": "Ak4",
+          "label": "Gs4",
           "agree": 6,
           "agree_indep": 2,
           "main": true,
@@ -1958,7 +1950,7 @@
           "hz": 413.49,
           "cents_from_tonic": 4.4,
           "register_cents": 4.4,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 6,
           "agree_indep": 2,
           "main": true,
@@ -1974,7 +1966,7 @@
           "hz": 413.229,
           "cents_from_tonic": 3.3,
           "register_cents": 3.3,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1990,7 +1982,7 @@
           "hz": 418.29,
           "cents_from_tonic": 24.4,
           "register_cents": 24.4,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2006,7 +1998,7 @@
           "hz": 182.085,
           "cents_from_tonic": 984.6,
           "register_cents": -1415.4,
-          "label": "Gb3",
+          "label": "F3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2022,7 +2014,7 @@
           "hz": 412.085,
           "cents_from_tonic": 1198.5,
           "register_cents": -1.5,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2038,7 +2030,7 @@
           "hz": 413.399,
           "cents_from_tonic": 4.1,
           "register_cents": 4.1,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2054,7 +2046,7 @@
           "hz": 411.977,
           "cents_from_tonic": 1198.1,
           "register_cents": -1.9,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2070,7 +2062,7 @@
           "hz": 414.521,
           "cents_from_tonic": 8.8,
           "register_cents": 8.8,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2086,7 +2078,7 @@
           "hz": 366.06,
           "cents_from_tonic": 993.5,
           "register_cents": -206.5,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2102,7 +2094,7 @@
           "hz": 411.299,
           "cents_from_tonic": 1195.2,
           "register_cents": -4.8,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -2118,7 +2110,7 @@
           "hz": 410.209,
           "cents_from_tonic": 1190.6,
           "register_cents": -9.4,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 1,
           "main": true,
@@ -2134,7 +2126,7 @@
           "hz": 412.438,
           "cents_from_tonic": 0.0,
           "register_cents": 0.0,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -2150,7 +2142,7 @@
           "hz": 366.443,
           "cents_from_tonic": 995.3,
           "register_cents": -204.7,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2166,7 +2158,7 @@
           "hz": 366.168,
           "cents_from_tonic": 994.0,
           "register_cents": -206.0,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2182,7 +2174,7 @@
           "hz": 412.711,
           "cents_from_tonic": 1.2,
           "register_cents": 1.2,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -2198,7 +2190,7 @@
           "hz": 366.34,
           "cents_from_tonic": 994.8,
           "register_cents": -205.2,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -2214,7 +2206,7 @@
           "hz": 367.437,
           "cents_from_tonic": 1000.0,
           "register_cents": -200.0,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2230,7 +2222,7 @@
           "hz": 366.505,
           "cents_from_tonic": 995.6,
           "register_cents": -204.4,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2246,7 +2238,7 @@
           "hz": 366.391,
           "cents_from_tonic": 995.1,
           "register_cents": -204.9,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2262,7 +2254,7 @@
           "hz": 366.937,
           "cents_from_tonic": 997.7,
           "register_cents": -202.3,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2278,7 +2270,7 @@
           "hz": 366.857,
           "cents_from_tonic": 997.3,
           "register_cents": -202.7,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2294,7 +2286,7 @@
           "hz": 412.774,
           "cents_from_tonic": 1.4,
           "register_cents": 1.4,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2310,7 +2302,7 @@
           "hz": 365.498,
           "cents_from_tonic": 990.9,
           "register_cents": -209.1,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2326,7 +2318,7 @@
           "hz": 365.647,
           "cents_from_tonic": 991.6,
           "register_cents": -208.4,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2342,7 +2334,7 @@
           "hz": 366.132,
           "cents_from_tonic": 993.9,
           "register_cents": -206.1,
-          "label": "Gb4",
+          "label": "F4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2358,7 +2350,7 @@
           "hz": 328.695,
           "cents_from_tonic": 807.1,
           "register_cents": -392.9,
-          "label": "E4",
+          "label": "Eb4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2374,7 +2366,7 @@
           "hz": 273.996,
           "cents_from_tonic": 492.0,
           "register_cents": -708.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2390,7 +2382,7 @@
           "hz": 298.449,
           "cents_from_tonic": 640.0,
           "register_cents": -560.0,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2406,7 +2398,7 @@
           "hz": 274.447,
           "cents_from_tonic": 494.8,
           "register_cents": -705.2,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2422,7 +2414,7 @@
           "hz": 204.838,
           "cents_from_tonic": 1188.4,
           "register_cents": -1211.6,
-          "label": "Ab3",
+          "label": "G3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2438,7 +2430,7 @@
           "hz": 412.131,
           "cents_from_tonic": 1198.7,
           "register_cents": -1.3,
-          "label": "Ab4",
+          "label": "G4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2460,54 +2452,54 @@
           "dwell": [
             {
               "pitch_id": "p11",
-              "label": "Ab",
+              "label": "G",
               "seconds": 1.94,
               "share": 0.49
             },
             {
               "pitch_id": "p07",
-              "label": "Db",
+              "label": "C",
               "seconds": 0.78,
               "share": 0.196
             },
             {
               "pitch_id": "p05",
-              "label": "B",
+              "label": "Bb",
               "seconds": 0.62,
               "share": 0.156
             },
             {
               "pitch_id": "p09",
-              "label": "Gb",
+              "label": "F",
               "seconds": 0.45,
               "share": 0.114
             },
             {
               "pitch_id": "p08",
-              "label": "E",
+              "label": "Eb",
               "seconds": 0.17,
               "share": 0.044
             }
           ],
           "shahed": {
             "pitch_id": "p11",
-            "label": "Ab",
+            "label": "G",
             "share": 0.49
           },
           "ist": {
             "pitch_id": "p11",
-            "label": "Ab4",
+            "label": "G4",
             "t": 3.9
           },
           "ambitus": {
-            "low": "Ab4",
+            "low": "G4",
             "low_hz": 410.89,
-            "high": "Ab4",
+            "high": "G4",
             "high_hz": 412.494,
             "cents": 7.0
           },
           "new_pitches": [
-            "Ab"
+            "G"
           ]
         },
         {
@@ -2520,61 +2512,61 @@
           "dwell": [
             {
               "pitch_id": "p03",
-              "label": "As",
+              "label": "Ak",
               "seconds": 5.27,
               "share": 0.334
             },
             {
               "pitch_id": "p11",
-              "label": "Ab",
+              "label": "G",
               "seconds": 5.09,
               "share": 0.322
             },
             {
               "pitch_id": "p09",
-              "label": "Gb",
+              "label": "F",
               "seconds": 2.67,
               "share": 0.169
             },
             {
               "pitch_id": "p05",
-              "label": "B",
+              "label": "Bb",
               "seconds": 1.25,
               "share": 0.079
             },
             {
               "pitch_id": "p07",
-              "label": "Db",
+              "label": "C",
               "seconds": 0.81,
               "share": 0.051
             },
             {
               "pitch_id": "p06",
-              "label": "B",
+              "label": "Bb",
               "seconds": 0.71,
               "share": 0.045
             }
           ],
           "shahed": {
             "pitch_id": "p03",
-            "label": "As",
+            "label": "Ak",
             "share": 0.334
           },
           "ist": {
             "pitch_id": "p11",
-            "label": "Ab4",
+            "label": "G4",
             "t": 38.74
           },
           "ambitus": {
-            "low": "Gb4",
+            "low": "F4",
             "low_hz": 364.255,
-            "high": "As4",
+            "high": "Ak4",
             "high_hz": 445.075,
             "cents": 347.0
           },
           "new_pitches": [
-            "As",
-            "Gb"
+            "Ak",
+            "F"
           ]
         },
         {
@@ -2587,31 +2579,31 @@
           "dwell": [
             {
               "pitch_id": "p11",
-              "label": "Ab",
+              "label": "G",
               "seconds": 6.32,
               "share": 0.935
             },
             {
               "pitch_id": "p09",
-              "label": "Gb",
+              "label": "F",
               "seconds": 0.44,
               "share": 0.065
             }
           ],
           "shahed": {
             "pitch_id": "p11",
-            "label": "Ab",
+            "label": "G",
             "share": 0.935
           },
           "ist": {
             "pitch_id": "p11",
-            "label": "Ab4",
+            "label": "G4",
             "t": 49.39
           },
           "ambitus": {
-            "low": "Gb4",
+            "low": "F4",
             "low_hz": 366.495,
-            "high": "Ab4",
+            "high": "G4",
             "high_hz": 417.278,
             "cents": 225.0
           },
@@ -2627,54 +2619,54 @@
           "dwell": [
             {
               "pitch_id": "p11",
-              "label": "Ab",
+              "label": "G",
               "seconds": 4.77,
               "share": 0.516
             },
             {
               "pitch_id": "p09",
-              "label": "Gb",
+              "label": "F",
               "seconds": 3.45,
               "share": 0.373
             },
             {
               "pitch_id": "p07",
-              "label": "Db",
+              "label": "C",
               "seconds": 0.72,
               "share": 0.078
             },
             {
               "pitch_id": "p08",
-              "label": "E",
+              "label": "Eb",
               "seconds": 0.16,
               "share": 0.018
             },
             {
               "pitch_id": "p02",
-              "label": "Ak",
+              "label": "Gs",
               "seconds": 0.15,
               "share": 0.016
             }
           ],
           "shahed": {
             "pitch_id": "p11",
-            "label": "Ab",
+            "label": "G",
             "share": 0.516
           },
           "ist": {
             "pitch_id": "p09",
-            "label": "Gb4",
+            "label": "F4",
             "t": 61.08
           },
           "ambitus": {
-            "low": "Gb4",
+            "low": "F4",
             "low_hz": 366.34,
-            "high": "Ak4",
+            "high": "Gs4",
             "high_hz": 431.583,
             "cents": 284.0
           },
           "new_pitches": [
-            "Ak"
+            "Gs"
           ]
         }
       ],
@@ -2682,155 +2674,155 @@
         {
           "from": "p11",
           "to": "p09",
-          "from_label": "Ab",
-          "to_label": "Gb",
+          "from_label": "G",
+          "to_label": "F",
           "count": 13
         },
         {
           "from": "p09",
           "to": "p11",
-          "from_label": "Gb",
-          "to_label": "Ab",
+          "from_label": "F",
+          "to_label": "G",
           "count": 12
         },
         {
           "from": "p05",
           "to": "p07",
-          "from_label": "B",
-          "to_label": "Db",
+          "from_label": "Bb",
+          "to_label": "C",
           "count": 3
         },
         {
           "from": "p03",
           "to": "p09",
-          "from_label": "As",
-          "to_label": "Gb",
+          "from_label": "Ak",
+          "to_label": "F",
           "count": 3
         },
         {
           "from": "p09",
           "to": "p03",
-          "from_label": "Gb",
-          "to_label": "As",
+          "from_label": "F",
+          "to_label": "Ak",
           "count": 3
         },
         {
           "from": "p08",
           "to": "p07",
-          "from_label": "E",
-          "to_label": "Db",
+          "from_label": "Eb",
+          "to_label": "C",
           "count": 2
         },
         {
           "from": "p07",
           "to": "p11",
-          "from_label": "Db",
-          "to_label": "Ab",
+          "from_label": "C",
+          "to_label": "G",
           "count": 2
         },
         {
           "from": "p06",
           "to": "p03",
-          "from_label": "B",
-          "to_label": "As",
+          "from_label": "Bb",
+          "to_label": "Ak",
           "count": 2
         },
         {
           "from": "p11",
           "to": "p08",
-          "from_label": "Ab",
-          "to_label": "E",
+          "from_label": "G",
+          "to_label": "Eb",
           "count": 1
         },
         {
           "from": "p07",
           "to": "p05",
-          "from_label": "Db",
-          "to_label": "B",
+          "from_label": "C",
+          "to_label": "Bb",
           "count": 1
         },
         {
           "from": "p09",
           "to": "p05",
-          "from_label": "Gb",
-          "to_label": "B",
+          "from_label": "F",
+          "to_label": "Bb",
           "count": 1
         },
         {
           "from": "p05",
           "to": "p09",
-          "from_label": "B",
-          "to_label": "Gb",
+          "from_label": "Bb",
+          "to_label": "F",
           "count": 1
         },
         {
           "from": "p11",
           "to": "p05",
-          "from_label": "Ab",
-          "to_label": "B",
+          "from_label": "G",
+          "to_label": "Bb",
           "count": 1
         },
         {
           "from": "p07",
           "to": "p03",
-          "from_label": "Db",
-          "to_label": "As",
+          "from_label": "C",
+          "to_label": "Ak",
           "count": 1
         },
         {
           "from": "p03",
           "to": "p05",
-          "from_label": "As",
-          "to_label": "B",
+          "from_label": "Ak",
+          "to_label": "Bb",
           "count": 1
         },
         {
           "from": "p07",
           "to": "p09",
-          "from_label": "Db",
-          "to_label": "Gb",
+          "from_label": "C",
+          "to_label": "F",
           "count": 1
         },
         {
           "from": "p09",
           "to": "p06",
-          "from_label": "Gb",
-          "to_label": "B",
+          "from_label": "F",
+          "to_label": "Bb",
           "count": 1
         },
         {
           "from": "p06",
           "to": "p07",
-          "from_label": "B",
-          "to_label": "Db",
+          "from_label": "Bb",
+          "to_label": "C",
           "count": 1
         },
         {
           "from": "p07",
           "to": "p06",
-          "from_label": "Db",
-          "to_label": "B",
+          "from_label": "C",
+          "to_label": "Bb",
           "count": 1
         },
         {
           "from": "p03",
           "to": "p11",
-          "from_label": "As",
-          "to_label": "Ab",
+          "from_label": "Ak",
+          "to_label": "G",
           "count": 1
         },
         {
           "from": "p02",
           "to": "p11",
-          "from_label": "Ak",
-          "to_label": "Ab",
+          "from_label": "Gs",
+          "to_label": "G",
           "count": 1
         },
         {
           "from": "p09",
           "to": "p08",
-          "from_label": "Gb",
-          "to_label": "E",
+          "from_label": "F",
+          "to_label": "Eb",
           "count": 1
         }
       ],
@@ -2909,34 +2901,34 @@
         }
       ],
       "peak": {
-        "label": "As4",
+        "label": "Ak4",
         "hz": 445.075,
         "t": 28.294
       },
       "forud": {
         "notes": [
           {
-            "label": "Ab4",
+            "label": "G4",
             "t": 52.92
           },
           {
-            "label": "Ab4",
+            "label": "G4",
             "t": 56.6
           },
           {
-            "label": "Ab4",
+            "label": "G4",
             "t": 57.3
           },
           {
-            "label": "Ab4",
+            "label": "G4",
             "t": 58.02
           },
           {
-            "label": "Ab4",
+            "label": "G4",
             "t": 60.41
           },
           {
-            "label": "Gb4",
+            "label": "F4",
             "t": 61.08
           }
         ],
@@ -2945,19 +2937,19 @@
       "just_intervals": [
         {
           "interval": "fourth",
-          "pitch": "Db",
+          "pitch": "C",
           "measured_cents": 497.48,
           "pure_cents": 498.04,
           "deviation_cents": -0.6
         },
         {
           "interval": "octave",
-          "pitch": "Ab",
+          "pitch": "G",
           "deviation_cents": null,
           "note": "measured octave minus 1200 ¢, register to register"
         }
       ],
-      "narrative": "The performance opens on Gb4 and dwells most on Ab in Phrase 1. Phrase 2 (0:07.5) introduces As, Gb, centred on As. Phrase 4 (0:51.7) introduces Ak, centred on Ab. The line peaks at As4 (445.1 Hz) at 0:28.3. It closes on Gb4, not the tonic (Ab4 → Ab4 → Ab4 → Ab4 → Ab4 → Gb4)."
+      "narrative": "The performance opens on F4 and dwells most on G in Phrase 1. Phrase 2 (0:07.5) introduces Ak, F, centred on Ak. Phrase 4 (0:51.7) introduces Gs, centred on G. The line peaks at Ak4 (445.1 Hz) at 0:28.3. It closes on F4, not the tonic (G4 → G4 → G4 → G4 → G4 → F4)."
     },
     "theory_fit": [
       {
@@ -3126,9 +3118,9 @@
     "hypotheses": [],
     "diagnostics": {
       "flags": [
-        "p03 (As): estimator families disagree by 17 ¢ {'E1': 142.05, 'E2': 140.54, 'E3': 125.44}",
-        "p05 (B): estimator families disagree by 16 ¢ {'E1': 278.28, 'E2': 283.05, 'E3': 294.16}",
-        "p07 (Db): estimator families disagree by 17 ¢ {'E1': 496.94, 'E2': 497.87, 'E3': 479.53}",
+        "p03 (Ak): estimator families disagree by 17 ¢ {'E1': 142.05, 'E2': 140.54, 'E3': 125.44}",
+        "p05 (Bb): estimator families disagree by 16 ¢ {'E1': 278.28, 'E2': 283.05, 'E3': 294.16}",
+        "p07 (C): estimator families disagree by 17 ¢ {'E1': 496.94, 'E2': 497.87, 'E3': 479.53}",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 548.8 Hz (C#5) via temporal-cadence. cadence agrees (274.1 Hz). drone picked 366.1 Hz (F#4), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (549.6 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

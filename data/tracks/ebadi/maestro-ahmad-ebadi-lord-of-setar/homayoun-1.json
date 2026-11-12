@@ -11,7 +11,8 @@
     "review": "approved",
     "links": [],
     "gushe": [],
-    "notes": "Tagged title: Dastgahe Homayoun 1."
+    "notes": "Tagged title: Dastgahe Homayoun 1.",
+    "instrument": null
   },
   "master": {
     "id": "ebadi",
@@ -29,9 +30,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.8.1",
+    "pipeline_version": "0.9.0",
     "track": "ebadi/maestro-ahmad-ebadi-lord-of-setar/homayoun-1",
-    "generated_at": "2026-11-12T14:08:40+00:00",
+    "generated_at": "2026-11-12T15:32:16+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -49,8 +50,10 @@
     "tonic": {
       "hz": 134.93,
       "cents_abs": 53.65,
-      "label": "Db3",
+      "label": "C3",
       "label_source": "catalog-hint",
+      "tuning_offset_cents": 53.6,
+      "reference_a4_hz": 453.85,
       "support": 1.0,
       "ci95_hz": [
         134.921,
@@ -139,7 +142,7 @@
           "E2": 141.11,
           "E3": 129.62
         },
-        "label": "Ds",
+        "label": "Dk",
         "cents_from_tonic": 136.7,
         "cents_abs": 190.35,
         "ci95_cents": [
@@ -189,7 +192,7 @@
           "E1": 173.52,
           "E3": 172.29
         },
-        "label": "Ds",
+        "label": "Dk",
         "cents_from_tonic": 173.52,
         "cents_abs": 227.17,
         "ci95_cents": [
@@ -208,7 +211,7 @@
         "by_family": {
           "E1": 245.06
         },
-        "label": "Ek",
+        "label": "Ds",
         "cents_from_tonic": 245.06,
         "cents_abs": 298.71,
         "ci95_cents": [
@@ -270,7 +273,7 @@
         "by_family": {
           "E1": 316.17
         },
-        "label": "E",
+        "label": "Eb",
         "cents_from_tonic": 316.17,
         "cents_abs": 369.82,
         "ci95_cents": [
@@ -332,7 +335,7 @@
         "by_family": {
           "E1": 388.73
         },
-        "label": "F",
+        "label": "E",
         "cents_from_tonic": 388.73,
         "cents_abs": 442.38,
         "ci95_cents": [
@@ -391,7 +394,7 @@
         "by_family": {
           "E1": 495.31
         },
-        "label": "Gb",
+        "label": "F",
         "cents_from_tonic": 495.31,
         "cents_abs": 548.95,
         "ci95_cents": [
@@ -454,7 +457,7 @@
           "E1": 661.53,
           "E3": 680.28
         },
-        "label": "Gs",
+        "label": "Gk",
         "cents_from_tonic": 661.53,
         "cents_abs": 715.18,
         "ci95_cents": [
@@ -474,7 +477,7 @@
           "E1": 703.61,
           "E2": 702.42
         },
-        "label": "Ab",
+        "label": "G",
         "cents_from_tonic": 703.0,
         "cents_abs": 756.65,
         "ci95_cents": [
@@ -508,7 +511,7 @@
         "by_family": {
           "E1": 851.73
         },
-        "label": "As",
+        "label": "Ak",
         "cents_from_tonic": 851.73,
         "cents_abs": 905.38,
         "ci95_cents": [
@@ -553,7 +556,7 @@
         "by_family": {
           "E1": 897.1
         },
-        "label": "Bb",
+        "label": "A",
         "cents_from_tonic": 897.1,
         "cents_abs": 950.75,
         "ci95_cents": null,
@@ -593,7 +596,7 @@
           "E1": 996.78,
           "E2": 998.08
         },
-        "label": "B",
+        "label": "Bb",
         "cents_from_tonic": 996.78,
         "cents_abs": 1050.43,
         "ci95_cents": [
@@ -643,7 +646,7 @@
           "E2": 1198.78,
           "E3": 1199.82
         },
-        "label": "Db",
+        "label": "C",
         "cents_from_tonic": 1198.78,
         "cents_abs": 52.43,
         "ci95_cents": [
@@ -707,7 +710,7 @@
       "degrees": [
         {
           "degree": 1,
-          "label": "Db",
+          "label": "C",
           "cents_from_tonic": 0.0,
           "pitch_id": "p12",
           "support": 1.0,
@@ -715,7 +718,7 @@
         },
         {
           "degree": 2,
-          "label": "Ds",
+          "label": "Dk",
           "cents_from_tonic": 136.7,
           "pitch_id": "p01",
           "support": 1.0,
@@ -723,7 +726,7 @@
         },
         {
           "degree": 3,
-          "label": "Ek",
+          "label": "Ds",
           "cents_from_tonic": 245.06,
           "pitch_id": "p03",
           "support": 0.16,
@@ -731,7 +734,7 @@
         },
         {
           "degree": 4,
-          "label": "E",
+          "label": "Eb",
           "cents_from_tonic": 316.17,
           "pitch_id": "p04",
           "support": 0.16,
@@ -739,7 +742,7 @@
         },
         {
           "degree": 5,
-          "label": "F",
+          "label": "E",
           "cents_from_tonic": 388.73,
           "pitch_id": "p05",
           "support": 0.16,
@@ -747,7 +750,7 @@
         },
         {
           "degree": 6,
-          "label": "Ab",
+          "label": "G",
           "cents_from_tonic": 703.0,
           "pitch_id": "p08",
           "support": 0.56,
@@ -755,7 +758,7 @@
         },
         {
           "degree": 7,
-          "label": "B",
+          "label": "Bb",
           "cents_from_tonic": 996.78,
           "pitch_id": "p11",
           "support": 0.76,
@@ -775,7 +778,7 @@
         {
           "degree": 2,
           "pitch_id": "p02",
-          "label": "Ds",
+          "label": "Dk",
           "cents_from_tonic": 173.52,
           "support": 0.14,
           "status": "tentative",
@@ -784,7 +787,7 @@
         {
           "degree": 6,
           "pitch_id": "p07",
-          "label": "Gs",
+          "label": "Gk",
           "cents_from_tonic": 661.53,
           "support": 0.14,
           "status": "tentative",
@@ -794,13 +797,13 @@
       "additional": [
         {
           "pitch_id": "p06",
-          "label": "Gb",
+          "label": "F",
           "cents_from_tonic": 495.31,
           "support": 0.16
         },
         {
           "pitch_id": "p09",
-          "label": "As",
+          "label": "Ak",
           "cents_from_tonic": 851.73,
           "support": 0.16
         }
@@ -830,7 +833,7 @@
           "hz": 542.954,
           "cents_from_tonic": 10.3,
           "register_cents": 2410.3,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -846,7 +849,7 @@
           "hz": 589.361,
           "cents_from_tonic": 152.3,
           "register_cents": 2552.3,
-          "label": "Ds5",
+          "label": "Dk5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -862,7 +865,7 @@
           "hz": 542.313,
           "cents_from_tonic": 8.3,
           "register_cents": 2408.3,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -878,7 +881,7 @@
           "hz": 542.891,
           "cents_from_tonic": 10.1,
           "register_cents": 2410.1,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -894,7 +897,7 @@
           "hz": 539.022,
           "cents_from_tonic": 1197.8,
           "register_cents": 2397.8,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -910,7 +913,7 @@
           "hz": 542.084,
           "cents_from_tonic": 7.6,
           "register_cents": 2407.6,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -926,7 +929,7 @@
           "hz": 588.77,
           "cents_from_tonic": 150.6,
           "register_cents": 2550.6,
-          "label": "Ds5",
+          "label": "Dk5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -942,7 +945,7 @@
           "hz": 540.987,
           "cents_from_tonic": 4.1,
           "register_cents": 2404.1,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -958,7 +961,7 @@
           "hz": 590.638,
           "cents_from_tonic": 156.1,
           "register_cents": 2556.1,
-          "label": "Ds5",
+          "label": "Dk5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -974,7 +977,7 @@
           "hz": 545.294,
           "cents_from_tonic": 17.8,
           "register_cents": 2417.8,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -990,7 +993,7 @@
           "hz": 543.483,
           "cents_from_tonic": 12.0,
           "register_cents": 2412.0,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1006,7 +1009,7 @@
           "hz": 589.158,
           "cents_from_tonic": 151.7,
           "register_cents": 2551.7,
-          "label": "Ds5",
+          "label": "Dk5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1022,7 +1025,7 @@
           "hz": 544.069,
           "cents_from_tonic": 13.9,
           "register_cents": 2413.9,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1038,7 +1041,7 @@
           "hz": 543.348,
           "cents_from_tonic": 11.6,
           "register_cents": 2411.6,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1054,7 +1057,7 @@
           "hz": 540.755,
           "cents_from_tonic": 3.3,
           "register_cents": 2403.3,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1070,7 +1073,7 @@
           "hz": 544.423,
           "cents_from_tonic": 15.0,
           "register_cents": 2415.0,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1086,7 +1089,7 @@
           "hz": 590.045,
           "cents_from_tonic": 154.3,
           "register_cents": 2554.3,
-          "label": "Ds5",
+          "label": "Dk5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1102,7 +1105,7 @@
           "hz": 543.17,
           "cents_from_tonic": 11.0,
           "register_cents": 2411.0,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1118,7 +1121,7 @@
           "hz": 541.244,
           "cents_from_tonic": 4.9,
           "register_cents": 2404.9,
-          "label": "Db5",
+          "label": "C5",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1134,7 +1137,7 @@
           "hz": 270.806,
           "cents_from_tonic": 6.1,
           "register_cents": 1206.1,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1150,7 +1153,7 @@
           "hz": 135.093,
           "cents_from_tonic": 2.1,
           "register_cents": 2.1,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1166,7 +1169,7 @@
           "hz": 293.545,
           "cents_from_tonic": 145.6,
           "register_cents": 1345.6,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -1182,7 +1185,7 @@
           "hz": 291.393,
           "cents_from_tonic": 132.9,
           "register_cents": 1332.9,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1198,7 +1201,7 @@
           "hz": 293.644,
           "cents_from_tonic": 146.2,
           "register_cents": 1346.2,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1214,7 +1217,7 @@
           "hz": 291.996,
           "cents_from_tonic": 136.5,
           "register_cents": 1336.5,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1230,7 +1233,7 @@
           "hz": 293.219,
           "cents_from_tonic": 143.7,
           "register_cents": 1343.7,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1246,7 +1249,7 @@
           "hz": 270.02,
           "cents_from_tonic": 1.0,
           "register_cents": 1201.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1262,7 +1265,7 @@
           "hz": 269.666,
           "cents_from_tonic": 1198.8,
           "register_cents": 1198.8,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1278,7 +1281,7 @@
           "hz": 293.373,
           "cents_from_tonic": 144.6,
           "register_cents": 1344.6,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1294,7 +1297,7 @@
           "hz": 270.142,
           "cents_from_tonic": 1.8,
           "register_cents": 1201.8,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1310,7 +1313,7 @@
           "hz": 269.012,
           "cents_from_tonic": 1194.6,
           "register_cents": 1194.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1326,7 +1329,7 @@
           "hz": 269.239,
           "cents_from_tonic": 1196.0,
           "register_cents": 1196.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1342,7 +1345,7 @@
           "hz": 269.528,
           "cents_from_tonic": 1197.9,
           "register_cents": 1197.9,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1358,7 +1361,7 @@
           "hz": 269.64,
           "cents_from_tonic": 1198.6,
           "register_cents": 1198.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -1374,7 +1377,7 @@
           "hz": 269.032,
           "cents_from_tonic": 1194.7,
           "register_cents": 1194.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1390,7 +1393,7 @@
           "hz": 269.376,
           "cents_from_tonic": 1196.9,
           "register_cents": 1196.9,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1406,7 +1409,7 @@
           "hz": 269.819,
           "cents_from_tonic": 1199.7,
           "register_cents": 1199.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1422,7 +1425,7 @@
           "hz": 270.164,
           "cents_from_tonic": 1.9,
           "register_cents": 1201.9,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1438,7 +1441,7 @@
           "hz": 269.305,
           "cents_from_tonic": 1196.4,
           "register_cents": 1196.4,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1454,7 +1457,7 @@
           "hz": 268.741,
           "cents_from_tonic": 1192.8,
           "register_cents": 1192.8,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1470,7 +1473,7 @@
           "hz": 269.731,
           "cents_from_tonic": 1199.2,
           "register_cents": 1199.2,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1486,7 +1489,7 @@
           "hz": 269.874,
           "cents_from_tonic": 0.1,
           "register_cents": 1200.1,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1502,7 +1505,7 @@
           "hz": 269.457,
           "cents_from_tonic": 1197.4,
           "register_cents": 1197.4,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1518,7 +1521,7 @@
           "hz": 269.535,
           "cents_from_tonic": 1197.9,
           "register_cents": 1197.9,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1534,7 +1537,7 @@
           "hz": 269.875,
           "cents_from_tonic": 0.1,
           "register_cents": 1200.1,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1550,7 +1553,7 @@
           "hz": 269.44,
           "cents_from_tonic": 1197.3,
           "register_cents": 1197.3,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1566,7 +1569,7 @@
           "hz": 269.267,
           "cents_from_tonic": 1196.2,
           "register_cents": 1196.2,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1582,7 +1585,7 @@
           "hz": 269.89,
           "cents_from_tonic": 0.2,
           "register_cents": 1200.2,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1598,7 +1601,7 @@
           "hz": 269.852,
           "cents_from_tonic": 1199.9,
           "register_cents": 1199.9,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1614,7 +1617,7 @@
           "hz": 269.506,
           "cents_from_tonic": 1197.7,
           "register_cents": 1197.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1630,7 +1633,7 @@
           "hz": 269.826,
           "cents_from_tonic": 1199.8,
           "register_cents": 1199.8,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1646,7 +1649,7 @@
           "hz": 269.567,
           "cents_from_tonic": 1198.1,
           "register_cents": 1198.1,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1662,7 +1665,7 @@
           "hz": 269.534,
           "cents_from_tonic": 1197.9,
           "register_cents": 1197.9,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1678,7 +1681,7 @@
           "hz": 269.012,
           "cents_from_tonic": 1194.6,
           "register_cents": 1194.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1694,7 +1697,7 @@
           "hz": 268.878,
           "cents_from_tonic": 1193.7,
           "register_cents": 1193.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1710,7 +1713,7 @@
           "hz": 269.078,
           "cents_from_tonic": 1195.0,
           "register_cents": 1195.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1726,7 +1729,7 @@
           "hz": 270.01,
           "cents_from_tonic": 1.0,
           "register_cents": 1201.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1742,7 +1745,7 @@
           "hz": 269.804,
           "cents_from_tonic": 1199.6,
           "register_cents": 1199.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1758,7 +1761,7 @@
           "hz": 269.092,
           "cents_from_tonic": 1195.1,
           "register_cents": 1195.1,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1774,7 +1777,7 @@
           "hz": 269.14,
           "cents_from_tonic": 1195.4,
           "register_cents": 1195.4,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1790,7 +1793,7 @@
           "hz": 269.338,
           "cents_from_tonic": 1196.6,
           "register_cents": 1196.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1806,7 +1809,7 @@
           "hz": 269.547,
           "cents_from_tonic": 1198.0,
           "register_cents": 1198.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1822,7 +1825,7 @@
           "hz": 269.347,
           "cents_from_tonic": 1196.7,
           "register_cents": 1196.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1838,7 +1841,7 @@
           "hz": 269.351,
           "cents_from_tonic": 1196.7,
           "register_cents": 1196.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1854,7 +1857,7 @@
           "hz": 268.702,
           "cents_from_tonic": 1192.6,
           "register_cents": 1192.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1870,7 +1873,7 @@
           "hz": 269.118,
           "cents_from_tonic": 1195.2,
           "register_cents": 1195.2,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1886,7 +1889,7 @@
           "hz": 269.172,
           "cents_from_tonic": 1195.6,
           "register_cents": 1195.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1902,7 +1905,7 @@
           "hz": 269.026,
           "cents_from_tonic": 1194.6,
           "register_cents": 1194.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1918,7 +1921,7 @@
           "hz": 268.993,
           "cents_from_tonic": 1194.4,
           "register_cents": 1194.4,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1934,7 +1937,7 @@
           "hz": 269.731,
           "cents_from_tonic": 1199.2,
           "register_cents": 1199.2,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1950,7 +1953,7 @@
           "hz": 291.467,
           "cents_from_tonic": 133.3,
           "register_cents": 1333.3,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -1966,7 +1969,7 @@
           "hz": 269.392,
           "cents_from_tonic": 1197.0,
           "register_cents": 1197.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1982,7 +1985,7 @@
           "hz": 269.074,
           "cents_from_tonic": 1195.0,
           "register_cents": 1195.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -1998,7 +2001,7 @@
           "hz": 134.81,
           "cents_from_tonic": 1198.5,
           "register_cents": -1.5,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2014,7 +2017,7 @@
           "hz": 134.885,
           "cents_from_tonic": 1199.4,
           "register_cents": -0.6,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2030,7 +2033,7 @@
           "hz": 135.065,
           "cents_from_tonic": 1.7,
           "register_cents": 1.7,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2046,7 +2049,7 @@
           "hz": 134.863,
           "cents_from_tonic": 1199.1,
           "register_cents": -0.9,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2062,7 +2065,7 @@
           "hz": 538.389,
           "cents_from_tonic": 1195.7,
           "register_cents": 2395.7,
-          "label": "Db5",
+          "label": "C5",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -2078,7 +2081,7 @@
           "hz": 269.524,
           "cents_from_tonic": 1197.8,
           "register_cents": 1197.8,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2094,7 +2097,7 @@
           "hz": 269.781,
           "cents_from_tonic": 1199.5,
           "register_cents": 1199.5,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2110,7 +2113,7 @@
           "hz": 268.446,
           "cents_from_tonic": 1190.9,
           "register_cents": 1190.9,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2126,7 +2129,7 @@
           "hz": 269.343,
           "cents_from_tonic": 1196.7,
           "register_cents": 1196.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2142,7 +2145,7 @@
           "hz": 539.111,
           "cents_from_tonic": 1198.0,
           "register_cents": 2398.0,
-          "label": "Db5",
+          "label": "C5",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -2158,7 +2161,7 @@
           "hz": 269.062,
           "cents_from_tonic": 1194.9,
           "register_cents": 1194.9,
-          "label": "Db4",
+          "label": "C4",
           "agree": 7,
           "agree_indep": 3,
           "main": true,
@@ -2174,7 +2177,7 @@
           "hz": 269.193,
           "cents_from_tonic": 1195.7,
           "register_cents": 1195.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2190,7 +2193,7 @@
           "hz": 269.777,
           "cents_from_tonic": 1199.5,
           "register_cents": 1199.5,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2206,7 +2209,7 @@
           "hz": 269.492,
           "cents_from_tonic": 1197.6,
           "register_cents": 1197.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2222,7 +2225,7 @@
           "hz": 269.8,
           "cents_from_tonic": 1199.6,
           "register_cents": 1199.6,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2238,7 +2241,7 @@
           "hz": 227.187,
           "cents_from_tonic": 902.0,
           "register_cents": 902.0,
-          "label": "Bb3",
+          "label": "A3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2254,7 +2257,7 @@
           "hz": 269.391,
           "cents_from_tonic": 1197.0,
           "register_cents": 1197.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2270,7 +2273,7 @@
           "hz": 269.544,
           "cents_from_tonic": 1198.0,
           "register_cents": 1198.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2286,7 +2289,7 @@
           "hz": 268.727,
           "cents_from_tonic": 1192.7,
           "register_cents": 1192.7,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2302,7 +2305,7 @@
           "hz": 268.943,
           "cents_from_tonic": 1194.1,
           "register_cents": 1194.1,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2318,7 +2321,7 @@
           "hz": 243.781,
           "cents_from_tonic": 1024.0,
           "register_cents": 1024.0,
-          "label": "B3",
+          "label": "Bb3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2334,7 +2337,7 @@
           "hz": 292.045,
           "cents_from_tonic": 136.8,
           "register_cents": 1336.8,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2350,7 +2353,7 @@
           "hz": 291.877,
           "cents_from_tonic": 135.8,
           "register_cents": 1335.8,
-          "label": "Ds4",
+          "label": "Dk4",
           "agree": 3,
           "agree_indep": 0,
           "main": true,
@@ -2366,7 +2369,7 @@
           "hz": 268.851,
           "cents_from_tonic": 1193.5,
           "register_cents": 1193.5,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2382,7 +2385,7 @@
           "hz": 268.813,
           "cents_from_tonic": 1193.3,
           "register_cents": 1193.3,
-          "label": "Db4",
+          "label": "C4",
           "agree": 5,
           "agree_indep": 1,
           "main": true,
@@ -2398,7 +2401,7 @@
           "hz": 269.764,
           "cents_from_tonic": 1199.4,
           "register_cents": 1199.4,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2414,7 +2417,7 @@
           "hz": 269.708,
           "cents_from_tonic": 1199.0,
           "register_cents": 1199.0,
-          "label": "Db4",
+          "label": "C4",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2430,7 +2433,7 @@
           "hz": 135.073,
           "cents_from_tonic": 1.8,
           "register_cents": 1.8,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2446,7 +2449,7 @@
           "hz": 135.178,
           "cents_from_tonic": 3.2,
           "register_cents": 3.2,
-          "label": "Db3",
+          "label": "C3",
           "agree": 4,
           "agree_indep": 0,
           "main": true,
@@ -2468,31 +2471,31 @@
           "dwell": [
             {
               "pitch_id": "p12",
-              "label": "Db",
+              "label": "C",
               "seconds": 2.47,
               "share": 0.712
             },
             {
               "pitch_id": "p01",
-              "label": "Ds",
+              "label": "Dk",
               "seconds": 1.0,
               "share": 0.288
             }
           ],
           "shahed": {
             "pitch_id": "p12",
-            "label": "Db",
+            "label": "C",
             "share": 0.712
           },
           "ist": {
             "pitch_id": "p12",
-            "label": "Db5",
+            "label": "C5",
             "t": 10.04
           },
           "ambitus": {
-            "low": "Db5",
+            "low": "C5",
             "low_hz": 539.022,
-            "high": "Ds5",
+            "high": "Dk5",
             "high_hz": 590.638,
             "cents": 158.0
           },
@@ -2508,31 +2511,31 @@
           "dwell": [
             {
               "pitch_id": "p12",
-              "label": "Db",
+              "label": "C",
               "seconds": 2.81,
               "share": 0.906
             },
             {
               "pitch_id": "p01",
-              "label": "Ds",
+              "label": "Dk",
               "seconds": 0.29,
               "share": 0.094
             }
           ],
           "shahed": {
             "pitch_id": "p12",
-            "label": "Db",
+            "label": "C",
             "share": 0.906
           },
           "ist": {
             "pitch_id": "p12",
-            "label": "Db3",
+            "label": "C3",
             "t": 18.69
           },
           "ambitus": {
-            "low": "Db3",
+            "low": "C3",
             "low_hz": 135.093,
-            "high": "Ds5",
+            "high": "Dk5",
             "high_hz": 590.045,
             "cents": 2552.0
           },
@@ -2548,36 +2551,36 @@
           "dwell": [
             {
               "pitch_id": "p12",
-              "label": "Db",
+              "label": "C",
               "seconds": 6.03,
               "share": 0.795
             },
             {
               "pitch_id": "p01",
-              "label": "Ds",
+              "label": "Dk",
               "seconds": 1.56,
               "share": 0.205
             }
           ],
           "shahed": {
             "pitch_id": "p12",
-            "label": "Db",
+            "label": "C",
             "share": 0.795
           },
           "ist": {
             "pitch_id": "p12",
-            "label": "Db4",
+            "label": "C4",
             "t": 29.07
           },
           "ambitus": {
-            "low": "Db4",
+            "low": "C4",
             "low_hz": 269.64,
-            "high": "Db4",
+            "high": "C4",
             "high_hz": 269.64,
             "cents": 0.0
           },
           "new_pitches": [
-            "Db"
+            "C"
           ]
         },
         {
@@ -2590,36 +2593,36 @@
           "dwell": [
             {
               "pitch_id": "p12",
-              "label": "Db",
+              "label": "C",
               "seconds": 10.26,
               "share": 0.957
             },
             {
               "pitch_id": "p01",
-              "label": "Ds",
+              "label": "Dk",
               "seconds": 0.47,
               "share": 0.043
             }
           ],
           "shahed": {
             "pitch_id": "p12",
-            "label": "Db",
+            "label": "C",
             "share": 0.957
           },
           "ist": {
             "pitch_id": "p01",
-            "label": "Ds4",
+            "label": "Dk4",
             "t": 48.87
           },
           "ambitus": {
-            "low": "Ds4",
+            "low": "Dk4",
             "low_hz": 291.467,
-            "high": "Ds4",
+            "high": "Dk4",
             "high_hz": 291.467,
             "cents": 0.0
           },
           "new_pitches": [
-            "Ds"
+            "Dk"
           ]
         },
         {
@@ -2632,37 +2635,37 @@
           "dwell": [
             {
               "pitch_id": "p12",
-              "label": "Db",
+              "label": "C",
               "seconds": 4.78,
               "share": 0.915
             },
             {
               "pitch_id": "p10",
-              "label": "Bb",
+              "label": "A",
               "seconds": 0.26,
               "share": 0.049
             },
             {
               "pitch_id": "p11",
-              "label": "B",
+              "label": "Bb",
               "seconds": 0.19,
               "share": 0.036
             }
           ],
           "shahed": {
             "pitch_id": "p12",
-            "label": "Db",
+            "label": "C",
             "share": 0.915
           },
           "ist": {
             "pitch_id": "p12",
-            "label": "Db4",
+            "label": "C4",
             "t": 55.48
           },
           "ambitus": {
-            "low": "Db4",
+            "low": "C4",
             "low_hz": 269.062,
-            "high": "Db4",
+            "high": "C4",
             "high_hz": 269.062,
             "cents": 0.0
           },
@@ -2678,31 +2681,31 @@
           "dwell": [
             {
               "pitch_id": "p12",
-              "label": "Db",
+              "label": "C",
               "seconds": 3.32,
               "share": 0.908
             },
             {
               "pitch_id": "p01",
-              "label": "Ds",
+              "label": "Dk",
               "seconds": 0.34,
               "share": 0.092
             }
           ],
           "shahed": {
             "pitch_id": "p12",
-            "label": "Db",
+            "label": "C",
             "share": 0.908
           },
           "ist": {
             "pitch_id": "p12",
-            "label": "Db4",
+            "label": "C4",
             "t": 63.56
           },
           "ambitus": {
-            "low": "Db4",
+            "low": "C4",
             "low_hz": 268.813,
-            "high": "Db4",
+            "high": "C4",
             "high_hz": 268.813,
             "cents": 0.0
           },
@@ -2713,43 +2716,43 @@
         {
           "from": "p01",
           "to": "p12",
-          "from_label": "Ds",
-          "to_label": "Db",
+          "from_label": "Dk",
+          "to_label": "C",
           "count": 9
         },
         {
           "from": "p12",
           "to": "p01",
-          "from_label": "Db",
-          "to_label": "Ds",
+          "from_label": "C",
+          "to_label": "Dk",
           "count": 7
         },
         {
           "from": "p12",
           "to": "p10",
-          "from_label": "Db",
-          "to_label": "Bb",
+          "from_label": "C",
+          "to_label": "A",
           "count": 1
         },
         {
           "from": "p10",
           "to": "p12",
-          "from_label": "Bb",
-          "to_label": "Db",
+          "from_label": "A",
+          "to_label": "C",
           "count": 1
         },
         {
           "from": "p12",
           "to": "p11",
-          "from_label": "Db",
-          "to_label": "B",
+          "from_label": "C",
+          "to_label": "Bb",
           "count": 1
         },
         {
           "from": "p11",
           "to": "p01",
-          "from_label": "B",
-          "to_label": "Ds",
+          "from_label": "Bb",
+          "to_label": "Dk",
           "count": 1
         }
       ],
@@ -2822,26 +2825,26 @@
         }
       ],
       "peak": {
-        "label": "Ds4",
+        "label": "Dk4",
         "hz": 291.467,
         "t": 48.866
       },
       "forud": {
         "notes": [
           {
-            "label": "Db4",
+            "label": "C4",
             "t": 29.07
           },
           {
-            "label": "Ds4",
+            "label": "Dk4",
             "t": 48.87
           },
           {
-            "label": "Db4",
+            "label": "C4",
             "t": 55.48
           },
           {
-            "label": "Db4",
+            "label": "C4",
             "t": 63.56
           }
         ],
@@ -2850,21 +2853,21 @@
       "just_intervals": [
         {
           "interval": "fourth",
-          "pitch": "Gb",
+          "pitch": "F",
           "measured_cents": 495.31,
           "pure_cents": 498.04,
           "deviation_cents": -2.7
         },
         {
           "interval": "fifth",
-          "pitch": "Ab",
+          "pitch": "G",
           "measured_cents": 703.0,
           "pure_cents": 701.96,
           "deviation_cents": 1.0
         },
         {
           "interval": "octave",
-          "pitch": "Db",
+          "pitch": "C",
           "deviation_cents": [
             -2.6,
             11.9
@@ -2872,7 +2875,7 @@
           "note": "measured octave minus 1200 ¢, register to register"
         }
       ],
-      "narrative": "The performance opens on Db5 and dwells most on Db in Phrase 1. Phrase 3 (0:21.1) introduces Db, centred on Db. Phrase 4 (0:36.0) introduces Ds, centred on Db. The line peaks at Ds4 (291.5 Hz) at 0:48.9. It closes on the tonic (Db4 → Ds4 → Db4 → Db4)."
+      "narrative": "The performance opens on C5 and dwells most on C in Phrase 1. Phrase 3 (0:21.1) introduces C, centred on C. Phrase 4 (0:36.0) introduces Dk, centred on C. The line peaks at Dk4 (291.5 Hz) at 0:48.9. It closes on the tonic (C4 → Dk4 → C4 → C4)."
     },
     "theory_fit": [
       {
@@ -3062,7 +3065,7 @@
     "hypotheses": [],
     "diagnostics": {
       "flags": [
-        "p07 (Gs): estimator families disagree by 19 ¢ {'E1': 661.53, 'E3': 680.28}"
+        "p07 (Gk): estimator families disagree by 19 ¢ {'E1': 661.53, 'E3': 680.28}"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [
