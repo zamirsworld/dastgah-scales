@@ -1,0 +1,3079 @@
+{
+  "schema_version": "1.0",
+  "track": {
+    "key": "hossein-alizadeh/radif-navazi-setar-nava/malek-hossein",
+    "id": "malek-hossein",
+    "title": "Nava: Malek Hossein",
+    "track_number": 16,
+    "dastgah": "nava",
+    "level": "gushe",
+    "source": "original-digital",
+    "review": "approved",
+    "links": [],
+    "gushe": [
+      {
+        "name": "Malek Hossein",
+        "name_fa": "ملک حسین",
+        "start": 0.0,
+        "status": "confirmed"
+      }
+    ],
+    "notes": "",
+    "instrument": null
+  },
+  "master": {
+    "id": "hossein-alizadeh",
+    "name": "Hossein Alizadeh",
+    "name_fa": "حسین علیزاده",
+    "instrument": "setar",
+    "years": null,
+    "bio": null,
+    "links": []
+  },
+  "album": {
+    "id": "radif-navazi-setar-nava",
+    "title": "Radif Navazi - Setar: Nava",
+    "release_date": "2025-12-10"
+  },
+  "consensus": {
+    "schema_version": "1.0",
+    "pipeline_version": "0.9.1",
+    "track": "hossein-alizadeh/radif-navazi-setar-nava/malek-hossein",
+    "generated_at": "2026-11-12T20:57:26+00:00",
+    "matrix": {
+      "preset": "standard",
+      "hash": "41e76dc61d8a",
+      "n_runs": 12,
+      "families": [
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    "window": {
+      "start_s": 0.0,
+      "end_s": 61.672
+    },
+    "tonic": {
+      "hz": 162.717,
+      "cents_abs": 377.83,
+      "label": "E3",
+      "label_source": "nearest-natural",
+      "tuning_offset_cents": -22.2,
+      "reference_a4_hz": 434.4,
+      "support": 0.767,
+      "ci95_hz": [
+        162.686,
+        162.787
+      ],
+      "methods": {
+        "chosen": "temporal-cadence",
+        "agreement": true,
+        "candidates": {
+          "temporal": {
+            "hz": 325.5252705117356,
+            "confidence": 0.9716848218555586
+          },
+          "cadence": {
+            "hz": 325.366583911367,
+            "confidence": 0.7703101597447465
+          },
+          "drone": {
+            "hz": 325.1111509545293,
+            "confidence": 0.6867469879518072
+          },
+          "marginalized": {
+            "hz": 325.5252705117356,
+            "confidence": 0.7031319412182013
+          }
+        },
+        "vote_hz": 162.935,
+        "placement": "register of p11",
+        "votes": [
+          {
+            "run": "E1-whole-mono-eb3f3c51296d",
+            "family": "E1",
+            "hz": 325.111,
+            "weight": 0.3
+          },
+          {
+            "run": "E1-whole-mono-198708ffe184",
+            "family": "E1",
+            "hz": 325.256,
+            "weight": 0.3
+          },
+          {
+            "run": "E2-whole-mono-9a28fdff4a79",
+            "family": "E2",
+            "hz": 162.931,
+            "weight": 1.0
+          },
+          {
+            "run": "E2-whole-mono-53f4a23947ae",
+            "family": "E2",
+            "hz": 162.966,
+            "weight": 1.0
+          },
+          {
+            "run": "E2-whole-left-ea24577959c3",
+            "family": "E2",
+            "hz": 325.87,
+            "weight": 1.0
+          },
+          {
+            "run": "E2-whole-right-c19e8e9a17cb",
+            "family": "E2",
+            "hz": 163.061,
+            "weight": 1.0
+          },
+          {
+            "run": "E3-whole-mono-d94e6fe20a8e",
+            "family": "E3",
+            "hz": 489.893,
+            "weight": 0.7
+          },
+          {
+            "run": "E3-whole-mono-12f8bfb8c8cf",
+            "family": "E3",
+            "hz": 489.441,
+            "weight": 0.7
+          }
+        ]
+      }
+    },
+    "pitches": [
+      {
+        "id": "p01",
+        "by_family": {
+          "E1": 205.02,
+          "E2": 205.49,
+          "E3": 200.31
+        },
+        "label": "Gb",
+        "cents_from_tonic": 205.3,
+        "cents_abs": 583.14,
+        "ci95_cents": [
+          205.02,
+          207.52
+        ],
+        "spread_cents": 0.5106392197159266,
+        "support": 0.82,
+        "families": 3,
+        "status": "confirmed",
+        "kind": "secondary",
+        "registers": [
+          {
+            "octave": 4,
+            "hz": 366.738,
+            "ci95_hz": [
+              366.355,
+              366.749
+            ],
+            "frames": 595,
+            "notes": 12,
+            "method": "f0-track",
+            "families": [
+              "E2",
+              "E3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p02",
+        "by_family": {
+          "E1": 289.45,
+          "E3": 290.49
+        },
+        "label": "G",
+        "cents_from_tonic": 289.45,
+        "cents_abs": 667.28,
+        "ci95_cents": [
+          288.79,
+          290.49
+        ],
+        "spread_cents": 0.6624295569482683,
+        "support": 0.2,
+        "families": 2,
+        "status": "tentative",
+        "kind": "secondary",
+        "registers": [
+          {
+            "octave": 4,
+            "hz": 384.228,
+            "ci95_hz": [
+              384.228,
+              384.661
+            ],
+            "frames": 69,
+            "notes": null,
+            "method": "f0-track",
+            "families": [
+              "E3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p03",
+        "by_family": {
+          "E1": 349.67
+        },
+        "label": "Gs",
+        "cents_from_tonic": 349.67,
+        "cents_abs": 727.5,
+        "ci95_cents": [
+          349.67,
+          349.73
+        ],
+        "spread_cents": null,
+        "support": 0.16,
+        "families": 1,
+        "status": "tentative",
+        "kind": "ornament",
+        "registers": [
+          {
+            "octave": 5,
+            "hz": 796.543,
+            "ci95_hz": [
+              796.543,
+              796.575
+            ],
+            "frames": null,
+            "notes": null,
+            "method": "reassigned",
+            "families": [
+              "E1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p04",
+        "by_family": {
+          "E1": 506.77,
+          "E2": 503.71,
+          "E3": 517.46
+        },
+        "label": "A",
+        "cents_from_tonic": 506.22,
+        "cents_abs": 884.06,
+        "ci95_cents": [
+          503.14,
+          506.77
+        ],
+        "spread_cents": 3.082060639448059,
+        "support": 0.94,
+        "families": 3,
+        "status": "confirmed",
+        "kind": "structural",
+        "registers": [
+          {
+            "octave": 2,
+            "hz": 109.701,
+            "ci95_hz": [
+              109.701,
+              109.701
+            ],
+            "frames": 43,
+            "notes": null,
+            "method": "f0-track",
+            "families": [
+              "E3"
+            ]
+          },
+          {
+            "octave": 3,
+            "hz": 217.923,
+            "ci95_hz": [
+              217.535,
+              218.016
+            ],
+            "frames": 934,
+            "notes": 37,
+            "method": "f0-track",
+            "families": [
+              "E2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p05",
+        "by_family": {
+          "E1": 700.65,
+          "E2": 704.19,
+          "E3": 706.22
+        },
+        "label": "B",
+        "cents_from_tonic": 703.38,
+        "cents_abs": 1081.22,
+        "ci95_cents": [
+          701.02,
+          705.82
+        ],
+        "spread_cents": 1.4664184621706227,
+        "support": 1.0,
+        "families": 3,
+        "status": "confirmed",
+        "kind": "structural",
+        "registers": [
+          {
+            "octave": 2,
+            "hz": 122.203,
+            "ci95_hz": [
+              122.128,
+              122.22
+            ],
+            "frames": 973,
+            "notes": 50,
+            "method": "f0-track",
+            "families": [
+              "E2",
+              "E3"
+            ]
+          },
+          {
+            "octave": 3,
+            "hz": 244.229,
+            "ci95_hz": [
+              244.111,
+              244.574
+            ],
+            "frames": 2444,
+            "notes": 101,
+            "method": "f0-track",
+            "families": [
+              "E2"
+            ]
+          },
+          {
+            "octave": 4,
+            "hz": 489.754,
+            "ci95_hz": [
+              489.448,
+              489.895
+            ],
+            "frames": 224,
+            "notes": 4,
+            "method": "f0-track",
+            "families": [
+              "E3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p06",
+        "by_family": {
+          "E1": 843.11,
+          "E2": 844.96,
+          "E3": 831.35
+        },
+        "label": "Cs",
+        "cents_from_tonic": 844.96,
+        "cents_abs": 22.8,
+        "ci95_cents": [
+          843.11,
+          845.84
+        ],
+        "spread_cents": 0.9256140548075109,
+        "support": 0.82,
+        "families": 3,
+        "status": "confirmed",
+        "kind": "structural",
+        "registers": [
+          {
+            "octave": 4,
+            "hz": 265.151,
+            "ci95_hz": [
+              264.759,
+              265.24
+            ],
+            "frames": 1308,
+            "notes": 45,
+            "method": "f0-track",
+            "families": [
+              "E2"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p07",
+        "by_family": {
+          "E1": 1000.04,
+          "E2": 998.93,
+          "E3": 1005.4
+        },
+        "label": "D",
+        "cents_from_tonic": 1000.04,
+        "cents_abs": 177.87,
+        "ci95_cents": [
+          998.68,
+          1000.53
+        ],
+        "spread_cents": 1.5845599092857583,
+        "support": 1.0,
+        "families": 3,
+        "status": "confirmed",
+        "kind": "structural",
+        "registers": [
+          {
+            "octave": 4,
+            "hz": 289.595,
+            "ci95_hz": [
+              289.331,
+              290.047
+            ],
+            "frames": 3543,
+            "notes": 125,
+            "method": "f0-track",
+            "families": [
+              "E2",
+              "E3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p08",
+        "by_family": {
+          "E3": 1060.18
+        },
+        "label": "Ds",
+        "cents_from_tonic": 1060.18,
+        "cents_abs": 238.02,
+        "ci95_cents": null,
+        "spread_cents": null,
+        "support": 0.06,
+        "families": 1,
+        "status": "tentative",
+        "kind": "unknown",
+        "registers": [
+          {
+            "octave": 4,
+            "hz": 300.018,
+            "ci95_hz": null,
+            "frames": 43,
+            "notes": null,
+            "method": "f0-track",
+            "families": [
+              "E3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p09",
+        "by_family": {
+          "E3": 1135.54
+        },
+        "label": "Ek",
+        "cents_from_tonic": 1135.54,
+        "cents_abs": 313.37,
+        "ci95_cents": [
+          1132.89,
+          1135.54
+        ],
+        "spread_cents": null,
+        "support": 0.12,
+        "families": 1,
+        "status": "tentative",
+        "kind": "unknown",
+        "registers": [
+          {
+            "octave": 4,
+            "hz": 313.212,
+            "ci95_hz": [
+              313.212,
+              313.588
+            ],
+            "frames": 76,
+            "notes": null,
+            "method": "f0-track",
+            "families": [
+              "E3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p10",
+        "by_family": {
+          "E3": 1168.4
+        },
+        "label": "Ek",
+        "cents_from_tonic": 1168.4,
+        "cents_abs": 346.23,
+        "ci95_cents": [
+          1154.78,
+          1168.4
+        ],
+        "spread_cents": 4.951445882259236,
+        "support": 0.18,
+        "families": 1,
+        "status": "tentative",
+        "kind": "unknown",
+        "registers": [
+          {
+            "octave": 4,
+            "hz": 323.644,
+            "ci95_hz": [
+              322.968,
+              323.644
+            ],
+            "frames": 403,
+            "notes": 19,
+            "method": "f0-track",
+            "families": [
+              "E3"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "p11",
+        "by_family": {
+          "E1": 1198.28,
+          "E2": 1198.87,
+          "E3": 1197.77
+        },
+        "label": "E",
+        "cents_from_tonic": 1198.87,
+        "cents_abs": 376.7,
+        "ci95_cents": [
+          1197.99,
+          1199.23
+        ],
+        "spread_cents": 0.6331784959609763,
+        "support": 1.0,
+        "families": 3,
+        "status": "confirmed",
+        "kind": "structural",
+        "registers": [
+          {
+            "octave": 3,
+            "hz": 162.717,
+            "ci95_hz": [
+              162.686,
+              162.787
+            ],
+            "frames": 1723,
+            "notes": 76,
+            "method": "f0-track",
+            "families": [
+              "E2",
+              "E3"
+            ]
+          },
+          {
+            "octave": 4,
+            "hz": 325.203,
+            "ci95_hz": [
+              325.026,
+              325.278
+            ],
+            "frames": 4566,
+            "notes": 183,
+            "method": "f0-track",
+            "families": [
+              "E2",
+              "E3"
+            ]
+          }
+        ]
+      }
+    ],
+    "scale": {
+      "degrees": [
+        {
+          "degree": 1,
+          "label": "E",
+          "cents_from_tonic": 0.0,
+          "pitch_id": "p11",
+          "support": 1.0,
+          "status": "confirmed"
+        },
+        {
+          "degree": 2,
+          "label": "Gb",
+          "cents_from_tonic": 205.3,
+          "pitch_id": "p01",
+          "support": 0.82,
+          "status": "confirmed"
+        },
+        {
+          "degree": 3,
+          "label": "G",
+          "cents_from_tonic": 289.45,
+          "pitch_id": "p02",
+          "support": 0.2,
+          "status": "tentative"
+        },
+        {
+          "degree": 4,
+          "label": "A",
+          "cents_from_tonic": 506.22,
+          "pitch_id": "p04",
+          "support": 0.94,
+          "status": "confirmed"
+        },
+        {
+          "degree": 5,
+          "label": "B",
+          "cents_from_tonic": 703.38,
+          "pitch_id": "p05",
+          "support": 1.0,
+          "status": "confirmed"
+        },
+        {
+          "degree": 6,
+          "label": "Cs",
+          "cents_from_tonic": 844.96,
+          "pitch_id": "p06",
+          "support": 0.82,
+          "status": "confirmed"
+        },
+        {
+          "degree": 7,
+          "label": "D",
+          "cents_from_tonic": 1000.04,
+          "pitch_id": "p07",
+          "support": 1.0,
+          "status": "confirmed"
+        }
+      ],
+      "steps_cents": [
+        205.3,
+        84.15,
+        216.77,
+        197.16,
+        141.58,
+        155.08,
+        199.96
+      ],
+      "variants": [
+        {
+          "degree": 1,
+          "pitch_id": "p09",
+          "label": "Ek",
+          "cents_from_tonic": 1135.54,
+          "support": 0.12,
+          "status": "tentative",
+          "offset_cents": -64.46
+        },
+        {
+          "degree": 1,
+          "pitch_id": "p10",
+          "label": "Ek",
+          "cents_from_tonic": 1168.4,
+          "support": 0.18,
+          "status": "tentative",
+          "offset_cents": -31.6
+        },
+        {
+          "degree": 3,
+          "pitch_id": "p03",
+          "label": "Gs",
+          "cents_from_tonic": 349.67,
+          "support": 0.16,
+          "status": "tentative",
+          "offset_cents": 60.22
+        }
+      ],
+      "additional": []
+    },
+    "segments": {
+      "level": "gushe",
+      "boundaries_s": [
+        33.72
+      ],
+      "gushe": [
+        {
+          "name": "Malek Hossein",
+          "name_fa": "ملک حسین",
+          "start_s": 0.0,
+          "status": "confirmed"
+        }
+      ]
+    },
+    "progression": {
+      "reference_run": "E2-whole-mono-9a28fdff4a79",
+      "n_notes": 115,
+      "n_main": 113,
+      "n_solid": 25,
+      "agreement_runs": 9,
+      "events": [
+        {
+          "t_on": 0.244,
+          "t_off": 0.975,
+          "hz": 288.809,
+          "cents_from_tonic": 993.3,
+          "register_cents": 993.3,
+          "label": "D4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -6.7
+        },
+        {
+          "t_on": 0.975,
+          "t_off": 1.544,
+          "hz": 244.341,
+          "cents_from_tonic": 703.8,
+          "register_cents": 703.8,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 0.5
+        },
+        {
+          "t_on": 1.614,
+          "t_off": 2.043,
+          "hz": 244.505,
+          "cents_from_tonic": 705.0,
+          "register_cents": 705.0,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 1.6
+        },
+        {
+          "t_on": 2.937,
+          "t_off": 3.146,
+          "hz": 243.688,
+          "cents_from_tonic": 699.2,
+          "register_cents": 699.2,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -4.2
+        },
+        {
+          "t_on": 3.344,
+          "t_off": 3.587,
+          "hz": 121.667,
+          "cents_from_tonic": 696.7,
+          "register_cents": -503.3,
+          "label": "B2",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -6.7
+        },
+        {
+          "t_on": 3.936,
+          "t_off": 4.412,
+          "hz": 290.211,
+          "cents_from_tonic": 1001.7,
+          "register_cents": 1001.7,
+          "label": "D4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": 1.6
+        },
+        {
+          "t_on": 4.516,
+          "t_off": 4.807,
+          "hz": 289.015,
+          "cents_from_tonic": 994.5,
+          "register_cents": 994.5,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -5.5
+        },
+        {
+          "t_on": 5.468,
+          "t_off": 5.793,
+          "hz": 265.169,
+          "cents_from_tonic": 845.5,
+          "register_cents": 845.5,
+          "label": "Cs4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p06",
+          "role": "degree",
+          "degree": 6,
+          "offset_cents": 0.5
+        },
+        {
+          "t_on": 5.817,
+          "t_off": 5.979,
+          "hz": 265.69,
+          "cents_from_tonic": 848.9,
+          "register_cents": 848.9,
+          "label": "Cs4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p06",
+          "role": "degree",
+          "degree": 6,
+          "offset_cents": 3.9
+        },
+        {
+          "t_on": 6.722,
+          "t_off": 7.163,
+          "hz": 325.215,
+          "cents_from_tonic": 1198.8,
+          "register_cents": 1198.8,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -0.0
+        },
+        {
+          "t_on": 7.326,
+          "t_off": 7.628,
+          "hz": 244.984,
+          "cents_from_tonic": 708.4,
+          "register_cents": 708.4,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 5.0
+        },
+        {
+          "t_on": 7.651,
+          "t_off": 7.814,
+          "hz": 244.46,
+          "cents_from_tonic": 704.7,
+          "register_cents": 704.7,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 1.3
+        },
+        {
+          "t_on": 7.825,
+          "t_off": 8.197,
+          "hz": 243.335,
+          "cents_from_tonic": 696.7,
+          "register_cents": 696.7,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -6.7
+        },
+        {
+          "t_on": 8.278,
+          "t_off": 8.522,
+          "hz": 122.29,
+          "cents_from_tonic": 705.5,
+          "register_cents": -494.5,
+          "label": "B2",
+          "agree": 6,
+          "agree_indep": 2,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 2.1
+        },
+        {
+          "t_on": 8.568,
+          "t_off": 8.789,
+          "hz": 218.739,
+          "cents_from_tonic": 512.2,
+          "register_cents": 512.2,
+          "label": "A3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p04",
+          "role": "degree",
+          "degree": 4,
+          "offset_cents": 6.0
+        },
+        {
+          "t_on": 9.009,
+          "t_off": 9.59,
+          "hz": 289.82,
+          "cents_from_tonic": 999.4,
+          "register_cents": 999.4,
+          "label": "D4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -0.7
+        },
+        {
+          "t_on": 9.59,
+          "t_off": 9.845,
+          "hz": 290.816,
+          "cents_from_tonic": 1005.3,
+          "register_cents": 1005.3,
+          "label": "D4",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": 5.3
+        },
+        {
+          "t_on": 10.031,
+          "t_off": 10.194,
+          "hz": 290.252,
+          "cents_from_tonic": 1001.9,
+          "register_cents": 1001.9,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": 1.9
+        },
+        {
+          "t_on": 10.31,
+          "t_off": 10.681,
+          "hz": 264.955,
+          "cents_from_tonic": 844.1,
+          "register_cents": 844.1,
+          "label": "Cs4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p06",
+          "role": "degree",
+          "degree": 6,
+          "offset_cents": -0.9
+        },
+        {
+          "t_on": 10.96,
+          "t_off": 11.146,
+          "hz": 325.696,
+          "cents_from_tonic": 1.4,
+          "register_cents": 1201.4,
+          "label": "E4",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 2.5
+        },
+        {
+          "t_on": 11.192,
+          "t_off": 11.366,
+          "hz": 324.819,
+          "cents_from_tonic": 1196.7,
+          "register_cents": 1196.7,
+          "label": "E4",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -2.1
+        },
+        {
+          "t_on": 11.691,
+          "t_off": 12.016,
+          "hz": 162.72,
+          "cents_from_tonic": 0.0,
+          "register_cents": 0.0,
+          "label": "E3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.2
+        },
+        {
+          "t_on": 12.597,
+          "t_off": 12.875,
+          "hz": 243.422,
+          "cents_from_tonic": 697.3,
+          "register_cents": 697.3,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -6.1
+        },
+        {
+          "t_on": 12.875,
+          "t_off": 13.166,
+          "hz": 122.232,
+          "cents_from_tonic": 704.7,
+          "register_cents": -495.3,
+          "label": "B2",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 1.3
+        },
+        {
+          "t_on": 13.247,
+          "t_off": 13.398,
+          "hz": 216.312,
+          "cents_from_tonic": 492.9,
+          "register_cents": 492.9,
+          "label": "A3",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p04",
+          "role": "degree",
+          "degree": 4,
+          "offset_cents": -13.3
+        },
+        {
+          "t_on": 13.665,
+          "t_off": 13.816,
+          "hz": 288.936,
+          "cents_from_tonic": 994.1,
+          "register_cents": 994.1,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -6.0
+        },
+        {
+          "t_on": 14.687,
+          "t_off": 14.838,
+          "hz": 265.133,
+          "cents_from_tonic": 845.2,
+          "register_cents": 845.2,
+          "label": "Cs4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p06",
+          "role": "degree",
+          "degree": 6,
+          "offset_cents": 0.3
+        },
+        {
+          "t_on": 14.896,
+          "t_off": 15.07,
+          "hz": 289.237,
+          "cents_from_tonic": 995.9,
+          "register_cents": 995.9,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -4.2
+        },
+        {
+          "t_on": 15.476,
+          "t_off": 16.01,
+          "hz": 289.473,
+          "cents_from_tonic": 997.3,
+          "register_cents": 997.3,
+          "label": "D4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -2.8
+        },
+        {
+          "t_on": 16.01,
+          "t_off": 16.312,
+          "hz": 290.549,
+          "cents_from_tonic": 1003.7,
+          "register_cents": 1003.7,
+          "label": "D4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": 3.7
+        },
+        {
+          "t_on": 16.579,
+          "t_off": 16.765,
+          "hz": 122.46,
+          "cents_from_tonic": 707.9,
+          "register_cents": -492.1,
+          "label": "B2",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 4.5
+        },
+        {
+          "t_on": 17.345,
+          "t_off": 17.496,
+          "hz": 244.134,
+          "cents_from_tonic": 702.4,
+          "register_cents": 702.4,
+          "label": "B3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -1.0
+        },
+        {
+          "t_on": 17.694,
+          "t_off": 17.868,
+          "hz": 242.893,
+          "cents_from_tonic": 693.5,
+          "register_cents": 693.5,
+          "label": "B3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -9.8
+        },
+        {
+          "t_on": 18.448,
+          "t_off": 18.611,
+          "hz": 244.098,
+          "cents_from_tonic": 702.1,
+          "register_cents": 702.1,
+          "label": "B3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -1.3
+        },
+        {
+          "t_on": 18.692,
+          "t_off": 19.238,
+          "hz": 265.368,
+          "cents_from_tonic": 846.8,
+          "register_cents": 846.8,
+          "label": "Cs4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p06",
+          "role": "degree",
+          "degree": 6,
+          "offset_cents": 1.8
+        },
+        {
+          "t_on": 19.354,
+          "t_off": 19.528,
+          "hz": 122.153,
+          "cents_from_tonic": 703.6,
+          "register_cents": -496.4,
+          "label": "B2",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 0.2
+        },
+        {
+          "t_on": 19.9,
+          "t_off": 20.05,
+          "hz": 325.012,
+          "cents_from_tonic": 1197.8,
+          "register_cents": 1197.8,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -1.1
+        },
+        {
+          "t_on": 20.097,
+          "t_off": 20.271,
+          "hz": 162.781,
+          "cents_from_tonic": 0.7,
+          "register_cents": 0.7,
+          "label": "E3",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.8
+        },
+        {
+          "t_on": 20.387,
+          "t_off": 20.584,
+          "hz": 244.158,
+          "cents_from_tonic": 702.5,
+          "register_cents": 702.5,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -0.8
+        },
+        {
+          "t_on": 20.654,
+          "t_off": 20.817,
+          "hz": 217.513,
+          "cents_from_tonic": 502.5,
+          "register_cents": 502.5,
+          "label": "A3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p04",
+          "role": "degree",
+          "degree": 4,
+          "offset_cents": -3.7
+        },
+        {
+          "t_on": 20.817,
+          "t_off": 21.095,
+          "hz": 243.69,
+          "cents_from_tonic": 699.2,
+          "register_cents": 699.2,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -4.2
+        },
+        {
+          "t_on": 21.095,
+          "t_off": 21.269,
+          "hz": 217.97,
+          "cents_from_tonic": 506.1,
+          "register_cents": 506.1,
+          "label": "A3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p04",
+          "role": "degree",
+          "degree": 4,
+          "offset_cents": -0.1
+        },
+        {
+          "t_on": 21.328,
+          "t_off": 21.513,
+          "hz": 243.901,
+          "cents_from_tonic": 700.7,
+          "register_cents": 700.7,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -2.7
+        },
+        {
+          "t_on": 21.641,
+          "t_off": 21.804,
+          "hz": 217.73,
+          "cents_from_tonic": 504.2,
+          "register_cents": 504.2,
+          "label": "A3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p04",
+          "role": "degree",
+          "degree": 4,
+          "offset_cents": -2.0
+        },
+        {
+          "t_on": 21.978,
+          "t_off": 22.384,
+          "hz": 162.687,
+          "cents_from_tonic": 1199.7,
+          "register_cents": -0.3,
+          "label": "E3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 0.8
+        },
+        {
+          "t_on": 23.208,
+          "t_off": 23.51,
+          "hz": 325.389,
+          "cents_from_tonic": 1199.8,
+          "register_cents": 1199.8,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 0.9
+        },
+        {
+          "t_on": 23.58,
+          "t_off": 23.789,
+          "hz": 322.478,
+          "cents_from_tonic": 1184.2,
+          "register_cents": 1184.2,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -14.7
+        },
+        {
+          "t_on": 23.789,
+          "t_off": 23.951,
+          "hz": 288.828,
+          "cents_from_tonic": 993.4,
+          "register_cents": 993.4,
+          "label": "D4",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -6.6
+        },
+        {
+          "t_on": 23.963,
+          "t_off": 24.23,
+          "hz": 323.707,
+          "cents_from_tonic": 1190.8,
+          "register_cents": 1190.8,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -8.1
+        },
+        {
+          "t_on": 24.23,
+          "t_off": 24.427,
+          "hz": 289.398,
+          "cents_from_tonic": 996.8,
+          "register_cents": 996.8,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -3.2
+        },
+        {
+          "t_on": 24.427,
+          "t_off": 24.706,
+          "hz": 323.734,
+          "cents_from_tonic": 1190.9,
+          "register_cents": 1190.9,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -7.9
+        },
+        {
+          "t_on": 24.706,
+          "t_off": 24.915,
+          "hz": 289.008,
+          "cents_from_tonic": 994.5,
+          "register_cents": 994.5,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -5.5
+        },
+        {
+          "t_on": 24.95,
+          "t_off": 25.24,
+          "hz": 324.785,
+          "cents_from_tonic": 1196.5,
+          "register_cents": 1196.5,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -2.3
+        },
+        {
+          "t_on": 25.449,
+          "t_off": 25.635,
+          "hz": 162.823,
+          "cents_from_tonic": 1.1,
+          "register_cents": 1.1,
+          "label": "E3",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 2.3
+        },
+        {
+          "t_on": 25.832,
+          "t_off": 26.018,
+          "hz": 289.517,
+          "cents_from_tonic": 997.5,
+          "register_cents": 997.5,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -2.5
+        },
+        {
+          "t_on": 26.192,
+          "t_off": 26.413,
+          "hz": 289.826,
+          "cents_from_tonic": 999.4,
+          "register_cents": 999.4,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -0.6
+        },
+        {
+          "t_on": 26.413,
+          "t_off": 26.564,
+          "hz": 265.197,
+          "cents_from_tonic": 845.6,
+          "register_cents": 845.6,
+          "label": "Cs4",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p06",
+          "role": "degree",
+          "degree": 6,
+          "offset_cents": 0.7
+        },
+        {
+          "t_on": 27.237,
+          "t_off": 27.411,
+          "hz": 264.157,
+          "cents_from_tonic": 838.8,
+          "register_cents": 838.8,
+          "label": "Cs4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p06",
+          "role": "degree",
+          "degree": 6,
+          "offset_cents": -6.1
+        },
+        {
+          "t_on": 28.444,
+          "t_off": 28.619,
+          "hz": 161.984,
+          "cents_from_tonic": 1192.2,
+          "register_cents": -7.8,
+          "label": "E3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -6.7
+        },
+        {
+          "t_on": 28.63,
+          "t_off": 28.793,
+          "hz": 162.714,
+          "cents_from_tonic": 1200.0,
+          "register_cents": -0.0,
+          "label": "E3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.1
+        },
+        {
+          "t_on": 29.756,
+          "t_off": 29.965,
+          "hz": 162.35,
+          "cents_from_tonic": 1196.1,
+          "register_cents": -3.9,
+          "label": "E3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -2.8
+        },
+        {
+          "t_on": 29.977,
+          "t_off": 30.209,
+          "hz": 264.671,
+          "cents_from_tonic": 842.2,
+          "register_cents": 842.2,
+          "label": "Cs4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p06",
+          "role": "degree",
+          "degree": 6,
+          "offset_cents": -2.8
+        },
+        {
+          "t_on": 30.302,
+          "t_off": 30.929,
+          "hz": 325.174,
+          "cents_from_tonic": 1198.6,
+          "register_cents": 1198.6,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -0.2
+        },
+        {
+          "t_on": 31.033,
+          "t_off": 31.184,
+          "hz": 325.266,
+          "cents_from_tonic": 1199.1,
+          "register_cents": 1199.1,
+          "label": "E4",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 0.2
+        },
+        {
+          "t_on": 31.463,
+          "t_off": 31.614,
+          "hz": 218.269,
+          "cents_from_tonic": 508.5,
+          "register_cents": 508.5,
+          "label": "A3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p04",
+          "role": "degree",
+          "degree": 4,
+          "offset_cents": 2.3
+        },
+        {
+          "t_on": 31.66,
+          "t_off": 31.869,
+          "hz": 161.931,
+          "cents_from_tonic": 1191.6,
+          "register_cents": -8.4,
+          "label": "E3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -7.2
+        },
+        {
+          "t_on": 31.869,
+          "t_off": 32.055,
+          "hz": 324.31,
+          "cents_from_tonic": 1194.0,
+          "register_cents": 1194.0,
+          "label": "E4",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -4.9
+        },
+        {
+          "t_on": 32.438,
+          "t_off": 32.694,
+          "hz": 325.584,
+          "cents_from_tonic": 0.8,
+          "register_cents": 1200.8,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.9
+        },
+        {
+          "t_on": 32.694,
+          "t_off": 33.193,
+          "hz": 162.707,
+          "cents_from_tonic": 1199.9,
+          "register_cents": -0.1,
+          "label": "E3",
+          "agree": 5,
+          "agree_indep": 1,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.0
+        },
+        {
+          "t_on": 33.193,
+          "t_off": 33.344,
+          "hz": 244.149,
+          "cents_from_tonic": 702.5,
+          "register_cents": 702.5,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -0.9
+        },
+        {
+          "t_on": 33.367,
+          "t_off": 33.681,
+          "hz": 244.702,
+          "cents_from_tonic": 706.4,
+          "register_cents": 706.4,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 3.0
+        },
+        {
+          "t_on": 34.017,
+          "t_off": 34.226,
+          "hz": 324.025,
+          "cents_from_tonic": 1192.5,
+          "register_cents": 1192.5,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -6.4
+        },
+        {
+          "t_on": 34.331,
+          "t_off": 34.493,
+          "hz": 122.111,
+          "cents_from_tonic": 703.0,
+          "register_cents": -497.0,
+          "label": "B2",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -0.4
+        },
+        {
+          "t_on": 35.016,
+          "t_off": 35.167,
+          "hz": 162.363,
+          "cents_from_tonic": 1196.2,
+          "register_cents": -3.8,
+          "label": "E3",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -2.6
+        },
+        {
+          "t_on": 35.19,
+          "t_off": 35.399,
+          "hz": 367.27,
+          "cents_from_tonic": 209.4,
+          "register_cents": 1409.4,
+          "label": "Gb4",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p01",
+          "role": "degree",
+          "degree": 2,
+          "offset_cents": 4.1
+        },
+        {
+          "t_on": 35.422,
+          "t_off": 35.585,
+          "hz": 162.663,
+          "cents_from_tonic": 1199.4,
+          "register_cents": -0.6,
+          "label": "E3",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 0.6
+        },
+        {
+          "t_on": 36.13,
+          "t_off": 36.711,
+          "hz": 325.179,
+          "cents_from_tonic": 1198.6,
+          "register_cents": 1198.6,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -0.2
+        },
+        {
+          "t_on": 36.885,
+          "t_off": 37.036,
+          "hz": 325.468,
+          "cents_from_tonic": 0.2,
+          "register_cents": 1200.2,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 1,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.3
+        },
+        {
+          "t_on": 37.477,
+          "t_off": 37.825,
+          "hz": 324.382,
+          "cents_from_tonic": 1194.4,
+          "register_cents": 1194.4,
+          "label": "E4",
+          "agree": 5,
+          "agree_indep": 1,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -4.5
+        },
+        {
+          "t_on": 38.301,
+          "t_off": 38.499,
+          "hz": 290.128,
+          "cents_from_tonic": 1001.2,
+          "register_cents": 1001.2,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": 1.2
+        },
+        {
+          "t_on": 38.754,
+          "t_off": 39.056,
+          "hz": 162.914,
+          "cents_from_tonic": 2.1,
+          "register_cents": 2.1,
+          "label": "E3",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 3.2
+        },
+        {
+          "t_on": 39.88,
+          "t_off": 40.066,
+          "hz": 244.489,
+          "cents_from_tonic": 704.9,
+          "register_cents": 704.9,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 1.5
+        },
+        {
+          "t_on": 40.217,
+          "t_off": 40.403,
+          "hz": 162.713,
+          "cents_from_tonic": 1200.0,
+          "register_cents": -0.0,
+          "label": "E3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.1
+        },
+        {
+          "t_on": 40.925,
+          "t_off": 41.111,
+          "hz": 367.003,
+          "cents_from_tonic": 208.1,
+          "register_cents": 1408.1,
+          "label": "Gb4",
+          "agree": 5,
+          "agree_indep": 1,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p01",
+          "role": "degree",
+          "degree": 2,
+          "offset_cents": 2.8
+        },
+        {
+          "t_on": 41.575,
+          "t_off": 41.784,
+          "hz": 326.917,
+          "cents_from_tonic": 7.9,
+          "register_cents": 1207.9,
+          "label": "E4",
+          "agree": 3,
+          "agree_indep": 1,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 9.0
+        },
+        {
+          "t_on": 41.842,
+          "t_off": 42.121,
+          "hz": 289.348,
+          "cents_from_tonic": 996.5,
+          "register_cents": 996.5,
+          "label": "D4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -3.5
+        },
+        {
+          "t_on": 42.655,
+          "t_off": 42.806,
+          "hz": 122.147,
+          "cents_from_tonic": 703.5,
+          "register_cents": -496.5,
+          "label": "B2",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 0.1
+        },
+        {
+          "t_on": 42.98,
+          "t_off": 43.189,
+          "hz": 162.779,
+          "cents_from_tonic": 0.7,
+          "register_cents": 0.7,
+          "label": "E3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.8
+        },
+        {
+          "t_on": 43.212,
+          "t_off": 43.363,
+          "hz": 244.55,
+          "cents_from_tonic": 705.3,
+          "register_cents": 705.3,
+          "label": "B3",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 1.9
+        },
+        {
+          "t_on": 43.851,
+          "t_off": 44.141,
+          "hz": 325.274,
+          "cents_from_tonic": 1199.1,
+          "register_cents": 1199.1,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 0.3
+        },
+        {
+          "t_on": 44.176,
+          "t_off": 44.339,
+          "hz": 366.472,
+          "cents_from_tonic": 205.6,
+          "register_cents": 1405.6,
+          "label": "Gb4",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p01",
+          "role": "degree",
+          "degree": 2,
+          "offset_cents": 0.3
+        },
+        {
+          "t_on": 44.698,
+          "t_off": 44.907,
+          "hz": 324.713,
+          "cents_from_tonic": 1196.2,
+          "register_cents": 1196.2,
+          "label": "E4",
+          "agree": 5,
+          "agree_indep": 1,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -2.7
+        },
+        {
+          "t_on": 45.395,
+          "t_off": 45.65,
+          "hz": 290.568,
+          "cents_from_tonic": 1003.8,
+          "register_cents": 1003.8,
+          "label": "D4",
+          "agree": 5,
+          "agree_indep": 1,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": 3.8
+        },
+        {
+          "t_on": 45.848,
+          "t_off": 46.045,
+          "hz": 122.46,
+          "cents_from_tonic": 707.9,
+          "register_cents": -492.1,
+          "label": "B2",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 4.5
+        },
+        {
+          "t_on": 46.254,
+          "t_off": 46.556,
+          "hz": 244.154,
+          "cents_from_tonic": 702.5,
+          "register_cents": 702.5,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -0.9
+        },
+        {
+          "t_on": 47.311,
+          "t_off": 47.578,
+          "hz": 121.979,
+          "cents_from_tonic": 701.1,
+          "register_cents": -498.9,
+          "label": "B2",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -2.3
+        },
+        {
+          "t_on": 48.042,
+          "t_off": 48.367,
+          "hz": 325.403,
+          "cents_from_tonic": 1199.8,
+          "register_cents": 1199.8,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.0
+        },
+        {
+          "t_on": 48.657,
+          "t_off": 48.89,
+          "hz": 289.38,
+          "cents_from_tonic": 996.7,
+          "register_cents": 996.7,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": -3.3
+        },
+        {
+          "t_on": 49.145,
+          "t_off": 49.308,
+          "hz": 290.03,
+          "cents_from_tonic": 1000.6,
+          "register_cents": 1000.6,
+          "label": "D4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p07",
+          "role": "degree",
+          "degree": 7,
+          "offset_cents": 0.6
+        },
+        {
+          "t_on": 49.76,
+          "t_off": 50.364,
+          "hz": 325.151,
+          "cents_from_tonic": 1198.5,
+          "register_cents": 1198.5,
+          "label": "E4",
+          "agree": 5,
+          "agree_indep": 1,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -0.4
+        },
+        {
+          "t_on": 50.782,
+          "t_off": 50.933,
+          "hz": 325.35,
+          "cents_from_tonic": 1199.6,
+          "register_cents": 1199.6,
+          "label": "E4",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 0.7
+        },
+        {
+          "t_on": 50.991,
+          "t_off": 51.142,
+          "hz": 324.067,
+          "cents_from_tonic": 1192.7,
+          "register_cents": 1192.7,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": -6.2
+        },
+        {
+          "t_on": 51.142,
+          "t_off": 51.293,
+          "hz": 163.333,
+          "cents_from_tonic": 6.5,
+          "register_cents": 6.5,
+          "label": "E3",
+          "agree": 0,
+          "agree_indep": 0,
+          "main": false,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 7.7
+        },
+        {
+          "t_on": 51.676,
+          "t_off": 51.839,
+          "hz": 162.721,
+          "cents_from_tonic": 0.0,
+          "register_cents": 0.0,
+          "label": "E3",
+          "agree": 0,
+          "agree_indep": 0,
+          "main": false,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.2
+        },
+        {
+          "t_on": 51.978,
+          "t_off": 52.222,
+          "hz": 162.983,
+          "cents_from_tonic": 2.8,
+          "register_cents": 2.8,
+          "label": "E3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 4.0
+        },
+        {
+          "t_on": 52.245,
+          "t_off": 52.407,
+          "hz": 162.677,
+          "cents_from_tonic": 1199.6,
+          "register_cents": -0.4,
+          "label": "E3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 0.7
+        },
+        {
+          "t_on": 52.407,
+          "t_off": 52.57,
+          "hz": 326.802,
+          "cents_from_tonic": 7.3,
+          "register_cents": 1207.3,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 8.4
+        },
+        {
+          "t_on": 53.975,
+          "t_off": 54.126,
+          "hz": 218.182,
+          "cents_from_tonic": 507.8,
+          "register_cents": 507.8,
+          "label": "A3",
+          "agree": 2,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p04",
+          "role": "degree",
+          "degree": 4,
+          "offset_cents": 1.6
+        },
+        {
+          "t_on": 54.648,
+          "t_off": 54.822,
+          "hz": 325.491,
+          "cents_from_tonic": 0.3,
+          "register_cents": 1200.3,
+          "label": "E4",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 1.4
+        },
+        {
+          "t_on": 55.089,
+          "t_off": 55.31,
+          "hz": 244.219,
+          "cents_from_tonic": 703.0,
+          "register_cents": 703.0,
+          "label": "B3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": -0.4
+        },
+        {
+          "t_on": 55.356,
+          "t_off": 55.716,
+          "hz": 244.537,
+          "cents_from_tonic": 705.2,
+          "register_cents": 705.2,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 1.8
+        },
+        {
+          "t_on": 55.832,
+          "t_off": 56.715,
+          "hz": 325.631,
+          "cents_from_tonic": 1.0,
+          "register_cents": 1201.0,
+          "label": "E4",
+          "agree": 7,
+          "agree_indep": 3,
+          "main": true,
+          "solid": true,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 2.2
+        },
+        {
+          "t_on": 57.086,
+          "t_off": 57.423,
+          "hz": 162.915,
+          "cents_from_tonic": 2.1,
+          "register_cents": 2.1,
+          "label": "E3",
+          "agree": 3,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 3.2
+        },
+        {
+          "t_on": 57.423,
+          "t_off": 57.853,
+          "hz": 325.641,
+          "cents_from_tonic": 1.1,
+          "register_cents": 1201.1,
+          "label": "E4",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p11",
+          "role": "degree",
+          "degree": 1,
+          "offset_cents": 2.2
+        },
+        {
+          "t_on": 57.945,
+          "t_off": 58.294,
+          "hz": 244.706,
+          "cents_from_tonic": 706.4,
+          "register_cents": 706.4,
+          "label": "B3",
+          "agree": 4,
+          "agree_indep": 0,
+          "main": true,
+          "solid": false,
+          "pitch_id": "p05",
+          "role": "degree",
+          "degree": 5,
+          "offset_cents": 3.0
+        }
+      ],
+      "segments": [
+        {
+          "name": "Malek Hossein",
+          "name_fa": "ملک حسین",
+          "status": "confirmed",
+          "start_s": 0.0,
+          "end_s": 61.67,
+          "n_notes": 113,
+          "dwell": [
+            {
+              "pitch_id": "p11",
+              "label": "E",
+              "seconds": 12.5,
+              "share": 0.423
+            },
+            {
+              "pitch_id": "p05",
+              "label": "B",
+              "seconds": 7.42,
+              "share": 0.251
+            },
+            {
+              "pitch_id": "p07",
+              "label": "D",
+              "seconds": 5.76,
+              "share": 0.195
+            },
+            {
+              "pitch_id": "p06",
+              "label": "Cs",
+              "seconds": 2.11,
+              "share": 0.072
+            },
+            {
+              "pitch_id": "p04",
+              "label": "A",
+              "seconds": 1.17,
+              "share": 0.04
+            },
+            {
+              "pitch_id": "p01",
+              "label": "Gb",
+              "seconds": 0.56,
+              "share": 0.019
+            }
+          ],
+          "shahed": {
+            "pitch_id": "p11",
+            "label": "E",
+            "share": 0.423
+          },
+          "ist": {
+            "pitch_id": "p11",
+            "label": "E4",
+            "t": 55.83
+          },
+          "ambitus": {
+            "low": "B2",
+            "low_hz": 122.232,
+            "high": "Gb4",
+            "high_hz": 367.003,
+            "cents": 1903.0
+          },
+          "new_pitches": [
+            "Gb",
+            "B",
+            "D",
+            "E"
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "from": "p11",
+          "to": "p05",
+          "from_label": "E",
+          "to_label": "B",
+          "count": 9
+        },
+        {
+          "from": "p05",
+          "to": "p11",
+          "from_label": "B",
+          "to_label": "E",
+          "count": 8
+        },
+        {
+          "from": "p11",
+          "to": "p07",
+          "from_label": "E",
+          "to_label": "D",
+          "count": 8
+        },
+        {
+          "from": "p05",
+          "to": "p04",
+          "from_label": "B",
+          "to_label": "A",
+          "count": 5
+        },
+        {
+          "from": "p07",
+          "to": "p11",
+          "from_label": "D",
+          "to_label": "E",
+          "count": 5
+        },
+        {
+          "from": "p07",
+          "to": "p05",
+          "from_label": "D",
+          "to_label": "B",
+          "count": 4
+        },
+        {
+          "from": "p07",
+          "to": "p06",
+          "from_label": "D",
+          "to_label": "Cs",
+          "count": 4
+        },
+        {
+          "from": "p06",
+          "to": "p11",
+          "from_label": "Cs",
+          "to_label": "E",
+          "count": 4
+        },
+        {
+          "from": "p04",
+          "to": "p11",
+          "from_label": "A",
+          "to_label": "E",
+          "count": 3
+        },
+        {
+          "from": "p11",
+          "to": "p01",
+          "from_label": "E",
+          "to_label": "Gb",
+          "count": 3
+        },
+        {
+          "from": "p01",
+          "to": "p11",
+          "from_label": "Gb",
+          "to_label": "E",
+          "count": 3
+        },
+        {
+          "from": "p04",
+          "to": "p07",
+          "from_label": "A",
+          "to_label": "D",
+          "count": 2
+        },
+        {
+          "from": "p04",
+          "to": "p05",
+          "from_label": "A",
+          "to_label": "B",
+          "count": 2
+        },
+        {
+          "from": "p11",
+          "to": "p04",
+          "from_label": "E",
+          "to_label": "A",
+          "count": 2
+        },
+        {
+          "from": "p05",
+          "to": "p07",
+          "from_label": "B",
+          "to_label": "D",
+          "count": 1
+        },
+        {
+          "from": "p06",
+          "to": "p07",
+          "from_label": "Cs",
+          "to_label": "D",
+          "count": 1
+        },
+        {
+          "from": "p05",
+          "to": "p06",
+          "from_label": "B",
+          "to_label": "Cs",
+          "count": 1
+        },
+        {
+          "from": "p06",
+          "to": "p05",
+          "from_label": "Cs",
+          "to_label": "B",
+          "count": 1
+        },
+        {
+          "from": "p11",
+          "to": "p06",
+          "from_label": "E",
+          "to_label": "Cs",
+          "count": 1
+        }
+      ],
+      "arc": [
+        {
+          "t": 3.0,
+          "median_cents": 845.5,
+          "high_cents": 1001.7,
+          "low_cents": -503.3
+        },
+        {
+          "t": 9.0,
+          "median_cents": 844.1,
+          "high_cents": 1201.4,
+          "low_cents": -494.5
+        },
+        {
+          "t": 15.0,
+          "median_cents": 702.4,
+          "high_cents": 1003.7,
+          "low_cents": -495.3
+        },
+        {
+          "t": 21.0,
+          "median_cents": 701.4,
+          "high_cents": 1199.8,
+          "low_cents": -496.4
+        },
+        {
+          "t": 27.0,
+          "median_cents": 845.6,
+          "high_cents": 1196.5,
+          "low_cents": -7.8
+        },
+        {
+          "t": 33.0,
+          "median_cents": 704.5,
+          "high_cents": 1409.4,
+          "low_cents": -497.0
+        },
+        {
+          "t": 39.0,
+          "median_cents": 1097.8,
+          "high_cents": 1408.1,
+          "low_cents": -0.0
+        },
+        {
+          "t": 45.0,
+          "median_cents": 703.9,
+          "high_cents": 1405.6,
+          "low_cents": -498.9
+        },
+        {
+          "t": 51.0,
+          "median_cents": 1096.7,
+          "high_cents": 1207.3,
+          "low_cents": -0.4
+        },
+        {
+          "t": 57.0,
+          "median_cents": 706.4,
+          "high_cents": 1201.1,
+          "low_cents": 2.1
+        }
+      ],
+      "peak": {
+        "label": "Gb4",
+        "hz": 367.003,
+        "t": 40.925
+      },
+      "forud": {
+        "notes": [
+          {
+            "label": "D4",
+            "t": 41.84
+          },
+          {
+            "label": "E4",
+            "t": 44.7
+          },
+          {
+            "label": "D4",
+            "t": 45.4
+          },
+          {
+            "label": "E4",
+            "t": 49.76
+          },
+          {
+            "label": "E4",
+            "t": 50.99
+          },
+          {
+            "label": "E4",
+            "t": 55.83
+          }
+        ],
+        "ends_on_tonic": true
+      },
+      "just_intervals": [
+        {
+          "interval": "fourth",
+          "pitch": "A",
+          "measured_cents": 506.22,
+          "pure_cents": 498.04,
+          "deviation_cents": 8.2
+        },
+        {
+          "interval": "fifth",
+          "pitch": "B",
+          "measured_cents": 703.38,
+          "pure_cents": 701.96,
+          "deviation_cents": 1.4
+        },
+        {
+          "interval": "octave",
+          "pitch": "E",
+          "deviation_cents": [
+            -1.2
+          ],
+          "note": "measured octave minus 1200 ¢, register to register"
+        }
+      ],
+      "narrative": "The performance opens on D4 and dwells most on E in Malek Hossein. The line peaks at Gb4 (367.0 Hz) at 0:40.9. It closes on the tonic (D4 → E4 → D4 → E4 → E4 → E4)."
+    },
+    "theory_fit": [
+      {
+        "model": "12tet",
+        "name": "12-tone equal temperament",
+        "basis": "degrees",
+        "description": "Reference only: distance from the semitone grid.",
+        "residual_rms": 17.77,
+        "assignment": [
+          {
+            "measured": 0.0,
+            "model": 0.0,
+            "residual": 0.0
+          },
+          {
+            "measured": 205.3,
+            "model": 200.0,
+            "residual": 5.3
+          },
+          {
+            "measured": 289.4,
+            "model": 300.0,
+            "residual": -10.5
+          },
+          {
+            "measured": 506.2,
+            "model": 500.0,
+            "residual": 6.2
+          },
+          {
+            "measured": 703.4,
+            "model": 700.0,
+            "residual": 3.4
+          },
+          {
+            "measured": 845.0,
+            "model": 800.0,
+            "residual": 45.0
+          },
+          {
+            "measured": 1000.0,
+            "model": 1000.0,
+            "residual": 0.0
+          }
+        ]
+      },
+      {
+        "model": "vaziri-24tet",
+        "name": "Vaziri 24-tone equal temperament",
+        "basis": "degrees",
+        "description": "Quarter-tone grid (koron/sori = exactly 50 ¢ from the natural note).",
+        "residual_rms": 5.54,
+        "assignment": [
+          {
+            "measured": 0.0,
+            "model": 0.0,
+            "residual": 0.0
+          },
+          {
+            "measured": 205.3,
+            "model": 200.0,
+            "residual": 5.3
+          },
+          {
+            "measured": 289.4,
+            "model": 300.0,
+            "residual": -10.5
+          },
+          {
+            "measured": 506.2,
+            "model": 500.0,
+            "residual": 6.2
+          },
+          {
+            "measured": 703.4,
+            "model": 700.0,
+            "residual": 3.4
+          },
+          {
+            "measured": 845.0,
+            "model": 850.0,
+            "residual": -5.0
+          },
+          {
+            "measured": 1000.0,
+            "model": 1000.0,
+            "residual": 0.0
+          }
+        ]
+      },
+      {
+        "model": "pythagorean",
+        "name": "Pythagorean / Safi al-Din",
+        "basis": "degrees",
+        "description": "Nearest note of the 17-note gamut generated by pure fifths (±8) from the tonic.",
+        "residual_rms": 11.76,
+        "assignment": [
+          {
+            "measured": 0.0,
+            "model": 0.0,
+            "residual": 0.0
+          },
+          {
+            "measured": 205.3,
+            "model": 203.9,
+            "residual": 1.4
+          },
+          {
+            "measured": 289.4,
+            "model": 294.1,
+            "residual": -4.7
+          },
+          {
+            "measured": 506.2,
+            "model": 498.0,
+            "residual": 8.2
+          },
+          {
+            "measured": 703.4,
+            "model": 702.0,
+            "residual": 1.4
+          },
+          {
+            "measured": 845.0,
+            "model": 815.6,
+            "residual": 29.3
+          },
+          {
+            "measured": 1000.0,
+            "model": 996.1,
+            "residual": 4.0
+          }
+        ]
+      },
+      {
+        "model": "farhat",
+        "name": "Farhat interval classes",
+        "basis": "steps",
+        "description": "Interval classes Hormoz Farhat measured in performance practice (\"The Dastgah Concept in Persian Music\", 1990). Approximate centres.",
+        "residual_rms": 6.86,
+        "assignment": [
+          {
+            "measured": 205.3,
+            "class": "whole-tone",
+            "model": 204.0,
+            "residual": 1.3
+          },
+          {
+            "measured": 84.2,
+            "class": "semitone",
+            "model": 90.0,
+            "residual": -5.8
+          },
+          {
+            "measured": 216.8,
+            "class": "whole-tone",
+            "model": 204.0,
+            "residual": 12.8
+          },
+          {
+            "measured": 197.2,
+            "class": "whole-tone",
+            "model": 204.0,
+            "residual": -6.8
+          },
+          {
+            "measured": 141.6,
+            "class": "small-neutral",
+            "model": 135.0,
+            "residual": 6.6
+          },
+          {
+            "measured": 155.1,
+            "class": "large-neutral",
+            "model": 160.0,
+            "residual": -4.9
+          },
+          {
+            "measured": 200.0,
+            "class": "whole-tone",
+            "model": 204.0,
+            "residual": -4.0
+          }
+        ]
+      }
+    ],
+    "hypotheses": [],
+    "diagnostics": {
+      "flags": [
+        "p04 (A): estimator families disagree by 11 ¢ {'E1': 506.77, 'E2': 503.71, 'E3': 517.46}",
+        "p06 (Cs): estimator families disagree by 12 ¢ {'E1': 843.11, 'E2': 844.96, 'E3': 831.35}"
+      ],
+      "freq_resolution_hz": 0.336456298828125,
+      "e1_degrees": [
+        0.0,
+        207.01,
+        500.3,
+        703.1,
+        841.72,
+        997.96
+      ]
+    }
+  }
+}

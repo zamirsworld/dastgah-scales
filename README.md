@@ -11,4 +11,4 @@ recordings are hosted here: the site plays a synthesized version of each
 measured tuning and links to the original at its publisher.
 
 This repository holds only the generated static site. It is published by the
-analysis pipeline (pipeline 0.9.0); please don't edit it by hand.
+analysis pipeline (pipeline 0.9.1); please don't edit it by hand.

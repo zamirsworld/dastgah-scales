@@ -34,6 +34,13 @@ function dastgah(id) {
   return catalog.dastgahs.find((d) => d.id === id) || { id, name: id };
 }
 
+// "avaz of Shur", "dastgah", or for a group (e.g. shared gushe-ha) its own description
+function kindLabel(d) {
+  if (d.kind === "avaz") return `avaz of ${esc(dastgah(d.parent).name)}`;
+  if (d.kind === "group") return esc(d.label || "group");
+  return "dastgah";
+}
+
 function allTracks() {
   const out = [];
   for (const m of catalog.masters)
@@ -149,14 +156,14 @@ function pageHome() {
   const used = catalog.dastgahs.map((d) => ({ d, n: all.filter((x) => x.track.dastgah === d.id).length }))
     .filter((x) => x.n);
   const dastgahs = used.map(({ d, n }) => `<div class="card"><h3><a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}</h3>
-      <div class="muted">${d.kind === "avaz" ? `avaz of ${esc(dastgah(d.parent).name)}` : "dastgah"} · ${n} recording(s)</div></div>`).join("");
+      <div class="muted">${kindLabel(d)} · ${n} recording(s)</div></div>`).join("");
   const stat = (v, k) => `<div class="stat"><div class="stat-v">${v}</div><div class="stat-k">${k}</div></div>`;
   return `<h1>Dastgah Scales</h1>
     <p class="lede">Measured tunings of Iranian masters: the absolute pitch of every note, the
     intervals of each dastgah's scale, and how performances move through them. Each recording is
     analysed many times by independent methods, and only what they agree on is shown.</p>
     <div class="stats">${stat(catalog.masters.length, "masters")}${stat(all.length, "recordings")}
-      ${stat(analysed.length, "analysed")}${stat(used.length, "dastgahs and avaz")}</div>
+      ${stat(analysed.length, "analysed")}${stat(used.filter((x) => x.d.kind !== "group").length, "dastgahs and avaz")}</div>
     <h2>Masters</h2><div class="grid">${masters}</div>
     <h2>By dastgah</h2><div class="grid">${dastgahs || '<p class="muted">No recordings yet.</p>'}</div>
     <p class="muted" style="margin-top:20px"><a href="#/dastgahs">All dastgahs and avaz</a> · <a href="#/method">How it's measured</a></p>`;
@@ -213,9 +220,8 @@ function pageAlbum(mid, aid) {
 function pageDastgahs() {
   const cards = catalog.dastgahs.map((d) => {
     const n = allTracks().filter((x) => x.track.dastgah === d.id).length;
-    const parent = d.parent ? `avaz of ${esc(dastgah(d.parent).name)}` : "dastgah";
     return `<div class="card${n ? "" : " card-empty"}"><h3><a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}</h3>
-      <div class="muted">${parent} · ${n} recording(s)</div></div>`;
+      <div class="muted">${kindLabel(d)} · ${n} recording(s)</div></div>`;
   }).join("");
   return crumbs([["#/", "Home"], [null, "Dastgahs"]]) + `<h1>Dastgahs and avaz</h1><div class="grid">${cards}</div>`;
 }
@@ -224,7 +230,7 @@ async function pageDastgah(id) {
   const d = dastgah(id);
   setCtx("dastgah", id);
   const entries = allTracks().filter((x) => x.track.dastgah === id);
-  const rel = d.parent
+  const rel = d.kind === "group" ? `<p class="muted">${esc(d.description || "")}</p>` : d.parent
     ? `<p class="muted">Avaz of <a href="#/dastgah/${esc(d.parent)}">${esc(dastgah(d.parent).name)}</a>${fa(dastgah(d.parent).name_fa)}.</p>`
     : (() => {
         const kids = catalog.dastgahs.filter((x) => x.parent === id);
@@ -241,7 +247,7 @@ async function pageDastgah(id) {
   const list = entries.map(({ master, album, track }) => `<tr><td>${trackLink(track)}</td>
       <td><a href="#/master/${esc(master.id)}">${esc(master.name)}</a></td><td>${esc(album.title)}</td>
       <td>${tonicCell(track)}</td></tr>`).join("");
-  if (!recs.length) {
+  if (!recs.length || d.kind === "group") {   // a group mixes modes: no shared degree table
     return head + `<h2>Recordings</h2><div class="table-wrap"><table><tbody>${list}</tbody></table></div>`;
   }
   // degree × recording table (cents from tonic) + summary row
