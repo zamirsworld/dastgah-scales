@@ -1,32 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dastgah Scales</title>
   <meta name="description" content="Measured tunings of Iranian masters: absolute pitch, intervals and note progression, by master, album, track and dastgah.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238a3b12'/%3E%3Cpath d='M7 24V8M12 24V12M17 24V6M22 24V14M27 24V10' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0f17'/%3E%3Cpath d='M7 24V8M12 24V12M17 24V6M22 24V14M27 24V10' stroke='%23e3b65b' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=9">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=10">
 </head>
 <body>
   <a class="skip" href="#app">Skip to content</a>
   <header class="topbar">
     <a class="brand" href="#/">Dastgah Scales <bdi class="fa" lang="fa">گام‌های دستگاهی</bdi></a>
     <nav aria-label="Main">
-      <a href="#/">Home</a>
-      <a href="#/dastgahs">Dastgahs</a>
-      <a href="#/method">Method</a>
+      <a href="#/" data-nav="library">Library</a>
+      <a href="#/dastgahs" data-nav="dastgahs">Dastgahs</a>
+      <a href="#/method" data-nav="method">Method</a>
       <button id="theme" class="theme" type="button" aria-label="Switch theme">☾</button>
     </nav>
   </header>
   <div class="shell">
-    <aside id="side" class="side" aria-label="Library"></aside>
     <main id="app" aria-live="polite" tabindex="-1"><p class="muted">Loading…</p></main>
   </div>
   <footer class="footer muted" id="footer"></footer>
-  <script type="module" src="assets/js/app.js?v=9"></script>
+  <script type="module" src="assets/js/app.js?v=10"></script>
 </body>
 </html>

@@ -2,13 +2,13 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=8";
-import { drawTimeline, progressionTables } from "./progression.js?v=8";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=8";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=8";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=10";
+import { drawTimeline, progressionTables } from "./progression.js?v=10";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=10";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=10";
+import { pageBrowse, wireBrowse, stripSVG } from "./browse.js?v=10";
 
 const app = document.getElementById("app");
-const side = document.getElementById("side");
 const footer = document.getElementById("footer");
 let afterRender = null;        // set by pages that draw charts after their HTML is in place
 let catalog = null;
@@ -98,75 +98,11 @@ function prevNext(hit) {
     <a href="#/track/${esc(n.track.key)}" rel="next">${esc(n.track.title)} ▶</a></nav>`;
 }
 
-// ── sidebar library tree ───────────────────────────────────────────────────
-
-function renderSide() {
-  const used = new Set(allTracks().map((x) => x.track.dastgah));
-  const opts = catalog.dastgahs.filter((d) => used.has(d.id))
-    .map((d) => `<option value="${esc(d.id)}">${esc(d.name)}</option>`).join("");
-  side.innerHTML = `<details id="lib"><summary>Library</summary>
-    <div class="side-filters">
-      <input type="search" id="lib-q" placeholder="Filter tracks" aria-label="Filter tracks by title">
-      <select id="lib-d" aria-label="Filter by dastgah"><option value="">All dastgahs</option>${opts}</select>
-    </div><div id="lib-tree"></div></details>`;
-  const lib = side.querySelector("#lib");
-  const wide = window.matchMedia("(min-width: 960px)");
-  lib.open = wide.matches;
-  wide.addEventListener("change", (e) => { lib.open = e.matches; });
-  // on a phone, picking something from the tree folds it away again
-  side.addEventListener("click", (e) => { if (e.target.closest("a") && !wide.matches) lib.open = false; });
-  const q = side.querySelector("#lib-q"), dsel = side.querySelector("#lib-d");
-  const draw = () => {
-    const needle = q.value.trim().toLowerCase(), dg = dsel.value;
-    const tree = catalog.masters.map((m) => {
-      const albums = m.albums.map((a) => {
-        const tracks = a.tracks.filter((t) => (!dg || t.dastgah === dg) &&
-          (!needle || `${t.title} ${m.name} ${a.title}`.toLowerCase().includes(needle)));
-        return tracks.length ? `<li><a href="#/album/${esc(m.id)}/${esc(a.id)}">${esc(a.title)}</a>
-          <ul>${tracks.map((t) => `<li><a data-key="${esc(t.key)}" href="#/track/${esc(t.key)}">${esc(t.title)}</a></li>`).join("")}</ul></li>` : "";
-      }).join("");
-      return albums ? `<li><a class="side-master" href="#/master/${esc(m.id)}">${esc(m.name)}</a><ul>${albums}</ul></li>` : "";
-    }).join("");
-    side.querySelector("#lib-tree").innerHTML = tree ? `<ul class="tree">${tree}</ul>` : '<p class="muted">No tracks match.</p>';
-    markCurrent();
-  };
-  q.addEventListener("input", draw);
-  dsel.addEventListener("change", draw);
-  draw();
-}
-
-function markCurrent() {
-  const key = decodeURIComponent(location.hash.replace(/^#\/track\//, ""));
-  side.querySelectorAll("a[data-key]").forEach((a) => {
-    if (a.dataset.key === key) a.setAttribute("aria-current", "page");
-    else a.removeAttribute("aria-current");
-  });
-}
-
 // ── pages ──────────────────────────────────────────────────────────────────
 
-function pageHome() {
-  const all = allTracks();
-  const analysed = all.filter((x) => x.track.has_result);
-  const masters = catalog.masters.map((m) => {
-    const n = m.albums.reduce((k, a) => k + a.tracks.length, 0);
-    return `<div class="card"><h3><a href="#/master/${esc(m.id)}">${esc(m.name)}</a>${fa(m.name_fa)}</h3>
-      <div class="muted">${esc(instrumentsOf(m))}${m.years ? ` · ${esc(m.years)}` : ""} · ${m.albums.length} album(s) · ${n} track(s)</div></div>`;
-  }).join("");
-  const used = catalog.dastgahs.map((d) => ({ d, n: all.filter((x) => x.track.dastgah === d.id).length }))
-    .filter((x) => x.n);
-  const dastgahs = used.map(({ d, n }) => `<div class="card"><h3><a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}</h3>
-      <div class="muted">${kindLabel(d)} · ${n} recording(s)</div></div>`).join("");
-  const stat = (v, k) => `<div class="stat"><div class="stat-v">${v}</div><div class="stat-k">${k}</div></div>`;
-  return `<h1>Dastgah Scales</h1>
-    <p class="lede">Measured tunings of Iranian masters: the absolute pitch of every note, the
-    intervals of each dastgah's scale, and how performances move through them. Each recording is
-    analysed many times by independent methods, and only what they agree on is shown.</p>
-    <div class="stats">${stat(catalog.masters.length, "masters")}${stat(all.length, "recordings")}
-      ${stat(analysed.length, "analysed")}${stat(used.filter((x) => x.d.kind !== "group").length, "dastgahs and avaz")}</div>
-    <h2>Masters</h2><div class="grid">${masters}</div>
-    <h2>By dastgah</h2><div class="grid">${dastgahs || '<p class="muted">No recordings yet.</p>'}</div>
-    <p class="muted" style="margin-top:20px"><a href="#/dastgahs">All dastgahs and avaz</a> · <a href="#/method">How it's measured</a></p>`;
+function pageHome(mode) {
+  afterRender = () => wireBrowse(mode, { setCtx });
+  return pageBrowse(catalog, mode);
 }
 
 function pageMaster(id) {
@@ -175,8 +111,7 @@ function pageMaster(id) {
   setCtx("master", m.id);
   const albums = m.albums.map((a) => `<div class="card">
       <h3><a href="#/album/${esc(m.id)}/${esc(a.id)}">${esc(a.title)}</a></h3>
-      <div class="muted">${esc(a.release_date || "")}</div>
-      <ul>${a.tracks.map((t) => `<li>${trackLink(t)}</li>`).join("")}</ul></div>`).join("");
+      <div class="muted">${esc(a.release_date || "")} · ${a.tracks.length} track(s)</div></div>`).join("");
   const mine = allTracks().filter((x) => x.master.id === m.id);
   const ds = [...new Set(mine.map((x) => x.track.dastgah))].map(dastgah);
   const tonicRows = mine.filter((x) => x.track.has_result).map(({ album, track }) => `<tr>
@@ -184,8 +119,9 @@ function pageMaster(id) {
       <td><a href="#/dastgah/${esc(track.dastgah)}">${esc(dastgah(track.dastgah).name)}</a></td>
       <td>${esc(track.tonic_label)}</td><td class="num">${fmt(track.tonic_hz, 2)}</td>
       <td class="num">${track.tuning_offset_cents === undefined || track.tuning_offset_cents === null ? "—" :
-        `${track.tuning_offset_cents > 0 ? "+" : ""}${fmt(track.tuning_offset_cents, 0)}`}</td></tr>`).join("");
-  return crumbs([["#/", "Home"], [null, esc(m.name)]]) +
+        `${track.tuning_offset_cents > 0 ? "+" : ""}${fmt(track.tuning_offset_cents, 0)}`}</td>
+      <td class="sc">${stripSVG(track)}</td></tr>`).join("");
+  return crumbs([["#/", "Library"], [null, esc(m.name)]]) +
     `<h1>${esc(m.name)}${fa(m.name_fa)}</h1>
      <div class="muted">${esc(instrumentsOf(m))}${m.years ? ` · ${esc(m.years)}` : ""}</div>
      ${m.bio ? `<p>${esc(m.bio)}</p>` : ""}
@@ -196,7 +132,7 @@ function pageMaster(id) {
        <p class="muted">Did the master hold a fixed pitch over the years? Absolute Hz is as recorded: old
        transfers can run slightly fast or slow.</p>
        <div class="table-wrap"><table><thead><tr><th>Track</th><th>Album</th><th>Released</th><th>Dastgah</th>
-       <th>Tonic</th><th class="num">Hz</th><th class="num">¢ from A440</th></tr></thead><tbody>${tonicRows}</tbody></table></div>` : ""}`;
+       <th>Tonic</th><th class="num">Hz</th><th class="num">¢ from A440</th><th>Scale, 0–1200 ¢</th></tr></thead><tbody>${tonicRows}</tbody></table></div>` : ""}`;
 }
 
 function pageAlbum(mid, aid) {
@@ -208,12 +144,13 @@ function pageAlbum(mid, aid) {
     const d = dastgah(t.dastgah);
     return `<tr><td class="num">${esc(t.track_number ?? "")}</td><td>${trackLink(t)}</td>
       <td><a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}</td>
-      <td>${tonicCell(t)}</td><td class="muted">${t.has_result ? esc((t.scale || []).join(" ")) : ""}</td></tr>`;
+      <td>${tonicCell(t)}</td><td class="muted">${t.has_result ? esc((t.scale || []).join(" ")) : ""}</td>
+      <td class="sc">${stripSVG(t)}</td></tr>`;
   }).join("");
-  return crumbs([["#/", "Home"], [`#/master/${esc(m.id)}`, esc(m.name)], [null, esc(a.title)]]) +
+  return crumbs([["#/", "Library"], [`#/master/${esc(m.id)}`, esc(m.name)], [null, esc(a.title)]]) +
     `<h1>${esc(a.title)}</h1><div class="muted">${esc(m.name)} · ${esc(a.release_date || "")}</div>
      <h2>Tracks</h2><div class="table-wrap"><table>
-     <thead><tr><th class="num">#</th><th>Title</th><th>Dastgah / avaz</th><th>Tonic</th><th>Scale</th></tr></thead>
+     <thead><tr><th class="num">#</th><th>Title</th><th>Dastgah / avaz</th><th>Tonic</th><th>Scale</th><th>0–1200 ¢</th></tr></thead>
      <tbody>${rows}</tbody></table></div>`;
 }
 
@@ -223,7 +160,7 @@ function pageDastgahs() {
     return `<div class="card${n ? "" : " card-empty"}"><h3><a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}</h3>
       <div class="muted">${kindLabel(d)} · ${n} recording(s)</div></div>`;
   }).join("");
-  return crumbs([["#/", "Home"], [null, "Dastgahs"]]) + `<h1>Dastgahs and avaz</h1><div class="grid">${cards}</div>`;
+  return crumbs([["#/", "Library"], [null, "Dastgahs"]]) + `<h1>Dastgahs and avaz</h1><div class="grid">${cards}</div>`;
 }
 
 async function pageDastgah(id) {
@@ -237,7 +174,7 @@ async function pageDastgah(id) {
         return kids.length ? `<p class="muted">Avaz derived from it: ${kids.map((k) =>
           `<a href="#/dastgah/${esc(k.id)}">${esc(k.name)}</a>${fa(k.name_fa)}`).join(" · ")}.</p>` : "";
       })();
-  const head = crumbs([["#/", "Home"], ["#/dastgahs", "Dastgahs"], [null, esc(d.name)]]) +
+  const head = crumbs([["#/", "Library"], ["#/dastgahs", "Dastgahs"], [null, esc(d.name)]]) +
     `<h1>${esc(d.name)}${fa(d.name_fa)}</h1>${rel}`;
   const analysed = entries.filter((e) => e.track.has_result);
   if (!entries.length) return head + '<p class="muted">No recordings yet.</p>';
@@ -325,7 +262,7 @@ async function pageTrack(key) {
   const hit = allTracks().find((x) => x.track.key === key);
   if (!hit) return notFound();
   const { master, album, track } = hit;
-  const head = crumbs([["#/", "Home"], [`#/master/${esc(master.id)}`, esc(master.name)],
+  const head = crumbs([["#/", "Library"], [`#/master/${esc(master.id)}`, esc(master.name)],
     [`#/album/${esc(master.id)}/${esc(album.id)}`, esc(album.title)], [null, esc(track.title)]]);
   const d = dastgah(track.dastgah);
   const links = extLinks(track.links);
@@ -496,7 +433,7 @@ function pageMethod() {
   const prRows = pr ? Object.entries({ overall: pr.overall, ...(pr.by_instrument || {}) }).map(([k, v]) =>
     `<tr><td>${esc(k)}</td><td class="num">${pct(v.recall)}</td><td class="num">${pct(v.precision)}</td>
      <td class="num">${pct(v.label_acc)}</td><td class="num">${pct(v.register_acc)}</td></tr>`).join("") : "";
-  return crumbs([["#/", "Home"], [null, "Method"]]) + `<h1>Method</h1>
+  return crumbs([["#/", "Library"], [null, "Method"]]) + `<h1>Method</h1>
     <p class="lede">Each recording is analysed many times, by several independent pitch estimators under different
     settings, and only the notes they agree on are published, each with its support and uncertainty.</p>
     <h2>How a tuning is measured</h2>
@@ -541,7 +478,7 @@ function pageMethod() {
 }
 
 function notFound() {
-  return `<h1>Not found</h1><p><a href="#/">Back home</a></p>`;
+  return `<h1>Not found</h1><p><a href="#/">Back to the library</a></p>`;
 }
 
 // ── theme ──────────────────────────────────────────────────────────────────
@@ -549,9 +486,8 @@ function notFound() {
 function initTheme() {
   const btn = document.getElementById("theme");
   const saved = store.get("localStorage", "ds.theme");
-  if (saved === "light" || saved === "dark") document.documentElement.dataset.theme = saved;
-  const current = () => document.documentElement.dataset.theme ||
-    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.dataset.theme = saved === "light" ? "light" : "dark";
+  const current = () => document.documentElement.dataset.theme;
   const label = () => {
     btn.textContent = current() === "dark" ? "☀" : "☾";
     btn.setAttribute("aria-label", current() === "dark" ? "Switch to light theme" : "Switch to dark theme");
@@ -583,7 +519,8 @@ async function route() {
   try {
     let html;
     afterRender = null;
-    if (!page) html = pageHome();
+    if (!page) html = pageHome("wall");
+    else if (page === "list") html = pageHome("list");
     else if (page === "master") html = pageMaster(rest[0]);
     else if (page === "album") html = pageAlbum(rest[0], rest[1]);
     else if (page === "dastgahs") html = pageDastgahs();
@@ -594,9 +531,12 @@ async function route() {
     app.innerHTML = html;
     window.scrollTo(0, 0);
     redraw = afterRender ? afterRender() : null;
-    markCurrent();
+    document.querySelectorAll(".topbar nav a").forEach((a) => {
+      const on = a.dataset.nav === (!page || page === "list" ? "library" : page === "dastgah" ? "dastgahs" : page);
+      if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
     const h1 = app.querySelector("h1");
-    document.title = h1 && page ? `${h1.childNodes[0].textContent.trim()} · Dastgah Scales` : "Dastgah Scales";
+    document.title = h1 && page && page !== "list" ? `${h1.childNodes[0].textContent.trim()} · Dastgah Scales` : "Dastgah Scales";
   } catch (err) {
     app.innerHTML = `<h1>Something went wrong</h1><p class="muted">${esc(err.message)}</p>`;
   }
@@ -615,7 +555,6 @@ async function init() {
   footer.innerHTML = `Data generated ${esc(catalog.generated_at.slice(0, 10))} · pipeline ${esc(catalog.pipeline_version)}` +
     (catalog.include_pending ? " · includes unreviewed drafts" : "") +
     ` · No recordings are hosted: playback is synthesized from the measured tuning.`;
-  renderSide();
   window.addEventListener("hashchange", route);
   route();
 }
