@@ -7,7 +7,7 @@
 // residual. Every mark has a hover/focus tooltip and the tables below hold every
 // value, so nothing is tooltip-only.
 
-import { el, attachTip, fitText, marker, hitArea } from "./compare.js?v=10";
+import { el, attachTip, fitText, marker, hitArea } from "./compare.js?v=13";
 
 const fmt = (x, d = 1) => (x === null || x === undefined ? "—" : Number(x).toFixed(d));
 const sgn = (x, d = 1) => (x > 0 ? "+" : "") + fmt(x, d);

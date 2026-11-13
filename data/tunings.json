@@ -1,0 +1,3977 @@
+{
+  "schema_version": "1.0",
+  "pipeline_version": "0.9.1",
+  "rules": {
+    "tonic_window_cents": 60.0,
+    "merge_cents": 30.0,
+    "main_share": 0.5,
+    "min_share": 0.15,
+    "class_tolerance_cents": 24.0
+  },
+  "step_classes": [
+    {
+      "id": "semitone",
+      "cents": 90.0
+    },
+    {
+      "id": "small-neutral",
+      "cents": 135.0
+    },
+    {
+      "id": "large-neutral",
+      "cents": 160.0
+    },
+    {
+      "id": "whole-tone",
+      "cents": 204.0
+    },
+    {
+      "id": "plus-tone",
+      "cents": 270.0
+    }
+  ],
+  "tunings": [
+    {
+      "id": "abdollah-dadvar.shur",
+      "master": "abdollah-dadvar",
+      "dastgah": "shur",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 198.18,
+        "label": "G",
+        "pc_cents": 719.1
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 198.18
+        },
+        {
+          "cents": 141.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 214.99
+        },
+        {
+          "cents": 292.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 234.65
+        },
+        {
+          "cents": 497.7,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 264.18
+        },
+        {
+          "cents": 632.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Dk",
+          "hz": 285.58
+        },
+        {
+          "cents": 791.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 312.97
+        },
+        {
+          "cents": 981.4,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 349.34
+        }
+      ],
+      "tracks": [
+        "abdollah-dadvar/a-century-of-setar-music/shur-i"
+      ]
+    },
+    {
+      "id": "abolhasan-saba.abu-ata",
+      "master": "abolhasan-saba",
+      "dastgah": "abu-ata",
+      "instrument": "santur",
+      "n": 2,
+      "n_total": 2,
+      "tonic": {
+        "hz": 416.6,
+        "label": "A",
+        "pc_cents": 805.4
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 416.6
+        },
+        {
+          "cents": 150.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 454.48
+        },
+        {
+          "cents": 304.3,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 496.66
+        },
+        {
+          "cents": 504.9,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 557.69
+        },
+        {
+          "cents": 710.2,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 627.87
+        },
+        {
+          "cents": 785.3,
+          "share": 0.5,
+          "main": true,
+          "label": "F",
+          "hz": 655.73
+        },
+        {
+          "cents": 937.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Gk",
+          "hz": 715.77
+        },
+        {
+          "cents": 1043.4,
+          "share": 0.5,
+          "main": true,
+          "label": "Gs",
+          "hz": 761.13
+        }
+      ],
+      "tracks": [
+        "abolhasan-saba/a-century-of-santur/abuata",
+        "abolhasan-saba/a-century-of-santur/abuata-tasnif-e-chehre-be-chehre"
+      ]
+    },
+    {
+      "id": "abolhasan-saba.nava",
+      "master": "abolhasan-saba",
+      "dastgah": "nava",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 404.17,
+        "label": "G",
+        "pc_cents": 752.9
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 404.17
+        },
+        {
+          "cents": 169.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 445.69
+        },
+        {
+          "cents": 297.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 480.05
+        },
+        {
+          "cents": 496.9,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 538.53
+        },
+        {
+          "cents": 632.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Dk",
+          "hz": 582.27
+        },
+        {
+          "cents": 797.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 640.46
+        },
+        {
+          "cents": 1004.7,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 722.1
+        }
+      ],
+      "tracks": [
+        "abolhasan-saba/a-century-of-setar-music/nava"
+      ]
+    },
+    {
+      "id": "ali-akbar-shahi.shur",
+      "master": "ali-akbar-shahi",
+      "dastgah": "shur",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 483.99,
+        "label": "B",
+        "pc_cents": 1065.0
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 483.99
+        },
+        {
+          "cents": 166.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Cs",
+          "hz": 532.95
+        },
+        {
+          "cents": 492.3,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 643.19
+        },
+        {
+          "cents": 708.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 728.83
+        },
+        {
+          "cents": 845.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Gs",
+          "hz": 788.84
+        },
+        {
+          "cents": 987.9,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 856.37
+        }
+      ],
+      "tracks": [
+        "ali-akbar-shahi/a-century-of-santur/shur-i"
+      ]
+    },
+    {
+      "id": "ali-naqi-vaziri.segah",
+      "master": "ali-naqi-vaziri",
+      "dastgah": "segah",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 487.88,
+        "label": "Bk",
+        "pc_cents": 1078.8
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 487.88
+        },
+        {
+          "cents": 151.2,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 532.4
+        },
+        {
+          "cents": 351.4,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 597.67
+        },
+        {
+          "cents": 488.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Ek",
+          "hz": 647.0
+        },
+        {
+          "cents": 641.6,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 706.74
+        },
+        {
+          "cents": 848.6,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 796.51
+        },
+        {
+          "cents": 1053.6,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 896.63
+        }
+      ],
+      "tracks": [
+        "ali-naqi-vaziri/a-century-of-setar-music/segah-i"
+      ]
+    },
+    {
+      "id": "arsalan-dargahi.mahur",
+      "master": "arsalan-dargahi",
+      "dastgah": "mahur",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 243.85,
+        "label": "B",
+        "pc_cents": 1078.2
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 243.85
+        },
+        {
+          "cents": 204.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Db",
+          "hz": 274.47
+        },
+        {
+          "cents": 412.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 309.51
+        },
+        {
+          "cents": 504.1,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 326.27
+        },
+        {
+          "cents": 705.2,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 366.46
+        },
+        {
+          "cents": 850.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Gs",
+          "hz": 398.58
+        },
+        {
+          "cents": 1104.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 461.49
+        }
+      ],
+      "tracks": [
+        "arsalan-dargahi/a-century-of-setar-music/mahur-ii"
+      ]
+    },
+    {
+      "id": "dariush-safvat.segah",
+      "master": "dariush-safvat",
+      "dastgah": "segah",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 289.26,
+        "label": "Dk",
+        "pc_cents": 173.9
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Dk",
+          "hz": 289.26
+        },
+        {
+          "cents": 159.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 317.11
+        },
+        {
+          "cents": 361.1,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 356.35
+        },
+        {
+          "cents": 504.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Gk",
+          "hz": 387.13
+        },
+        {
+          "cents": 859.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 475.21
+        },
+        {
+          "cents": 976.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Ck",
+          "hz": 508.52
+        },
+        {
+          "cents": 1067.7,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 535.97
+        }
+      ],
+      "tracks": [
+        "dariush-safvat/a-century-of-setar-music/segah-ii"
+      ]
+    },
+    {
+      "id": "dariush-talai.chahargah",
+      "master": "dariush-talai",
+      "dastgah": "chahargah",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 113.84,
+        "label": "A",
+        "pc_cents": 959.4
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 113.84
+        },
+        {
+          "cents": 148.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 124.06
+        },
+        {
+          "cents": 398.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Db",
+          "hz": 143.34
+        },
+        {
+          "cents": 495.5,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 151.56
+        },
+        {
+          "cents": 709.8,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 171.54
+        },
+        {
+          "cents": 857.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Fs",
+          "hz": 186.8
+        },
+        {
+          "cents": 1104.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Ab",
+          "hz": 215.46
+        }
+      ],
+      "tracks": [
+        "dariush-talai/a-century-of-setar-music/chahargah"
+      ]
+    },
+    {
+      "id": "ebadi.shur",
+      "master": "ebadi",
+      "dastgah": "shur",
+      "instrument": "setar",
+      "n": 7,
+      "n_total": 8,
+      "tonic": {
+        "hz": 204.82,
+        "label": "G",
+        "pc_cents": 776.2
+      },
+      "pitches": [
+        {
+          "cents": 1.8,
+          "share": 0.86,
+          "main": true,
+          "label": "G",
+          "hz": 205.04
+        },
+        {
+          "cents": 145.7,
+          "share": 0.86,
+          "main": true,
+          "label": "Ak",
+          "hz": 222.81
+        },
+        {
+          "cents": 290.2,
+          "share": 0.86,
+          "main": true,
+          "label": "Bb",
+          "hz": 242.2
+        },
+        {
+          "cents": 501.3,
+          "share": 0.86,
+          "main": true,
+          "label": "C",
+          "hz": 273.62
+        },
+        {
+          "cents": 642.3,
+          "share": 0.57,
+          "main": true,
+          "label": "Dk",
+          "hz": 296.82
+        },
+        {
+          "cents": 698.7,
+          "share": 0.29,
+          "main": false,
+          "label": "D",
+          "hz": 306.66
+        },
+        {
+          "cents": 791.7,
+          "share": 0.71,
+          "main": true,
+          "label": "Eb",
+          "hz": 323.57
+        },
+        {
+          "cents": 993.2,
+          "share": 0.86,
+          "main": true,
+          "label": "F",
+          "hz": 363.53
+        }
+      ],
+      "tracks": [
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/shur-1",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/shur-2",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/shur-3",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/shur-4",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/shur-5",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/shur-6",
+        "ebadi/persian-setar-i/shur"
+      ]
+    },
+    {
+      "id": "ebadi.abu-ata",
+      "master": "ebadi",
+      "dastgah": "abu-ata",
+      "instrument": "setar",
+      "n": 6,
+      "n_total": 7,
+      "tonic": {
+        "hz": 246.99,
+        "label": "B",
+        "pc_cents": 1100.3
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 246.99
+        },
+        {
+          "cents": 142.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Cs",
+          "hz": 268.1
+        },
+        {
+          "cents": 288.4,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 291.76
+        },
+        {
+          "cents": 496.4,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 329.01
+        },
+        {
+          "cents": 704.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 370.94
+        },
+        {
+          "cents": 780.9,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 387.77
+        },
+        {
+          "cents": 998.5,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 439.7
+        }
+      ],
+      "tracks": [
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/abu-ata-1",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/abu-ata-2",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/abu-ata-3",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/abu-ata-4",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/abu-ata-5",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/abu-ata-6"
+      ]
+    },
+    {
+      "id": "ebadi.bayat-e-tork",
+      "master": "ebadi",
+      "dastgah": "bayat-e-tork",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 266.06,
+        "label": "C",
+        "pc_cents": 29.1
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 266.06
+        },
+        {
+          "cents": 213.2,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 300.93
+        },
+        {
+          "cents": 414.5,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 338.04
+        },
+        {
+          "cents": 496.0,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 354.33
+        },
+        {
+          "cents": 701.7,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 399.04
+        },
+        {
+          "cents": 851.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 435.18
+        },
+        {
+          "cents": 1056.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 489.83
+        }
+      ],
+      "tracks": [
+        "ebadi/persian-setar-i/bayat-e-tork"
+      ]
+    },
+    {
+      "id": "ebadi.afshari",
+      "master": "ebadi",
+      "dastgah": "afshari",
+      "instrument": "setar",
+      "n": 2,
+      "n_total": 3,
+      "tonic": {
+        "hz": 256.73,
+        "label": "C",
+        "pc_cents": 1167.3
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 256.73
+        },
+        {
+          "cents": 189.4,
+          "share": 0.5,
+          "main": true,
+          "label": "D",
+          "hz": 286.42
+        },
+        {
+          "cents": 221.2,
+          "share": 0.5,
+          "main": true,
+          "label": "D",
+          "hz": 291.71
+        },
+        {
+          "cents": 298.0,
+          "share": 0.5,
+          "main": true,
+          "label": "Eb",
+          "hz": 304.95
+        },
+        {
+          "cents": 339.1,
+          "share": 0.5,
+          "main": true,
+          "label": "Ek",
+          "hz": 312.29
+        },
+        {
+          "cents": 494.1,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 341.53
+        },
+        {
+          "cents": 705.6,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 385.91
+        },
+        {
+          "cents": 815.0,
+          "share": 0.5,
+          "main": true,
+          "label": "Ab",
+          "hz": 411.1
+        },
+        {
+          "cents": 851.9,
+          "share": 0.5,
+          "main": true,
+          "label": "Ak",
+          "hz": 419.93
+        },
+        {
+          "cents": 990.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 454.84
+        }
+      ],
+      "tracks": [
+        "ebadi/setar/afshari",
+        "ebadi/the-masters-of-persian-traditional-music-sehtar/afshari"
+      ]
+    },
+    {
+      "id": "ebadi.homayoun",
+      "master": "ebadi",
+      "dastgah": "homayoun",
+      "instrument": "setar",
+      "n": 8,
+      "n_total": 17,
+      "tonic": {
+        "hz": 342.41,
+        "label": "F",
+        "pc_cents": 465.8
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 342.41
+        },
+        {
+          "cents": 138.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Gk",
+          "hz": 370.98
+        },
+        {
+          "cents": 410.1,
+          "share": 0.88,
+          "main": true,
+          "label": "A",
+          "hz": 433.93
+        },
+        {
+          "cents": 494.2,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 455.52
+        },
+        {
+          "cents": 638.5,
+          "share": 0.25,
+          "main": false,
+          "label": "Ck",
+          "hz": 495.13
+        },
+        {
+          "cents": 712.7,
+          "share": 0.62,
+          "main": true,
+          "label": "C",
+          "hz": 516.82
+        },
+        {
+          "cents": 909.6,
+          "share": 0.5,
+          "main": true,
+          "label": "D",
+          "hz": 579.05
+        },
+        {
+          "cents": 985.7,
+          "share": 0.88,
+          "main": true,
+          "label": "Eb",
+          "hz": 605.09
+        }
+      ],
+      "tracks": [
+        "ebadi/masterpieces-of-ahmad-ebadi-homayoun/daramad",
+        "ebadi/masterpieces-of-ahmad-ebadi-homayoun/zarbi",
+        "ebadi/masterpieces-of-ahmad-ebadi-homayoun/homayoun-continued",
+        "ebadi/masterpieces-of-ahmad-ebadi-homayoun/mavalian-chakavak",
+        "ebadi/masterpieces-of-ahmad-ebadi-homayoun/tarz-bakhtiari",
+        "ebadi/masterpieces-of-ahmad-ebadi-homayoun/mansuri-zanguleh-forud",
+        "ebadi/masterpieces-of-ahmad-ebadi-homayoun/bidad",
+        "ebadi/masterpieces-of-ahmad-ebadi-homayoun/neydavud-forud"
+      ]
+    },
+    {
+      "id": "ebadi.bayat-e-esfahan",
+      "master": "ebadi",
+      "dastgah": "bayat-e-esfahan",
+      "instrument": "setar",
+      "n": 8,
+      "n_total": 10,
+      "tonic": {
+        "hz": 186.64,
+        "label": "F",
+        "pc_cents": 615.3
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 186.64
+        },
+        {
+          "cents": 206.9,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 210.34
+        },
+        {
+          "cents": 284.6,
+          "share": 0.88,
+          "main": true,
+          "label": "Ab",
+          "hz": 219.99
+        },
+        {
+          "cents": 354.3,
+          "share": 0.5,
+          "main": true,
+          "label": "Ak",
+          "hz": 229.03
+        },
+        {
+          "cents": 491.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 247.97
+        },
+        {
+          "cents": 705.5,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 280.54
+        },
+        {
+          "cents": 845.6,
+          "share": 0.38,
+          "main": false,
+          "label": "Dk",
+          "hz": 304.19
+        },
+        {
+          "cents": 1061.3,
+          "share": 0.75,
+          "main": true,
+          "label": "Ek",
+          "hz": 344.55
+        }
+      ],
+      "tracks": [
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/bayat-e-esfahan-1",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/bayat-e-esfahan-2",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/bayat-e-esfahan-3",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/bayat-e-esfahan-4",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/bayat-e-esfahan-5",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/bayat-e-esfahan-6",
+        "ebadi/maestro-ahmad-ebadi-lord-of-setar/bayat-e-esfahan-7",
+        "ebadi/persian-setar-i/bayat-e-esfahan"
+      ]
+    },
+    {
+      "id": "ebadi.segah",
+      "master": "ebadi",
+      "dastgah": "segah",
+      "instrument": "setar",
+      "n": 3,
+      "n_total": 3,
+      "tonic": {
+        "hz": 146.72,
+        "label": "Dk",
+        "pc_cents": 198.7
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Dk",
+          "hz": 146.72
+        },
+        {
+          "cents": 162.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 161.2
+        },
+        {
+          "cents": 372.7,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 181.97
+        },
+        {
+          "cents": 499.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Gk",
+          "hz": 195.84
+        },
+        {
+          "cents": 628.9,
+          "share": 0.33,
+          "main": false,
+          "label": "Ab",
+          "hz": 210.99
+        },
+        {
+          "cents": 664.5,
+          "share": 0.67,
+          "main": true,
+          "label": "Ab",
+          "hz": 215.38
+        },
+        {
+          "cents": 702.4,
+          "share": 0.33,
+          "main": false,
+          "label": "Ak",
+          "hz": 220.14
+        },
+        {
+          "cents": 859.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 241.07
+        },
+        {
+          "cents": 1085.4,
+          "share": 0.67,
+          "main": true,
+          "label": "Cs",
+          "hz": 274.65
+        }
+      ],
+      "tracks": [
+        "ebadi/persian-setar-i/segah",
+        "ebadi/setar/segah",
+        "ebadi/the-masters-of-persian-traditional-music-sehtar/segah"
+      ]
+    },
+    {
+      "id": "ebadi.chahargah",
+      "master": "ebadi",
+      "dastgah": "chahargah",
+      "instrument": "setar",
+      "n": 2,
+      "n_total": 3,
+      "tonic": {
+        "hz": 118.28,
+        "label": "B",
+        "pc_cents": 1025.6
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 118.28
+        },
+        {
+          "cents": 143.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Cs",
+          "hz": 128.49
+        },
+        {
+          "cents": 403.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 149.33
+        },
+        {
+          "cents": 496.0,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 157.52
+        },
+        {
+          "cents": 706.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 177.9
+        },
+        {
+          "cents": 844.2,
+          "share": 1.0,
+          "main": true,
+          "label": "Gs",
+          "hz": 192.61
+        },
+        {
+          "cents": 1115.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 225.27
+        }
+      ],
+      "tracks": [
+        "ebadi/setar/chahargah",
+        "ebadi/the-masters-of-persian-traditional-music-sehtar/chahargah"
+      ]
+    },
+    {
+      "id": "faramarz-payvar.homayoun",
+      "master": "faramarz-payvar",
+      "dastgah": "homayoun",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 98.45,
+        "label": "G",
+        "pc_cents": 707.9
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 98.45
+        },
+        {
+          "cents": 138.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 106.66
+        },
+        {
+          "cents": 385.9,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 123.03
+        },
+        {
+          "cents": 503.0,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 131.64
+        },
+        {
+          "cents": 704.5,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 147.89
+        },
+        {
+          "cents": 794.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 155.78
+        },
+        {
+          "cents": 997.3,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 175.14
+        }
+      ],
+      "tracks": [
+        "faramarz-payvar/a-century-of-santur/homayun-ii"
+      ]
+    },
+    {
+      "id": "habib-somai.shur",
+      "master": "habib-somai",
+      "dastgah": "shur",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 268.9,
+        "label": "C",
+        "pc_cents": 47.5
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 268.9
+        },
+        {
+          "cents": 198.0,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 301.48
+        },
+        {
+          "cents": 484.2,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 355.68
+        },
+        {
+          "cents": 795.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Ab",
+          "hz": 425.77
+        },
+        {
+          "cents": 884.8,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 448.28
+        },
+        {
+          "cents": 996.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 478.21
+        },
+        {
+          "cents": 1161.2,
+          "share": 1.0,
+          "main": true,
+          "label": "Ck",
+          "hz": 525.88
+        }
+      ],
+      "tracks": [
+        "habib-somai/a-century-of-santur/shur-mahur"
+      ]
+    },
+    {
+      "id": "hasan-ali-daftari.bayat-e-esfahan",
+      "master": "hasan-ali-daftari",
+      "dastgah": "bayat-e-esfahan",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 251.92,
+        "label": "B",
+        "pc_cents": 1134.5
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 251.92
+        },
+        {
+          "cents": 249.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Dk",
+          "hz": 290.98
+        },
+        {
+          "cents": 389.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 315.48
+        },
+        {
+          "cents": 490.5,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 334.43
+        },
+        {
+          "cents": 699.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 377.36
+        },
+        {
+          "cents": 839.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Gs",
+          "hz": 409.19
+        },
+        {
+          "cents": 1051.1,
+          "share": 1.0,
+          "main": true,
+          "label": "As",
+          "hz": 462.31
+        }
+      ],
+      "tracks": [
+        "hasan-ali-daftari/a-century-of-setar-music/bayat-esfahan"
+      ]
+    },
+    {
+      "id": "hasan-khan.rast-panjgah",
+      "master": "hasan-khan",
+      "dastgah": "rast-panjgah",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 294.84,
+        "label": "D",
+        "pc_cents": 206.9
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 294.84
+        },
+        {
+          "cents": 205.1,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 331.92
+        },
+        {
+          "cents": 341.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Fs",
+          "hz": 359.15
+        },
+        {
+          "cents": 525.2,
+          "share": 1.0,
+          "main": true,
+          "label": "Gs",
+          "hz": 399.33
+        },
+        {
+          "cents": 734.8,
+          "share": 1.0,
+          "main": true,
+          "label": "As",
+          "hz": 450.73
+        },
+        {
+          "cents": 892.7,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 493.77
+        },
+        {
+          "cents": 1033.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Cs",
+          "hz": 535.73
+        }
+      ],
+      "tracks": [
+        "hasan-khan/a-century-of-santur/avaz-e-rast-dogah-reng"
+      ]
+    },
+    {
+      "id": "hoseyn-malek.segah",
+      "master": "hoseyn-malek",
+      "dastgah": "segah",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 423.45,
+        "label": "Ak",
+        "pc_cents": 833.6
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 423.45
+        },
+        {
+          "cents": 153.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 462.82
+        },
+        {
+          "cents": 369.9,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 524.32
+        },
+        {
+          "cents": 489.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Dk",
+          "hz": 561.89
+        },
+        {
+          "cents": 713.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Ek",
+          "hz": 639.43
+        },
+        {
+          "cents": 860.4,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 696.06
+        },
+        {
+          "cents": 1077.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Gs",
+          "hz": 788.87
+        }
+      ],
+      "tracks": [
+        "hoseyn-malek/a-century-of-santur/segah-ii"
+      ]
+    },
+    {
+      "id": "hoseyn-saba.segah",
+      "master": "hoseyn-saba",
+      "dastgah": "segah",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 319.68,
+        "label": "Ek",
+        "pc_cents": 346.9
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Ek",
+          "hz": 319.68
+        },
+        {
+          "cents": 212.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Fs",
+          "hz": 361.43
+        },
+        {
+          "cents": 344.3,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 390.02
+        },
+        {
+          "cents": 543.4,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 437.55
+        },
+        {
+          "cents": 707.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 481.09
+        },
+        {
+          "cents": 910.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Cs",
+          "hz": 541.0
+        },
+        {
+          "cents": 1001.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Dk",
+          "hz": 570.03
+        }
+      ],
+      "tracks": [
+        "hoseyn-saba/a-century-of-santur/segah-i"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.shur",
+      "master": "hossein-alizadeh",
+      "dastgah": "shur",
+      "instrument": "setar",
+      "n": 45,
+      "n_total": 45,
+      "tonic": {
+        "hz": 165.08,
+        "label": "E",
+        "pc_cents": 402.8
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 165.08
+        },
+        {
+          "cents": 135.0,
+          "share": 0.8,
+          "main": true,
+          "label": "Fs",
+          "hz": 178.46
+        },
+        {
+          "cents": 286.5,
+          "share": 0.96,
+          "main": true,
+          "label": "G",
+          "hz": 194.79
+        },
+        {
+          "cents": 398.7,
+          "share": 0.38,
+          "main": false,
+          "label": "Ab",
+          "hz": 207.83
+        },
+        {
+          "cents": 501.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 220.48
+        },
+        {
+          "cents": 631.4,
+          "share": 0.64,
+          "main": true,
+          "label": "Bk",
+          "hz": 237.72
+        },
+        {
+          "cents": 708.5,
+          "share": 0.51,
+          "main": true,
+          "label": "B",
+          "hz": 248.55
+        },
+        {
+          "cents": 794.4,
+          "share": 0.51,
+          "main": true,
+          "label": "C",
+          "hz": 261.2
+        },
+        {
+          "cents": 990.4,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 292.51
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/daramad-e-aval",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/daramad-e-dovom",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/basteh-negar",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/haji-hasani",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/daramad-e-sevom",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/daramad-e-chaharom",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/ghatar",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/gharaei",
+        "hossein-alizadeh/radif-navazi-setar-shur/daramad-e-aval",
+        "hossein-alizadeh/radif-navazi-setar-shur/daramad-e-dovom-panje-sheri",
+        "hossein-alizadeh/radif-navazi-setar-shur/daramad-e-sevom-kereshmeh",
+        "hossein-alizadeh/radif-navazi-setar-shur/daramad-e-chaharom-rohab",
+        "hossein-alizadeh/radif-navazi-setar-shur/daramad-e-panjom-owj",
+        "hossein-alizadeh/radif-navazi-setar-shur/daramad-e-sheshom-mollanazi",
+        "hossein-alizadeh/radif-navazi-setar-shur/naghmeh-e-aval",
+        "hossein-alizadeh/radif-navazi-setar-shur/naghmeh-e-dovom",
+        "hossein-alizadeh/radif-navazi-setar-shur/zirkesh-e-salmak",
+        "hossein-alizadeh/radif-navazi-setar-shur/mollanazi",
+        "hossein-alizadeh/radif-navazi-setar-shur/salmak",
+        "hossein-alizadeh/radif-navazi-setar-shur/golriz",
+        "hossein-alizadeh/radif-navazi-setar-shur/majles-afruz",
+        "hossein-alizadeh/radif-navazi-setar-shur/ozzal",
+        "hossein-alizadeh/radif-navazi-setar-shur/safa",
+        "hossein-alizadeh/radif-navazi-setar-shur/bozorg",
+        "hossein-alizadeh/radif-navazi-setar-shur/kuchak",
+        "hossein-alizadeh/radif-navazi-setar-shur/dobeyti",
+        "hossein-alizadeh/radif-navazi-setar-shur/khara",
+        "hossein-alizadeh/radif-navazi-setar-shur/ghajar",
+        "hossein-alizadeh/radif-navazi-setar-shur/hazin",
+        "hossein-alizadeh/radif-navazi-setar-shur/shur-e-paeen-dasteh",
+        "hossein-alizadeh/radif-navazi-setar-shur/gusheh-e-rohab",
+        "hossein-alizadeh/radif-navazi-setar-shur/chahar-gusheh-pt-1",
+        "hossein-alizadeh/radif-navazi-setar-shur/chahar-gusheh-pt-2",
+        "hossein-alizadeh/radif-navazi-setar-shur/chahar-gusheh-pt-3",
+        "hossein-alizadeh/radif-navazi-setar-shur/chahar-gusheh-pt-4",
+        "hossein-alizadeh/radif-navazi-setar-shur/moghadameh-e-gereyli",
+        "hossein-alizadeh/radif-navazi-setar-shur/razavi-hazin-forud",
+        "hossein-alizadeh/radif-navazi-setar-shur/shahnaz",
+        "hossein-alizadeh/radif-navazi-setar-shur/gharacheh",
+        "hossein-alizadeh/radif-navazi-setar-shur/shahnaz-e-kot-ashegh-kosh",
+        "hossein-alizadeh/radif-navazi-setar-shur/reng-e-osul",
+        "hossein-alizadeh/radif-navazi-setar-shur/gereyli-pt-1",
+        "hossein-alizadeh/radif-navazi-setar-shur/gereyli-pt-2",
+        "hossein-alizadeh/radif-navazi-setar-shur/gereyli-pt-3",
+        "hossein-alizadeh/radif-navazi-setar-shur/reng-e-shahr-ashub"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.abu-ata",
+      "master": "hossein-alizadeh",
+      "dastgah": "abu-ata",
+      "instrument": "setar",
+      "n": 10,
+      "n_total": 10,
+      "tonic": {
+        "hz": 165.94,
+        "label": "E",
+        "pc_cents": 411.8
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 165.94
+        },
+        {
+          "cents": 68.6,
+          "share": 0.3,
+          "main": false,
+          "label": "Fk",
+          "hz": 172.65
+        },
+        {
+          "cents": 142.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Fs",
+          "hz": 180.14
+        },
+        {
+          "cents": 297.3,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 197.03
+        },
+        {
+          "cents": 387.2,
+          "share": 0.4,
+          "main": false,
+          "label": "Ab",
+          "hz": 207.53
+        },
+        {
+          "cents": 496.8,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 221.09
+        },
+        {
+          "cents": 705.1,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 249.37
+        },
+        {
+          "cents": 786.5,
+          "share": 0.5,
+          "main": true,
+          "label": "C",
+          "hz": 261.37
+        },
+        {
+          "cents": 984.0,
+          "share": 0.4,
+          "main": false,
+          "label": "D",
+          "hz": 292.96
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-ramkeli",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-daramad",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-sayakhi",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-hejaz",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-basteh-negar",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-yaquluna",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-chaharpareh",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-gabri",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-gham-angiz",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-gilaki"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.bayat-e-tork",
+      "master": "hossein-alizadeh",
+      "dastgah": "bayat-e-tork",
+      "instrument": "setar",
+      "n": 14,
+      "n_total": 14,
+      "tonic": {
+        "hz": 387.62,
+        "label": "G",
+        "pc_cents": 680.6
+      },
+      "pitches": [
+        {
+          "cents": -0.3,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 387.56
+        },
+        {
+          "cents": 210.9,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 437.84
+        },
+        {
+          "cents": 419.7,
+          "share": 0.79,
+          "main": true,
+          "label": "B",
+          "hz": 493.95
+        },
+        {
+          "cents": 497.5,
+          "share": 0.5,
+          "main": true,
+          "label": "C",
+          "hz": 516.68
+        },
+        {
+          "cents": 701.6,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 581.3
+        },
+        {
+          "cents": 911.5,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 656.24
+        },
+        {
+          "cents": 1051.4,
+          "share": 0.93,
+          "main": true,
+          "label": "Fs",
+          "hz": 711.49
+        },
+        {
+          "cents": 1161.2,
+          "share": 0.29,
+          "main": false,
+          "label": "Gk",
+          "hz": 758.05
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/daramad-e-aval",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/daramad-e-dovom",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/daramad-e-sevom",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/haji-hasani",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/basteh-negar",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/zanguleh",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/khosravani",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/naghmeh",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/feyli",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/gusheh-e-shekasteh",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/mehrabani",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/jamehdaran",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/mehdi-zarrabi",
+        "hossein-alizadeh/radif-navazi-setar-bayat-tork/ruhol-arvah"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.afshari",
+      "master": "hossein-alizadeh",
+      "dastgah": "afshari",
+      "instrument": "setar",
+      "n": 3,
+      "n_total": 3,
+      "tonic": {
+        "hz": 296.49,
+        "label": "D",
+        "pc_cents": 216.6
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 296.49
+        },
+        {
+          "cents": 204.7,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 333.7
+        },
+        {
+          "cents": 348.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Fs",
+          "hz": 362.58
+        },
+        {
+          "cents": 496.9,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 395.05
+        },
+        {
+          "cents": 703.8,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 445.22
+        },
+        {
+          "cents": 906.1,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 500.39
+        },
+        {
+          "cents": 988.3,
+          "share": 0.67,
+          "main": true,
+          "label": "C",
+          "hz": 524.74
+        },
+        {
+          "cents": 1094.3,
+          "share": 0.33,
+          "main": false,
+          "label": "Db",
+          "hz": 557.85
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/afshari-daramad",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/afshari-basteh-negar",
+        "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/afshari-eragh"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.dashti",
+      "master": "hossein-alizadeh",
+      "dastgah": "dashti",
+      "instrument": "setar",
+      "n": 4,
+      "n_total": 4,
+      "tonic": {
+        "hz": 165.02,
+        "label": "E",
+        "pc_cents": 402.2
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 165.02
+        },
+        {
+          "cents": 137.2,
+          "share": 0.75,
+          "main": true,
+          "label": "Fs",
+          "hz": 178.63
+        },
+        {
+          "cents": 301.8,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 196.45
+        },
+        {
+          "cents": 503.5,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 220.73
+        },
+        {
+          "cents": 625.6,
+          "share": 0.75,
+          "main": true,
+          "label": "Bk",
+          "hz": 236.85
+        },
+        {
+          "cents": 701.3,
+          "share": 0.75,
+          "main": true,
+          "label": "B",
+          "hz": 247.43
+        },
+        {
+          "cents": 784.8,
+          "share": 0.5,
+          "main": true,
+          "label": "C",
+          "hz": 259.66
+        },
+        {
+          "cents": 987.2,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 291.86
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/daramad",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/bidegani",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/hajiani",
+        "hossein-alizadeh/radif-navazi-setar-dashti-bayat-kord/owj"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.homayoun",
+      "master": "hossein-alizadeh",
+      "dastgah": "homayoun",
+      "instrument": "setar",
+      "n": 28,
+      "n_total": 28,
+      "tonic": {
+        "hz": 166.57,
+        "label": "E",
+        "pc_cents": 418.3
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 166.57
+        },
+        {
+          "cents": 147.6,
+          "share": 0.93,
+          "main": true,
+          "label": "Fs",
+          "hz": 181.39
+        },
+        {
+          "cents": 398.2,
+          "share": 0.96,
+          "main": true,
+          "label": "Ab",
+          "hz": 209.64
+        },
+        {
+          "cents": 497.3,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 221.99
+        },
+        {
+          "cents": 701.5,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 249.78
+        },
+        {
+          "cents": 792.8,
+          "share": 0.5,
+          "main": true,
+          "label": "C",
+          "hz": 263.31
+        },
+        {
+          "cents": 846.7,
+          "share": 0.36,
+          "main": false,
+          "label": "Cs",
+          "hz": 271.65
+        },
+        {
+          "cents": 995.4,
+          "share": 0.75,
+          "main": true,
+          "label": "D",
+          "hz": 296.0
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-homayun/chaharmezrab",
+        "hossein-alizadeh/radif-navazi-setar-homayun/daramad-e-aval",
+        "hossein-alizadeh/radif-navazi-setar-homayun/daramad-e-dovom-zang-e-shotor",
+        "hossein-alizadeh/radif-navazi-setar-homayun/mavalian",
+        "hossein-alizadeh/radif-navazi-setar-homayun/chakavak",
+        "hossein-alizadeh/radif-navazi-setar-homayun/tarz",
+        "hossein-alizadeh/radif-navazi-setar-homayun/bidad",
+        "hossein-alizadeh/radif-navazi-setar-homayun/bidad-e-kot",
+        "hossein-alizadeh/radif-navazi-setar-homayun/neydavud",
+        "hossein-alizadeh/radif-navazi-setar-homayun/bavi",
+        "hossein-alizadeh/radif-navazi-setar-homayun/suz-o-godaz",
+        "hossein-alizadeh/radif-navazi-setar-homayun/abolchap",
+        "hossein-alizadeh/radif-navazi-setar-homayun/leyli-o-majnun",
+        "hossein-alizadeh/radif-navazi-setar-homayun/ravandi",
+        "hossein-alizadeh/radif-navazi-setar-homayun/nowruz-e-arab",
+        "hossein-alizadeh/radif-navazi-setar-homayun/nowruz-e-saba",
+        "hossein-alizadeh/radif-navazi-setar-homayun/nowruz-e-khara",
+        "hossein-alizadeh/radif-navazi-setar-homayun/nafair",
+        "hossein-alizadeh/radif-navazi-setar-homayun/farang-ba-shushtari-gardan",
+        "hossein-alizadeh/radif-navazi-setar-homayun/shushtari",
+        "hossein-alizadeh/radif-navazi-setar-homayun/jamehdaran",
+        "hossein-alizadeh/radif-navazi-setar-homayun/raz-o-niaz",
+        "hossein-alizadeh/radif-navazi-setar-homayun/meygoli",
+        "hossein-alizadeh/radif-navazi-setar-homayun/moalef",
+        "hossein-alizadeh/radif-navazi-setar-homayun/bakhtiari",
+        "hossein-alizadeh/radif-navazi-setar-homayun/ozzal",
+        "hossein-alizadeh/radif-navazi-setar-homayun/denaseri",
+        "hossein-alizadeh/radif-navazi-setar-homayun/reng-e-farah"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.bayat-e-esfahan",
+      "master": "hossein-alizadeh",
+      "dastgah": "bayat-e-esfahan",
+      "instrument": "setar",
+      "n": 7,
+      "n_total": 7,
+      "tonic": {
+        "hz": 221.49,
+        "label": "A",
+        "pc_cents": 911.7
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 221.49
+        },
+        {
+          "cents": 204.3,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 249.22
+        },
+        {
+          "cents": 285.7,
+          "share": 0.71,
+          "main": true,
+          "label": "C",
+          "hz": 261.23
+        },
+        {
+          "cents": 492.4,
+          "share": 0.86,
+          "main": true,
+          "label": "D",
+          "hz": 294.36
+        },
+        {
+          "cents": 698.9,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 331.64
+        },
+        {
+          "cents": 838.3,
+          "share": 0.86,
+          "main": true,
+          "label": "Fs",
+          "hz": 359.46
+        },
+        {
+          "cents": 926.5,
+          "share": 0.29,
+          "main": false,
+          "label": "Gk",
+          "hz": 378.25
+        },
+        {
+          "cents": 1077.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Ab",
+          "hz": 412.66
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-bayat-esfahan/daramad",
+        "hossein-alizadeh/radif-navazi-setar-bayat-esfahan/jamehdaran",
+        "hossein-alizadeh/radif-navazi-setar-bayat-esfahan/bayat-raje-pt-1",
+        "hossein-alizadeh/radif-navazi-setar-bayat-esfahan/bayat-raje-pt-2",
+        "hossein-alizadeh/radif-navazi-setar-bayat-esfahan/forud",
+        "hossein-alizadeh/radif-navazi-setar-bayat-esfahan/kereshmeh",
+        "hossein-alizadeh/radif-navazi-setar-bayat-esfahan/suz-o-godaz"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.segah",
+      "master": "hossein-alizadeh",
+      "dastgah": "segah",
+      "instrument": "setar",
+      "n": 18,
+      "n_total": 20,
+      "tonic": {
+        "hz": 178.9,
+        "label": "Fs",
+        "pc_cents": 542.0
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Fs",
+          "hz": 178.9
+        },
+        {
+          "cents": 141.0,
+          "share": 0.89,
+          "main": true,
+          "label": "G",
+          "hz": 194.08
+        },
+        {
+          "cents": 361.2,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 220.41
+        },
+        {
+          "cents": 492.3,
+          "share": 0.78,
+          "main": true,
+          "label": "Bk",
+          "hz": 237.75
+        },
+        {
+          "cents": 639.6,
+          "share": 0.22,
+          "main": false,
+          "label": "C",
+          "hz": 258.86
+        },
+        {
+          "cents": 704.3,
+          "share": 0.56,
+          "main": true,
+          "label": "Cs",
+          "hz": 268.72
+        },
+        {
+          "cents": 849.1,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 292.16
+        },
+        {
+          "cents": 1062.7,
+          "share": 0.89,
+          "main": true,
+          "label": "E",
+          "hz": 330.53
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-segah/chaharmezrab",
+        "hossein-alizadeh/radif-navazi-setar-segah/daramad",
+        "hossein-alizadeh/radif-navazi-setar-segah/naghmeh",
+        "hossein-alizadeh/radif-navazi-setar-segah/kereshmeh-ba-muyeh",
+        "hossein-alizadeh/radif-navazi-setar-segah/zang-e-shotor",
+        "hossein-alizadeh/radif-navazi-setar-segah/zabol",
+        "hossein-alizadeh/radif-navazi-setar-segah/basteh-negar",
+        "hossein-alizadeh/radif-navazi-setar-segah/muyeh",
+        "hossein-alizadeh/radif-navazi-setar-segah/mokhalef",
+        "hossein-alizadeh/radif-navazi-setar-segah/maghlub",
+        "hossein-alizadeh/radif-navazi-setar-segah/naghmeh-e-maghlub",
+        "hossein-alizadeh/radif-navazi-setar-segah/hazin",
+        "hossein-alizadeh/radif-navazi-setar-segah/muyeh-ii",
+        "hossein-alizadeh/radif-navazi-setar-segah/rohab",
+        "hossein-alizadeh/radif-navazi-setar-segah/masihi",
+        "hossein-alizadeh/radif-navazi-setar-segah/shah-khataei",
+        "hossein-alizadeh/radif-navazi-setar-segah/takht-e-taghdis",
+        "hossein-alizadeh/radif-navazi-setar-segah/reng-e-delgosha"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.chahargah",
+      "master": "hossein-alizadeh",
+      "dastgah": "chahargah",
+      "instrument": "setar",
+      "n": 32,
+      "n_total": 32,
+      "tonic": {
+        "hz": 219.77,
+        "label": "A",
+        "pc_cents": 898.2
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 219.77
+        },
+        {
+          "cents": 148.2,
+          "share": 0.72,
+          "main": true,
+          "label": "Bk",
+          "hz": 239.41
+        },
+        {
+          "cents": 206.8,
+          "share": 0.25,
+          "main": false,
+          "label": "B",
+          "hz": 247.65
+        },
+        {
+          "cents": 395.6,
+          "share": 0.84,
+          "main": true,
+          "label": "Db",
+          "hz": 276.19
+        },
+        {
+          "cents": 496.5,
+          "share": 0.72,
+          "main": true,
+          "label": "D",
+          "hz": 292.77
+        },
+        {
+          "cents": 577.8,
+          "share": 0.16,
+          "main": false,
+          "label": "Eb",
+          "hz": 306.84
+        },
+        {
+          "cents": 706.8,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 330.58
+        },
+        {
+          "cents": 842.6,
+          "share": 0.88,
+          "main": true,
+          "label": "Fs",
+          "hz": 357.57
+        },
+        {
+          "cents": 1100.5,
+          "share": 0.97,
+          "main": true,
+          "label": "Ab",
+          "hz": 414.99
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-chahargah/daramad-e-aval",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/daramad-e-dovom",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/daramad-e-sevom-pish-zanguleh-va-zanguleh",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/daramad-e-chaharom",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/naghmeh",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/kereshmeh-va-kereshmeh-ba-muyeh",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/zang-e-shotor",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/zabol",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/basteh-negar",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/muyeh",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/forud",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/hesar-pt-1",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/hesar-pt-2",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/hesar-pt-3",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/chaharmezrab",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/pas-hesar",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/muyeh-va-forud",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/mokhalef",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/haji-hasani",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/basteh-negar-ii",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/maghlub",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/naghmeh-e-maghlub",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/hazin",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/hodi",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/pahlavi",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/rajaz",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/mansoori-pt-1",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/mansoori-pt-2",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/mansoori-pt-3",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/lezgi",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/matn-o-hashiyeh",
+        "hossein-alizadeh/radif-navazi-setar-chahargah/reng-e-shahr-ashub"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.mahur",
+      "master": "hossein-alizadeh",
+      "dastgah": "mahur",
+      "instrument": "setar",
+      "n": 36,
+      "n_total": 36,
+      "tonic": {
+        "hz": 220.63,
+        "label": "A",
+        "pc_cents": 905.0
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 220.63
+        },
+        {
+          "cents": 208.2,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 248.83
+        },
+        {
+          "cents": 396.6,
+          "share": 0.72,
+          "main": true,
+          "label": "Db",
+          "hz": 277.43
+        },
+        {
+          "cents": 495.5,
+          "share": 0.75,
+          "main": true,
+          "label": "D",
+          "hz": 293.74
+        },
+        {
+          "cents": 704.4,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 331.41
+        },
+        {
+          "cents": 914.1,
+          "share": 0.89,
+          "main": true,
+          "label": "Gb",
+          "hz": 374.1
+        },
+        {
+          "cents": 1099.3,
+          "share": 0.89,
+          "main": true,
+          "label": "Ab",
+          "hz": 416.33
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-mahur/daramad",
+        "hossein-alizadeh/radif-navazi-setar-mahur/kereshmeh",
+        "hossein-alizadeh/radif-navazi-setar-mahur/avaz",
+        "hossein-alizadeh/radif-navazi-setar-mahur/moghadameh-e-dad",
+        "hossein-alizadeh/radif-navazi-setar-mahur/dad",
+        "hossein-alizadeh/radif-navazi-setar-mahur/majles-afruz",
+        "hossein-alizadeh/radif-navazi-setar-mahur/khosravani",
+        "hossein-alizadeh/radif-navazi-setar-mahur/delkash-chaharmezrab-va-forud",
+        "hossein-alizadeh/radif-navazi-setar-mahur/khavaran",
+        "hossein-alizadeh/radif-navazi-setar-mahur/tarab-angiz",
+        "hossein-alizadeh/radif-navazi-setar-mahur/neyshaburak",
+        "hossein-alizadeh/radif-navazi-setar-mahur/nasirkhani-tusi",
+        "hossein-alizadeh/radif-navazi-setar-mahur/chaharpareh-moradkhani",
+        "hossein-alizadeh/radif-navazi-setar-mahur/feyli",
+        "hossein-alizadeh/radif-navazi-setar-mahur/mahur-e-saghir",
+        "hossein-alizadeh/radif-navazi-setar-mahur/azarbayjani",
+        "hossein-alizadeh/radif-navazi-setar-mahur/hesar-e-mahur-abol-zanguleh-naghmeh",
+        "hossein-alizadeh/radif-navazi-setar-mahur/zir-afkand",
+        "hossein-alizadeh/radif-navazi-setar-mahur/neyriz",
+        "hossein-alizadeh/radif-navazi-setar-mahur/shekasteh",
+        "hossein-alizadeh/radif-navazi-setar-mahur/eragh",
+        "hossein-alizadeh/radif-navazi-setar-mahur/nahib",
+        "hossein-alizadeh/radif-navazi-setar-mahur/mohayer",
+        "hossein-alizadeh/radif-navazi-setar-mahur/ashuravand",
+        "hossein-alizadeh/radif-navazi-setar-mahur/esfahanak",
+        "hossein-alizadeh/radif-navazi-setar-mahur/hazin",
+        "hossein-alizadeh/radif-navazi-setar-mahur/kereshmeh-ii",
+        "hossein-alizadeh/radif-navazi-setar-mahur/zanguleh",
+        "hossein-alizadeh/radif-navazi-setar-mahur/rak-e-hendi",
+        "hossein-alizadeh/radif-navazi-setar-mahur/rak-e-keshmir",
+        "hossein-alizadeh/radif-navazi-setar-mahur/rak-e-abdollah",
+        "hossein-alizadeh/radif-navazi-setar-mahur/kereshmeh-e-rak-safir-e-rak",
+        "hossein-alizadeh/radif-navazi-setar-mahur/saghinameh-koshteh-mordeh-sufinameh",
+        "hossein-alizadeh/radif-navazi-setar-mahur/reng-e-harbi",
+        "hossein-alizadeh/radif-navazi-setar-mahur/reng-e-shalakhu",
+        "hossein-alizadeh/radif-navazi-setar-mahur/reng-e-yek-chubeh"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.rast-panjgah",
+      "master": "hossein-alizadeh",
+      "dastgah": "rast-panjgah",
+      "instrument": "setar",
+      "n": 25,
+      "n_total": 25,
+      "tonic": {
+        "hz": 146.74,
+        "label": "D",
+        "pc_cents": 198.9
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 146.74
+        },
+        {
+          "cents": 206.8,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 165.36
+        },
+        {
+          "cents": 282.5,
+          "share": 0.36,
+          "main": false,
+          "label": "F",
+          "hz": 172.75
+        },
+        {
+          "cents": 349.3,
+          "share": 0.32,
+          "main": false,
+          "label": "Fs",
+          "hz": 179.54
+        },
+        {
+          "cents": 395.8,
+          "share": 0.36,
+          "main": false,
+          "label": "Gb",
+          "hz": 184.43
+        },
+        {
+          "cents": 494.8,
+          "share": 0.92,
+          "main": true,
+          "label": "G",
+          "hz": 195.28
+        },
+        {
+          "cents": 705.3,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 220.53
+        },
+        {
+          "cents": 856.7,
+          "share": 0.32,
+          "main": false,
+          "label": "Bk",
+          "hz": 240.69
+        },
+        {
+          "cents": 910.8,
+          "share": 0.56,
+          "main": true,
+          "label": "B",
+          "hz": 248.33
+        },
+        {
+          "cents": 996.7,
+          "share": 0.16,
+          "main": false,
+          "label": "C",
+          "hz": 260.96
+        },
+        {
+          "cents": 1102.6,
+          "share": 0.68,
+          "main": true,
+          "label": "Db",
+          "hz": 277.43
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/daramad",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/zang-e-shotor",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/zanguleh",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/naghmeh",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/khosravani",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/ruh-afaza",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/panjgah",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/sepehr",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/oshagh",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/neyriz",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/bal-e-kabutaran",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/bayat-ajam",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/bahr-e-nur",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/gharacheh",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/mobargha",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/tarz",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/abolchap",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/leyli-o-majnun",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/ravandi",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/nowruz-e-arab",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/nowruz-e-saba",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/nowruz-e-khara",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/mavaraonnahar",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/nafir",
+        "hossein-alizadeh/radif-navazi-setar-rast-panjgah/farang"
+      ]
+    },
+    {
+      "id": "hossein-alizadeh.nava",
+      "master": "hossein-alizadeh",
+      "dastgah": "nava",
+      "instrument": "setar",
+      "n": 22,
+      "n_total": 22,
+      "tonic": {
+        "hz": 162.84,
+        "label": "E",
+        "pc_cents": 379.2
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 162.84
+        },
+        {
+          "cents": 125.0,
+          "share": 0.18,
+          "main": false,
+          "label": "F",
+          "hz": 175.03
+        },
+        {
+          "cents": 200.0,
+          "share": 0.68,
+          "main": true,
+          "label": "Gb",
+          "hz": 182.79
+        },
+        {
+          "cents": 288.8,
+          "share": 0.86,
+          "main": true,
+          "label": "G",
+          "hz": 192.41
+        },
+        {
+          "cents": 401.7,
+          "share": 0.18,
+          "main": false,
+          "label": "Ab",
+          "hz": 205.37
+        },
+        {
+          "cents": 503.4,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 217.79
+        },
+        {
+          "cents": 702.0,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 244.28
+        },
+        {
+          "cents": 843.9,
+          "share": 0.64,
+          "main": true,
+          "label": "Cs",
+          "hz": 265.14
+        },
+        {
+          "cents": 995.5,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 289.39
+        }
+      ],
+      "tracks": [
+        "hossein-alizadeh/radif-navazi-setar-nava/chaharmezrab",
+        "hossein-alizadeh/radif-navazi-setar-nava/daramad-e-aval",
+        "hossein-alizadeh/radif-navazi-setar-nava/daramad-e-dovom",
+        "hossein-alizadeh/radif-navazi-setar-nava/kereshmeh",
+        "hossein-alizadeh/radif-navazi-setar-nava/gardaniyeh",
+        "hossein-alizadeh/radif-navazi-setar-nava/naghmeh",
+        "hossein-alizadeh/radif-navazi-setar-nava/bayat-raje",
+        "hossein-alizadeh/radif-navazi-setar-nava/hazin",
+        "hossein-alizadeh/radif-navazi-setar-nava/oshagh",
+        "hossein-alizadeh/radif-navazi-setar-nava/nahoft",
+        "hossein-alizadeh/radif-navazi-setar-nava/gavesht",
+        "hossein-alizadeh/radif-navazi-setar-nava/ashiran",
+        "hossein-alizadeh/radif-navazi-setar-nava/neyshaburak",
+        "hossein-alizadeh/radif-navazi-setar-nava/mojasli",
+        "hossein-alizadeh/radif-navazi-setar-nava/khojasteh",
+        "hossein-alizadeh/radif-navazi-setar-nava/malek-hossein",
+        "hossein-alizadeh/radif-navazi-setar-nava/hossein",
+        "hossein-alizadeh/radif-navazi-setar-nava/busalik",
+        "hossein-alizadeh/radif-navazi-setar-nava/neyriz",
+        "hossein-alizadeh/radif-navazi-setar-nava/reng-e-nava-i",
+        "hossein-alizadeh/radif-navazi-setar-nava/reng-e-nava-ii",
+        "hossein-alizadeh/radif-navazi-setar-nava/reng-e-nastari"
+      ]
+    },
+    {
+      "id": "jalal-zolfonun.abu-ata",
+      "master": "jalal-zolfonun",
+      "dastgah": "abu-ata",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 434.57,
+        "label": "A",
+        "pc_cents": 878.5
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 434.57
+        },
+        {
+          "cents": 137.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 470.54
+        },
+        {
+          "cents": 291.6,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 514.29
+        },
+        {
+          "cents": 498.6,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 579.61
+        },
+        {
+          "cents": 701.2,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 651.57
+        },
+        {
+          "cents": 837.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Fs",
+          "hz": 705.1
+        },
+        {
+          "cents": 996.3,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 772.66
+        }
+      ],
+      "tracks": [
+        "jalal-zolfonun/a-century-of-setar-music/abuata"
+      ]
+    },
+    {
+      "id": "mahmud-tajbakhsh.bayat-e-tork",
+      "master": "mahmud-tajbakhsh",
+      "dastgah": "bayat-e-tork",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 309.64,
+        "label": "D",
+        "pc_cents": 291.7
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 309.64
+        },
+        {
+          "cents": 193.2,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 346.19
+        },
+        {
+          "cents": 394.2,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 388.81
+        },
+        {
+          "cents": 493.6,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 411.79
+        },
+        {
+          "cents": 692.6,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 461.95
+        },
+        {
+          "cents": 896.2,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 519.61
+        },
+        {
+          "cents": 1050.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Cs",
+          "hz": 568.01
+        }
+      ],
+      "tracks": [
+        "mahmud-tajbakhsh/a-century-of-setar-music/bayat-tork-i"
+      ]
+    },
+    {
+      "id": "majid-kiani.shur",
+      "master": "majid-kiani",
+      "dastgah": "shur",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 185.74,
+        "label": "G",
+        "pc_cents": 606.9
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 185.74
+        },
+        {
+          "cents": 138.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 201.25
+        },
+        {
+          "cents": 292.2,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 219.89
+        },
+        {
+          "cents": 502.6,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 248.31
+        },
+        {
+          "cents": 700.8,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 278.43
+        },
+        {
+          "cents": 777.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 291.07
+        },
+        {
+          "cents": 992.7,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 329.56
+        }
+      ],
+      "tracks": [
+        "majid-kiani/a-century-of-santur/bayat-e-kord"
+      ]
+    },
+    {
+      "id": "mansur-saremi.bayat-e-esfahan",
+      "master": "mansur-saremi",
+      "dastgah": "bayat-e-esfahan",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 401.38,
+        "label": "G",
+        "pc_cents": 740.9
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 401.38
+        },
+        {
+          "cents": 203.1,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 451.34
+        },
+        {
+          "cents": 291.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 474.84
+        },
+        {
+          "cents": 485.9,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 531.43
+        },
+        {
+          "cents": 704.3,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 602.88
+        },
+        {
+          "cents": 841.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Ek",
+          "hz": 652.56
+        },
+        {
+          "cents": 1099.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 757.39
+        }
+      ],
+      "tracks": [
+        "mansur-saremi/a-century-of-santur/bayat-e-esfahan-ii"
+      ]
+    },
+    {
+      "id": "meshkatian.shur",
+      "master": "meshkatian",
+      "dastgah": "shur",
+      "instrument": "santur",
+      "n": 6,
+      "n_total": 6,
+      "tonic": {
+        "hz": 199.91,
+        "label": "G",
+        "pc_cents": 734.2
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 199.91
+        },
+        {
+          "cents": 141.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 216.98
+        },
+        {
+          "cents": 282.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 235.29
+        },
+        {
+          "cents": 500.8,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 266.97
+        },
+        {
+          "cents": 648.6,
+          "share": 0.33,
+          "main": false,
+          "label": "Dk",
+          "hz": 290.76
+        },
+        {
+          "cents": 703.5,
+          "share": 0.67,
+          "main": true,
+          "label": "D",
+          "hz": 300.13
+        },
+        {
+          "cents": 783.0,
+          "share": 0.83,
+          "main": true,
+          "label": "Eb",
+          "hz": 314.24
+        },
+        {
+          "cents": 894.5,
+          "share": 0.17,
+          "main": false,
+          "label": "E",
+          "hz": 335.14
+        },
+        {
+          "cents": 995.5,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 355.26
+        }
+      ],
+      "tracks": [
+        "meshkatian/santur-shur/zarbi-shur",
+        "meshkatian/santur-shur/daramad-rohab-kereshmeh",
+        "meshkatian/santur-shur/shur",
+        "meshkatian/santur-shur/salmak-shahnaz",
+        "meshkatian/santur-shur/zarbi-gereyli-shasti",
+        "meshkatian/santur-shur/chaharmezrab-shur"
+      ]
+    },
+    {
+      "id": "meshkatian.dashti",
+      "master": "meshkatian",
+      "dastgah": "dashti",
+      "instrument": "santur",
+      "n": 3,
+      "n_total": 3,
+      "tonic": {
+        "hz": 199.97,
+        "label": "G",
+        "pc_cents": 734.7
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 199.97
+        },
+        {
+          "cents": 140.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 216.88
+        },
+        {
+          "cents": 284.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 235.71
+        },
+        {
+          "cents": 498.3,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 266.67
+        },
+        {
+          "cents": 707.0,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 300.83
+        },
+        {
+          "cents": 785.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 314.75
+        },
+        {
+          "cents": 997.2,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 355.74
+        }
+      ],
+      "tracks": [
+        "meshkatian/santur-shur/dashti-forud-shur-dashtestani",
+        "meshkatian/santur-shur/dashtestani",
+        "meshkatian/santur-shur/dashtestani-shur"
+      ]
+    },
+    {
+      "id": "meshkatian.bayat-e-esfahan",
+      "master": "meshkatian",
+      "dastgah": "bayat-e-esfahan",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 263.95,
+        "label": "C",
+        "pc_cents": 15.3
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 263.95
+        },
+        {
+          "cents": 208.9,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 297.8
+        },
+        {
+          "cents": 282.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 310.72
+        },
+        {
+          "cents": 479.1,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 348.11
+        },
+        {
+          "cents": 705.7,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 396.79
+        },
+        {
+          "cents": 835.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 427.73
+        },
+        {
+          "cents": 1052.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 484.82
+        }
+      ],
+      "tracks": [
+        "meshkatian/beyond-the-screen/improvisation-bayat-e-esfahan-pt1"
+      ]
+    },
+    {
+      "id": "meshkatian.segah",
+      "master": "meshkatian",
+      "dastgah": "segah",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 268.76,
+        "label": "Cs",
+        "pc_cents": 46.6
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Cs",
+          "hz": 268.76
+        },
+        {
+          "cents": 146.9,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 292.56
+        },
+        {
+          "cents": 342.5,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 327.55
+        },
+        {
+          "cents": 494.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Fs",
+          "hz": 357.65
+        },
+        {
+          "cents": 697.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Gs",
+          "hz": 402.07
+        },
+        {
+          "cents": 843.7,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 437.53
+        },
+        {
+          "cents": 986.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 475.12
+        }
+      ],
+      "tracks": [
+        "meshkatian/a-century-of-santur/segah-iv"
+      ]
+    },
+    {
+      "id": "mohammad-reza-lotfi.bayat-e-tork",
+      "master": "mohammad-reza-lotfi",
+      "dastgah": "bayat-e-tork",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 208.33,
+        "label": "A",
+        "pc_cents": 805.6
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 208.33
+        },
+        {
+          "cents": 205.8,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 234.63
+        },
+        {
+          "cents": 410.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Db",
+          "hz": 264.05
+        },
+        {
+          "cents": 495.3,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 277.33
+        },
+        {
+          "cents": 695.5,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 311.33
+        },
+        {
+          "cents": 918.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 354.11
+        },
+        {
+          "cents": 1040.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Gs",
+          "hz": 379.97
+        }
+      ],
+      "tracks": [
+        "mohammad-reza-lotfi/a-century-of-setar-music/bayat-tork-ii"
+      ]
+    },
+    {
+      "id": "morteza-abdolrasuli.mahur",
+      "master": "morteza-abdolrasuli",
+      "dastgah": "mahur",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 386.07,
+        "label": "G",
+        "pc_cents": 673.6
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 386.07
+        },
+        {
+          "cents": 210.5,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 435.99
+        },
+        {
+          "cents": 409.8,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 489.18
+        },
+        {
+          "cents": 496.8,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 514.39
+        },
+        {
+          "cents": 709.4,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 581.6
+        },
+        {
+          "cents": 890.6,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 645.78
+        },
+        {
+          "cents": 1105.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 731.17
+        }
+      ],
+      "tracks": [
+        "morteza-abdolrasuli/a-century-of-santur/mahur"
+      ]
+    },
+    {
+      "id": "moshir-moazzam-afshar.afshari",
+      "master": "moshir-moazzam-afshar",
+      "dastgah": "afshari",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 586.48,
+        "label": "D",
+        "pc_cents": 197.5
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 586.48
+        },
+        {
+          "cents": 201.6,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 658.91
+        },
+        {
+          "cents": 296.3,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 695.96
+        },
+        {
+          "cents": 506.5,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 785.81
+        },
+        {
+          "cents": 694.5,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 875.94
+        },
+        {
+          "cents": 847.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 956.88
+        },
+        {
+          "cents": 995.2,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 1042.1
+        }
+      ],
+      "tracks": [
+        "moshir-moazzam-afshar/a-century-of-setar-music/afshari-ii"
+      ]
+    },
+    {
+      "id": "nur-ali-borumand.bayat-e-esfahan",
+      "master": "nur-ali-borumand",
+      "dastgah": "bayat-e-esfahan",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 260.4,
+        "label": "C",
+        "pc_cents": 1191.8
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 260.4
+        },
+        {
+          "cents": 202.2,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 292.66
+        },
+        {
+          "cents": 288.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 307.54
+        },
+        {
+          "cents": 484.2,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 344.43
+        },
+        {
+          "cents": 703.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 390.83
+        },
+        {
+          "cents": 850.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 425.59
+        },
+        {
+          "cents": 1072.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Bk",
+          "hz": 483.84
+        }
+      ],
+      "tracks": [
+        "nur-ali-borumand/a-century-of-santur/bayat-e-esfahan-i"
+      ]
+    },
+    {
+      "id": "nur-ali-borumand.mahur",
+      "master": "nur-ali-borumand",
+      "dastgah": "mahur",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 221.4,
+        "label": "A",
+        "pc_cents": 911.0
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 221.4
+        },
+        {
+          "cents": 207.7,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 249.62
+        },
+        {
+          "cents": 393.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Db",
+          "hz": 277.93
+        },
+        {
+          "cents": 497.7,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 295.14
+        },
+        {
+          "cents": 705.3,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 332.74
+        },
+        {
+          "cents": 909.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 374.35
+        },
+        {
+          "cents": 1096.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Ab",
+          "hz": 417.05
+        }
+      ],
+      "tracks": [
+        "nur-ali-borumand/a-century-of-setar-music/mahur-iii"
+      ]
+    },
+    {
+      "id": "qobad-zafar.shur",
+      "master": "qobad-zafar",
+      "dastgah": "shur",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 826.96,
+        "label": "G",
+        "pc_cents": 792.4
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 826.96
+        },
+        {
+          "cents": 127.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 890.31
+        },
+        {
+          "cents": 274.2,
+          "share": 1.0,
+          "main": true,
+          "label": "As",
+          "hz": 968.88
+        },
+        {
+          "cents": 502.6,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 1105.51
+        },
+        {
+          "cents": 735.1,
+          "share": 1.0,
+          "main": true,
+          "label": "Ds",
+          "hz": 1264.41
+        },
+        {
+          "cents": 840.3,
+          "share": 1.0,
+          "main": true,
+          "label": "Ek",
+          "hz": 1343.63
+        },
+        {
+          "cents": 988.1,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 1463.38
+        }
+      ],
+      "tracks": [
+        "qobad-zafar/a-century-of-santur/shur-ii"
+      ]
+    },
+    {
+      "id": "reza-varzande.segah",
+      "master": "reza-varzande",
+      "dastgah": "segah",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 185.0,
+        "label": "Gk",
+        "pc_cents": 600.1
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Gk",
+          "hz": 185.0
+        },
+        {
+          "cents": 215.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 209.52
+        },
+        {
+          "cents": 347.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Bb",
+          "hz": 226.18
+        },
+        {
+          "cents": 479.7,
+          "share": 1.0,
+          "main": true,
+          "label": "Ck",
+          "hz": 244.07
+        },
+        {
+          "cents": 702.9,
+          "share": 1.0,
+          "main": true,
+          "label": "Dk",
+          "hz": 277.66
+        },
+        {
+          "cents": 834.2,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 299.53
+        },
+        {
+          "cents": 1047.5,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 338.81
+        }
+      ],
+      "tracks": [
+        "reza-varzande/a-century-of-santur/segah-iii"
+      ]
+    },
+    {
+      "id": "said-hormozi.mahur",
+      "master": "said-hormozi",
+      "dastgah": "mahur",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 112.6,
+        "label": "A",
+        "pc_cents": 940.4
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 112.6
+        },
+        {
+          "cents": 208.3,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 126.99
+        },
+        {
+          "cents": 402.8,
+          "share": 1.0,
+          "main": true,
+          "label": "Db",
+          "hz": 142.09
+        },
+        {
+          "cents": 501.2,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 150.4
+        },
+        {
+          "cents": 703.5,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 169.05
+        },
+        {
+          "cents": 905.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 189.97
+        },
+        {
+          "cents": 1095.5,
+          "share": 1.0,
+          "main": true,
+          "label": "Ab",
+          "hz": 212.0
+        }
+      ],
+      "tracks": [
+        "said-hormozi/a-century-of-setar-music/mahur-i"
+      ]
+    },
+    {
+      "id": "talie-kamran.homayoun",
+      "master": "talie-kamran",
+      "dastgah": "homayoun",
+      "instrument": "santur",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 102.81,
+        "label": "G",
+        "pc_cents": 783.0
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 102.81
+        },
+        {
+          "cents": 149.6,
+          "share": 1.0,
+          "main": true,
+          "label": "Ak",
+          "hz": 112.09
+        },
+        {
+          "cents": 388.0,
+          "share": 1.0,
+          "main": true,
+          "label": "B",
+          "hz": 128.64
+        },
+        {
+          "cents": 497.3,
+          "share": 1.0,
+          "main": true,
+          "label": "C",
+          "hz": 137.03
+        },
+        {
+          "cents": 713.3,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 155.23
+        },
+        {
+          "cents": 814.4,
+          "share": 1.0,
+          "main": true,
+          "label": "Eb",
+          "hz": 164.57
+        },
+        {
+          "cents": 989.7,
+          "share": 1.0,
+          "main": true,
+          "label": "F",
+          "hz": 182.11
+        }
+      ],
+      "tracks": [
+        "talie-kamran/a-century-of-santur/homayun"
+      ]
+    },
+    {
+      "id": "yusef-forutan.afshari",
+      "master": "yusef-forutan",
+      "dastgah": "afshari",
+      "instrument": "setar",
+      "n": 1,
+      "n_total": 1,
+      "tonic": {
+        "hz": 112.82,
+        "label": "A",
+        "pc_cents": 943.8
+      },
+      "pitches": [
+        {
+          "cents": 0.0,
+          "share": 1.0,
+          "main": true,
+          "label": "A",
+          "hz": 112.82
+        },
+        {
+          "cents": 494.2,
+          "share": 1.0,
+          "main": true,
+          "label": "D",
+          "hz": 150.09
+        },
+        {
+          "cents": 697.7,
+          "share": 1.0,
+          "main": true,
+          "label": "E",
+          "hz": 168.81
+        },
+        {
+          "cents": 895.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Gb",
+          "hz": 189.19
+        },
+        {
+          "cents": 980.9,
+          "share": 1.0,
+          "main": true,
+          "label": "G",
+          "hz": 198.81
+        },
+        {
+          "cents": 1087.0,
+          "share": 1.0,
+          "main": true,
+          "label": "Ab",
+          "hz": 211.38
+        }
+      ],
+      "tracks": [
+        "yusef-forutan/a-century-of-setar-music/afshari-i"
+      ]
+    }
+  ]
+}

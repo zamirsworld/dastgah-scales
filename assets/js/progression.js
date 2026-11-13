@@ -3,7 +3,7 @@
 // Single series colour; every note bar has a ≥ 24 px hover/focus target; the segment
 // and transition tables below hold the same information without hovering.
 
-import { attachTip, el, fitText } from "./compare.js?v=10";
+import { attachTip, el, fitText } from "./compare.js?v=13";
 
 const fmt = (x, d = 1) => (x === null || x === undefined ? "—" : Number(x).toFixed(d));
 const mmss = (t) => `${Math.floor(t / 60)}:${(t % 60).toFixed(1).padStart(4, "0")}`;

@@ -6,7 +6,7 @@
 // List: the same recordings as a sortable table with the strip in every row.
 // Filters dim rows on the wall (you keep your place) and remove rows from the list.
 
-import { sequence, stopSequence } from "./synth.js?v=10";
+import { sequence, stopSequence } from "./synth.js?v=13";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -51,6 +51,16 @@ function prepare(catalog) {
 }
 
 // ── filters ────────────────────────────────────────────────────────────────
+
+// Set the library's filters from another page (e.g. a mark on the tuning map), by id.
+export function filterLibrary(catalog, { master = null, dastgah = null } = {}) {
+  prepare(catalog);
+  const m = M.find((x) => x.id === master), d = DG.find((x) => x.id === dastgah);
+  state.q = "";
+  state.f = { d: d ? d.i : null, m: m ? m.i : null, inst: null, inf: null };
+  state.shown = PAGE;
+  save();
+}
 
 const FACETS = {
   m: { title: "Master", of: (t) => t.m },

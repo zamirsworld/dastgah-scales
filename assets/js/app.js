@@ -2,17 +2,25 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=10";
-import { drawTimeline, progressionTables } from "./progression.js?v=10";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=10";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=10";
-import { pageBrowse, wireBrowse, stripSVG } from "./browse.js?v=10";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=13";
+import { drawTimeline, progressionTables } from "./progression.js?v=13";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=13";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=13";
+import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=13";
+import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=13";
+import { pageScales, wireScales, scalesLink } from "./scales.js?v=13";
 
 const app = document.getElementById("app");
 const footer = document.getElementById("footer");
 let afterRender = null;        // set by pages that draw charts after their HTML is in place
 let catalog = null;
 let method = null;
+let tunings = null;            // data/tunings.json, loaded the first time a page needs it
+
+async function loadTunings() {
+  if (!tunings) tunings = await loadJSON("data/tunings.json");
+  return tunings;
+}
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -127,6 +135,7 @@ function pageMaster(id) {
      ${m.bio ? `<p>${esc(m.bio)}</p>` : ""}
      ${m.links && m.links.length ? `<p>${extLinks(m.links)}</p>` : ""}
      <p><strong>Dastgahs recorded:</strong> ${ds.map((d) => `<a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}`).join(" · ")}</p>
+     <p><a class="btn" href="${scalesLink("master", esc(m.id))}">Compare this master's scales and starting notes</a></p>
      <h2>Albums</h2><div class="grid">${albums}</div>
      ${tonicRows ? `<h2>Tonic across recordings</h2>
        <p class="muted">Did the master hold a fixed pitch over the years? Absolute Hz is as recorded: old
@@ -154,13 +163,41 @@ function pageAlbum(mid, aid) {
      <tbody>${rows}</tbody></table></div>`;
 }
 
+let mapAxis = "fold";
+
 function pageDastgahs() {
-  const cards = catalog.dastgahs.map((d) => {
+  const card = (d) => {
     const n = allTracks().filter((x) => x.track.dastgah === d.id).length;
     return `<div class="card${n ? "" : " card-empty"}"><h3><a href="#/dastgah/${esc(d.id)}">${esc(d.name)}</a>${fa(d.name_fa)}</h3>
       <div class="muted">${kindLabel(d)} · ${n} recording(s)</div></div>`;
-  }).join("");
-  return crumbs([["#/", "Library"], [null, "Dastgahs"]]) + `<h1>Dastgahs and avaz</h1><div class="grid">${cards}</div>`;
+  };
+  // each dastgah followed by the avaz-ha derived from it, as the tradition groups them
+  const roots = catalog.dastgahs.filter((d) => !d.parent);
+  const cards = roots.map((d) => card(d) + catalog.dastgahs.filter((k) => k.parent === d.id).map(card).join("")).join("");
+  afterRender = () => {
+    const host = document.getElementById("tm-map");
+    const draw = () => drawTuningMap(host, catalog, {
+      axis: mapAxis,
+      onPick: (g) => { filterLibrary(catalog, { master: g.master.id, dastgah: g.dastgah }); location.hash = "#/list"; },
+    });
+    app.querySelector(".tm-bar").addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-axis]");
+      if (!b) return;
+      mapAxis = b.dataset.axis;
+      app.querySelectorAll("button[data-axis]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      draw();
+    });
+    draw();
+    return draw;
+  };
+  return crumbs([["#/", "Library"], [null, "Dastgahs"]]) + `<h1>Dastgahs and avaz</h1>` +
+    tuningMapHTML(catalog, mapAxis) + `<h2>All dastgah-ha and avaz-ha</h2><div class="grid">${cards}</div>`;
+}
+
+async function pageScalesRoute(parts) {
+  const data = await loadTunings();
+  afterRender = () => wireScales();
+  return crumbs([["#/", "Library"], [null, "Scales"]]) + pageScales(catalog, data, parts);
 }
 
 async function pageDastgah(id) {
@@ -174,8 +211,11 @@ async function pageDastgah(id) {
         return kids.length ? `<p class="muted">Avaz derived from it: ${kids.map((k) =>
           `<a href="#/dastgah/${esc(k.id)}">${esc(k.name)}</a>${fa(k.name_fa)}`).join(" · ")}.</p>` : "";
       })();
+  let pooled = [];
+  try { pooled = (await loadTunings()).tunings.filter((t) => t.dastgah === id); } catch (_) { pooled = []; }
+  const explore = pooled.length ? `<p><a class="btn" href="${scalesLink("dastgah", esc(id))}">Compare the masters' scales and starting notes</a></p>` : "";
   const head = crumbs([["#/", "Library"], ["#/dastgahs", "Dastgahs"], [null, esc(d.name)]]) +
-    `<h1>${esc(d.name)}${fa(d.name_fa)}</h1>${rel}`;
+    `<h1>${esc(d.name)}${fa(d.name_fa)}</h1>${rel}${explore}`;
   const analysed = entries.filter((e) => e.track.has_result);
   if (!entries.length) return head + '<p class="muted">No recordings yet.</p>';
   const recs = await Promise.all(analysed.map(async (e) => ({
@@ -425,6 +465,7 @@ function wireTrack(c, instrument) {
 }
 
 function pageMethod() {
+  const rules = tunings && tunings.rules;
   const cal = (method && method.calibrations) || [];
   const pr = method && method.progression;
   const calRows = cal.map((k) => `<tr><td>${esc(k.instrument)}</td><td class="num">${fmt(k.median_err_cents, 2)}</td>
@@ -453,6 +494,13 @@ function pageMethod() {
         estimator decide the opening, peak, final cadence and new pitches of each section.</li>
       <li><strong>Review.</strong> Nothing is published until the analysis has been checked by ear.</li>
     </ol>
+    <h2>Pooled tunings</h2>
+    <p>A short gushe recording uses only part of its scale. The <a href="#/scales">scale explorer</a> therefore pools all of
+      one master's recordings of a dastgah into a single tuning: each note is the median of where those recordings play it,
+      and its share is the fraction of them that use it.${rules ? ` Recordings whose tonic is within ${fmt(rules.tonic_window_cents, 0)} ¢ of the
+      group's commonest tonic are pooled; pitches within ${fmt(rules.merge_cents, 0)} ¢ of each other are one note; a note counts as part of the
+      scale when its share is at least ${pct(rules.main_share)}, and notes under ${pct(rules.min_share)} are left out.` : ""}
+      Every pooled tuning lists the recordings it comes from.</p>
     <h2>Measured accuracy</h2>
     <p class="muted">Against an instrument tuned and checked note by note with a tuner (pipeline ${esc(method ? method.pipeline_version : "")}).</p>
     ${calRows ? `<div class="table-wrap"><table><thead><tr><th>Instrument</th><th class="num">Median error ¢</th>
@@ -526,7 +574,8 @@ async function route() {
     else if (page === "dastgahs") html = pageDastgahs();
     else if (page === "dastgah") html = await pageDastgah(rest[0]);
     else if (page === "track") html = await pageTrack(rest.join("/"));
-    else if (page === "method") html = pageMethod();
+    else if (page === "scales") html = await pageScalesRoute(rest);
+    else if (page === "method") { try { await loadTunings(); } catch (_) { /* the page works without the rules */ } html = pageMethod(); }
     else html = notFound();
     app.innerHTML = html;
     window.scrollTo(0, 0);
