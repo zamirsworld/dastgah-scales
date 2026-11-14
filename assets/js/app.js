@@ -2,13 +2,14 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=13";
-import { drawTimeline, progressionTables } from "./progression.js?v=13";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=13";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=13";
-import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=13";
-import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=13";
-import { pageScales, wireScales, scalesLink } from "./scales.js?v=13";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=14";
+import { drawTimeline, progressionTables } from "./progression.js?v=14";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=14";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=14";
+import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=14";
+import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=14";
+import { pageScales, wireScales, scalesLink } from "./scales.js?v=14";
+import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=14";
 
 const app = document.getElementById("app");
 const footer = document.getElementById("footer");
@@ -16,6 +17,13 @@ let afterRender = null;        // set by pages that draw charts after their HTML
 let catalog = null;
 let method = null;
 let tunings = null;            // data/tunings.json, loaded the first time a page needs it
+
+let signatures = null;         // data/signatures.json: every recording's melodic signature, for galleries and matching
+
+async function loadSignatures() {
+  if (!signatures) signatures = (await loadJSON("data/signatures.json")).signatures;
+  return signatures;
+}
 
 async function loadTunings() {
   if (!tunings) tunings = await loadJSON("data/tunings.json");
@@ -218,6 +226,12 @@ async function pageDastgah(id) {
     `<h1>${esc(d.name)}${fa(d.name_fa)}</h1>${rel}${explore}`;
   const analysed = entries.filter((e) => e.track.has_result);
   if (!entries.length) return head + '<p class="muted">No recordings yet.</p>';
+  let sigs = {};
+  try { sigs = await loadSignatures(); } catch (_) { sigs = {}; }
+  const gallery = entries.some((e) => sigs[e.track.key]) ? `<h2>Melodic signatures</h2>
+    <p class="muted">How each recording moves between its notes, tonic at the top: one line per move, from the notes extracted from
+      the recording. ${d.kind === "group" ? "" : "The notes are the same from one to the next; the moves are what tell the gushe-ha apart. "}Open a recording to replay it.</p>
+    ${SIG_LEGEND}${galleryHTML(entries, sigs)}` : "";
   const recs = await Promise.all(analysed.map(async (e) => ({
     ...e, c: (await loadJSON(`data/tracks/${e.track.key}.json`)).consensus })));
   const slots = buildSlots(recs);
@@ -225,7 +239,7 @@ async function pageDastgah(id) {
       <td><a href="#/master/${esc(master.id)}">${esc(master.name)}</a></td><td>${esc(album.title)}</td>
       <td>${tonicCell(track)}</td></tr>`).join("");
   if (!recs.length || d.kind === "group") {   // a group mixes modes: no shared degree table
-    return head + `<h2>Recordings</h2><div class="table-wrap"><table><tbody>${list}</tbody></table></div>`;
+    return head + gallery + `<h2>Recordings</h2><div class="table-wrap"><table><tbody>${list}</tbody></table></div>`;
   }
   // degree × recording table (cents from tonic) + summary row
   const cell = (r, s) => {
@@ -267,6 +281,7 @@ async function pageDastgah(id) {
     <p class="muted">Measured frequency of every degree in every octave it was played (log scale), against 12-TET note
       guides at A4 = 440 Hz. ▲ marks the tonic. Absolute Hz is as recorded: old transfers may run slightly fast or slow.</p>
     <div id="cmp-absolute" class="viz"></div>
+    ${gallery}
     <h2>Degrees by recording (¢ from tonic)</h2>
     <div class="table-wrap"><table><thead><tr><th>Recording</th><th>Tonic (Hz)</th>${slotHead}<th>Steps ¢</th></tr></thead>
       <tbody>${degRows}${sumRow}</tbody></table></div>
@@ -402,6 +417,13 @@ async function pageTrack(key) {
       <th class="num">Support</th><th>Status</th><th>Kind</th></tr></thead>
       <tbody>${pitchRows}</tbody></table></div>
     ${hyps ? `<h2>Hypotheses</h2>${hyps}` : ""}`;
+  if (page.signature) {
+    html += `<h2>Melodic signature</h2>
+      <p class="muted">How the performance moves between its notes. Each line is a step of the melody from one note to the next,
+        from the notes extracted from this recording; the tonic is at the top. Play replays them in order, at their measured
+        times, with each line fading as the music goes on. Synthesized from the measured notes, not the recording.</p>
+      ${signatureHTML()}`;
+  }
   if (c.progression) {
     html += `<h2>Progression</h2><p>${esc(c.progression.narrative)}</p>
       <p class="muted">Each bar is a note (time across, pitch up); faint lines are the scale degrees in every octave,
@@ -418,7 +440,17 @@ async function pageTrack(key) {
     “${esc(c.matrix.preset)}” (${c.matrix.n_runs} runs, ${esc(c.matrix.families.join(", "))}) · ${esc(c.generated_at)} ·
     <a href="#/method">method</a></p>` + prevNext(hit);
 
-  afterRender = () => wireTrack(c, track.instrument || master.instrument);
+  afterRender = () => {
+    if (page.signature && c.progression) {
+      mountSignature(c, page.signature, track.instrument || master.instrument);
+      loadSignatures().then((sigs) => {
+        const el = document.getElementById("sig-near");
+        const lookup = (k) => { const x = allTracks().find((e) => e.track.key === k); return x && { ...x, dastgah: dastgah(x.track.dastgah).name }; };
+        if (el && location.hash === `#/track/${key}`) el.innerHTML = nearHTML(key, sigs, lookup);
+      }).catch(() => { /* the page works without the comparison */ });
+    }
+    return wireTrack(c, track.instrument || master.instrument);
+  };
   return html;
 }
 
@@ -501,6 +533,12 @@ function pageMethod() {
       group's commonest tonic are pooled; pitches within ${fmt(rules.merge_cents, 0)} ¢ of each other are one note; a note counts as part of the
       scale when its share is at least ${pct(rules.main_share)}, and notes under ${pct(rules.min_share)} are left out.` : ""}
       Every pooled tuning lists the recordings it comes from.</p>
+    <h2>Melodic signatures</h2>
+    <p>The wheel on a recording's page draws every step of the melody from one note to a different note as a line across the
+      octave. The notes are the ones the progression analysis trusts (long enough, or found by several runs). A step counts as
+      rising or falling by the register it sounds in, so C up to D and C down to the D below are kept apart; a repeated note
+      or an octave leap is not a step. Recordings are matched by scale degree and direction, which lets a gushe in one
+      dastgah resemble a gushe in another.</p>
     <h2>Measured accuracy</h2>
     <p class="muted">Against an instrument tuned and checked note by note with a tuner (pipeline ${esc(method ? method.pipeline_version : "")}).</p>
     ${calRows ? `<div class="table-wrap"><table><thead><tr><th>Instrument</th><th class="num">Median error ¢</th>

@@ -8,7 +8,7 @@
 // Note positions are 12-TET at A4 = 440 Hz, for reference only: Persian music has no
 // fixed pitch. Every value is also in the table under the chart.
 
-import { el, attachTip } from "./compare.js?v=13";
+import { el, attachTip } from "./compare.js?v=14";
 
 const C4 = 261.6256;
 const NAT = [["C", 0], ["D", 200], ["E", 400], ["F", 500], ["G", 700], ["A", 900], ["B", 1100]];

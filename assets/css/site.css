@@ -321,3 +321,30 @@ table.sc-table tbody tr { cursor: pointer; }
 table.sc-table tbody tr.sc-cur td { background: var(--accent-soft); }
 table.sc-table tbody tr:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 .sc-pat { font-family: var(--cond); letter-spacing: .12em; font-size: 1rem; }
+
+/* ── melodic signature ─────────────────────────────────────────────── */
+/* Two directions, two hues (validated pair) plus form: taper from the starting note and opposite bow. */
+.sg-rise { fill: var(--series-2); fill-opacity: .85; }
+.sg-fall { fill: var(--series-1); fill-opacity: .85; }
+.sg-ring { fill: none; stroke: var(--line); stroke-width: 1.5; }
+.sg-tick { stroke: var(--line); stroke-width: 1; }
+.sg-bead { fill: var(--tick); stroke: var(--bg); stroke-width: 1.5; }
+.sg-bead.sg-tonic { stroke: var(--accent); stroke-width: 2.5; }
+.sg-bead.sg-on { fill: var(--accent); stroke: var(--text); }
+.sig-wheel svg { display: block; width: 100%; height: auto; max-width: 460px; margin: 0 auto; }
+.sig-wheel text.sg-nm { fill: var(--text); font-size: 12px; }
+.sig-wheel text.sg-mid { fill: var(--muted); font-size: 12px; }
+.sig-main { display: grid; grid-template-columns: minmax(0, 460px) minmax(0, 1fr); gap: 8px 36px; align-items: start; }
+@media (max-width: 900px) { .sig-main { grid-template-columns: minmax(0, 1fr); } }
+.sig-bar { border-top: 0; padding: 4px 0; }
+.sig-bar select { font: inherit; font-size: .88rem; padding: 3px 6px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); }
+.sig-bar input[type="range"] { flex: 1 1 180px; min-width: 0; accent-color: var(--accent); }
+.sig-time { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sig-legend { margin: 8px 0 12px; }
+.sig-sw { display: inline-block; width: 16px; height: 6px; border-radius: 3px 1px 1px 3px; vertical-align: middle; }
+.sig-sw-rise { background: var(--series-2); } .sig-sw-fall { background: var(--series-1); }
+.sig-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 14px 12px; margin: 10px 0 4px; }
+.sig-card { display: grid; justify-items: center; gap: 1px; text-align: center; font-size: .82rem; color: var(--text); padding: 6px 4px; border-radius: 8px; min-width: 0; }
+.sig-card:hover { background: var(--surface); text-decoration: none; }
+.sig-card .sig-t { font-weight: 600; overflow-wrap: anywhere; }
+svg.sg-mini { display: block; }
