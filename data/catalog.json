@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "pipeline_version": "0.9.1",
-  "generated_at": "2026-11-15T05:01:25+00:00",
+  "generated_at": "2026-11-15T05:12:06+00:00",
   "include_pending": false,
   "masters": [
     {
@@ -2708,9 +2708,9 @@
           "release_date": "2002-09-03",
           "tracks": [
             {
-              "key": "habib-somai/a-century-of-santur/shur-mahur",
-              "id": "shur-mahur",
-              "title": "Shur, Mahur",
+              "key": "habib-somai/a-century-of-santur/shur-mahur-part-1",
+              "id": "shur-mahur-part-1",
+              "title": "Shur, Mahur (part 1)",
               "track_number": 103,
               "dastgah": "shur",
               "level": "gushe",
@@ -2721,43 +2721,83 @@
                 {
                   "name": "Shur",
                   "name_fa": "شور",
-                  "start": null,
-                  "status": "proposed"
-                },
-                {
-                  "name": "Mahur",
-                  "name_fa": "ماهور",
-                  "start": null,
+                  "start": 0.0,
                   "status": "proposed"
                 }
               ],
-              "notes": "Two dastgahs in one track (Shur, then Mahur): the scale and tonic will mix until the boundary is set.",
+              "notes": "First 4:07 of the track 'Shur, Mahur' (two disc sides): the Shur. The rest of the track sounds about 20 cents lower and is catalogued as part 2.",
               "instrument": null,
               "has_result": true,
-              "tonic_hz": 268.899,
-              "tonic_label": "C4",
-              "tuning_offset_cents": 47.5,
+              "tonic_hz": 240.206,
+              "tonic_label": "B3",
+              "tuning_offset_cents": -47.9,
               "scale": [
-                "C",
+                "B",
+                "Cs",
                 "D",
-                "F",
-                "Ab",
-                "A",
-                "Bb",
-                "Ck"
+                "E",
+                "F#",
+                "Gs",
+                "A"
               ],
               "degrees_cents": [
                 0.0,
-                198.0,
-                484.2,
-                795.6,
-                884.8,
-                996.7,
-                1161.2
+                153.5,
+                304.8,
+                504.8,
+                703.2,
+                846.2,
+                999.2
               ],
               "degrees_status": "ccccccc",
               "tonic_inferred": false,
-              "duration_s": 532
+              "duration_s": 247
+            },
+            {
+              "key": "habib-somai/a-century-of-santur/shur-mahur-part-2",
+              "id": "shur-mahur-part-2",
+              "title": "Shur, Mahur (part 2)",
+              "track_number": 103,
+              "dastgah": "mahur",
+              "level": "gushe",
+              "source": "unknown",
+              "review": "approved",
+              "links": [],
+              "gushe": [
+                {
+                  "name": "Mahur",
+                  "name_fa": "ماهور",
+                  "start": 249.68,
+                  "status": "proposed"
+                }
+              ],
+              "notes": "From 4:10 of the track 'Shur, Mahur' (two disc sides): the Mahur, about 20 cents lower than part 1. On the last side (from 6:32) the sixth is neutral, the seventh is lowered and the melody sits on the fifth.",
+              "instrument": null,
+              "has_result": true,
+              "tonic_hz": 237.836,
+              "tonic_label": "B3",
+              "tuning_offset_cents": -65.0,
+              "scale": [
+                "B",
+                "C#",
+                "D#",
+                "E",
+                "F#",
+                "Gs",
+                "A"
+              ],
+              "degrees_cents": [
+                0.0,
+                209.2,
+                410.8,
+                487.3,
+                694.0,
+                843.9,
+                990.4
+              ],
+              "degrees_status": "ccccccc",
+              "tonic_inferred": true,
+              "duration_s": 277
             }
           ]
         }
