@@ -2,19 +2,20 @@
 //
 // No recording audio is hosted. The pitch comes straight from the measured Hz, so
 // you hear the tuning, not the performance. An instrument with a measured overtone
-// profile (setar, so far) is built from that profile (voice.js); the others use a
+// profile (setar, santur) is built from that profile (voice.js); the others use a
 // plain additive "plucked string" voice. The AudioContext is created on the first
 // click, which is what browsers' autoplay rules require.
 
-import { renderPluck } from "./voice.js?v=15";
-import SETAR from "./timbre-setar.js?v=15";
+import { renderPluck } from "./voice.js?v=16";
+import SETAR from "./timbre-setar.js?v=16";
+import SANTUR from "./timbre-santur.js?v=16";
 
 // instruments whose notes are built from overtones measured on recordings
-const MEASURED = { setar: SETAR };
+const MEASURED = { setar: SETAR, santur: SANTUR };
 const GRID_CENTS = 20;       // one rendered note per 20 cents; the exact pitch comes from the playback rate
-const MAX_RENDERED = 48;
+const MAX_RENDERED = 40;
 const rendered = new Map();
-let string = null;           // the measured voice is one string: a new note stops the one before
+let string = null;           // on one string (setar) a new note stops the one before; santur courses ring on
 let bus = null;              // every measured note passes through here, so Stop can fade them together
 
 let ctx = null;
@@ -67,11 +68,13 @@ function measuredPluck(ac, profile, hz, t0, gain) {
   if (!bus) { bus = ac.createGain(); bus.connect(master); }
   src.connect(g).connect(bus);
   src.start(t0);
-  if (string && string.t0 <= t0) {                     // the finger moves on: the earlier note is damped
-    string.g.gain.setTargetAtTime(0, t0, 0.015);
-    try { string.src.stop(t0 + 0.2); } catch (_) { /* already stopped */ }
+  if (!profile.ring) {
+    if (string && string.t0 <= t0) {                   // the finger moves on: the earlier note is damped
+      string.g.gain.setTargetAtTime(0, t0, 0.015);
+      try { string.src.stop(t0 + 0.2); } catch (_) { /* already stopped */ }
+    }
+    string = { src, g, t0 };
   }
-  string = { src, g, t0 };
   active.push(src);
   return t0;
 }

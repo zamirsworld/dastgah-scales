@@ -2,14 +2,14 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=15";
-import { drawTimeline, progressionTables } from "./progression.js?v=15";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=15";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=15";
-import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=15";
-import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=15";
-import { pageScales, wireScales, scalesLink } from "./scales.js?v=15";
-import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=15";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=16";
+import { drawTimeline, progressionTables } from "./progression.js?v=16";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=16";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=16";
+import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=16";
+import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=16";
+import { pageScales, wireScales, scalesLink } from "./scales.js?v=16";
+import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=16";
 
 const app = document.getElementById("app");
 const footer = document.getElementById("footer");
