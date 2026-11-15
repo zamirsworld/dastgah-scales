@@ -2,14 +2,14 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=16";
-import { drawTimeline, progressionTables } from "./progression.js?v=16";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=16";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=16";
-import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=16";
-import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=16";
-import { pageScales, wireScales, scalesLink } from "./scales.js?v=16";
-import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=16";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=17";
+import { drawTimeline, progressionTables } from "./progression.js?v=17";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=17";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=17";
+import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=17";
+import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=17";
+import { pageScales, wireScales, scalesLink } from "./scales.js?v=17";
+import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=17";
 
 const app = document.getElementById("app");
 const footer = document.getElementById("footer");
@@ -385,7 +385,7 @@ async function pageTrack(key) {
       <button id="pl-stop" class="btn">Stop</button>
       <label class="inline"><input type="checkbox" id="pl-et"> hear 12-TET instead, to compare</label>
     </div>
-    <p class="muted">Synthesized at the measured frequencies, not the recording. Click a degree on the ruler or ▶ in a
+    <p class="muted">Synthesized at the measured frequencies in a santur sound, not the recording. Click a degree on the ruler or ▶ in a
       table to hear a single note.</p>
 
     <h2>Tonic</h2>

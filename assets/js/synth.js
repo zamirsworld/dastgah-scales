@@ -1,21 +1,21 @@
 // Tuning synth: plays a recording's measured scale with WebAudio.
 //
 // No recording audio is hosted. The pitch comes straight from the measured Hz, so
-// you hear the tuning, not the performance. An instrument with a measured overtone
-// profile (setar, santur) is built from that profile (voice.js); the others use a
-// plain additive "plucked string" voice. The AudioContext is created on the first
-// click, which is what browsers' autoplay rules require.
+// you hear the tuning, not the performance. Every note is built from the overtones
+// measured on a santur (voice.js, timbre-santur.js), whatever instrument the track
+// was played on: one sound for the whole library. The AudioContext is created on
+// the first click, which is what browsers' autoplay rules require.
 
-import { renderPluck } from "./voice.js?v=16";
-import SETAR from "./timbre-setar.js?v=16";
-import SANTUR from "./timbre-santur.js?v=16";
+import { renderPluck } from "./voice.js?v=17";
+import SANTUR from "./timbre-santur.js?v=17";
 
-// instruments whose notes are built from overtones measured on recordings
-const MEASURED = { setar: SETAR, santur: SANTUR };
+// The one voice. A setar profile also exists (timbre-setar.js) but is not loaded:
+// it did not sound like a setar.
+const VOICE = SANTUR;
 const GRID_CENTS = 20;       // one rendered note per 20 cents; the exact pitch comes from the playback rate
 const MAX_RENDERED = 40;
 const rendered = new Map();
-let string = null;           // on one string (setar) a new note stops the one before; santur courses ring on
+let string = null;           // a one-string profile damps the note before; santur courses ring on
 let bus = null;              // every measured note passes through here, so Stop can fade them together
 
 let ctx = null;
@@ -23,14 +23,6 @@ let master = null;
 let drone = null;
 let timers = [];
 let active = [];
-
-const TIMBRE = {
-  // partial amplitudes and decay time (s): santur bright and ringing, plucked lutes darker and shorter
-  santur: { partials: [1, 0.55, 0.42, 0.25, 0.18, 0.12, 0.08, 0.05], decay: 2.6 },
-  setar:  { partials: [1, 0.7, 0.35, 0.3, 0.15, 0.12, 0.06], decay: 1.5 },
-  tar:    { partials: [1, 0.75, 0.45, 0.32, 0.2, 0.12, 0.08], decay: 1.7 },
-  default:{ partials: [1, 0.5, 0.3, 0.2, 0.1], decay: 1.8 },
-};
 
 function audio() {
   if (!ctx) {
@@ -79,32 +71,10 @@ function measuredPluck(ac, profile, hz, t0, gain) {
   return t0;
 }
 
-export function pluck(hz, { instrument = "default", when = 0, gain = 0.32 } = {}) {
+// `instrument` is accepted for the callers' sake; every instrument plays with the one voice.
+export function pluck(hz, { when = 0, gain = 0.32 } = {}) {
   const ac = audio();
-  const t0 = ac.currentTime + 0.02 + when;
-  if (MEASURED[instrument]) return measuredPluck(ac, MEASURED[instrument], hz, t0, gain);
-  const t = TIMBRE[instrument] || TIMBRE.default;
-  const out = ac.createGain();
-  out.gain.setValueAtTime(0, t0);
-  out.gain.linearRampToValueAtTime(gain, t0 + 0.004);
-  out.gain.exponentialRampToValueAtTime(0.0008, t0 + t.decay);
-  out.connect(master);
-  const oscs = t.partials.map((amp, i) => {
-    const n = i + 1;
-    if (hz * n > ac.sampleRate / 2.2) return null;
-    const o = ac.createOscillator();
-    const g = ac.createGain();
-    o.frequency.value = hz * n;
-    // higher partials die faster, like a real string
-    g.gain.setValueAtTime(amp / t.partials.length, t0);
-    g.gain.exponentialRampToValueAtTime(0.0005, t0 + t.decay / (1 + 0.35 * i));
-    o.connect(g).connect(out);
-    o.start(t0);
-    o.stop(t0 + t.decay + 0.05);
-    return o;
-  }).filter(Boolean);
-  active.push(...oscs);
-  return t0;
+  return measuredPluck(ac, VOICE, hz, ac.currentTime + 0.02 + when, gain);
 }
 
 // Play a list of Hz in order. onStep(i) is called as each note sounds; onDone at the end.
