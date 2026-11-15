@@ -6,8 +6,8 @@
 // was played on: one sound for the whole library. The AudioContext is created on
 // the first click, which is what browsers' autoplay rules require.
 
-import { renderPluck } from "./voice.js?v=19";
-import SANTUR from "./timbre-santur.js?v=19";
+import { renderPluck } from "./voice.js?v=20";
+import SANTUR from "./timbre-santur.js?v=20";
 
 // The one voice. A setar profile also exists (timbre-setar.js) but is not loaded:
 // it did not sound like a setar.

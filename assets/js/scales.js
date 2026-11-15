@@ -22,16 +22,16 @@
 // Step shades follow Farhat's interval classes, for reference only; note letters on the
 // sounding axis are 12-TET at A4 = 440 Hz, for reference only.
 
-import { pluck, sequence, stopSequence } from "./synth.js?v=19";
-import { FARHAT } from "./track.js?v=19";
-import { filterLibrary } from "./browse.js?v=19";
+import { pluck, sequence, stopSequence } from "./synth.js?v=20";
+import { FARHAT } from "./track.js?v=20";
+import { filterLibrary } from "./browse.js?v=20";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const mod = (x) => ((x % 1200) + 1200) % 1200;
 const cdist = (a, b) => { const d = Math.abs(a - b) % 1200; return Math.min(d, 1200 - d); };
 const avg = (a) => a.reduce((s, v) => s + v, 0) / a.length;
-const nice = (n) => String(n).replace(/^([A-G])k$/, "$1 koron").replace(/^([A-G])s$/, "$1 sori").replace(/^([A-G])b$/, "$1♭");
+const nice = (n) => String(n).replace(/^([A-G])k$/, "$1 koron").replace(/^([A-G])s$/, "$1 sori").replace(/^([A-G])b$/, "$1♭").replace(/^([A-G])#$/, "$1♯");
 const sgn = (x) => `${x > 0 ? "+" : x < 0 ? "−" : ""}${Math.abs(x)}`;
 const NAT = [["C", 0], ["D", 200], ["E", 400], ["F", 500], ["G", 700], ["A", 900], ["B", 1100]];
 const ORD = ["tonic", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th"];

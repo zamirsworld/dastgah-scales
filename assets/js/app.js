@@ -2,14 +2,14 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=19";
-import { drawTimeline, progressionTables } from "./progression.js?v=19";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=19";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=19";
-import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=19";
-import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=19";
-import { pageScales, wireScales, scalesLink } from "./scales.js?v=19";
-import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=19";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=20";
+import { drawTimeline, progressionTables } from "./progression.js?v=20";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=20";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=20";
+import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=20";
+import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=20";
+import { pageScales, wireScales, scalesLink } from "./scales.js?v=20";
+import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=20";
 
 const app = document.getElementById("app");
 const footer = document.getElementById("footer");
@@ -561,7 +561,8 @@ function pageMethod() {
     </ul>
     <h2>Notation</h2>
     <p>Koron is written <strong>k</strong> (Ek = E koron, about a quarter-tone flat) and sori <strong>s</strong>
-      (Fs = F sori); b is a flat. Octaves follow scientific pitch notation (A4 = 440 Hz).</p>`;
+      (Fs = F sori); b is a flat and # a sharp. Notes are spelled from the tonic, so each degree of a scale has its own
+      letter (Mahur on A: A B C# D E F# G#). Octaves follow scientific pitch notation (A4 = 440 Hz).</p>`;
 }
 
 function notFound() {

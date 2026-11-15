@@ -17,7 +17,7 @@
 // `p` notes [cents, scale degree or 0, share of sounding time, label], `m` moves
 // [from, to, rising, falling]. The table beside the wheel holds the same counts.
 
-import { pluck, stopSequence } from "./synth.js?v=19";
+import { pluck, stopSequence } from "./synth.js?v=20";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
