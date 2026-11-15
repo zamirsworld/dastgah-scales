@@ -1,9 +1,21 @@
 // Tuning synth: plays a recording's measured scale with WebAudio.
 //
-// No recording audio is hosted. This is a plain additive "plucked string" voice
-// whose pitch comes straight from the measured Hz, so you hear the tuning, not
-// the performance. The AudioContext is created on the first click, which is what
-// browsers' autoplay rules require.
+// No recording audio is hosted. The pitch comes straight from the measured Hz, so
+// you hear the tuning, not the performance. An instrument with a measured overtone
+// profile (setar, so far) is built from that profile (voice.js); the others use a
+// plain additive "plucked string" voice. The AudioContext is created on the first
+// click, which is what browsers' autoplay rules require.
+
+import { renderPluck } from "./voice.js?v=15";
+import SETAR from "./timbre-setar.js?v=15";
+
+// instruments whose notes are built from overtones measured on recordings
+const MEASURED = { setar: SETAR };
+const GRID_CENTS = 20;       // one rendered note per 20 cents; the exact pitch comes from the playback rate
+const MAX_RENDERED = 48;
+const rendered = new Map();
+let string = null;           // the measured voice is one string: a new note stops the one before
+let bus = null;              // every measured note passes through here, so Stop can fade them together
 
 let ctx = null;
 let master = null;
@@ -34,10 +46,41 @@ function audio() {
   return ctx;
 }
 
+function measuredPluck(ac, profile, hz, t0, gain) {
+  const step = Math.round(1200 * Math.log2(hz / 440) / GRID_CENTS);
+  const gridHz = 440 * 2 ** (step * GRID_CENTS / 1200);
+  const key = `${profile.instrument}:${step}`;
+  let buf = rendered.get(key);
+  if (buf) rendered.delete(key);                       // re-inserted below: the Map keeps the least used first
+  else {
+    const samples = renderPluck(profile, gridHz, ac.sampleRate);
+    buf = ac.createBuffer(1, samples.length, ac.sampleRate);
+    buf.getChannelData(0).set(samples);
+    if (rendered.size >= MAX_RENDERED) rendered.delete(rendered.keys().next().value);
+  }
+  rendered.set(key, buf);
+  const src = ac.createBufferSource();
+  src.buffer = buf;
+  src.playbackRate.value = hz / gridHz;
+  const g = ac.createGain();
+  g.gain.setValueAtTime(gain / 0.32, t0);
+  if (!bus) { bus = ac.createGain(); bus.connect(master); }
+  src.connect(g).connect(bus);
+  src.start(t0);
+  if (string && string.t0 <= t0) {                     // the finger moves on: the earlier note is damped
+    string.g.gain.setTargetAtTime(0, t0, 0.015);
+    try { string.src.stop(t0 + 0.2); } catch (_) { /* already stopped */ }
+  }
+  string = { src, g, t0 };
+  active.push(src);
+  return t0;
+}
+
 export function pluck(hz, { instrument = "default", when = 0, gain = 0.32 } = {}) {
   const ac = audio();
-  const t = TIMBRE[instrument] || TIMBRE.default;
   const t0 = ac.currentTime + 0.02 + when;
+  if (MEASURED[instrument]) return measuredPluck(ac, MEASURED[instrument], hz, t0, gain);
+  const t = TIMBRE[instrument] || TIMBRE.default;
   const out = ac.createGain();
   out.gain.setValueAtTime(0, t0);
   out.gain.linearRampToValueAtTime(gain, t0 + 0.004);
@@ -78,6 +121,8 @@ export function stopSequence() {
   const now = ctx ? ctx.currentTime : 0;
   active.forEach((o) => { try { o.stop(now + 0.03); } catch (_) { /* already stopped */ } });
   active = [];
+  string = null;
+  if (bus) { bus.gain.setTargetAtTime(0, now, 0.008); bus = null; }   // fade what is sounding; the next note gets a new bus
 }
 
 // A soft sustained drone on the tonic (and its octave below), at the measured Hz.
