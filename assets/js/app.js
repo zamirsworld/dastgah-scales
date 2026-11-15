@@ -2,14 +2,14 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=17";
-import { drawTimeline, progressionTables } from "./progression.js?v=17";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=17";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=17";
-import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=17";
-import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=17";
-import { pageScales, wireScales, scalesLink } from "./scales.js?v=17";
-import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=17";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=18";
+import { drawTimeline, progressionTables } from "./progression.js?v=18";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=18";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=18";
+import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=18";
+import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=18";
+import { pageScales, wireScales, scalesLink } from "./scales.js?v=18";
+import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=18";
 
 const app = document.getElementById("app");
 const footer = document.getElementById("footer");
@@ -420,7 +420,8 @@ async function pageTrack(key) {
   if (page.signature) {
     html += `<h2>Melodic signature</h2>
       <p class="muted">How the performance moves between its notes. Each line is a step of the melody from one note to the next,
-        from the notes extracted from this recording; the tonic is at the top. Play replays them in order, at their measured
+        from the notes extracted from this recording; the tonic is at the top. On the spiral one turn is an octave and
+        higher notes sit further out; Circle folds the octaves together. Play replays the notes in order, at their measured
         times, with each line fading as the music goes on. Synthesized from the measured notes, not the recording.</p>
       ${signatureHTML()}`;
   }

@@ -2,7 +2,9 @@
 //
 // The octave is a circle with the tonic at the top. Every step of the melody from one note
 // to a different note is a line across the circle, taken from the notes extracted from the
-// recording (the same sequence the progression analysis uses). Two views:
+// recording (the same sequence the progression analysis uses). On a track page the circle
+// can be opened into a spiral: one turn is an octave and higher notes sit further out, so
+// the G above the tonic and the G below it are two places at the same angle. Two views:
 //   whole performance  all moves laid over each other; a line's width is how often the move
 //                      was made, so the most-used moves are the heaviest;
 //   replay             the notes in order, at their measured times: each move draws its line,
@@ -15,7 +17,7 @@
 // `p` notes [cents, scale degree or 0, share of sounding time, label], `m` moves
 // [from, to, rising, falling]. The table beside the wheel holds the same counts.
 
-import { pluck, stopSequence } from "./synth.js?v=17";
+import { pluck, stopSequence } from "./synth.js?v=18";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -25,12 +27,12 @@ const fmtT = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart
 
 const xy = (cents, r, C) => { const a = (cents / 1200) * 2 * Math.PI; return [C + r * Math.sin(a), C - r * Math.cos(a)]; };
 
-// A line from one note to another as a tapered, slightly bowed shape: widest where it starts.
-function chord(fromC, toC, w, r, C) {
-  const [x0, y0] = xy(fromC, r, C), [x2, y2] = xy(toC, r, C);
+// A line from one point to another as a tapered, slightly bowed shape: widest where it starts.
+// `pull` is how far the bow is drawn towards the centre (half way on the circle, less on the spiral).
+function chord([x0, y0], [x2, y2], w, r, C, pull = 0.5) {
   const dx = x2 - x0, dy = y2 - y0, len = Math.hypot(dx, dy) || 1;
   const mx = (x0 + x2) / 2, my = (y0 + y2) / 2, bow = Math.min(r * 0.16, len * 0.22);
-  const qx = C + (mx - C) * 0.5 + (dy / len) * bow, qy = C + (my - C) * 0.5 - (dx / len) * bow;
+  const qx = mx + (C - mx) * pull + (dy / len) * bow, qy = my + (C - my) * pull - (dx / len) * bow;
   const left = [], right = [];
   for (let k = 0; k <= 14; k++) {
     const t = k / 14, u = 1 - t;
@@ -43,7 +45,8 @@ function chord(fromC, toC, w, r, C) {
   return `M${left.join("L")}L${right.reverse().join("L")}Z`;
 }
 
-function movesSVG(sig, counts, maxCount, r, C, scale) {
+// counts: [from, to, rising, falling] by place; pt(i) is where place i sits, name(i) what it is called.
+function movesSVG(counts, maxCount, total, pt, name, r, C, scale, pull) {
   // widest first, so thin lines stay visible on top
   const items = [];
   counts.forEach(([a, b, rise, fall]) => {
@@ -53,7 +56,7 @@ function movesSVG(sig, counts, maxCount, r, C, scale) {
   items.sort((p, q) => q[2] - p[2]);
   return items.map(([a, b, n, dir]) => {
     const w = (1.4 + 10 * Math.sqrt(n / maxCount)) * scale;
-    return `<path class="sg-${dir}" d="${chord(sig.p[a][0], sig.p[b][0], w, r, C)}"><title>${esc(sig.p[a][3])} → ${esc(sig.p[b][3])}, ${dir === "rise" ? "rising" : "falling"}: ${n} of ${sig.n} moves</title></path>`;
+    return `<path class="sg-${dir}" d="${chord(pt(a), pt(b), w, r, C, pull)}"><title>${esc(name(a))} → ${esc(name(b))}, ${dir === "rise" ? "rising" : "falling"}: ${n} of ${total} moves</title></path>`;
   }).join("");
 }
 
@@ -65,7 +68,7 @@ export function miniWheel(sig, size = 116) {
   const beads = sig.p.map((p) => { const [x, y] = xy(p[0], R, C);
     return `<circle class="sg-bead${p[1] === 1 ? " sg-tonic" : ""}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.2 + 5 * Math.sqrt(p[2])).toFixed(1)}"/>`; }).join("");
   return `<svg class="sg-mini" viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" aria-hidden="true"><circle class="sg-ring" cx="${C}" cy="${C}" r="${R}"/>
-    ${movesSVG(sig, sig.m, maxOf(sig), R - 3, C, size / 440)}${beads}</svg>`;
+    ${movesSVG(sig.m, maxOf(sig), sig.n, (k) => xy(sig.p[k][0], R - 3, C), (k) => sig.p[k][3], R - 3, C, size / 440)}${beads}</svg>`;
 }
 
 // ── likeness between two signatures ────────────────────────────────────────
@@ -115,7 +118,9 @@ export function signatureHTML() {
     <div class="sig-side">
       <div class="br-bar sig-bar"><span class="seg" role="group" aria-label="View" id="sig-mode">
           <button type="button" data-v="all">Whole performance</button><button type="button" data-v="replay">Replay</button></span>
-        <button type="button" class="btn btn-primary" id="sig-play">▶ Play</button></div>
+        <button type="button" class="btn btn-primary" id="sig-play">▶ Play</button>
+        <span class="seg" role="group" aria-label="Octaves" id="sig-shape">
+          <button type="button" data-v="spiral" title="One turn is an octave; higher notes sit further out">Spiral</button><button type="button" data-v="circle" title="All octaves folded onto one circle">Circle</button></span></div>
       <div class="br-bar sig-bar"><input type="range" id="sig-seek" min="0" step="0.05" value="0" aria-label="Position in the recording">
         <span class="muted sig-time" id="sig-time"></span></div>
       <div class="br-bar sig-bar">
@@ -132,25 +137,76 @@ export function mountSignature(c, sig, instrument) {
   const host = document.getElementById("sig-wheel");
   if (!host || !sig) return;
   const $ = (id) => document.getElementById(id);
-  const S = 440, C = S / 2, R = 158, maxCount = maxOf(sig);
+  const S = 440, C = S / 2, R = 158;
   const byId = Object.fromEntries(c.pitches.map((p) => [p.id, p]));
   const at = (pid) => { const cents = ((byId[pid].cents_from_tonic % 1200) + 1200) % 1200;
     let best = -1; sig.p.forEach((p, k) => { if (Math.abs(p[0] - cents) <= 1.5 || Math.abs(p[0] - cents) >= 1198.5) best = k; }); return best; };
   const seq = (c.progression.events || []).filter((e) => e.main && e.pitch_id && byId[e.pitch_id])
-    .map((e) => ({ t: e.t_on, hz: e.hz, k: at(e.pitch_id), reg: e.register_cents, label: e.label })).filter((e) => e.k >= 0);
+    .map((e) => ({ t: e.t_on, dur: Math.max(0, e.t_off - e.t_on), hz: e.hz, k: at(e.pitch_id), reg: e.register_cents, label: e.label })).filter((e) => e.k >= 0);
   const t0 = seq.length ? seq[0].t : 0, end = seq.length ? seq[seq.length - 1].t + 1.2 : 0;
   const segs = (c.progression.segments || []).filter((s) => s.name);
-  const state = { mode: "all", playing: false, cursor: t0, fired: 0, last: 0 };
+
+  // Places on the spiral: a note in a given octave. `c` is its cents above the tonic in that octave.
+  const nodes = [], nodeOf = new Map();
+  seq.forEach((e) => {
+    const oct = Math.round((e.reg - sig.p[e.k][0]) / 1200), key = `${e.k},${oct}`;
+    if (!nodeOf.has(key)) { nodeOf.set(key, nodes.length); nodes.push({ k: e.k, c: sig.p[e.k][0] + 1200 * oct, time: 0, names: new Map() }); }
+    e.n = nodeOf.get(key);
+    const node = nodes[e.n];
+    node.time += e.dur; node.names.set(e.label, (node.names.get(e.label) || 0) + 1);
+  });
+  const sounding = nodes.reduce((sum, n) => sum + n.time, 0) || 1;
+  nodes.forEach((n) => { n.share = n.time / sounding; n.label = [...n.names].sort((p, q) => q[1] - p[1])[0][0]; });
+  const cLo = Math.min(0, ...nodes.map((n) => n.c)) - 120, cHi = Math.max(0, ...nodes.map((n) => n.c)) + 120;
+  const turn = Math.min(64, (R - 40) / ((cHi - cLo) / 1200));           // how far apart two octaves sit
+  const rad = (cents) => R - ((cHi - cents) / 1200) * turn;
+
+  // moves between places, counted over the first `upto` notes; `id` is "k" (circle) or "n" (spiral)
+  const countMoves = (upto, id) => {
+    const counts = new Map();
+    for (let j = 1; j <= upto; j++) { const a = seq[j - 1], b = seq[j]; if (a.k === b.k) continue;
+      const key = `${a[id]},${b[id]}`, cur = counts.get(key) || [a[id], b[id], 0, 0]; cur[b.reg > a.reg ? 2 : 3] += 1; counts.set(key, cur); }
+    return [...counts.values()];
+  };
+  const spiralAll = countMoves(seq.length - 1, "n");
+  const shapes = {
+    circle: { id: "k", pt: (k) => xy(sig.p[k][0], R - 4, C), name: (k) => sig.p[k][3], pull: 0.5, all: sig.m, max: maxOf(sig) },
+    spiral: { id: "n", pt: (n) => xy(nodes[n].c, rad(nodes[n].c), C), name: (n) => nodes[n].label, pull: 0.2, all: spiralAll,
+      max: Math.max(1, ...spiralAll.map((m) => Math.max(m[2], m[3]))) },
+  };
+  const state = { mode: "all", shape: nodes.length ? "spiral" : "circle", playing: false, cursor: t0, fired: 0, last: 0 };
+  const movesOf = (sh, counts) => movesSVG(counts, sh.max, sig.n, sh.pt, sh.name, R - 4, C, 1, sh.pull);
 
   let ticks = "";
   for (let k = 0; k < 12; k++) { const [x1, y1] = xy(k * 100, R + 4, C), [x2, y2] = xy(k * 100, R + 9, C); ticks += `<line class="sg-tick" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`; }
-  const beads = sig.p.map((p, k) => { const [x, y] = xy(p[0], R, C), [tx, ty] = xy(p[0], R + 26, C);
-    return `<circle class="sg-bead${p[1] === 1 ? " sg-tonic" : ""}" data-k="${k}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(2.5 + 11 * Math.sqrt(p[2])).toFixed(1)}"><title>${esc(p[3])}: ${Math.round(p[2] * 100)} % of the sounding time</title></circle>` +
-      (p[1] || p[2] >= 0.03 ? `<text class="sg-nm" x="${tx.toFixed(1)}" y="${(ty + 4).toFixed(1)}" text-anchor="middle">${esc(p[3])}</text>` : ""); }).join("");
-  host.innerHTML = `<svg viewBox="0 0 ${S} ${S}" role="img" aria-label="Melodic signature: moves between notes as lines across the pitch wheel, tonic at the top. The table beside it lists the most used moves.">
-    <circle class="sg-ring" cx="${C}" cy="${C}" r="${R}"/>${ticks}<g id="sg-all">${movesSVG(sig, sig.m, maxCount, R - 4, C, 1)}</g><g id="sg-live"></g>${beads}
-    <text class="sg-nm sg-mid" id="sg-mid" x="${C}" y="${S - 14}" text-anchor="middle"></text></svg>`;
-  const all = host.querySelector("#sg-all"), live = host.querySelector("#sg-live"), mid = host.querySelector("#sg-mid");
+  const names = sig.p.map((p) => { const [tx, ty] = xy(p[0], R + 26, C);
+    return p[1] || p[2] >= 0.03 ? `<text class="sg-nm" x="${tx.toFixed(1)}" y="${(ty + 4).toFixed(1)}" text-anchor="middle">${esc(p[3])}</text>` : ""; }).join("");
+  const bead = (i, x, y, share, tonic, title) => `<circle class="sg-bead${tonic ? " sg-tonic" : ""}" data-i="${i}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(2.5 + 11 * Math.sqrt(share)).toFixed(1)}"><title>${esc(title)}: ${Math.round(share * 100)} % of the sounding time</title></circle>`;
+  const frames = {
+    circle: () => `<circle class="sg-ring" cx="${C}" cy="${C}" r="${R}"/>${ticks}`,
+    spiral: () => {
+      let d = "";
+      for (let cents = cLo; cents <= cHi; cents += 15) { const [x, y] = xy(cents, rad(cents), C); d += `${d ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`; }
+      // the spiral, and the tonic's line across its turns
+      return `<path class="sg-ring" d="${d}"/><line class="sg-tick" x1="${C}" y1="${(C - Math.max(6, rad(cLo) - 8)).toFixed(1)}" x2="${C}" y2="${C - R - 9}"/>${ticks}`;
+    },
+  };
+  // which octave each turn is: the tonic's name beside its place on every turn (drawn over the lines)
+  const octaveTags = () => nodes.filter((n) => sig.p[n.k][1] === 1).map((n) =>
+    `<text class="sg-oct" x="${(C - 2.5 - 11 * Math.sqrt(n.share) - 5).toFixed(1)}" y="${(C - rad(n.c) + 4).toFixed(1)}" text-anchor="end">${esc(n.label)}</text>`).join("");
+  const beadsOf = {
+    circle: () => sig.p.map((p, k) => { const [x, y] = xy(p[0], R, C); return bead(k, x, y, p[2], p[1] === 1, p[3]); }).join(""),
+    spiral: () => nodes.map((n, i) => { const [x, y] = shapes.spiral.pt(i); return bead(i, x, y, n.share, sig.p[n.k][1] === 1, n.label); }).join(""),
+  };
+  let all, live, mid;
+  const build = () => {
+    const sh = shapes[state.shape];
+    host.innerHTML = `<svg viewBox="0 0 ${S} ${S}" role="img" aria-label="Melodic signature: moves between notes as lines across the pitch ${state.shape === "spiral" ? "spiral, one turn to the octave, higher notes further out" : "wheel"}, tonic at the top. The table beside it lists the most used moves.">
+      ${frames[state.shape]()}<g id="sg-all">${movesOf(sh, sh.all)}</g><g id="sg-live"></g>${beadsOf[state.shape]()}${names}${state.shape === "spiral" ? octaveTags() : ""}
+      <text class="sg-nm sg-mid" id="sg-mid" x="${C}" y="${S - 14}" text-anchor="middle"></text></svg>`;
+    all = host.querySelector("#sg-all"); live = host.querySelector("#sg-live"); mid = host.querySelector("#sg-mid");
+  };
+  build();
 
   const rows = [];
   sig.m.forEach(([a, b, rise, fall]) => { if (rise) rows.push([a, b, "rising", rise]); if (fall) rows.push([a, b, "falling", fall]); });
@@ -163,7 +219,9 @@ export function mountSignature(c, sig, instrument) {
   const seek = $("sig-seek"), playBtn = $("sig-play");
   seek.min = String(t0); seek.max = String(end);
   const draw = () => {
+    const sh = shapes[state.shape];
     [...$("sig-mode").children].forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === state.mode)));
+    [...$("sig-shape").children].forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === state.shape)));
     playBtn.textContent = state.playing ? "❚❚ Pause" : "▶ Play";
     host.querySelectorAll(".sg-bead.sg-on").forEach((b) => b.classList.remove("sg-on"));
     if (state.mode === "all") {
@@ -177,20 +235,17 @@ export function mountSignature(c, sig, instrument) {
     for (let k = 0; k < seq.length && seq[k].t <= state.cursor; k++) i = k;
     let html = "";
     if (trail === 0) {                       // everything so far, growing into the whole performance
-      const counts = new Map();
-      for (let k = 1; k <= i; k++) { const a = seq[k - 1], b = seq[k]; if (a.k === b.k) continue;
-        const key = `${a.k},${b.k}`, cur = counts.get(key) || [a.k, b.k, 0, 0]; cur[b.reg > a.reg ? 2 : 3] += 1; counts.set(key, cur); }
-      html = movesSVG(sig, [...counts.values()], maxCount, R - 4, C, 1);
+      html = movesOf(sh, countMoves(i, sh.id));
     } else {
       for (let k = i; k >= 1 && state.cursor - seq[k].t < trail; k--) {
         const a = seq[k - 1], b = seq[k];
         if (a.k === b.k) continue;
         const age = (state.cursor - b.t) / trail;
-        html = `<path class="sg-${b.reg > a.reg ? "rise" : "fall"}" style="opacity:${Math.max(0.04, (1 - age) ** 1.6).toFixed(2)}" d="${chord(sig.p[a.k][0], sig.p[b.k][0], 7, R - 4, C)}"/>` + html;
+        html = `<path class="sg-${b.reg > a.reg ? "rise" : "fall"}" style="opacity:${Math.max(0.04, (1 - age) ** 1.6).toFixed(2)}" d="${chord(sh.pt(a[sh.id]), sh.pt(b[sh.id]), 7, R - 4, C, sh.pull)}"/>` + html;
       }
     }
     live.innerHTML = html;
-    if (i >= 0) { const bead = host.querySelector(`.sg-bead[data-k="${seq[i].k}"]`); if (bead) bead.classList.add("sg-on"); }
+    if (i >= 0) { const on = host.querySelector(`.sg-bead[data-i="${seq[i][sh.id]}"]`); if (on) on.classList.add("sg-on"); }
     const seg = segs.filter((s) => s.start_s <= state.cursor).pop();
     mid.textContent = i >= 0 ? `${seq[i].label}${seg ? ` · ${seg.name}` : ""}` : "";
     seek.value = String(state.cursor);
@@ -222,6 +277,8 @@ export function mountSignature(c, sig, instrument) {
     state.mode = b.dataset.v; if (state.mode === "all") { state.playing = false; stopSequence(); } draw(); });
   seek.addEventListener("input", () => { setCursor(+seek.value); state.mode = "replay"; draw(); });
   $("sig-trail").addEventListener("change", draw);
+  $("sig-shape").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b || !nodes.length) return;
+    state.shape = b.dataset.v; build(); draw(); });
   draw();
 }
 

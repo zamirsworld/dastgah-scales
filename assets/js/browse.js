@@ -6,7 +6,7 @@
 // List: the same recordings as a sortable table with the strip in every row.
 // Filters dim rows on the wall (you keep your place) and remove rows from the list.
 
-import { sequence, stopSequence } from "./synth.js?v=17";
+import { sequence, stopSequence } from "./synth.js?v=18";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
