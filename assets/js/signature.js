@@ -17,7 +17,7 @@
 // `p` notes [cents, scale degree or 0, share of sounding time, label], `m` moves
 // [from, to, rising, falling]. The table beside the wheel holds the same counts.
 
-import { pluck, stopSequence } from "./synth.js?v=18";
+import { pluck, stopSequence } from "./synth.js?v=19";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -126,7 +126,8 @@ export function signatureHTML() {
       <div class="br-bar sig-bar">
         <label class="br-k" for="sig-speed">Speed</label><select id="sig-speed"><option value="1">×1</option><option value="2" selected>×2</option><option value="4">×4</option><option value="8">×8</option></select>
         <label class="br-k" for="sig-trail">Lines last</label><select id="sig-trail"><option value="3">3 s</option><option value="8" selected>8 s</option><option value="20">20 s</option><option value="0">all so far</option></select>
-        <label class="inline"><input type="checkbox" id="sig-sound" checked> sound</label></div>
+        <label class="inline"><input type="checkbox" id="sig-sound" checked> sound</label>
+        <label class="inline" id="sig-every-wrap" hidden title="The spiral draws only the most used moves unless this is ticked"><input type="checkbox" id="sig-every"> every move</label></div>
       ${LEGEND}
       <div id="sig-table"></div>
     </div></div>
@@ -175,7 +176,27 @@ export function mountSignature(c, sig, instrument) {
       max: Math.max(1, ...spiralAll.map((m) => Math.max(m[2], m[3]))) },
   };
   const state = { mode: "all", shape: nodes.length ? "spiral" : "circle", playing: false, cursor: t0, fired: 0, last: 0 };
-  const movesOf = (sh, counts) => movesSVG(counts, sh.max, sig.n, sh.pt, sh.name, R - 4, C, 1, sh.pull);
+  // A long recording makes hundreds of different moves on the spiral. Unless "every move" is ticked it
+  // draws only the 48 most used lines (a short recording has fewer than that and loses nothing).
+  const thin = (counts) => {
+    const lines = [];
+    counts.forEach(([a, b, rise, fall]) => { if (rise) lines.push([a, b, 2, rise]); if (fall) lines.push([a, b, 3, fall]); });
+    lines.sort((p, q) => q[3] - p[3]);
+    const total = lines.reduce((sum, l) => sum + l[3], 0), kept = new Map();
+    let sum = 0, shown = 0;
+    for (const [a, b, dir, n] of lines) {
+      if (shown >= 48) break;
+      const key = `${a},${b}`, cur = kept.get(key) || [a, b, 0, 0];
+      cur[dir] = n; kept.set(key, cur); sum += n; shown += 1;
+    }
+    return { counts: [...kept.values()], shown, lines: lines.length, share: total ? sum / total : 1 };
+  };
+  let thinned = null;                                   // what the last whole-performance drawing left out, if anything
+  const movesOf = (sh, counts) => {
+    thinned = sh.id === "n" && !$("sig-every").checked ? thin(counts) : null;
+    return movesSVG(thinned ? thinned.counts : counts, sh.max, sig.n, sh.pt, sh.name, R - 4, C, 1, sh.pull);
+  };
+  const crowded = thin(spiralAll).shown < thin(spiralAll).lines;
 
   let ticks = "";
   for (let k = 0; k < 12; k++) { const [x1, y1] = xy(k * 100, R + 4, C), [x2, y2] = xy(k * 100, R + 9, C); ticks += `<line class="sg-tick" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`; }
@@ -222,10 +243,14 @@ export function mountSignature(c, sig, instrument) {
     const sh = shapes[state.shape];
     [...$("sig-mode").children].forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === state.mode)));
     [...$("sig-shape").children].forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === state.shape)));
+    $("sig-every-wrap").hidden = !(state.shape === "spiral" && crowded);
     playBtn.textContent = state.playing ? "❚❚ Pause" : "▶ Play";
     host.querySelectorAll(".sg-bead.sg-on").forEach((b) => b.classList.remove("sg-on"));
     if (state.mode === "all") {
-      all.style.display = ""; live.innerHTML = ""; mid.textContent = "";
+      all.style.display = ""; live.innerHTML = "";
+      all.innerHTML = movesOf(sh, sh.all);
+      mid.textContent = thinned && thinned.shown < thinned.lines
+        ? `the ${thinned.shown} most used of ${thinned.lines} lines · ${Math.round(thinned.share * 100)} % of the moves` : "";
       $("sig-time").textContent = `${fmtT(end - t0)} of music`;
       return;
     }
@@ -277,6 +302,7 @@ export function mountSignature(c, sig, instrument) {
     state.mode = b.dataset.v; if (state.mode === "all") { state.playing = false; stopSequence(); } draw(); });
   seek.addEventListener("input", () => { setCursor(+seek.value); state.mode = "replay"; draw(); });
   $("sig-trail").addEventListener("change", draw);
+  $("sig-every").addEventListener("change", draw);
   $("sig-shape").addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b || !nodes.length) return;
     state.shape = b.dataset.v; build(); draw(); });
   draw();
