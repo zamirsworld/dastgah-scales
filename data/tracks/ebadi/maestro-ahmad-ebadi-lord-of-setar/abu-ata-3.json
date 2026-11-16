@@ -32,7 +32,7 @@
     "schema_version": "1.0",
     "pipeline_version": "0.9.1",
     "track": "ebadi/maestro-ahmad-ebadi-lord-of-setar/abu-ata-3",
-    "generated_at": "2026-11-15T04:55:33+00:00",
+    "generated_at": "2026-11-16T18:41:01+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -181,7 +181,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 16,
+          "seconds": 5.46,
+          "share": 0.0524
+        }
       },
       {
         "id": "p02",
@@ -216,7 +221,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 14,
+          "seconds": 3.15,
+          "share": 0.0302
+        }
       },
       {
         "id": "p03",
@@ -265,7 +275,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 51,
+          "seconds": 13.69,
+          "share": 0.1315
+        }
       },
       {
         "id": "p04",
@@ -317,7 +332,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 163,
+          "seconds": 77.46,
+          "share": 0.7445
+        }
       },
       {
         "id": "p05",
@@ -354,7 +374,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 11,
+          "seconds": 3.01,
+          "share": 0.0289
+        }
       },
       {
         "id": "p06",
@@ -388,7 +413,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p07",
@@ -423,7 +453,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 3,
+          "seconds": 0.89,
+          "share": 0.0086
+        }
       },
       {
         "id": "p08",
@@ -485,7 +520,12 @@
               "E1"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p09",
@@ -522,7 +562,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 2,
+          "seconds": 0.4,
+          "share": 0.0038
+        }
       }
     ],
     "scale": {
@@ -574,14 +619,6 @@
           "pitch_id": "p07",
           "support": 0.4,
           "status": "probable"
-        },
-        {
-          "degree": 7,
-          "label": "A",
-          "cents_from_tonic": 1002.82,
-          "pitch_id": "p09",
-          "support": 0.68,
-          "status": "confirmed"
         }
       ],
       "steps_cents": [
@@ -590,28 +627,10 @@
         208.31,
         206.41,
         78.93,
-        218.33,
-        197.18
+        415.51
       ],
-      "variants": [
-        {
-          "degree": 6,
-          "pitch_id": "p06",
-          "label": "Gk",
-          "cents_from_tonic": 749.0,
-          "support": 0.24,
-          "status": "tentative",
-          "offset_cents": -35.49
-        }
-      ],
-      "additional": [
-        {
-          "pitch_id": "p08",
-          "label": "Gs",
-          "cents_from_tonic": 872.49,
-          "support": 0.16
-        }
-      ]
+      "variants": [],
+      "additional": []
     },
     "segments": {
       "level": "dastgah",
@@ -1240,8 +1259,8 @@
           "main": true,
           "solid": false,
           "pitch_id": "p09",
-          "role": "degree",
-          "degree": 7,
+          "role": "other",
+          "degree": null,
           "offset_cents": -0.2
         },
         {
@@ -4504,8 +4523,8 @@
           "main": true,
           "solid": false,
           "pitch_id": "p09",
-          "role": "degree",
-          "degree": 7,
+          "role": "other",
+          "degree": null,
           "offset_cents": 0.8
         },
         {
@@ -5791,7 +5810,7 @@
         "name": "12-tone equal temperament",
         "basis": "degrees",
         "description": "Reference only: distance from the semitone grid.",
-        "residual_rms": 17.44,
+        "residual_rms": 18.8,
         "assignment": [
           {
             "measured": 0.0,
@@ -5822,11 +5841,6 @@
             "measured": 784.5,
             "model": 800.0,
             "residual": -15.5
-          },
-          {
-            "measured": 1002.8,
-            "model": 1000.0,
-            "residual": 2.8
           }
         ]
       },
@@ -5835,7 +5849,7 @@
         "name": "Vaziri 24-tone equal temperament",
         "basis": "degrees",
         "description": "Quarter-tone grid (koron/sori = exactly 50 ¢ from the natural note).",
-        "residual_rms": 7.82,
+        "residual_rms": 8.37,
         "assignment": [
           {
             "measured": 0.0,
@@ -5866,11 +5880,6 @@
             "measured": 784.5,
             "model": 800.0,
             "residual": -15.5
-          },
-          {
-            "measured": 1002.8,
-            "model": 1000.0,
-            "residual": 2.8
           }
         ]
       },
@@ -5879,7 +5888,7 @@
         "name": "Pythagorean / Safi al-Din",
         "basis": "degrees",
         "description": "Nearest note of the 17-note gamut generated by pure fifths (±8) from the tonic.",
-        "residual_rms": 11.54,
+        "residual_rms": 12.16,
         "assignment": [
           {
             "measured": 0.0,
@@ -5910,11 +5919,6 @@
             "measured": 784.5,
             "model": 792.2,
             "residual": -7.7
-          },
-          {
-            "measured": 1002.8,
-            "model": 996.1,
-            "residual": 6.7
           }
         ]
       },
@@ -5923,7 +5927,7 @@
         "name": "Farhat interval classes",
         "basis": "steps",
         "description": "Interval classes Hormoz Farhat measured in performance practice (\"The Dastgah Concept in Persian Music\", 1990). Approximate centres.",
-        "residual_rms": 9.04,
+        "residual_rms": 59.85,
         "assignment": [
           {
             "measured": 142.0,
@@ -5956,16 +5960,10 @@
             "residual": -11.1
           },
           {
-            "measured": 218.3,
-            "class": "whole-tone",
-            "model": 204.0,
-            "residual": 14.3
-          },
-          {
-            "measured": 197.2,
-            "class": "whole-tone",
-            "model": 204.0,
-            "residual": -6.8
+            "measured": 415.5,
+            "class": "plus-tone",
+            "model": 270.0,
+            "residual": 145.5
           }
         ]
       }
@@ -5980,5 +5978,5 @@
       "e1_degrees": []
     }
   },
-  "signature": {"n":106,"p":[[3,1,0.052,"B"],[142,2,0.03,"Cs"],[291,3,0.132,"D"],[499,4,0.744,"E"],[706,5,0.029,"F#"],[784,6,0.009,"G"],[1003,7,0.004,"A"]],"m":[[2,3,9,14],[3,2,15,7],[3,0,4,3],[1,3,2,4],[3,4,6,0],[4,3,0,6],[0,3,3,2],[3,1,4,1],[2,1,1,3],[1,0,0,3],[1,2,3,0],[0,2,2,0],[4,2,0,2],[0,1,1,0],[0,4,1,0],[0,6,0,1],[2,0,0,1],[2,4,1,0],[3,5,1,0],[3,6,1,0],[4,1,0,1],[5,3,0,1],[5,4,0,1],[6,3,0,1],[6,5,0,1]]}
+  "signature": {"n":106,"p":[[3,1,0.052,"B"],[142,2,0.03,"Cs"],[291,3,0.132,"D"],[499,4,0.744,"E"],[706,5,0.029,"F#"],[784,6,0.009,"G"],[1003,0,0.004,"A"]],"m":[[2,3,9,14],[3,2,15,7],[3,0,4,3],[1,3,2,4],[3,4,6,0],[4,3,0,6],[0,3,3,2],[3,1,4,1],[2,1,1,3],[1,0,0,3],[1,2,3,0],[0,2,2,0],[4,2,0,2],[0,1,1,0],[0,4,1,0],[0,6,0,1],[2,0,0,1],[2,4,1,0],[3,5,1,0],[3,6,1,0],[4,1,0,1],[5,3,0,1],[5,4,0,1],[6,3,0,1],[6,5,0,1]]}
 }

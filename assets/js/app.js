@@ -2,14 +2,14 @@
 // Hash router over data/catalog.json; track pages lazy-load data/tracks/<key>.json.
 // All URLs are relative so the site works under a GitHub Pages subpath.
 
-import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=20";
-import { drawTimeline, progressionTables } from "./progression.js?v=20";
-import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=20";
-import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=20";
-import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=20";
-import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=20";
-import { pageScales, wireScales, scalesLink } from "./scales.js?v=20";
-import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=20";
+import { buildSlots, drawAbsolute, drawIntervals, legendHTML } from "./compare.js?v=21";
+import { drawTimeline, progressionTables } from "./progression.js?v=21";
+import { drawRuler, drawSteps, accuracyHTML, ciHalf, FARHAT } from "./track.js?v=21";
+import { pluck, sequence, stopSequence, setDrone, droneOn, degreeHz, scaleHz } from "./synth.js?v=21";
+import { pageBrowse, wireBrowse, stripSVG, filterLibrary } from "./browse.js?v=21";
+import { drawTuningMap, tuningMapHTML } from "./tuningmap.js?v=21";
+import { pageScales, wireScales, scalesLink } from "./scales.js?v=21";
+import { signatureHTML, mountSignature, nearHTML, galleryHTML, LEGEND as SIG_LEGEND } from "./signature.js?v=21";
 
 const app = document.getElementById("app");
 const footer = document.getElementById("footer");
@@ -367,11 +367,16 @@ async function pageTrack(key) {
     <div class="table-wrap"><table><thead><tr><th>Note</th><th class="num">Hypothesis Hz</th><th class="num">Measured Hz</th><th class="num">Diff ¢</th></tr></thead>
     <tbody>${h.compared.map((n) => `<tr><td>${esc(n.name)}${n.octave}</td><td class="num">${fmt(n.hz, 2)}</td>
       <td class="num">${fmt(n.measured_hz, 2)}</td><td class="num">${n.diff_cents > 0 ? "+" : ""}${fmt(n.diff_cents, 1)}</td></tr>`).join("")}</tbody></table></div>`).join("");
+  // how much each pitch was played (main notes, share of the sounding time) and whether the scale lists it
+  const inScale = new Set([...c.scale.degrees, ...(c.scale.variants || []), ...(c.scale.additional || [])].map((x) => x.pitch_id));
+  const played = (p) => (!p.played ? "—" : !p.played.notes ? '<span class="muted">not played</span>'
+    : `${p.played.notes} ${p.played.notes === 1 ? "note" : "notes"} · ${p.played.share < 0.00095 ? "under 0.1 %" : p.played.share < 0.0095 ? `${(p.played.share * 100).toFixed(1)} %` : pct(p.played.share)}`);
   const pitchRows = c.pitches.map((p) => {
     const reg = p.registers.map((r) => `<button class="play play-sm" data-hz="${r.hz}" aria-label="Play ${esc(p.label)} at ${fmt(r.hz, 2)} hertz">▶</button>
       ${fmt(r.hz, 2)} Hz <span class="muted">(oct ${r.octave}${r.ci95_hz ? `, ±${fmt((r.ci95_hz[1] - r.ci95_hz[0]) / 2, 2)}` : ""}${r.notes ? `, ${r.notes} notes` : ""})</span>`).join("<br>");
     return `<tr><td>${esc(p.label)}</td><td class="num">${fmt(p.cents_from_tonic, 1)}</td>
-      <td>${reg || '<span class="muted">no register established</span>'}</td><td class="num">${pct(p.support)}</td>
+      <td>${reg || '<span class="muted">no register established</span>'}</td>
+      <td class="num">${played(p)}</td><td>${inScale.has(p.id) ? "yes" : '<span class="muted">no</span>'}</td><td class="num">${pct(p.support)}</td>
       <td class="status-${esc(p.status)}">${esc(p.status)}</td><td>${esc(p.kind)}</td></tr>`;
   }).join("");
   const gushe = c.segments.gushe.map((g) => `<tr><td>${esc(g.name)}${fa(g.name_fa)}</td>
@@ -411,10 +416,13 @@ async function pageTrack(key) {
       <div class="table-wrap"><table><thead><tr><th>Model</th><th>Basis</th><th class="num">RMS ¢</th></tr></thead><tbody>${theory}</tbody></table></div>` : ""}
 
     <h2>Absolute pitch by register</h2>
-    <p class="muted">Every pitch heard, in every octave where it was played as a real note. Absolute Hz is as recorded.</p>
+    <p class="muted">Every pitch heard, in every octave where it was played as a real note. Absolute Hz is as recorded.
+      A pitch is in the scale only when it was played: its notes take at least 0.5 % of the sounding time, or, for a
+      tentative pitch, at least two notes and 1 %.
+      The others are heard in the spectrum (overtones, sympathetic strings, a brief passing note) and are listed here only.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Note</th><th class="num">¢ from tonic</th><th>Hz by register</th>
-      <th class="num">Support</th><th>Status</th><th>Kind</th></tr></thead>
+      <th class="num">Played</th><th>In scale</th><th class="num">Support</th><th>Status</th><th>Kind</th></tr></thead>
       <tbody>${pitchRows}</tbody></table></div>
     ${hyps ? `<h2>Hypotheses</h2>${hyps}` : ""}`;
   if (page.signature) {
@@ -522,7 +530,10 @@ function pageMethod() {
       <li><strong>Registers.</strong> A pitch is placed in an octave only where it was played as at least two real
         notes, which keeps harmonics and sympathetic strings from posing as notes.</li>
       <li><strong>Tonic and scale.</strong> The tonic is voted from the cadences of whole-recording runs; the scale
-        is the strongest pitch in each region of the octave, with mobile degrees listed as variants.</li>
+        is the most played pitch in each region of the octave, with mobile degrees listed as variants. Only pitches that
+        were played enter it: notes that take at least 0.5 % of the sounding time, or at least two notes and 1 % when
+        the pitch is only tentative. A scale therefore has
+        fewer than seven degrees when fewer were played, as short gushe-ha often do.</li>
       <li><strong>Progression.</strong> Notes are followed through time; only notes confirmed by an independent
         estimator decide the opening, peak, final cadence and new pitches of each section.</li>
       <li><strong>Review.</strong> Nothing is published until the analysis has been checked by ear.</li>
@@ -531,8 +542,10 @@ function pageMethod() {
     <p>A short gushe recording uses only part of its scale. The <a href="#/scales">scale explorer</a> therefore pools all of
       one master's recordings of a dastgah into a single tuning: each note is the median of where those recordings play it,
       and its share is the fraction of them that use it.${rules ? ` Recordings whose tonic is within ${fmt(rules.tonic_window_cents, 0)} ¢ of the
-      group's commonest tonic are pooled; pitches within ${fmt(rules.merge_cents, 0)} ¢ of each other are one note; a note counts as part of the
-      scale when its share is at least ${pct(rules.main_share)}, and notes under ${pct(rules.min_share)} are left out.` : ""}
+      group's commonest tonic are pooled; pitches within ${fmt(rules.merge_cents, 0)} ¢ of each other are one note, and notes under
+      ${pct(rules.min_share)} are left out.${rules.slot_cents ? ` Notes closer than ${fmt(rules.slot_cents, 0)} ¢ are forms of one degree: the form most recordings use
+      is part of the scale, and another form is too when at least ${pct(rules.main_share)} of the recordings that play the degree use it.
+      A recording lists only the notes it plays, so a degree that few gushe-ha reach has a small share and still belongs to the scale.` : ""}` : ""}
       Every pooled tuning lists the recordings it comes from.</p>
     <h2>Melodic signatures</h2>
     <p>The wheel on a recording's page draws every step of the melody from one note to a different note as a line across the

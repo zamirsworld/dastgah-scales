@@ -2,7 +2,8 @@
 //
 // A tuning here is one master's recordings of one dastgah pooled into a pitch set
 // (data/tunings.json, built by `tunelib export`): each note has a share, the fraction of
-// the recordings that use it. Row A is the reference.
+// the recordings that use it, and `main` marks the scale (per degree, the form most recordings use).
+// Row A is the reference.
 //
 // Views of one state:
 //   ring   the reference tuning as a playable ring (after Leimma and Interval): the octave
@@ -22,9 +23,9 @@
 // Step shades follow Farhat's interval classes, for reference only; note letters on the
 // sounding axis are 12-TET at A4 = 440 Hz, for reference only.
 
-import { pluck, sequence, stopSequence } from "./synth.js?v=20";
-import { FARHAT } from "./track.js?v=20";
-import { filterLibrary } from "./browse.js?v=20";
+import { pluck, sequence, stopSequence } from "./synth.js?v=21";
+import { FARHAT } from "./track.js?v=21";
+import { filterLibrary } from "./browse.js?v=21";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -232,6 +233,7 @@ function sourcesHTML() {
       <span class="sc-nw"><button type="button" class="btn" data-list="${r}">List the recordings</button>
       <button type="button" class="btn" data-scl="${r}">Download as Scala (.scl)</button></span></div></div>`;
   }).join("") + `<p class="muted">A pooled tuning is measured, not prescribed: each note is the median of where the recordings play it, and its share says how many of them do.
+    Hollow notes are less used forms of a degree; a filled note with a small share is a degree few of the recordings reach.
     <a href="#/method">How the measurements are made</a>.</p>`;
 }
 // Scala scale file of row r from its current starting note: the measured notes of the scale, in cents.

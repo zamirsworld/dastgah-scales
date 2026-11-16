@@ -39,7 +39,7 @@
     "schema_version": "1.0",
     "pipeline_version": "0.9.1",
     "track": "yusef-forutan/radif-of-persian-music-on-setar-iii/afshari-daramad",
-    "generated_at": "2026-11-15T04:57:36+00:00",
+    "generated_at": "2026-11-16T18:43:00+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -177,7 +177,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 15,
+          "seconds": 2.76,
+          "share": 0.0375
+        }
       },
       {
         "id": "p02",
@@ -213,7 +218,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 1,
+          "seconds": 0.25,
+          "share": 0.0035
+        }
       },
       {
         "id": "p03",
@@ -247,7 +257,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p04",
@@ -275,7 +290,12 @@
               "E1"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p05",
@@ -309,7 +329,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 1,
+          "seconds": 0.15,
+          "share": 0.0021
+        }
       },
       {
         "id": "p06",
@@ -361,7 +386,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 207,
+          "seconds": 53.16,
+          "share": 0.7219
+        }
       },
       {
         "id": "p07",
@@ -398,7 +428,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 11,
+          "seconds": 2.63,
+          "share": 0.0358
+        }
       },
       {
         "id": "p08",
@@ -433,7 +468,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 11,
+          "seconds": 2.54,
+          "share": 0.0345
+        }
       },
       {
         "id": "p09",
@@ -468,7 +508,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 10,
+          "seconds": 3.22,
+          "share": 0.0437
+        }
       },
       {
         "id": "p10",
@@ -502,7 +547,12 @@
               "E1"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p11",
@@ -553,7 +603,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 29,
+          "seconds": 8.6,
+          "share": 0.1168
+        }
       }
     ],
     "scale": {
@@ -597,14 +652,6 @@
           "pitch_id": "p09",
           "support": 0.26,
           "status": "tentative"
-        },
-        {
-          "degree": 6,
-          "label": "G#",
-          "cents_from_tonic": 1090.88,
-          "pitch_id": "p10",
-          "support": 0.16,
-          "status": "tentative"
         }
       ],
       "steps_cents": [
@@ -612,28 +659,9 @@
         212.54,
         143.1,
         147.24,
-        97.76,
-        109.12
+        206.88
       ],
       "variants": [
-        {
-          "degree": 2,
-          "pitch_id": "p02",
-          "label": "Ds",
-          "cents_from_tonic": 537.14,
-          "support": 0.38,
-          "status": "probable",
-          "offset_cents": 46.9
-        },
-        {
-          "degree": 3,
-          "pitch_id": "p05",
-          "label": "Ek",
-          "cents_from_tonic": 660.65,
-          "support": 0.5,
-          "status": "probable",
-          "offset_cents": -42.13
-        },
         {
           "degree": 4,
           "pitch_id": "p08",
@@ -2761,8 +2789,8 @@
           "main": true,
           "solid": true,
           "pitch_id": "p05",
-          "role": "variant",
-          "degree": 3,
+          "role": "other",
+          "degree": null,
           "offset_cents": 1.0
         },
         {
@@ -4617,8 +4645,8 @@
           "main": true,
           "solid": true,
           "pitch_id": "p02",
-          "role": "variant",
-          "degree": 2,
+          "role": "other",
+          "degree": null,
           "offset_cents": -7.0
         },
         {
@@ -5338,8 +5366,6 @@
             "cents": 2202.0
           },
           "new_pitches": [
-            "Ds",
-            "Ek",
             "E",
             "Fs",
             "F#",
@@ -5714,7 +5740,7 @@
         "name": "12-tone equal temperament",
         "basis": "degrees",
         "description": "Reference only: distance from the semitone grid.",
-        "residual_rms": 19.74,
+        "residual_rms": 21.24,
         "assignment": [
           {
             "measured": 0.0,
@@ -5740,11 +5766,6 @@
             "measured": 993.1,
             "model": 1000.0,
             "residual": -6.9
-          },
-          {
-            "measured": 1090.9,
-            "model": 1100.0,
-            "residual": -9.1
           }
         ]
       },
@@ -5753,7 +5774,7 @@
         "name": "Vaziri 24-tone equal temperament",
         "basis": "degrees",
         "description": "Quarter-tone grid (koron/sori = exactly 50 ¢ from the natural note).",
-        "residual_rms": 6.46,
+        "residual_rms": 5.78,
         "assignment": [
           {
             "measured": 0.0,
@@ -5779,11 +5800,6 @@
             "measured": 993.1,
             "model": 1000.0,
             "residual": -6.9
-          },
-          {
-            "measured": 1090.9,
-            "model": 1100.0,
-            "residual": -9.1
           }
         ]
       },
@@ -5792,7 +5808,7 @@
         "name": "Pythagorean / Safi al-Din",
         "basis": "degrees",
         "description": "Nearest note of the 17-note gamut generated by pure fifths (±8) from the tonic.",
-        "residual_rms": 12.95,
+        "residual_rms": 14.03,
         "assignment": [
           {
             "measured": 0.0,
@@ -5818,11 +5834,6 @@
             "measured": 993.1,
             "model": 996.1,
             "residual": -3.0
-          },
-          {
-            "measured": 1090.9,
-            "model": 1086.3,
-            "residual": 4.6
           }
         ]
       },
@@ -5831,7 +5842,7 @@
         "name": "Farhat interval classes",
         "basis": "steps",
         "description": "Interval classes Hormoz Farhat measured in performance practice (\"The Dastgah Concept in Persian Music\", 1990). Approximate centres.",
-        "residual_rms": 90.55,
+        "residual_rms": 98.78,
         "assignment": [
           {
             "measured": 490.2,
@@ -5858,16 +5869,10 @@
             "residual": 12.2
           },
           {
-            "measured": 97.8,
-            "class": "semitone",
-            "model": 90.0,
-            "residual": 7.8
-          },
-          {
-            "measured": 109.1,
-            "class": "semitone",
-            "model": 90.0,
-            "residual": 19.1
+            "measured": 206.9,
+            "class": "whole-tone",
+            "model": 204.0,
+            "residual": 2.9
           }
         ]
       }
@@ -5891,5 +5896,5 @@
       ]
     }
   },
-  "signature": {"n":111,"p":[[490,2,0.038,"D"],[537,2,0.003,"Ds"],[661,3,0.002,"Ek"],[703,3,0.725,"E"],[846,4,0.036,"Fs"],[902,4,0.035,"F#"],[993,5,0.044,"G"],[1197,1,0.117,"A"]],"m":[[3,7,1,14],[0,3,13,1],[7,3,14,0],[3,0,3,8],[3,4,10,0],[4,3,0,9],[3,5,7,0],[5,3,0,5],[6,3,0,5],[3,6,4,0],[5,6,4,0],[6,5,0,3],[5,7,0,2],[7,0,2,0],[1,7,0,1],[2,3,1,0],[3,2,0,1],[4,0,0,1],[7,1,1,0],[7,5,1,0]]}
+  "signature": {"n":111,"p":[[490,2,0.038,"D"],[537,0,0.003,"Ds"],[661,0,0.002,"Ek"],[703,3,0.725,"E"],[846,4,0.036,"Fs"],[902,4,0.035,"F#"],[993,5,0.044,"G"],[1197,1,0.117,"A"]],"m":[[3,7,1,14],[0,3,13,1],[7,3,14,0],[3,0,3,8],[3,4,10,0],[4,3,0,9],[3,5,7,0],[5,3,0,5],[6,3,0,5],[3,6,4,0],[5,6,4,0],[6,5,0,3],[5,7,0,2],[7,0,2,0],[1,7,0,1],[2,3,1,0],[3,2,0,1],[4,0,0,1],[7,1,1,0],[7,5,1,0]]}
 }

@@ -39,7 +39,7 @@
     "schema_version": "1.0",
     "pipeline_version": "0.9.1",
     "track": "yusef-forutan/radif-of-persian-music-on-setar-i/abu-ata-daramad-i",
-    "generated_at": "2026-11-15T04:57:22+00:00",
+    "generated_at": "2026-11-16T18:42:47+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -177,7 +177,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 4,
+          "seconds": 1.79,
+          "share": 0.1456
+        }
       },
       {
         "id": "p02",
@@ -212,7 +217,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 5,
+          "seconds": 1.5,
+          "share": 0.1219
+        }
       },
       {
         "id": "p03",
@@ -248,7 +258,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p04",
@@ -284,7 +299,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p05",
@@ -300,7 +320,12 @@
         "families": 1,
         "status": "tentative",
         "kind": "unknown",
-        "registers": []
+        "registers": [],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p06",
@@ -334,7 +359,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p07",
@@ -386,7 +416,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 29,
+          "seconds": 8.75,
+          "share": 0.7126
+        }
       },
       {
         "id": "p08",
@@ -420,7 +455,12 @@
               "E1"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p09",
@@ -455,7 +495,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 1,
+          "seconds": 0.24,
+          "share": 0.0199
+        }
       }
     ],
     "scale": {
@@ -491,52 +536,15 @@
           "pitch_id": "p07",
           "support": 1.0,
           "status": "confirmed"
-        },
-        {
-          "degree": 5,
-          "label": "G#",
-          "cents_from_tonic": 882.69,
-          "pitch_id": "p08",
-          "support": 0.16,
-          "status": "tentative"
         }
       ],
       "steps_cents": [
         135.18,
         159.81,
         199.76,
-        387.94,
-        317.31
+        705.25
       ],
-      "variants": [
-        {
-          "degree": 3,
-          "pitch_id": "p03",
-          "label": "D",
-          "cents_from_tonic": 323.25,
-          "support": 0.28,
-          "status": "tentative",
-          "offset_cents": 28.26
-        },
-        {
-          "degree": 3,
-          "pitch_id": "p04",
-          "label": "Ds",
-          "cents_from_tonic": 355.51,
-          "support": 0.62,
-          "status": "confirmed",
-          "offset_cents": 60.52
-        },
-        {
-          "degree": 4,
-          "pitch_id": "p06",
-          "label": "Ek",
-          "cents_from_tonic": 441.56,
-          "support": 0.12,
-          "status": "tentative",
-          "offset_cents": -53.19
-        }
-      ],
+      "variants": [],
       "additional": []
     },
     "segments": {
@@ -1368,7 +1376,7 @@
         "name": "12-tone equal temperament",
         "basis": "degrees",
         "description": "Reference only: distance from the semitone grid.",
-        "residual_rms": 17.83,
+        "residual_rms": 17.96,
         "assignment": [
           {
             "measured": 0.0,
@@ -1389,11 +1397,6 @@
             "measured": 494.8,
             "model": 500.0,
             "residual": -5.2
-          },
-          {
-            "measured": 882.7,
-            "model": 900.0,
-            "residual": -17.3
           }
         ]
       },
@@ -1402,7 +1405,7 @@
         "name": "Vaziri 24-tone equal temperament",
         "basis": "degrees",
         "description": "Quarter-tone grid (koron/sori = exactly 50 ¢ from the natural note).",
-        "residual_rms": 10.7,
+        "residual_rms": 8.25,
         "assignment": [
           {
             "measured": 0.0,
@@ -1423,11 +1426,6 @@
             "measured": 494.8,
             "model": 500.0,
             "residual": -5.2
-          },
-          {
-            "measured": 882.7,
-            "model": 900.0,
-            "residual": -17.3
           }
         ]
       },
@@ -1436,7 +1434,7 @@
         "name": "Pythagorean / Safi al-Din",
         "basis": "degrees",
         "description": "Nearest note of the 17-note gamut generated by pure fifths (±8) from the tonic.",
-        "residual_rms": 14.22,
+        "residual_rms": 10.88,
         "assignment": [
           {
             "measured": 0.0,
@@ -1457,11 +1455,6 @@
             "measured": 494.8,
             "model": 498.0,
             "residual": -3.3
-          },
-          {
-            "measured": 882.7,
-            "model": 905.9,
-            "residual": -23.2
           }
         ]
       },
@@ -1470,7 +1463,7 @@
         "name": "Farhat interval classes",
         "basis": "steps",
         "description": "Interval classes Hormoz Farhat measured in performance practice (\"The Dastgah Concept in Persian Music\", 1990). Approximate centres.",
-        "residual_rms": 56.84,
+        "residual_rms": 217.61,
         "assignment": [
           {
             "measured": 135.2,
@@ -1491,16 +1484,10 @@
             "residual": -4.2
           },
           {
-            "measured": 387.9,
+            "measured": 705.2,
             "class": "plus-tone",
             "model": 270.0,
-            "residual": 117.9
-          },
-          {
-            "measured": 317.3,
-            "class": "plus-tone",
-            "model": 270.0,
-            "residual": 47.3
+            "residual": 435.2
           }
         ]
       }

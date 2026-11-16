@@ -39,7 +39,7 @@
     "schema_version": "1.0",
     "pipeline_version": "0.9.1",
     "track": "hossein-alizadeh/radif-navazi-setar-nava/bayat-raje",
-    "generated_at": "2026-11-15T04:56:29+00:00",
+    "generated_at": "2026-11-16T18:41:55+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -192,7 +192,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 4,
+          "seconds": 1.55,
+          "share": 0.1438
+        }
       },
       {
         "id": "p02",
@@ -244,7 +249,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 17,
+          "seconds": 5.18,
+          "share": 0.4821
+        }
       },
       {
         "id": "p03",
@@ -272,7 +282,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p04",
@@ -323,7 +338,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 7,
+          "seconds": 1.35,
+          "share": 0.1255
+        }
       },
       {
         "id": "p05",
@@ -358,7 +378,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p06",
@@ -395,7 +420,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 6,
+          "seconds": 1.18,
+          "share": 0.1102
+        }
       },
       {
         "id": "p07",
@@ -447,7 +477,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 4,
+          "seconds": 1.49,
+          "share": 0.1384
+        }
       },
       {
         "id": "p08",
@@ -481,7 +516,12 @@
               "E1"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p09",
@@ -501,7 +541,12 @@
         "families": 2,
         "status": "tentative",
         "kind": "secondary",
-        "registers": []
+        "registers": [],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       }
     ],
     "scale": {
@@ -545,22 +590,6 @@
           "pitch_id": "p07",
           "support": 1.0,
           "status": "confirmed"
-        },
-        {
-          "degree": 6,
-          "label": "C#",
-          "cents_from_tonic": 911.41,
-          "pitch_id": "p08",
-          "support": 0.16,
-          "status": "tentative"
-        },
-        {
-          "degree": 7,
-          "label": "D",
-          "cents_from_tonic": 990.12,
-          "pitch_id": "p09",
-          "support": 0.26,
-          "status": "tentative"
         }
       ],
       "steps_cents": [
@@ -568,21 +597,9 @@
         90.79,
         199.21,
         211.9,
-        208.83,
-        78.71,
-        209.88
+        497.42
       ],
-      "variants": [
-        {
-          "degree": 4,
-          "pitch_id": "p05",
-          "label": "Ak",
-          "cents_from_tonic": 457.16,
-          "support": 0.46,
-          "status": "probable",
-          "offset_cents": -33.52
-        }
-      ],
+      "variants": [],
       "additional": []
     },
     "segments": {
@@ -1469,7 +1486,7 @@
         "name": "12-tone equal temperament",
         "basis": "degrees",
         "description": "Reference only: distance from the semitone grid.",
-        "residual_rms": 7.51,
+        "residual_rms": 5.77,
         "assignment": [
           {
             "measured": 0.0,
@@ -1495,16 +1512,6 @@
             "measured": 702.6,
             "model": 700.0,
             "residual": 2.6
-          },
-          {
-            "measured": 911.4,
-            "model": 900.0,
-            "residual": 11.4
-          },
-          {
-            "measured": 990.1,
-            "model": 1000.0,
-            "residual": -9.9
           }
         ]
       },
@@ -1513,7 +1520,7 @@
         "name": "Vaziri 24-tone equal temperament",
         "basis": "degrees",
         "description": "Quarter-tone grid (koron/sori = exactly 50 ¢ from the natural note).",
-        "residual_rms": 7.51,
+        "residual_rms": 5.77,
         "assignment": [
           {
             "measured": 0.0,
@@ -1539,16 +1546,6 @@
             "measured": 702.6,
             "model": 700.0,
             "residual": 2.6
-          },
-          {
-            "measured": 911.4,
-            "model": 900.0,
-            "residual": 11.4
-          },
-          {
-            "measured": 990.1,
-            "model": 1000.0,
-            "residual": -9.9
           }
         ]
       },
@@ -1557,7 +1554,7 @@
         "name": "Pythagorean / Safi al-Din",
         "basis": "degrees",
         "description": "Nearest note of the 17-note gamut generated by pure fifths (±8) from the tonic.",
-        "residual_rms": 4.45,
+        "residual_rms": 3.8,
         "assignment": [
           {
             "measured": 0.0,
@@ -1583,16 +1580,6 @@
             "measured": 702.6,
             "model": 702.0,
             "residual": 0.6
-          },
-          {
-            "measured": 911.4,
-            "model": 905.9,
-            "residual": 5.5
-          },
-          {
-            "measured": 990.1,
-            "model": 996.1,
-            "residual": -6.0
           }
         ]
       },
@@ -1601,7 +1588,7 @@
         "name": "Farhat interval classes",
         "basis": "steps",
         "description": "Interval classes Hormoz Farhat measured in performance practice (\"The Dastgah Concept in Persian Music\", 1990). Approximate centres.",
-        "residual_rms": 6.35,
+        "residual_rms": 101.79,
         "assignment": [
           {
             "measured": 200.7,
@@ -1628,22 +1615,10 @@
             "residual": 7.9
           },
           {
-            "measured": 208.8,
-            "class": "whole-tone",
-            "model": 204.0,
-            "residual": 4.8
-          },
-          {
-            "measured": 78.7,
-            "class": "semitone",
-            "model": 90.0,
-            "residual": -11.3
-          },
-          {
-            "measured": 209.9,
-            "class": "whole-tone",
-            "model": 204.0,
-            "residual": 5.9
+            "measured": 497.4,
+            "class": "plus-tone",
+            "model": 270.0,
+            "residual": 227.4
           }
         ]
       }

@@ -39,7 +39,7 @@
     "schema_version": "1.0",
     "pipeline_version": "0.9.1",
     "track": "hossein-alizadeh/radif-navazi-setar-segah/muyeh",
-    "generated_at": "2026-11-15T04:56:38+00:00",
+    "generated_at": "2026-11-16T18:42:04+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -192,7 +192,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 41,
+          "seconds": 10.25,
+          "share": 0.3118
+        }
       },
       {
         "id": "p02",
@@ -226,7 +231,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p03",
@@ -277,7 +287,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 14,
+          "seconds": 3.58,
+          "share": 0.1088
+        }
       },
       {
         "id": "p04",
@@ -308,7 +323,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p05",
@@ -345,7 +365,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 40,
+          "seconds": 10.73,
+          "share": 0.3264
+        }
       },
       {
         "id": "p06",
@@ -396,7 +421,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 7,
+          "seconds": 1.44,
+          "share": 0.0438
+        }
       },
       {
         "id": "p07",
@@ -431,7 +461,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 3,
+          "seconds": 0.52,
+          "share": 0.0159
+        }
       },
       {
         "id": "p08",
@@ -466,7 +501,12 @@
               "E2"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 0,
+          "seconds": 0.0,
+          "share": 0.0
+        }
       },
       {
         "id": "p09",
@@ -503,7 +543,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 20,
+          "seconds": 5.96,
+          "share": 0.1812
+        }
       },
       {
         "id": "p10",
@@ -535,7 +580,12 @@
               "E3"
             ]
           }
-        ]
+        ],
+        "played": {
+          "notes": 1,
+          "seconds": 0.39,
+          "share": 0.012
+        }
       }
     ],
     "scale": {
@@ -587,14 +637,6 @@
           "pitch_id": "p09",
           "support": 0.94,
           "status": "confirmed"
-        },
-        {
-          "degree": 7,
-          "label": "E",
-          "cents_from_tonic": 1060.71,
-          "pitch_id": "p10",
-          "support": 0.22,
-          "status": "tentative"
         }
       ],
       "steps_cents": [
@@ -603,29 +645,9 @@
         127.9,
         150.33,
         212.09,
-        210.02,
-        139.29
+        349.31
       ],
-      "variants": [
-        {
-          "degree": 2,
-          "pitch_id": "p02",
-          "label": "Gk",
-          "cents_from_tonic": 78.61,
-          "support": 0.12,
-          "status": "tentative",
-          "offset_cents": -59.79
-        },
-        {
-          "degree": 5,
-          "pitch_id": "p08",
-          "label": "Cs",
-          "cents_from_tonic": 701.88,
-          "support": 0.36,
-          "status": "probable",
-          "offset_cents": 63.28
-        }
-      ],
+      "variants": [],
       "additional": []
     },
     "segments": {
@@ -2424,8 +2446,8 @@
           "main": true,
           "solid": false,
           "pitch_id": "p10",
-          "role": "degree",
-          "degree": 7,
+          "role": "other",
+          "degree": null,
           "offset_cents": 0.5
         },
         {
@@ -3060,7 +3082,7 @@
         "name": "12-tone equal temperament",
         "basis": "degrees",
         "description": "Reference only: distance from the semitone grid.",
-        "residual_rms": 35.15,
+        "residual_rms": 34.41,
         "assignment": [
           {
             "measured": 0.0,
@@ -3091,11 +3113,6 @@
             "measured": 850.7,
             "model": 900.0,
             "residual": -49.3
-          },
-          {
-            "measured": 1060.7,
-            "model": 1100.0,
-            "residual": -39.3
           }
         ]
       },
@@ -3104,7 +3121,7 @@
         "name": "Vaziri 24-tone equal temperament",
         "basis": "degrees",
         "description": "Quarter-tone grid (koron/sori = exactly 50 ¢ from the natural note).",
-        "residual_rms": 9.45,
+        "residual_rms": 9.22,
         "assignment": [
           {
             "measured": 0.0,
@@ -3135,11 +3152,6 @@
             "measured": 850.7,
             "model": 850.0,
             "residual": 0.7
-          },
-          {
-            "measured": 1060.7,
-            "model": 1050.0,
-            "residual": 10.7
           }
         ]
       },
@@ -3148,7 +3160,7 @@
         "name": "Pythagorean / Safi al-Din",
         "basis": "degrees",
         "description": "Nearest note of the 17-note gamut generated by pure fifths (±8) from the tonic.",
-        "residual_rms": 23.57,
+        "residual_rms": 23.21,
         "assignment": [
           {
             "measured": 0.0,
@@ -3179,11 +3191,6 @@
             "measured": 850.7,
             "model": 815.6,
             "residual": 35.0
-          },
-          {
-            "measured": 1060.7,
-            "model": 1086.3,
-            "residual": -25.6
           }
         ]
       },
@@ -3192,7 +3199,7 @@
         "name": "Farhat interval classes",
         "basis": "steps",
         "description": "Interval classes Hormoz Farhat measured in performance practice (\"The Dastgah Concept in Persian Music\", 1990). Approximate centres.",
-        "residual_rms": 9.26,
+        "residual_rms": 33.75,
         "assignment": [
           {
             "measured": 138.4,
@@ -3225,16 +3232,10 @@
             "residual": 8.1
           },
           {
-            "measured": 210.0,
-            "class": "whole-tone",
-            "model": 204.0,
-            "residual": 6.0
-          },
-          {
-            "measured": 139.3,
-            "class": "small-neutral",
-            "model": 135.0,
-            "residual": 4.3
+            "measured": 349.3,
+            "class": "plus-tone",
+            "model": 270.0,
+            "residual": 79.3
           }
         ]
       }
@@ -3258,5 +3259,5 @@
       ]
     }
   },
-  "signature": {"n":79,"p":[[0,1,0.312,"Fs"],[138,2,0.109,"G"],[360,3,0.326,"A"],[488,4,0.044,"Bk"],[639,5,0.016,"C"],[851,6,0.181,"D"],[1061,7,0.012,"E"]],"m":[[5,2,8,1],[0,1,7,1],[1,0,0,7],[2,5,1,6],[2,0,1,5],[0,3,3,2],[0,5,0,5],[5,0,5,0],[0,2,3,1],[1,5,0,3],[5,1,3,0],[1,2,2,0],[2,1,0,2],[2,4,2,0],[3,0,1,1],[3,5,1,1],[1,6,0,1],[3,2,0,1],[3,4,1,0],[4,0,0,1],[4,2,0,1],[4,3,0,1],[6,0,1,0]]}
+  "signature": {"n":79,"p":[[0,1,0.312,"Fs"],[138,2,0.109,"G"],[360,3,0.326,"A"],[488,4,0.044,"Bk"],[639,5,0.016,"C"],[851,6,0.181,"D"],[1061,0,0.012,"E"]],"m":[[5,2,8,1],[0,1,7,1],[1,0,0,7],[2,5,1,6],[2,0,1,5],[0,3,3,2],[0,5,0,5],[5,0,5,0],[0,2,3,1],[1,5,0,3],[5,1,3,0],[1,2,2,0],[2,1,0,2],[2,4,2,0],[3,0,1,1],[3,5,1,1],[1,6,0,1],[3,2,0,1],[3,4,1,0],[4,0,0,1],[4,2,0,1],[4,3,0,1],[6,0,1,0]]}
 }
