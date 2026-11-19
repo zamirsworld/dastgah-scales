@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "yusef-forutan/radif-of-persian-music-on-setar-i/shur-daramad-e-khara",
-    "generated_at": "2026-11-16T18:42:46+00:00",
+    "generated_at": "2026-11-16T20:58:45+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": 0.41,
           "E3": 2.81
         },
+        "by_e2_window": {
+          "4096": 0.41,
+          "8192": 1.19
+        },
         "label": "G",
         "cents_from_tonic": 0.41,
         "cents_abs": 773.08,
@@ -190,6 +194,10 @@
           "E1": 134.77,
           "E2": 133.03,
           "E3": 124.69
+        },
+        "by_e2_window": {
+          "4096": 133.03,
+          "8192": 135.4
         },
         "label": "Ak",
         "cents_from_tonic": 133.59,
@@ -265,6 +273,10 @@
           "E1": 289.28,
           "E2": 283.45,
           "E3": 305.04
+        },
+        "by_e2_window": {
+          "4096": 283.45,
+          "8192": 288.18
         },
         "label": "Bb",
         "cents_from_tonic": 284.11,
@@ -364,6 +376,10 @@
           "E1": 495.46,
           "E2": 494.6,
           "E3": 495.21
+        },
+        "by_e2_window": {
+          "4096": 494.6,
+          "8192": 496.33
         },
         "label": "C",
         "cents_from_tonic": 494.6,
@@ -475,6 +491,10 @@
           "E2": 708.24,
           "E3": 692.96
         },
+        "by_e2_window": {
+          "4096": 708.24,
+          "8192": 703.41
+        },
         "label": "D",
         "cents_from_tonic": 708.24,
         "cents_abs": 280.91,
@@ -563,6 +583,10 @@
           "E1": 787.22,
           "E2": 778.81,
           "E3": 789.29
+        },
+        "by_e2_window": {
+          "4096": 779.56,
+          "8192": 769.0
         },
         "label": "Eb",
         "cents_from_tonic": 787.22,
@@ -684,6 +708,10 @@
           "E1": 994.1,
           "E2": 992.58,
           "E3": 993.1
+        },
+        "by_e2_window": {
+          "4096": 992.58,
+          "8192": 989.8
         },
         "label": "F",
         "cents_from_tonic": 992.58,
@@ -2389,6 +2417,7 @@
         "p04 (Bb): estimator families disagree by 16 ¢ {'E1': 289.28, 'E2': 283.45, 'E3': 305.04}",
         "p12 (Ek): estimator families disagree by 15 ¢ {'E1': 827.17, 'E2': 841.76, 'E3': 815.23}",
         "p13 (E): estimator families disagree by 18 ¢ {'E1': 879.02, 'E2': 896.88}",
+        "p11 (Eb): E2 window sizes disagree by 11 ¢ {4096: 779.56, 8192: 769.0}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 204.9 Hz (G#3) via temporal-cadence. cadence agrees (204.8 Hz). drone picked 272.0 Hz (C#4), a fourth away — likely the dominant; resolved to the tonic. marginalized picked 272.5 Hz (C#4), a fourth away — likely the dominant; resolved to the tonic."
       ],
       "freq_resolution_hz": 0.336456298828125,

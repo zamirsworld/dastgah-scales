@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "yusef-forutan/radif-of-persian-music-on-setar-iii/mahur-kereshme",
-    "generated_at": "2026-11-16T18:42:58+00:00",
+    "generated_at": "2026-11-16T20:58:58+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": 2.19,
           "E3": -0.37
         },
+        "by_e2_window": {
+          "4096": 2.19,
+          "8192": 2.84
+        },
         "label": "A",
         "cents_from_tonic": 2.19,
         "cents_abs": 932.49,
@@ -205,6 +209,10 @@
           "E1": 208.57,
           "E2": 204.98
         },
+        "by_e2_window": {
+          "4096": 204.98,
+          "8192": 207.28
+        },
         "label": "B",
         "cents_from_tonic": 208.57,
         "cents_abs": 1138.87,
@@ -244,6 +252,10 @@
         "by_family": {
           "E1": 398.72,
           "E2": 402.26
+        },
+        "by_e2_window": {
+          "4096": 402.26,
+          "8192": 404.42
         },
         "label": "C#",
         "cents_from_tonic": 402.26,
@@ -323,6 +335,10 @@
           "E2": 707.77,
           "E3": 706.46
         },
+        "by_e2_window": {
+          "4096": 707.77,
+          "8192": 713.72
+        },
         "label": "E",
         "cents_from_tonic": 709.0,
         "cents_abs": 439.3,
@@ -378,6 +394,10 @@
           "E1": 910.9,
           "E2": 909.59
         },
+        "by_e2_window": {
+          "4096": 909.59,
+          "8192": 909.07
+        },
         "label": "F#",
         "cents_from_tonic": 909.59,
         "cents_abs": 639.89,
@@ -417,6 +437,10 @@
         "by_family": {
           "E1": 1123.14,
           "E2": 1130.3
+        },
+        "by_e2_window": {
+          "4096": 1130.3,
+          "8192": 1118.77
         },
         "label": "G#",
         "cents_from_tonic": 1123.14,
@@ -2978,7 +3002,8 @@
     "hypotheses": [],
     "diagnostics": {
       "flags": [
-        "p05 (E): estimator families disagree by 11 ¢ {'E1': 716.97, 'E2': 707.77, 'E3': 706.46}"
+        "p05 (E): estimator families disagree by 11 ¢ {'E1': 716.97, 'E2': 707.77, 'E3': 706.46}",
+        "p07 (G#): E2 window sizes disagree by 12 ¢ {4096: 1130.3, 8192: 1118.77}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

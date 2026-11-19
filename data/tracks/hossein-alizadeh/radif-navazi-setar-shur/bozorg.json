@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-shur/bozorg",
-    "generated_at": "2026-11-16T18:41:32+00:00",
+    "generated_at": "2026-11-16T20:57:31+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -188,6 +188,10 @@
           "E2": 87.85,
           "E3": 95.51
         },
+        "by_e2_window": {
+          "4096": 87.85,
+          "8192": 103.98
+        },
         "label": "F",
         "cents_from_tonic": 90.21,
         "cents_abs": 486.9,
@@ -268,6 +272,10 @@
           "E1": 500.47,
           "E2": 498.32,
           "E3": 503.6
+        },
+        "by_e2_window": {
+          "4096": 498.32,
+          "8192": 499.04
         },
         "label": "A",
         "cents_from_tonic": 500.47,
@@ -380,6 +388,10 @@
           "E1": 993.33,
           "E2": 995.17
         },
+        "by_e2_window": {
+          "4096": 995.34,
+          "8192": 995.76
+        },
         "label": "D",
         "cents_from_tonic": 994.22,
         "cents_abs": 190.9,
@@ -434,6 +446,10 @@
           "E1": 1196.95,
           "E2": 1200.28,
           "E3": 1198.83
+        },
+        "by_e2_window": {
+          "4096": 1200.28,
+          "8192": 1197.78
         },
         "label": "E",
         "cents_from_tonic": 1198.94,
@@ -1592,6 +1608,7 @@
     "diagnostics": {
       "flags": [
         "tonic E set in the catalog (Shur's finalis E (the suite and Alizadeh's other Shur-family albums are on E); this gushe moves to the key of the 4th above without changing mode (Farhat 1990, pp. 30-32; the lowered 5th makes the 4th sound like a finalis, p. 27), so the vote picked A. Inference, not yet by ear); the runs' vote favoured 219.0 Hz (A)",
+        "p02 (F): E2 window sizes disagree by 16 ¢ {4096: 87.85, 8192: 103.98}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 110.4 Hz (A2) via temporal-cadence. cadence agrees (110.3 Hz). drone picked 328.4 Hz (E4), a fourth away — likely the dominant; resolved to the tonic. marginalized picked 329.4 Hz (E4), a fourth away — likely the dominant; resolved to the tonic."
       ],
       "freq_resolution_hz": 0.336456298828125,

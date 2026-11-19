@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-mahur/zir-afkand",
-    "generated_at": "2026-11-16T18:41:40+00:00",
+    "generated_at": "2026-11-16T20:57:39+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -132,6 +132,10 @@
           "E2": 0.29,
           "E3": 0.21
         },
+        "by_e2_window": {
+          "4096": 0.18,
+          "8192": 0.67
+        },
         "label": "A",
         "cents_from_tonic": 0.56,
         "cents_abs": 895.85,
@@ -186,6 +190,10 @@
           "E1": 205.18,
           "E2": 205.02
         },
+        "by_e2_window": {
+          "4096": 204.95,
+          "8192": 204.84
+        },
         "label": "B",
         "cents_from_tonic": 205.02,
         "cents_abs": 1100.31,
@@ -225,6 +233,10 @@
         "by_family": {
           "E1": 394.72,
           "E2": 398.92
+        },
+        "by_e2_window": {
+          "4096": 398.93,
+          "8192": 397.33
         },
         "label": "C#",
         "cents_from_tonic": 398.2,
@@ -266,6 +278,10 @@
           "E1": 506.39,
           "E2": 500.91,
           "E3": 506.43
+        },
+        "by_e2_window": {
+          "4096": 500.91,
+          "8192": 501.65
         },
         "label": "D",
         "cents_from_tonic": 501.37,
@@ -332,6 +348,10 @@
           "E1": 700.25,
           "E2": 700.65,
           "E3": 701.14
+        },
+        "by_e2_window": {
+          "4096": 702.2,
+          "8192": 700.65
         },
         "label": "E",
         "cents_from_tonic": 701.14,
@@ -413,6 +433,10 @@
           "E2": 922.63,
           "E3": 908.65
         },
+        "by_e2_window": {
+          "4096": 922.63,
+          "8192": 912.04
+        },
         "label": "F#",
         "cents_from_tonic": 912.04,
         "cents_abs": 607.33,
@@ -453,6 +477,10 @@
         "by_family": {
           "E2": 982.65,
           "E3": 970.19
+        },
+        "by_e2_window": {
+          "4096": 982.65,
+          "8192": 983.85
         },
         "label": "G",
         "cents_from_tonic": 982.65,
@@ -1445,7 +1473,8 @@
       "flags": [
         "tonic A set in the catalog (Mahur's finalis A (27 of the suite's 36 gushe-ha end there; same pitch set). The vote picked the 2nd (B). Inference, not yet by ear); the runs' vote favoured 246.6 Hz (B)",
         "p08 (F#): estimator families disagree by 20 ¢ {'E1': 902.95, 'E2': 922.63, 'E3': 908.65}",
-        "p09 (G): estimator families disagree by 12 ¢ {'E2': 982.65, 'E3': 970.19}"
+        "p09 (G): estimator families disagree by 12 ¢ {'E2': 982.65, 'E3': 970.19}",
+        "p08 (F#): E2 window sizes disagree by 11 ¢ {4096: 922.63, 8192: 912.04}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": []

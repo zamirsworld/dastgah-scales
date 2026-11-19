@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-segah/masihi",
-    "generated_at": "2026-11-16T18:42:05+00:00",
+    "generated_at": "2026-11-16T20:58:05+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -148,6 +148,10 @@
           "E2": 88.63,
           "E3": 93.08
         },
+        "by_e2_window": {
+          "4096": 87.23,
+          "8192": 87.02
+        },
         "label": "Gk",
         "cents_from_tonic": 88.63,
         "cents_abs": 635.9,
@@ -189,6 +193,10 @@
           "E1": 145.6,
           "E2": 138.45,
           "E3": 122.65
+        },
+        "by_e2_window": {
+          "4096": 137.35,
+          "8192": 138.45
         },
         "label": "G",
         "cents_from_tonic": 138.99,
@@ -285,6 +293,10 @@
           "E2": 353.68,
           "E3": 347.4
         },
+        "by_e2_window": {
+          "4096": 353.89,
+          "8192": 353.5
+        },
         "label": "A",
         "cents_from_tonic": 353.57,
         "cents_abs": 900.84,
@@ -325,6 +337,10 @@
         "by_family": {
           "E1": 838.73,
           "E2": 839.18
+        },
+        "by_e2_window": {
+          "4096": 839.35,
+          "8192": 838.65
         },
         "label": "D",
         "cents_from_tonic": 838.73,
@@ -380,6 +396,10 @@
           "E1": 1054.91,
           "E2": 1054.41,
           "E3": 1053.09
+        },
+        "by_e2_window": {
+          "4096": 1054.77,
+          "8192": 1048.46
         },
         "label": "E",
         "cents_from_tonic": 1054.13,
@@ -519,6 +539,10 @@
           "E1": 1204.27,
           "E2": 1190.04,
           "E3": 1197.12
+        },
+        "by_e2_window": {
+          "4096": 1189.21,
+          "8192": 1202.87
         },
         "label": "Fs",
         "cents_from_tonic": 1193.35,
@@ -1810,6 +1834,7 @@
         "p02 (G): estimator families disagree by 23 ¢ {'E1': 145.6, 'E2': 138.45, 'E3': 122.65}",
         "p07 (F): estimator families disagree by 11 ¢ {'E1': 1132.26, 'E3': 1143.07}",
         "p09 (Fs): estimator families disagree by 14 ¢ {'E1': 1204.27, 'E2': 1190.04, 'E3': 1197.12}",
+        "p09 (Fs): E2 window sizes disagree by 14 ¢ {4096: 1189.21, 8192: 1202.87}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 328.5 Hz (E4) via temporal-cadence. cadence agrees (329.6 Hz). drone differs (358.4 Hz, 145¢ off). marginalized picked 440.3 Hz (A4), a fourth away — likely the dominant; resolved to the tonic."
       ],
       "freq_resolution_hz": 0.336456298828125,

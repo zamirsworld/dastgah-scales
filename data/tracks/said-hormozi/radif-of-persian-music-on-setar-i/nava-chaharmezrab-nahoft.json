@@ -43,9 +43,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "said-hormozi/radif-of-persian-music-on-setar-i/nava-chaharmezrab-nahoft",
-    "generated_at": "2026-11-16T18:42:35+00:00",
+    "generated_at": "2026-11-16T20:58:35+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -155,6 +155,10 @@
           "E2": -0.45,
           "E3": 3.46
         },
+        "by_e2_window": {
+          "4096": -0.45,
+          "8192": 0.01
+        },
         "label": "E",
         "cents_from_tonic": 0.01,
         "cents_abs": 432.5,
@@ -211,6 +215,10 @@
           "E2": 209.48,
           "E3": 216.6
         },
+        "by_e2_window": {
+          "4096": 209.62,
+          "8192": 215.1
+        },
         "label": "F#",
         "cents_from_tonic": 209.56,
         "cents_abs": 642.05,
@@ -250,6 +258,10 @@
         "by_family": {
           "E1": 294.21,
           "E2": 293.84
+        },
+        "by_e2_window": {
+          "4096": 293.96,
+          "8192": 293.66
         },
         "label": "G",
         "cents_from_tonic": 294.21,
@@ -291,6 +303,10 @@
           "E1": 500.42,
           "E2": 502.81,
           "E3": 505.1
+        },
+        "by_e2_window": {
+          "4096": 502.82,
+          "8192": 502.81
         },
         "label": "A",
         "cents_from_tonic": 502.82,
@@ -347,6 +363,10 @@
           "E2": 703.68,
           "E3": 718.71
         },
+        "by_e2_window": {
+          "4096": 703.68,
+          "8192": 705.54
+        },
         "label": "B",
         "cents_from_tonic": 703.87,
         "cents_abs": 1136.36,
@@ -401,6 +421,10 @@
         "by_family": {
           "E1": 825.57,
           "E2": 837.05
+        },
+        "by_e2_window": {
+          "4096": 837.01,
+          "8192": 848.51
         },
         "label": "Cs",
         "cents_from_tonic": 834.08,
@@ -497,6 +521,10 @@
           "E1": 1011.46,
           "E2": 1004.46,
           "E3": 1005.4
+        },
+        "by_e2_window": {
+          "4096": 1004.39,
+          "8192": 1009.83
         },
         "label": "D",
         "cents_from_tonic": 1007.61,
@@ -3434,7 +3462,8 @@
       "flags": [
         "p05 (B): estimator families disagree by 13 ¢ {'E1': 705.45, 'E2': 703.68, 'E3': 718.71}",
         "p06 (Cs): estimator families disagree by 11 ¢ {'E1': 825.57, 'E2': 837.05}",
-        "p07 (Cs): estimator families disagree by 19 ¢ {'E2': 882.18, 'E3': 863.2}"
+        "p07 (Cs): estimator families disagree by 19 ¢ {'E2': 882.18, 'E3': 863.2}",
+        "p06 (Cs): E2 window sizes disagree by 12 ¢ {4096: 837.01, 8192: 848.51}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

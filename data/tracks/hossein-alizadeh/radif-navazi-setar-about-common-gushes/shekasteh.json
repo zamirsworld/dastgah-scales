@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-about-common-gushes/shekasteh",
-    "generated_at": "2026-11-16T18:42:09+00:00",
+    "generated_at": "2026-11-16T20:58:09+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -131,6 +131,10 @@
           "E2": 38.91,
           "E3": 22.08
         },
+        "by_e2_window": {
+          "4096": 46.01,
+          "8192": 19.8
+        },
         "label": "B",
         "cents_from_tonic": 38.91,
         "cents_abs": 1066.06,
@@ -185,6 +189,10 @@
           "E1": 87.29,
           "E2": 85.65,
           "E3": 90.68
+        },
+        "by_e2_window": {
+          "4096": 85.65,
+          "8192": 85.18
         },
         "label": "Ck",
         "cents_from_tonic": 85.65,
@@ -266,6 +274,10 @@
           "E1": 161.05,
           "E2": 157.01,
           "E3": 158.62
+        },
+        "by_e2_window": {
+          "4096": 157.01,
+          "8192": 157.1
         },
         "label": "C",
         "cents_from_tonic": 157.46,
@@ -361,6 +373,10 @@
           "E1": 207.37,
           "E2": 221.58
         },
+        "by_e2_window": {
+          "4096": 220.69,
+          "8192": 221.58
+        },
         "label": "Cs",
         "cents_from_tonic": 220.04,
         "cents_abs": 47.19,
@@ -401,6 +417,10 @@
           "E1": 285.38,
           "E2": 290.2,
           "E3": 280.17
+        },
+        "by_e2_window": {
+          "4096": 290.24,
+          "8192": 290.35
         },
         "label": "Dk",
         "cents_from_tonic": 290.2,
@@ -531,6 +551,10 @@
           "E1": 368.75,
           "E2": 375.8,
           "E3": 373.66
+        },
+        "by_e2_window": {
+          "4096": 375.77,
+          "8192": 376.54
         },
         "label": "Ds",
         "cents_from_tonic": 375.77,
@@ -815,6 +839,10 @@
           "E2": 581.34,
           "E3": 579.54
         },
+        "by_e2_window": {
+          "4096": 581.34,
+          "8192": 579.71
+        },
         "label": "Fk",
         "cents_from_tonic": 581.33,
         "cents_abs": 408.48,
@@ -962,6 +990,10 @@
           "E1": 745.31,
           "E2": 757.02
         },
+        "by_e2_window": {
+          "4096": 757.02,
+          "8192": 751.49
+        },
         "label": "Gb",
         "cents_from_tonic": 755.8,
         "cents_abs": 582.95,
@@ -1038,6 +1070,10 @@
         "by_family": {
           "E1": 853.59,
           "E2": 853.89
+        },
+        "by_e2_window": {
+          "4096": 854.88,
+          "8192": 856.92
         },
         "label": "G",
         "cents_from_tonic": 853.89,
@@ -1190,6 +1226,10 @@
           "E2": 1028.6,
           "E3": 1053.46
         },
+        "by_e2_window": {
+          "4096": 1035.62,
+          "8192": 1035.5
+        },
         "label": "A",
         "cents_from_tonic": 1035.5,
         "cents_abs": 862.65,
@@ -1245,6 +1285,10 @@
           "E1": 1080.68,
           "E2": 1084.2,
           "E3": 1086.4
+        },
+        "by_e2_window": {
+          "4096": 1084.2,
+          "8192": 1084.24
         },
         "label": "As",
         "cents_from_tonic": 1084.24,
@@ -1354,6 +1398,10 @@
         "id": "p28",
         "by_family": {
           "E2": 1163.34
+        },
+        "by_e2_window": {
+          "4096": 1147.75,
+          "8192": 1179.81
         },
         "label": "Bb",
         "cents_from_tonic": 1163.34,
@@ -2484,6 +2532,7 @@
         "p06 (Cs): estimator families disagree by 14 ¢ {'E1': 207.37, 'E2': 221.58}",
         "p19 (Gb): estimator families disagree by 12 ¢ {'E1': 745.31, 'E2': 757.02}",
         "p25 (A): estimator families disagree by 14 ¢ {'E1': 1039.27, 'E2': 1028.6, 'E3': 1053.46}",
+        "p01 (B): E2 window sizes disagree by 26 ¢ {4096: 46.01, 8192: 19.8}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 148.0 Hz (D3) via temporal-cadence. cadence agrees (588.3 Hz). drone differs (330.6 Hz, 200¢ off). marginalized picked 111.0 Hz (A2), a fourth away — likely the dominant; resolved to the tonic."
       ],
       "freq_resolution_hz": 0.336456298828125,

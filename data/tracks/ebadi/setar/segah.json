@@ -30,9 +30,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "ebadi/setar/segah",
-    "generated_at": "2026-11-16T18:41:09+00:00",
+    "generated_at": "2026-11-16T20:57:08+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -125,6 +125,10 @@
           "E2": 12.74,
           "E3": 14.85
         },
+        "by_e2_window": {
+          "4096": 12.74,
+          "8192": 2.14
+        },
         "label": "Dk",
         "cents_from_tonic": 12.26,
         "cents_abs": 226.38,
@@ -181,6 +185,10 @@
           "E1": 150.69,
           "E2": 152.34,
           "E3": 160.09
+        },
+        "by_e2_window": {
+          "4096": 152.76,
+          "8192": 152.34
         },
         "label": "Eb",
         "cents_from_tonic": 153.44,
@@ -306,6 +314,10 @@
           "E2": 364.94,
           "E3": 363.36
         },
+        "by_e2_window": {
+          "4096": 364.94,
+          "8192": 365.34
+        },
         "label": "F",
         "cents_from_tonic": 364.94,
         "cents_abs": 579.06,
@@ -398,6 +410,10 @@
           "E1": 492.99,
           "E2": 503.59,
           "E3": 490.71
+        },
+        "by_e2_window": {
+          "4096": 503.59,
+          "8192": 492.98
         },
         "label": "Gk",
         "cents_from_tonic": 494.78,
@@ -494,6 +510,10 @@
           "E1": 660.41,
           "E2": 651.66,
           "E3": 643.7
+        },
+        "by_e2_window": {
+          "4096": 651.44,
+          "8192": 652.51
         },
         "label": "Ab",
         "cents_from_tonic": 651.66,
@@ -593,6 +613,10 @@
           "E2": 730.62,
           "E3": 741.84
         },
+        "by_e2_window": {
+          "4096": 729.49,
+          "8192": 732.35
+        },
         "label": "A",
         "cents_from_tonic": 731.46,
         "cents_abs": 945.58,
@@ -650,6 +674,10 @@
           "E2": 855.22,
           "E3": 872.03
         },
+        "by_e2_window": {
+          "4096": 855.25,
+          "8192": 853.44
+        },
         "label": "Bb",
         "cents_from_tonic": 855.25,
         "cents_abs": 1069.38,
@@ -706,6 +734,10 @@
           "E1": 1080.13,
           "E2": 1081.55,
           "E3": 1068.21
+        },
+        "by_e2_window": {
+          "4096": 1080.55,
+          "8192": 1081.55
         },
         "label": "Cs",
         "cents_from_tonic": 1080.13,
@@ -16849,6 +16881,8 @@
         "p10 (A): estimator families disagree by 11 ¢ {'E2': 730.62, 'E3': 741.84}",
         "p11 (Bb): estimator families disagree by 17 ¢ {'E1': 871.9, 'E2': 855.22, 'E3': 872.03}",
         "p12 (Cs): estimator families disagree by 12 ¢ {'E1': 1080.13, 'E2': 1081.55, 'E3': 1068.21}",
+        "p01 (Dk): E2 window sizes disagree by 11 ¢ {4096: 12.74, 8192: 2.14}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
+        "p06 (Gk): E2 window sizes disagree by 11 ¢ {4096: 503.59, 8192: 492.98}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 244.3 Hz (B3) via temporal-cadence. cadence differs (150.2 Hz, 355¢ off). drone picked 366.0 Hz (F#4), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (244.3 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

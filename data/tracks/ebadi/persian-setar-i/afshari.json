@@ -30,9 +30,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "ebadi/persian-setar-i/afshari",
-    "generated_at": "2026-11-16T18:41:06+00:00",
+    "generated_at": "2026-11-16T20:57:04+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -142,6 +142,10 @@
           "E2": 213.06,
           "E3": 201.89
         },
+        "by_e2_window": {
+          "4096": 214.42,
+          "8192": 207.11
+        },
         "label": "A",
         "cents_from_tonic": 207.11,
         "cents_abs": 843.05,
@@ -234,6 +238,10 @@
           "E2": 274.95,
           "E3": 269.25
         },
+        "by_e2_window": {
+          "4096": 274.95,
+          "8192": 274.06
+        },
         "label": "As",
         "cents_from_tonic": 274.95,
         "cents_abs": 910.9,
@@ -275,6 +283,10 @@
           "E1": 362.33,
           "E2": 357.29,
           "E3": 358.44
+        },
+        "by_e2_window": {
+          "4096": 356.79,
+          "8192": 357.29
         },
         "label": "Bk",
         "cents_from_tonic": 357.34,
@@ -331,6 +343,10 @@
           "E1": 502.34,
           "E2": 501.09,
           "E3": 496.79
+        },
+        "by_e2_window": {
+          "4096": 500.33,
+          "8192": 501.68
         },
         "label": "C",
         "cents_from_tonic": 501.38,
@@ -404,6 +420,10 @@
           "E2": 698.95,
           "E3": 699.54
         },
+        "by_e2_window": {
+          "4096": 697.78,
+          "8192": 700.82
+        },
         "label": "D",
         "cents_from_tonic": 699.91,
         "cents_abs": 135.85,
@@ -473,6 +493,10 @@
           "E1": 839.81,
           "E2": 833.36,
           "E3": 837.19
+        },
+        "by_e2_window": {
+          "4096": 832.84,
+          "8192": 838.38
         },
         "label": "Ek",
         "cents_from_tonic": 836.97,
@@ -594,6 +618,10 @@
           "E2": 982.54,
           "E3": 991.09
         },
+        "by_e2_window": {
+          "4096": 982.49,
+          "8192": 984.95
+        },
         "label": "F",
         "cents_from_tonic": 983.35,
         "cents_abs": 419.29,
@@ -649,6 +677,10 @@
           "E1": 1011.78,
           "E2": 1027.29
         },
+        "by_e2_window": {
+          "4096": 1029.2,
+          "8192": 1010.05
+        },
         "label": "F",
         "cents_from_tonic": 1011.78,
         "cents_abs": 447.72,
@@ -703,6 +735,10 @@
           "E1": 1106.74,
           "E2": 1098.01
         },
+        "by_e2_window": {
+          "4096": 1097.96,
+          "8192": 1095.26
+        },
         "label": "F#",
         "cents_from_tonic": 1106.74,
         "cents_abs": 542.69,
@@ -741,6 +777,10 @@
         "id": "p12",
         "by_family": {
           "E2": 1151.08
+        },
+        "by_e2_window": {
+          "4096": 1151.08,
+          "8192": 1149.76
         },
         "label": "Gk",
         "cents_from_tonic": 1151.08,
@@ -782,6 +822,10 @@
           "E1": 1196.78,
           "E2": 1199.02,
           "E3": 1198.98
+        },
+        "by_e2_window": {
+          "4096": 1199.39,
+          "8192": 1199.02
         },
         "label": "G",
         "cents_from_tonic": 1199.02,
@@ -20771,7 +20815,8 @@
     "diagnostics": {
       "flags": [
         "p03 (As): estimator families disagree by 10 ¢ {'E1': 279.3, 'E2': 274.95, 'E3': 269.25}",
-        "p10 (F): estimator families disagree by 16 ¢ {'E1': 1011.78, 'E2': 1027.29}"
+        "p10 (F): estimator families disagree by 16 ¢ {'E1': 1011.78, 'E2': 1027.29}",
+        "p10 (F): E2 window sizes disagree by 19 ¢ {4096: 1029.2, 8192: 1010.05}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

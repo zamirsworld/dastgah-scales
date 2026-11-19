@@ -55,9 +55,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-mahur/hesar-e-mahur-abol-zanguleh-naghmeh",
-    "generated_at": "2026-11-16T18:41:39+00:00",
+    "generated_at": "2026-11-16T20:57:38+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E1": 4.9,
           "E2": 4.65,
           "E3": 4.51
+        },
+        "by_e2_window": {
+          "4096": 4.65,
+          "8192": 4.57
         },
         "label": "A",
         "cents_from_tonic": 4.9,
@@ -258,6 +262,10 @@
           "E1": 411.8,
           "E2": 405.54
         },
+        "by_e2_window": {
+          "4096": 405.54,
+          "8192": 406.27
+        },
         "label": "C#",
         "cents_from_tonic": 405.85,
         "cents_abs": 96.63,
@@ -298,6 +306,10 @@
           "E1": 506.43,
           "E2": 505.15,
           "E3": 509.87
+        },
+        "by_e2_window": {
+          "4096": 505.28,
+          "8192": 506.08
         },
         "label": "D",
         "cents_from_tonic": 505.28,
@@ -394,6 +406,10 @@
           "E1": 706.13,
           "E2": 709.36,
           "E3": 707.42
+        },
+        "by_e2_window": {
+          "4096": 709.58,
+          "8192": 706.04
         },
         "label": "E",
         "cents_from_tonic": 709.36,
@@ -579,6 +595,10 @@
           "E1": 937.31,
           "E2": 928.08,
           "E3": 928.7
+        },
+        "by_e2_window": {
+          "4096": 928.08,
+          "8192": 918.01
         },
         "label": "Gk",
         "cents_from_tonic": 928.08,
@@ -3707,6 +3727,7 @@
       "flags": [
         "tonic A set in the catalog (Mahur's finalis A (27 of the suite's 36 gushe-ha end there; same pitch set). The vote picked the 4th (D). Inference, not yet by ear); the runs' vote favoured 293.3 Hz (D)",
         "p11 (F#): estimator families disagree by 19 ¢ {'E2': 903.63, 'E3': 884.92}",
+        "p12 (Gk): E2 window sizes disagree by 10 ¢ {4096: 928.08, 8192: 918.01}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 328.6 Hz (E4) via temporal-cadence. cadence agrees (328.6 Hz). drone agrees (328.6 Hz). marginalized picked 110.3 Hz (A2), a fourth away — likely the dominant; resolved to the tonic."
       ],
       "freq_resolution_hz": 0.336456298828125,

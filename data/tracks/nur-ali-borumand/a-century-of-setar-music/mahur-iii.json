@@ -30,9 +30,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "nur-ali-borumand/a-century-of-setar-music/mahur-iii",
-    "generated_at": "2026-11-16T18:42:24+00:00",
+    "generated_at": "2026-11-16T20:58:24+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -125,6 +125,10 @@
           "E2": 0.85,
           "E3": -1.94
         },
+        "by_e2_window": {
+          "4096": 0.69,
+          "8192": 1.0
+        },
         "label": "A",
         "cents_from_tonic": 0.76,
         "cents_abs": 911.73,
@@ -182,6 +186,10 @@
           "E2": 207.69,
           "E3": 208.02
         },
+        "by_e2_window": {
+          "4096": 207.47,
+          "8192": 207.69
+        },
         "label": "B",
         "cents_from_tonic": 207.69,
         "cents_abs": 1118.67,
@@ -223,6 +231,10 @@
           "E1": 393.72,
           "E2": 393.84
         },
+        "by_e2_window": {
+          "4096": 394.03,
+          "8192": 391.66
+        },
         "label": "C#",
         "cents_from_tonic": 393.72,
         "cents_abs": 104.7,
@@ -262,6 +274,10 @@
         "by_family": {
           "E1": 499.97,
           "E2": 494.53
+        },
+        "by_e2_window": {
+          "4096": 494.53,
+          "8192": 497.72
         },
         "label": "D",
         "cents_from_tonic": 497.72,
@@ -303,6 +319,10 @@
           "E1": 704.82,
           "E2": 705.32,
           "E3": 700.51
+        },
+        "by_e2_window": {
+          "4096": 705.32,
+          "8192": 706.57
         },
         "label": "E",
         "cents_from_tonic": 705.32,
@@ -359,6 +379,10 @@
           "E2": 857.19,
           "E3": 847.6
         },
+        "by_e2_window": {
+          "4096": 859.09,
+          "8192": 847.04
+        },
         "label": "Fs",
         "cents_from_tonic": 857.14,
         "cents_abs": 568.11,
@@ -400,6 +424,10 @@
           "E1": 913.85,
           "E2": 909.87,
           "E3": 907.68
+        },
+        "by_e2_window": {
+          "4096": 909.87,
+          "8192": 902.39
         },
         "label": "F#",
         "cents_from_tonic": 909.34,
@@ -456,6 +484,10 @@
           "E1": 1096.34,
           "E2": 1096.93,
           "E3": 1101.29
+        },
+        "by_e2_window": {
+          "4096": 1095.97,
+          "8192": 1090.24
         },
         "label": "G#",
         "cents_from_tonic": 1096.34,
@@ -17068,6 +17100,7 @@
     "hypotheses": [],
     "diagnostics": {
       "flags": [
+        "p06 (Fs): E2 window sizes disagree by 12 ¢ {4096: 859.09, 8192: 847.04}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 333.4 Hz (E4) via temporal-cadence. cadence picked 220.4 Hz (A3), a fourth away — likely the dominant; resolved to the tonic. drone agrees (332.9 Hz). marginalized picked 111.0 Hz (A2), a fourth away — likely the dominant; resolved to the tonic."
       ],
       "freq_resolution_hz": 0.336456298828125,

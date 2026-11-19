@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-mahur/feyli",
-    "generated_at": "2026-11-16T18:41:39+00:00",
+    "generated_at": "2026-11-16T20:57:38+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": 1.24,
           "E3": -0.43
         },
+        "by_e2_window": {
+          "4096": 1.24,
+          "8192": 2.34
+        },
         "label": "A",
         "cents_from_tonic": 4.26,
         "cents_abs": 900.38,
@@ -204,6 +208,10 @@
           "E1": 209.47,
           "E2": 210.66
         },
+        "by_e2_window": {
+          "4096": 211.1,
+          "8192": 211.04
+        },
         "label": "B",
         "cents_from_tonic": 209.94,
         "cents_abs": 1106.06,
@@ -243,6 +251,10 @@
         "by_family": {
           "E1": 403.07,
           "E2": 401.17
+        },
+        "by_e2_window": {
+          "4096": 401.26,
+          "8192": 401.88
         },
         "label": "C#",
         "cents_from_tonic": 401.17,
@@ -284,6 +296,10 @@
           "E1": 501.49,
           "E2": 503.14
         },
+        "by_e2_window": {
+          "4096": 502.7,
+          "8192": 507.32
+        },
         "label": "D",
         "cents_from_tonic": 503.14,
         "cents_abs": 199.26,
@@ -324,6 +340,10 @@
           "E1": 710.86,
           "E2": 709.46,
           "E3": 709.79
+        },
+        "by_e2_window": {
+          "4096": 710.17,
+          "8192": 706.23
         },
         "label": "E",
         "cents_from_tonic": 710.17,
@@ -493,6 +513,10 @@
         "by_family": {
           "E1": 925.74,
           "E2": 924.18
+        },
+        "by_e2_window": {
+          "4096": 924.31,
+          "8192": 912.19
         },
         "label": "F#",
         "cents_from_tonic": 924.18,
@@ -2116,7 +2140,8 @@
     "hypotheses": [],
     "diagnostics": {
       "flags": [
-        "tonic A set in the catalog (Mahur's finalis A (27 of the suite's 36 gushe-ha end there; same pitch set); in Feyli the 5th above the finalis becomes the shahed (Farhat 1990, p. 92). The vote picked that 5th (E). Inference, not yet by ear); the runs' vote favoured 164.9 Hz (E)"
+        "tonic A set in the catalog (Mahur's finalis A (27 of the suite's 36 gushe-ha end there; same pitch set); in Feyli the 5th above the finalis becomes the shahed (Farhat 1990, p. 92). The vote picked that 5th (E). Inference, not yet by ear); the runs' vote favoured 164.9 Hz (E)",
+        "p09 (F#): E2 window sizes disagree by 12 ¢ {4096: 924.31, 8192: 912.19}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

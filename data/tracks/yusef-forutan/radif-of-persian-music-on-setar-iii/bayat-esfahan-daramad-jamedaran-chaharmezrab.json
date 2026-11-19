@@ -49,9 +49,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "yusef-forutan/radif-of-persian-music-on-setar-iii/bayat-esfahan-daramad-jamedaran-chaharmezrab",
-    "generated_at": "2026-11-16T18:43:02+00:00",
+    "generated_at": "2026-11-16T20:59:01+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -161,6 +161,10 @@
           "E2": 0.62,
           "E3": -1.57
         },
+        "by_e2_window": {
+          "4096": 0.59,
+          "8192": 2.26
+        },
         "label": "F",
         "cents_from_tonic": 0.63,
         "cents_abs": 530.81,
@@ -216,6 +220,10 @@
         "by_family": {
           "E1": 202.71,
           "E2": 201.38
+        },
+        "by_e2_window": {
+          "4096": 201.26,
+          "8192": 202.28
         },
         "label": "G",
         "cents_from_tonic": 201.97,
@@ -365,6 +373,10 @@
           "E2": 702.73,
           "E3": 700.37
         },
+        "by_e2_window": {
+          "4096": 702.73,
+          "8192": 702.21
+        },
         "label": "C",
         "cents_from_tonic": 700.14,
         "cents_abs": 30.32,
@@ -462,6 +474,10 @@
           "E2": 1051.47,
           "E3": 1075.85
         },
+        "by_e2_window": {
+          "4096": 1050.65,
+          "8192": 1063.82
+        },
         "label": "Ek",
         "cents_from_tonic": 1063.51,
         "cents_abs": 393.69,
@@ -516,6 +532,10 @@
         "by_family": {
           "E2": 1093.34,
           "E3": 1083.3
+        },
+        "by_e2_window": {
+          "4096": 1093.34,
+          "8192": 1091.1
         },
         "label": "E",
         "cents_from_tonic": 1093.27,
@@ -625,6 +645,10 @@
         "id": "p10",
         "by_family": {
           "E2": 1154.72
+        },
+        "by_e2_window": {
+          "4096": 1154.72,
+          "8192": 1152.38
         },
         "label": "Fk",
         "cents_from_tonic": 1154.72,
@@ -8578,7 +8602,8 @@
     "diagnostics": {
       "flags": [
         "p07 (Ek): estimator families disagree by 12 ¢ {'E1': 1063.51, 'E2': 1051.47, 'E3': 1075.85}",
-        "p08 (E): estimator families disagree by 10 ¢ {'E2': 1093.34, 'E3': 1083.3}"
+        "p08 (E): estimator families disagree by 10 ¢ {'E2': 1093.34, 'E3': 1083.3}",
+        "p07 (Ek): E2 window sizes disagree by 13 ¢ {4096: 1050.65, 8192: 1063.82}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

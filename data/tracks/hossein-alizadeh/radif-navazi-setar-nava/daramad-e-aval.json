@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-nava/daramad-e-aval",
-    "generated_at": "2026-11-16T18:41:54+00:00",
+    "generated_at": "2026-11-16T20:57:53+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -148,6 +148,10 @@
           "E1": 1.36,
           "E2": 0.49,
           "E3": 3.67
+        },
+        "by_e2_window": {
+          "4096": 0.42,
+          "8192": 2.77
         },
         "label": "E",
         "cents_from_tonic": 1.03,
@@ -260,6 +264,10 @@
           "E2": 201.62,
           "E3": 203.08
         },
+        "by_e2_window": {
+          "4096": 201.62,
+          "8192": 202.26
+        },
         "label": "F#",
         "cents_from_tonic": 201.62,
         "cents_abs": 582.44,
@@ -356,6 +364,10 @@
           "E1": 288.93,
           "E2": 288.15,
           "E3": 283.07
+        },
+        "by_e2_window": {
+          "4096": 288.15,
+          "8192": 277.67
         },
         "label": "G",
         "cents_from_tonic": 288.93,
@@ -502,6 +514,10 @@
           "E2": 700.47,
           "E3": 700.66
         },
+        "by_e2_window": {
+          "4096": 700.47,
+          "8192": 699.78
+        },
         "label": "B",
         "cents_from_tonic": 700.47,
         "cents_abs": 1081.3,
@@ -611,6 +627,10 @@
           "E2": 844.66,
           "E3": 841.85
         },
+        "by_e2_window": {
+          "4096": 844.66,
+          "8192": 839.95
+        },
         "label": "Cs",
         "cents_from_tonic": 841.85,
         "cents_abs": 22.67,
@@ -699,6 +719,10 @@
           "E1": 981.1,
           "E2": 987.66,
           "E3": 984.77
+        },
+        "by_e2_window": {
+          "4096": 987.38,
+          "8192": 987.23
         },
         "label": "D",
         "cents_from_tonic": 987.23,
@@ -2854,7 +2878,8 @@
     "hypotheses": [],
     "diagnostics": {
       "flags": [
-        "p05 (Gk): estimator families disagree by 11 ¢ {'E2': 254.97, 'E3': 244.27}"
+        "p05 (Gk): estimator families disagree by 11 ¢ {'E2': 254.97, 'E3': 244.27}",
+        "p06 (G): E2 window sizes disagree by 10 ¢ {4096: 288.15, 8192: 277.67}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

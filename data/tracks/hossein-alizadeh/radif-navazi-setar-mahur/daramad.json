@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-mahur/daramad",
-    "generated_at": "2026-11-16T18:41:37+00:00",
+    "generated_at": "2026-11-16T20:57:36+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": 0.18,
           "E3": -1.48
         },
+        "by_e2_window": {
+          "4096": 0.21,
+          "8192": 0.16
+        },
         "label": "A",
         "cents_from_tonic": 0.18,
         "cents_abs": 905.21,
@@ -205,6 +209,10 @@
           "E1": 214.94,
           "E2": 213.81
         },
+        "by_e2_window": {
+          "4096": 213.78,
+          "8192": 213.85
+        },
         "label": "B",
         "cents_from_tonic": 214.17,
         "cents_abs": 1119.19,
@@ -244,6 +252,10 @@
         "by_family": {
           "E1": 391.62,
           "E2": 399.82
+        },
+        "by_e2_window": {
+          "4096": 399.89,
+          "8192": 400.87
         },
         "label": "C#",
         "cents_from_tonic": 391.83,
@@ -285,6 +297,10 @@
           "E1": 707.78,
           "E2": 706.93,
           "E3": 702.44
+        },
+        "by_e2_window": {
+          "4096": 705.82,
+          "8192": 708.11
         },
         "label": "E",
         "cents_from_tonic": 705.93,
@@ -342,6 +358,10 @@
           "E2": 914.73,
           "E3": 907.9
         },
+        "by_e2_window": {
+          "4096": 915.74,
+          "8192": 904.77
+        },
         "label": "F#",
         "cents_from_tonic": 914.73,
         "cents_abs": 619.76,
@@ -397,6 +417,10 @@
           "E1": 1104.22,
           "E2": 1102.98,
           "E3": 1096.76
+        },
+        "by_e2_window": {
+          "4096": 1102.98,
+          "8192": 1098.75
         },
         "label": "G#",
         "cents_from_tonic": 1104.22,
@@ -1761,6 +1785,7 @@
     "hypotheses": [],
     "diagnostics": {
       "flags": [
+        "p05 (F#): E2 window sizes disagree by 11 ¢ {4096: 915.74, 8192: 904.77}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 221.8 Hz (A3) via temporal-cadence. cadence agrees (221.8 Hz). drone picked 331.8 Hz (E4), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (221.8 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "yusef-forutan/radif-of-persian-music-on-setar-i/bayat-tork-gusheye-dashti",
-    "generated_at": "2026-11-16T18:42:50+00:00",
+    "generated_at": "2026-11-16T20:58:50+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -148,6 +148,10 @@
           "E1": 2.26,
           "E2": 2.41,
           "E3": 7.01
+        },
+        "by_e2_window": {
+          "4096": 2.41,
+          "8192": 3.06
         },
         "label": "G",
         "cents_from_tonic": 2.41,
@@ -272,6 +276,10 @@
           "E2": 204.69,
           "E3": 208.24
         },
+        "by_e2_window": {
+          "4096": 204.61,
+          "8192": 204.32
+        },
         "label": "A",
         "cents_from_tonic": 204.32,
         "cents_abs": 928.38,
@@ -341,6 +349,10 @@
           "E2": 343.54,
           "E3": 332.2
         },
+        "by_e2_window": {
+          "4096": 343.49,
+          "8192": 343.72
+        },
         "label": "Bk",
         "cents_from_tonic": 343.49,
         "cents_abs": 1067.55,
@@ -381,6 +393,10 @@
           "E1": 403.54,
           "E2": 404.2,
           "E3": 405.95
+        },
+        "by_e2_window": {
+          "4096": 404.29,
+          "8192": 406.9
         },
         "label": "B",
         "cents_from_tonic": 404.14,
@@ -438,6 +454,10 @@
           "E2": 467.59,
           "E3": 490.8
         },
+        "by_e2_window": {
+          "4096": 467.39,
+          "8192": 485.04
+        },
         "label": "C",
         "cents_from_tonic": 484.91,
         "cents_abs": 8.97,
@@ -494,6 +514,10 @@
           "E2": 701.22,
           "E3": 691.61
         },
+        "by_e2_window": {
+          "4096": 701.22,
+          "8192": 697.86
+        },
         "label": "D",
         "cents_from_tonic": 701.15,
         "cents_abs": 225.22,
@@ -549,6 +573,10 @@
           "E1": 908.37,
           "E2": 906.02,
           "E3": 905.9
+        },
+        "by_e2_window": {
+          "4096": 906.02,
+          "8192": 905.64
         },
         "label": "E",
         "cents_from_tonic": 906.0,
@@ -4074,6 +4102,7 @@
         "tonic G set in the catalog (Bayat-e Tork's finalis G (198.7 Hz): seven of the suite's fourteen tracks voted it and the pitch set fits from it (0, 205, 405, 488, 702, 905, 1052 cents). The vote picked the 4th below, Bayat-e Tork's opening note and ist (Farhat 1990, p. 43). Inference, not yet by ear); the runs' vote favoured 149.5 Hz (D)",
         "p06 (C): estimator families disagree by 20 ¢ {'E1': 487.35, 'E2': 467.59, 'E3': 490.8}",
         "p07 (D): estimator families disagree by 12 ¢ {'E1': 689.64, 'E2': 701.22, 'E3': 691.61}",
+        "p06 (C): E2 window sizes disagree by 18 ¢ {4096: 467.39, 8192: 485.04}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 199.1 Hz (G3) via temporal-cadence. cadence agrees (199.2 Hz). drone picked 296.6 Hz (D4), a fourth away — likely the dominant; resolved to the tonic. marginalized picked 297.8 Hz (D4), a fourth away — likely the dominant; resolved to the tonic."
       ],
       "freq_resolution_hz": 0.336456298828125,

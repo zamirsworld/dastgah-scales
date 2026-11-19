@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "yusef-forutan/radif-of-persian-music-on-setar-iii/afshari-daramad",
-    "generated_at": "2026-11-16T18:43:00+00:00",
+    "generated_at": "2026-11-16T20:59:00+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -148,6 +148,10 @@
           "E1": 499.82,
           "E2": 490.24,
           "E3": 485.92
+        },
+        "by_e2_window": {
+          "4096": 490.24,
+          "8192": 500.69
         },
         "label": "D",
         "cents_from_tonic": 490.24,
@@ -343,6 +347,10 @@
           "E2": 702.78,
           "E3": 701.13
         },
+        "by_e2_window": {
+          "4096": 702.78,
+          "8192": 704.78
+        },
         "label": "E",
         "cents_from_tonic": 702.78,
         "cents_abs": 475.35,
@@ -400,6 +408,10 @@
           "E2": 845.88,
           "E3": 834.88
         },
+        "by_e2_window": {
+          "4096": 845.88,
+          "8192": 839.53
+        },
         "label": "Fs",
         "cents_from_tonic": 845.88,
         "cents_abs": 618.45,
@@ -440,6 +452,10 @@
         "by_family": {
           "E1": 899.75,
           "E2": 901.73
+        },
+        "by_e2_window": {
+          "4096": 901.74,
+          "8192": 901.54
         },
         "label": "F#",
         "cents_from_tonic": 901.73,
@@ -560,6 +576,10 @@
           "E1": 1196.07,
           "E2": 1196.84,
           "E3": 1201.13
+        },
+        "by_e2_window": {
+          "4096": 1196.84,
+          "8192": 1197.34
         },
         "label": "A",
         "cents_from_tonic": 1196.64,
@@ -5882,6 +5902,7 @@
       "flags": [
         "tonic A set in the catalog (Afshari's finalis A (229.5 Hz): the suite's pitch set fits Afshari from it (0, 350, 500, 702, 902, 990 cents) and the Chaharmezrab voted it. The vote picked the 5th above, Afshari's shahed (Farhat 1990, p. 47), which takes 49 % of the suite's sounding time. Inference, not yet by ear); the runs' vote favoured 172.1 Hz (F)",
         "p01 (D): estimator families disagree by 14 ¢ {'E1': 499.82, 'E2': 490.24, 'E3': 485.92}",
+        "p01 (D): E2 window sizes disagree by 10 ¢ {4096: 490.24, 8192: 500.69}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 172.6 Hz (F3) via temporal-cadence. cadence picked 115.2 Hz (A#2), a fourth away — likely the dominant; resolved to the tonic. drone agrees (172.6 Hz). marginalized agrees (172.6 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

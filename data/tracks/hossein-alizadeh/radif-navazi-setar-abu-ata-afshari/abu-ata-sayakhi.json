@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-sayakhi",
-    "generated_at": "2026-11-16T18:41:21+00:00",
+    "generated_at": "2026-11-16T20:57:20+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -148,6 +148,10 @@
           "E1": -2.49,
           "E2": 0.84,
           "E3": 0.14
+        },
+        "by_e2_window": {
+          "4096": 0.8,
+          "8192": 1.32
         },
         "label": "E",
         "cents_from_tonic": 0.84,
@@ -285,6 +289,10 @@
           "E2": 129.9,
           "E3": 130.1
         },
+        "by_e2_window": {
+          "4096": 128.83,
+          "8192": 143.23
+        },
         "label": "Fs",
         "cents_from_tonic": 130.1,
         "cents_abs": 542.22,
@@ -368,6 +376,10 @@
           "E2": 273.68,
           "E3": 266.51
         },
+        "by_e2_window": {
+          "4096": 273.68,
+          "8192": 270.37
+        },
         "label": "Gk",
         "cents_from_tonic": 273.68,
         "cents_abs": 685.8,
@@ -409,6 +421,10 @@
           "E1": 301.59,
           "E2": 300.27,
           "E3": 288.53
+        },
+        "by_e2_window": {
+          "4096": 300.27,
+          "8192": 296.52
         },
         "label": "G",
         "cents_from_tonic": 301.59,
@@ -504,6 +520,10 @@
           "E1": 499.95,
           "E2": 498.37,
           "E3": 500.03
+        },
+        "by_e2_window": {
+          "4096": 498.06,
+          "8192": 498.37
         },
         "label": "A",
         "cents_from_tonic": 499.0,
@@ -4277,6 +4297,7 @@
         "p05 (F#): estimator families disagree by 11 ¢ {'E2': 223.77, 'E3': 234.75}",
         "p06 (Gk): estimator families disagree by 14 ¢ {'E1': 280.18, 'E2': 273.68, 'E3': 266.51}",
         "p07 (G): estimator families disagree by 13 ¢ {'E1': 301.59, 'E2': 300.27, 'E3': 288.53}",
+        "p04 (Fs): E2 window sizes disagree by 14 ¢ {4096: 128.83, 8192: 143.23}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 166.5 Hz (E3) via temporal-cadence. cadence agrees (332.9 Hz). drone agrees (166.5 Hz). marginalized picked 111.2 Hz (A2), a fourth away — likely the dominant; resolved to the tonic."
       ],
       "freq_resolution_hz": 0.336456298828125,

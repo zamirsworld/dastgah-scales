@@ -30,9 +30,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "jalal-zolfonun/a-century-of-setar-music/abuata",
-    "generated_at": "2026-11-16T18:42:15+00:00",
+    "generated_at": "2026-11-16T20:58:14+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -125,6 +125,10 @@
           "E2": 2.13,
           "E3": 0.5
         },
+        "by_e2_window": {
+          "4096": 2.13,
+          "8192": 3.05
+        },
         "label": "A",
         "cents_from_tonic": 2.13,
         "cents_abs": 880.63,
@@ -182,6 +186,10 @@
           "E2": 137.74,
           "E3": 132.43
         },
+        "by_e2_window": {
+          "4096": 137.74,
+          "8192": 134.03
+        },
         "label": "Bk",
         "cents_from_tonic": 137.74,
         "cents_abs": 1016.24,
@@ -238,6 +246,10 @@
           "E1": 296.22,
           "E2": 291.55,
           "E3": 288.86
+        },
+        "by_e2_window": {
+          "4096": 291.59,
+          "8192": 290.31
         },
         "label": "C",
         "cents_from_tonic": 291.61,
@@ -311,6 +323,10 @@
           "E2": 498.72,
           "E3": 496.2
         },
+        "by_e2_window": {
+          "4096": 498.62,
+          "8192": 499.93
+        },
         "label": "D",
         "cents_from_tonic": 498.62,
         "cents_abs": 177.12,
@@ -381,6 +397,10 @@
         "by_family": {
           "E1": 716.22,
           "E2": 699.77
+        },
+        "by_e2_window": {
+          "4096": 699.56,
+          "8192": 714.17
         },
         "label": "E",
         "cents_from_tonic": 701.25,
@@ -475,6 +495,10 @@
           "E2": 794.29,
           "E3": 814.22
         },
+        "by_e2_window": {
+          "4096": 794.31,
+          "8192": 795.98
+        },
         "label": "F",
         "cents_from_tonic": 794.31,
         "cents_abs": 472.8,
@@ -516,6 +540,10 @@
           "E1": 837.89,
           "E2": 845.65,
           "E3": 846.01
+        },
+        "by_e2_window": {
+          "4096": 845.64,
+          "8192": 826.2
         },
         "label": "Fs",
         "cents_from_tonic": 837.89,
@@ -598,6 +626,10 @@
           "E1": 967.29,
           "E2": 957.11
         },
+        "by_e2_window": {
+          "4096": 957.11,
+          "8192": 953.73
+        },
         "label": "Gk",
         "cents_from_tonic": 957.11,
         "cents_abs": 635.61,
@@ -638,6 +670,10 @@
           "E1": 999.46,
           "E2": 996.25,
           "E3": 995.78
+        },
+        "by_e2_window": {
+          "4096": 996.24,
+          "8192": 998.81
         },
         "label": "G",
         "cents_from_tonic": 996.34,
@@ -7278,7 +7314,9 @@
         "p05 (E): estimator families disagree by 16 ¢ {'E1': 716.22, 'E2': 699.77}",
         "p07 (F): estimator families disagree by 20 ¢ {'E2': 794.29, 'E3': 814.22}",
         "p09 (F#): estimator families disagree by 16 ¢ {'E1': 879.1, 'E3': 862.89}",
-        "p10 (Gk): estimator families disagree by 10 ¢ {'E1': 967.29, 'E2': 957.11}"
+        "p10 (Gk): estimator families disagree by 10 ¢ {'E1': 967.29, 'E2': 957.11}",
+        "p05 (E): E2 window sizes disagree by 15 ¢ {4096: 699.56, 8192: 714.17}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
+        "p08 (Fs): E2 window sizes disagree by 19 ¢ {4096: 845.64, 8192: 826.2}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": []

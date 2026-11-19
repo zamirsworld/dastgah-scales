@@ -43,9 +43,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "said-hormozi/radif-of-persian-music-on-setar-ii/homayun-daramad-ii-karvani-zang-e-shotor",
-    "generated_at": "2026-11-16T18:42:40+00:00",
+    "generated_at": "2026-11-16T20:58:40+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -155,6 +155,10 @@
           "E2": 0.25,
           "E3": 1.62
         },
+        "by_e2_window": {
+          "4096": 0.24,
+          "8192": 1.39
+        },
         "label": "F",
         "cents_from_tonic": 0.52,
         "cents_abs": 486.95,
@@ -210,6 +214,10 @@
           "E1": 137.14,
           "E2": 137.64,
           "E3": 135.7
+        },
+        "by_e2_window": {
+          "4096": 137.64,
+          "8192": 138.81
         },
         "label": "Gk",
         "cents_from_tonic": 137.62,
@@ -293,6 +301,10 @@
           "E2": 390.53,
           "E3": 412.71
         },
+        "by_e2_window": {
+          "4096": 390.29,
+          "8192": 401.35
+        },
         "label": "A",
         "cents_from_tonic": 398.49,
         "cents_abs": 884.92,
@@ -348,6 +360,10 @@
         "by_family": {
           "E1": 500.18,
           "E2": 500.58
+        },
+        "by_e2_window": {
+          "4096": 500.58,
+          "8192": 500.23
         },
         "label": "Bb",
         "cents_from_tonic": 500.58,
@@ -429,6 +445,10 @@
           "E1": 705.82,
           "E2": 709.54
         },
+        "by_e2_window": {
+          "4096": 709.67,
+          "8192": 710.0
+        },
         "label": "C",
         "cents_from_tonic": 709.49,
         "cents_abs": 1195.92,
@@ -509,6 +529,10 @@
           "E2": 843.38,
           "E3": 848.79
         },
+        "by_e2_window": {
+          "4096": 843.42,
+          "8192": 844.88
+        },
         "label": "Dk",
         "cents_from_tonic": 842.62,
         "cents_abs": 129.05,
@@ -564,6 +588,10 @@
           "E1": 1000.29,
           "E2": 1001.95,
           "E3": 1009.86
+        },
+        "by_e2_window": {
+          "4096": 1001.95,
+          "8192": 1001.99
         },
         "label": "Eb",
         "cents_from_tonic": 1001.95,
@@ -4183,7 +4211,8 @@
     "hypotheses": [],
     "diagnostics": {
       "flags": [
-        "p04 (A): estimator families disagree by 13 ¢ {'E1': 400.12, 'E2': 390.53, 'E3': 412.71}"
+        "p04 (A): estimator families disagree by 13 ¢ {'E1': 400.12, 'E2': 390.53, 'E3': 412.71}",
+        "p04 (A): E2 window sizes disagree by 11 ¢ {4096: 390.29, 8192: 401.35}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

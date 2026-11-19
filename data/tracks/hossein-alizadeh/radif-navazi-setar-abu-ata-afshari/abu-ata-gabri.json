@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-gabri",
-    "generated_at": "2026-11-16T18:41:22+00:00",
+    "generated_at": "2026-11-16T20:57:21+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -148,6 +148,10 @@
           "E1": 4.38,
           "E2": 1.74,
           "E3": -0.2
+        },
+        "by_e2_window": {
+          "4096": 1.74,
+          "8192": -0.6
         },
         "label": "E",
         "cents_from_tonic": 1.95,
@@ -282,6 +286,10 @@
           "E2": 135.07,
           "E3": 146.09
         },
+        "by_e2_window": {
+          "4096": 135.07,
+          "8192": 150.74
+        },
         "label": "Fs",
         "cents_from_tonic": 146.24,
         "cents_abs": 551.37,
@@ -365,6 +373,10 @@
           "E1": 302.02,
           "E2": 307.66,
           "E3": 302.91
+        },
+        "by_e2_window": {
+          "4096": 306.84,
+          "8192": 302.2
         },
         "label": "G",
         "cents_from_tonic": 302.2,
@@ -461,6 +473,10 @@
           "E2": 498.71,
           "E3": 495.96
         },
+        "by_e2_window": {
+          "4096": 498.23,
+          "8192": 497.53
+        },
         "label": "A",
         "cents_from_tonic": 498.75,
         "cents_abs": 903.87,
@@ -517,6 +533,10 @@
           "E1": 709.3,
           "E2": 703.5
         },
+        "by_e2_window": {
+          "4096": 703.78,
+          "8192": 704.12
+        },
         "label": "B",
         "cents_from_tonic": 703.5,
         "cents_abs": 1108.62,
@@ -556,6 +576,10 @@
         "by_family": {
           "E1": 787.18,
           "E2": 794.34
+        },
+        "by_e2_window": {
+          "4096": 795.2,
+          "8192": 792.49
         },
         "label": "C",
         "cents_from_tonic": 792.85,
@@ -3307,7 +3331,8 @@
     "diagnostics": {
       "flags": [
         "p04 (Fs): estimator families disagree by 17 ¢ {'E1': 152.14, 'E2': 135.07, 'E3': 146.09}",
-        "p05 (Gk): estimator families disagree by 11 ¢ {'E1': 249.25, 'E2': 253.82, 'E3': 260.03}"
+        "p05 (Gk): estimator families disagree by 11 ¢ {'E1': 249.25, 'E2': 253.82, 'E3': 260.03}",
+        "p04 (Fs): E2 window sizes disagree by 16 ¢ {4096: 135.07, 8192: 150.74}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

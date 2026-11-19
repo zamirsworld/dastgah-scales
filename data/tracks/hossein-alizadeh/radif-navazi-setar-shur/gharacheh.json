@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-shur/gharacheh",
-    "generated_at": "2026-11-16T18:41:35+00:00",
+    "generated_at": "2026-11-16T20:57:34+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": 1.69,
           "E3": 0.64
         },
+        "by_e2_window": {
+          "4096": 1.69,
+          "8192": -2.77
+        },
         "label": "E",
         "cents_from_tonic": 1.69,
         "cents_abs": 404.79,
@@ -245,6 +249,10 @@
           "E2": 135.72,
           "E3": 130.78
         },
+        "by_e2_window": {
+          "4096": 135.72,
+          "8192": 146.93
+        },
         "label": "Fs",
         "cents_from_tonic": 134.81,
         "cents_abs": 537.92,
@@ -286,6 +294,10 @@
           "E1": 290.23,
           "E2": 285.03,
           "E3": 274.65
+        },
+        "by_e2_window": {
+          "4096": 284.05,
+          "8192": 285.03
         },
         "label": "G",
         "cents_from_tonic": 285.59,
@@ -382,6 +394,10 @@
           "E2": 498.78,
           "E3": 495.44
         },
+        "by_e2_window": {
+          "4096": 498.78,
+          "8192": 498.8
+        },
         "label": "A",
         "cents_from_tonic": 498.78,
         "cents_abs": 901.89,
@@ -452,6 +468,10 @@
           "E1": 625.9,
           "E2": 631.04,
           "E3": 620.34
+        },
+        "by_e2_window": {
+          "4096": 631.04,
+          "8192": 631.01
         },
         "label": "Bk",
         "cents_from_tonic": 631.01,
@@ -532,6 +552,10 @@
           "E2": 784.05,
           "E3": 781.57
         },
+        "by_e2_window": {
+          "4096": 783.2,
+          "8192": 784.71
+        },
         "label": "C",
         "cents_from_tonic": 784.3,
         "cents_abs": 1187.41,
@@ -573,6 +597,10 @@
           "E1": 981.26,
           "E2": 990.34,
           "E3": 984.63
+        },
+        "by_e2_window": {
+          "4096": 990.34,
+          "8192": 990.47
         },
         "label": "D",
         "cents_from_tonic": 987.7,
@@ -4279,6 +4307,7 @@
         "tonic E set in the catalog (Shur's finalis E (the suite and Alizadeh's other Shur-family albums are on E); this gushe moves to the key of the 4th above without changing mode (Farhat 1990, pp. 30-32; the lowered 5th makes the 4th sound like a finalis, p. 27), so the vote picked A. Inference, not yet by ear); the runs' vote favoured 219.2 Hz (A)",
         "p03 (Fs): estimator families disagree by 19 ¢ {'E1': 116.48, 'E2': 135.72, 'E3': 130.78}",
         "p04 (G): estimator families disagree by 16 ¢ {'E1': 290.23, 'E2': 285.03, 'E3': 274.65}",
+        "p03 (Fs): E2 window sizes disagree by 11 ¢ {4096: 135.72, 8192: 146.93}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 440.4 Hz (A4) via temporal-cadence. cadence agrees (110.2 Hz). drone picked 329.7 Hz (E4), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (441.0 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

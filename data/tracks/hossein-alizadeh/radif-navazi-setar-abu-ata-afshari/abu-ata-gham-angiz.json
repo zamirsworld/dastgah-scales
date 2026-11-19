@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-gham-angiz",
-    "generated_at": "2026-11-16T18:41:22+00:00",
+    "generated_at": "2026-11-16T20:57:21+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -131,6 +131,10 @@
           "E1": -0.67,
           "E2": 0.24,
           "E3": 3.49
+        },
+        "by_e2_window": {
+          "4096": 0.24,
+          "8192": -2.88
         },
         "label": "E",
         "cents_from_tonic": 1.29,
@@ -317,6 +321,10 @@
           "E1": 151.7,
           "E2": 136.32,
           "E3": 134.49
+        },
+        "by_e2_window": {
+          "4096": 135.23,
+          "8192": 150.09
         },
         "label": "Fs",
         "cents_from_tonic": 136.43,
@@ -644,6 +652,10 @@
           "E2": 497.64,
           "E3": 493.15
         },
+        "by_e2_window": {
+          "4096": 497.64,
+          "8192": 497.49
+        },
         "label": "A",
         "cents_from_tonic": 497.64,
         "cents_abs": 902.73,
@@ -713,6 +725,10 @@
         "by_family": {
           "E1": 708.4,
           "E2": 704.01
+        },
+        "by_e2_window": {
+          "4096": 704.01,
+          "8192": 704.23
         },
         "label": "B",
         "cents_from_tonic": 704.26,
@@ -3345,6 +3361,7 @@
     "diagnostics": {
       "flags": [
         "p05 (Fs): estimator families disagree by 17 ¢ {'E1': 151.7, 'E2': 136.32, 'E3': 134.49}",
+        "p05 (Fs): E2 window sizes disagree by 15 ¢ {4096: 135.23, 8192: 150.09}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 221.3 Hz (A3) via temporal-cadence. cadence agrees (220.7 Hz). drone picked 165.1 Hz (E3), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (220.4 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

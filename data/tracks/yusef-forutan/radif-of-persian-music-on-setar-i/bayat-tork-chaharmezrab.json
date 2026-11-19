@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "yusef-forutan/radif-of-persian-music-on-setar-i/bayat-tork-chaharmezrab",
-    "generated_at": "2026-11-16T18:42:49+00:00",
+    "generated_at": "2026-11-16T20:58:49+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": 0.83,
           "E3": 1.8
         },
+        "by_e2_window": {
+          "4096": 0.81,
+          "8192": 1.49
+        },
         "label": "G",
         "cents_from_tonic": 0.85,
         "cents_abs": 725.98,
@@ -204,6 +208,10 @@
         "by_family": {
           "E1": 204.19,
           "E2": 203.61
+        },
+        "by_e2_window": {
+          "4096": 203.63,
+          "8192": 202.81
         },
         "label": "A",
         "cents_from_tonic": 204.19,
@@ -330,6 +338,10 @@
           "E2": 697.18,
           "E3": 696.2
         },
+        "by_e2_window": {
+          "4096": 697.18,
+          "8192": 693.71
+        },
         "label": "D",
         "cents_from_tonic": 696.86,
         "cents_abs": 221.99,
@@ -386,6 +398,10 @@
           "E1": 900.66,
           "E2": 903.43,
           "E3": 906.98
+        },
+        "by_e2_window": {
+          "4096": 903.15,
+          "8192": 901.36
         },
         "label": "E",
         "cents_from_tonic": 903.15,
@@ -475,6 +491,10 @@
           "E1": 1035.29,
           "E2": 1047.52,
           "E3": 1038.14
+        },
+        "by_e2_window": {
+          "4096": 1047.52,
+          "8192": 1037.42
         },
         "label": "Fs",
         "cents_from_tonic": 1044.61,
@@ -4308,6 +4328,7 @@
       "flags": [
         "tonic G set in the catalog (Bayat-e Tork's finalis G (198.7 Hz): seven of the suite's fourteen tracks voted it and the pitch set fits from it (0, 205, 405, 488, 702, 905, 1052 cents). The vote picked the 4th below, Bayat-e Tork's opening note and ist (Farhat 1990, p. 43). Inference, not yet by ear); the runs' vote favoured 149.1 Hz (D)",
         "p08 (Fs): estimator families disagree by 12 ¢ {'E1': 1035.29, 'E2': 1047.52, 'E3': 1038.14}",
+        "p08 (Fs): E2 window sizes disagree by 10 ¢ {4096: 1047.52, 8192: 1037.42}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 199.2 Hz (G3) via temporal-cadence. cadence agrees (198.8 Hz). drone picked 296.5 Hz (D4), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (199.2 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

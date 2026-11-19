@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-rast-panjgah/panjgah",
-    "generated_at": "2026-11-16T18:41:59+00:00",
+    "generated_at": "2026-11-16T20:57:59+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -132,6 +132,10 @@
           "E2": 3.07,
           "E3": -3.69
         },
+        "by_e2_window": {
+          "4096": 2.86,
+          "8192": 4.1
+        },
         "label": "D",
         "cents_from_tonic": 1.5,
         "cents_abs": 199.81,
@@ -173,6 +177,10 @@
           "E1": 203.26,
           "E2": 206.48,
           "E3": 209.94
+        },
+        "by_e2_window": {
+          "4096": 206.3,
+          "8192": 203.53
         },
         "label": "E",
         "cents_from_tonic": 203.26,
@@ -228,6 +236,10 @@
           "E1": 340.32,
           "E2": 341.48,
           "E3": 348.74
+        },
+        "by_e2_window": {
+          "4096": 341.48,
+          "8192": 341.65
         },
         "label": "Fs",
         "cents_from_tonic": 341.48,
@@ -338,6 +350,10 @@
           "E2": 491.04,
           "E3": 498.56
         },
+        "by_e2_window": {
+          "4096": 491.04,
+          "8192": 503.07
+        },
         "label": "G",
         "cents_from_tonic": 496.32,
         "cents_abs": 694.63,
@@ -431,6 +447,10 @@
           "E2": 705.49,
           "E3": 703.49
         },
+        "by_e2_window": {
+          "4096": 705.5,
+          "8192": 705.6
+        },
         "label": "A",
         "cents_from_tonic": 705.5,
         "cents_abs": 903.81,
@@ -501,6 +521,10 @@
         "by_family": {
           "E1": 904.11,
           "E2": 902.82
+        },
+        "by_e2_window": {
+          "4096": 902.83,
+          "8192": 903.31
         },
         "label": "B",
         "cents_from_tonic": 902.82,
@@ -1912,6 +1936,7 @@
       "flags": [
         "tonic D set in the catalog (Rast-Panjgah's finalis D (18 of the suite's 25 gushe-ha end there). Rast is customarily played a 5th below Mahur (Farhat 1990, p. 100), and Alizadeh's Mahur is on A. The vote picked the 5th (A). Inference, not yet by ear); the runs' vote favoured 440.2 Hz (A)",
         "p05 (G): estimator families disagree by 13 ¢ {'E1': 485.82, 'E2': 491.04, 'E3': 498.56}",
+        "p05 (G): E2 window sizes disagree by 12 ¢ {4096: 491.04, 8192: 503.07}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 221.1 Hz (A3) via temporal-cadence. cadence agrees (441.5 Hz). drone differs (391.2 Hz, 210¢ off). marginalized agrees (221.1 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

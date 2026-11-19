@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-bayat-esfahan/jamehdaran",
-    "generated_at": "2026-11-16T18:41:24+00:00",
+    "generated_at": "2026-11-16T20:57:22+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -187,6 +187,10 @@
           "E1": 205.02,
           "E2": 204.65
         },
+        "by_e2_window": {
+          "4096": 204.57,
+          "8192": 204.65
+        },
         "label": "B",
         "cents_from_tonic": 204.65,
         "cents_abs": 1115.88,
@@ -226,6 +230,10 @@
         "by_family": {
           "E1": 288.77,
           "E2": 287.3
+        },
+        "by_e2_window": {
+          "4096": 287.3,
+          "8192": 287.2
         },
         "label": "C",
         "cents_from_tonic": 287.53,
@@ -305,6 +313,10 @@
           "E2": 698.16,
           "E3": 703.26
         },
+        "by_e2_window": {
+          "4096": 698.16,
+          "8192": 696.85
+        },
         "label": "E",
         "cents_from_tonic": 698.07,
         "cents_abs": 409.3,
@@ -361,6 +373,10 @@
           "E1": 847.89,
           "E2": 835.64,
           "E3": 842.43
+        },
+        "by_e2_window": {
+          "4096": 835.44,
+          "8192": 846.0
         },
         "label": "Fs",
         "cents_from_tonic": 842.43,
@@ -509,6 +525,10 @@
           "E2": 1072.05,
           "E3": 1070.92
         },
+        "by_e2_window": {
+          "4096": 1072.75,
+          "8192": 1078.63
+        },
         "label": "Gs",
         "cents_from_tonic": 1074.05,
         "cents_abs": 785.28,
@@ -589,6 +609,10 @@
           "E1": 1203.3,
           "E2": 1199.82,
           "E3": 1197.34
+        },
+        "by_e2_window": {
+          "4096": 1199.28,
+          "8192": 1200.43
         },
         "label": "A",
         "cents_from_tonic": 1199.82,
@@ -4226,6 +4250,7 @@
         "tonic A set in the catalog (the suite's finalis A (the Forud and Bayat-e Raje Pt. 1 end there; same pitch set); the vote picked the ist, the raised 6th a 3rd below the finalis, on which a phrase or whole piece may end (Farhat 1990, p. 76). Inference, not yet by ear); the runs' vote favoured 359.9 Hz (F)",
         "p06 (Fs): estimator families disagree by 12 ¢ {'E1': 847.89, 'E2': 835.64, 'E3': 842.43}",
         "p10 (Gs): estimator families disagree by 10 ¢ {'E1': 1081.04, 'E2': 1072.05, 'E3': 1070.92}",
+        "p06 (Fs): E2 window sizes disagree by 11 ¢ {4096: 835.44, 8192: 846.0}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 111.1 Hz (A2) via temporal-cadence. cadence differs (361.9 Hz, 350¢ off). drone picked 331.5 Hz (E4), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (111.1 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

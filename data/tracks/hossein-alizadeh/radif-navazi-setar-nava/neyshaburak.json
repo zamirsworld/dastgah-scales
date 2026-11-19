@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-nava/neyshaburak",
-    "generated_at": "2026-11-16T18:41:56+00:00",
+    "generated_at": "2026-11-16T20:57:55+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": -0.11,
           "E3": 2.94
         },
+        "by_e2_window": {
+          "4096": -0.11,
+          "8192": 0.75
+        },
         "label": "E",
         "cents_from_tonic": 0.34,
         "cents_abs": 378.28,
@@ -206,6 +210,10 @@
           "E2": 199.69,
           "E3": 208.37
         },
+        "by_e2_window": {
+          "4096": 199.91,
+          "8192": 199.69
+        },
         "label": "F#",
         "cents_from_tonic": 198.04,
         "cents_abs": 575.98,
@@ -261,6 +269,10 @@
           "E1": 279.45,
           "E2": 289.03,
           "E3": 282.33
+        },
+        "by_e2_window": {
+          "4096": 289.03,
+          "8192": 281.49
         },
         "label": "G",
         "cents_from_tonic": 288.35,
@@ -358,6 +370,10 @@
           "E1": 501.61,
           "E2": 494.48
         },
+        "by_e2_window": {
+          "4096": 494.48,
+          "8192": 498.92
+        },
         "label": "A",
         "cents_from_tonic": 495.53,
         "cents_abs": 873.47,
@@ -398,6 +414,10 @@
           "E1": 701.64,
           "E2": 701.33,
           "E3": 703.27
+        },
+        "by_e2_window": {
+          "4096": 701.43,
+          "8192": 701.1
         },
         "label": "B",
         "cents_from_tonic": 701.64,
@@ -506,6 +526,10 @@
           "E1": 994.57,
           "E2": 990.25,
           "E3": 987.91
+        },
+        "by_e2_window": {
+          "4096": 990.25,
+          "8192": 980.02
         },
         "label": "D",
         "cents_from_tonic": 994.57,
@@ -3084,6 +3108,7 @@
       "flags": [
         "tonic E set in the catalog (Nava's finalis E (11 of the suite's 22 gushe-ha end there, including both daramads). From Oshagh on, the 4th below Nava's finalis becomes the finalis, and Hoseyni, Busalik and Neyriz are in the mode of Shur (Farhat 1990, pp. 85-86). The vote picked that 4th below (B). Inference, not yet by ear); the runs' vote favoured 244.1 Hz (B)",
         "p02 (F#): estimator families disagree by 11 ¢ {'E1': 197.43, 'E2': 199.69, 'E3': 208.37}",
+        "p08 (D): E2 window sizes disagree by 10 ¢ {4096: 990.25, 8192: 980.02}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 243.9 Hz (B3) via temporal-cadence. cadence agrees (243.8 Hz). drone differs (383.5 Hz, 420¢ off). marginalized differs (384.2 Hz, 415¢ off)."
       ],
       "freq_resolution_hz": 0.336456298828125,

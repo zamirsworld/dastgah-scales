@@ -43,9 +43,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "said-hormozi/radif-of-persian-music-on-setar-ii/avaz-e-bayat-e-tork-daramad-avaz-e-bayat-e-tork",
-    "generated_at": "2026-11-16T18:42:39+00:00",
+    "generated_at": "2026-11-16T20:58:39+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -155,6 +155,10 @@
           "E2": 200.85,
           "E3": 204.28
         },
+        "by_e2_window": {
+          "4096": 200.87,
+          "8192": 201.72
+        },
         "label": "E",
         "cents_from_tonic": 201.54,
         "cents_abs": 449.54,
@@ -196,6 +200,10 @@
           "E1": 404.79,
           "E2": 401.29
         },
+        "by_e2_window": {
+          "4096": 400.59,
+          "8192": 405.62
+        },
         "label": "F#",
         "cents_from_tonic": 403.54,
         "cents_abs": 651.53,
@@ -236,6 +244,10 @@
           "E1": 700.6,
           "E2": 700.12,
           "E3": 694.61
+        },
+        "by_e2_window": {
+          "4096": 700.11,
+          "8192": 699.86
         },
         "label": "A",
         "cents_from_tonic": 700.6,
@@ -291,6 +303,10 @@
         "by_family": {
           "E1": 1039.84,
           "E2": 1054.72
+        },
+        "by_e2_window": {
+          "4096": 1055.91,
+          "8192": 1039.91
         },
         "label": "Cs",
         "cents_from_tonic": 1052.43,
@@ -406,6 +422,10 @@
           "E1": 1200.93,
           "E2": 1198.86,
           "E3": 1198.05
+        },
+        "by_e2_window": {
+          "4096": 1198.87,
+          "8192": 1199.84
         },
         "label": "D",
         "cents_from_tonic": 1198.87,
@@ -3609,7 +3629,8 @@
     "diagnostics": {
       "flags": [
         "p04 (Cs): estimator families disagree by 15 ¢ {'E1': 1039.84, 'E2': 1054.72}",
-        "p06 (Dk): estimator families disagree by 16 ¢ {'E1': 1167.58, 'E3': 1151.9}"
+        "p06 (Dk): estimator families disagree by 16 ¢ {'E1': 1167.58, 'E3': 1151.9}",
+        "p04 (Cs): E2 window sizes disagree by 16 ¢ {4096: 1055.91, 8192: 1039.91}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

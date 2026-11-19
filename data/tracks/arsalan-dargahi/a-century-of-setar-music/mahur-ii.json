@@ -30,9 +30,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "arsalan-dargahi/a-century-of-setar-music/mahur-ii",
-    "generated_at": "2026-11-16T18:41:00+00:00",
+    "generated_at": "2026-11-16T20:56:58+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -142,6 +142,10 @@
           "E2": 1.82,
           "E3": 2.07
         },
+        "by_e2_window": {
+          "4096": 1.82,
+          "8192": -1.2
+        },
         "label": "B",
         "cents_from_tonic": 1.99,
         "cents_abs": 1080.15,
@@ -212,6 +216,10 @@
           "E1": 206.13,
           "E2": 200.39,
           "E3": 211.53
+        },
+        "by_e2_window": {
+          "4096": 199.69,
+          "8192": 204.77
         },
         "label": "C#",
         "cents_from_tonic": 204.77,
@@ -359,6 +367,10 @@
           "E2": 410.23,
           "E3": 415.17
         },
+        "by_e2_window": {
+          "4096": 413.35,
+          "8192": 402.01
+        },
         "label": "D#",
         "cents_from_tonic": 412.77,
         "cents_abs": 290.93,
@@ -401,6 +413,10 @@
           "E2": 499.8,
           "E3": 504.12
         },
+        "by_e2_window": {
+          "4096": 498.04,
+          "8192": 508.86
+        },
         "label": "E",
         "cents_from_tonic": 504.12,
         "cents_abs": 382.28,
@@ -442,6 +458,10 @@
           "E1": 703.56,
           "E2": 705.96,
           "E3": 705.17
+        },
+        "by_e2_window": {
+          "4096": 705.08,
+          "8192": 705.36
         },
         "label": "F#",
         "cents_from_tonic": 705.17,
@@ -500,6 +520,10 @@
           "E2": 850.83,
           "E3": 846.75
         },
+        "by_e2_window": {
+          "4096": 850.66,
+          "8192": 850.83
+        },
         "label": "Gs",
         "cents_from_tonic": 850.66,
         "cents_abs": 728.82,
@@ -555,6 +579,10 @@
           "E1": 908.41,
           "E2": 905.69
         },
+        "by_e2_window": {
+          "4096": 904.98,
+          "8192": 905.69
+        },
         "label": "G#",
         "cents_from_tonic": 908.41,
         "cents_abs": 786.57,
@@ -608,6 +636,10 @@
         "by_family": {
           "E1": 979.62,
           "E2": 988.44
+        },
+        "by_e2_window": {
+          "4096": 988.44,
+          "8192": 989.51
         },
         "label": "A",
         "cents_from_tonic": 988.44,
@@ -699,6 +731,10 @@
           "E1": 1112.86,
           "E2": 1099.68,
           "E3": 1114.51
+        },
+        "by_e2_window": {
+          "4096": 1099.68,
+          "8192": 1104.36
         },
         "label": "A#",
         "cents_from_tonic": 1104.36,
@@ -14385,7 +14421,9 @@
     "diagnostics": {
       "flags": [
         "tonic B set in the catalog (pattern: major scale on the note at 488 Hz (0·202·410·502·703·905·1102 ¢), named B (−19 ¢ from A440; it sounds near B-flat at 440). The vote picked its 6th (G). Inference, not yet by ear); the runs' vote favoured 411.7 Hz (G)",
-        "p12 (A#): estimator families disagree by 13 ¢ {'E1': 1112.86, 'E2': 1099.68, 'E3': 1114.51}"
+        "p12 (A#): estimator families disagree by 13 ¢ {'E1': 1112.86, 'E2': 1099.68, 'E3': 1114.51}",
+        "p05 (D#): E2 window sizes disagree by 11 ¢ {4096: 413.35, 8192: 402.01}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
+        "p06 (E): E2 window sizes disagree by 11 ¢ {4096: 498.04, 8192: 508.86}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
       ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [

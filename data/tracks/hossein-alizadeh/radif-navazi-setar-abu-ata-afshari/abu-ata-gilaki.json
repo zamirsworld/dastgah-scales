@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-abu-ata-afshari/abu-ata-gilaki",
-    "generated_at": "2026-11-16T18:41:23+00:00",
+    "generated_at": "2026-11-16T20:57:21+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -131,6 +131,10 @@
           "E1": 1.57,
           "E2": 2.39,
           "E3": 1.75
+        },
+        "by_e2_window": {
+          "4096": 1.48,
+          "8192": 2.4
         },
         "label": "E",
         "cents_from_tonic": 2.39,
@@ -263,6 +267,10 @@
           "E1": 150.79,
           "E2": 142.84,
           "E3": 139.41
+        },
+        "by_e2_window": {
+          "4096": 142.84,
+          "8192": 142.67
         },
         "label": "Fs",
         "cents_from_tonic": 142.84,
@@ -428,6 +436,10 @@
           "E2": 300.08,
           "E3": 294.3
         },
+        "by_e2_window": {
+          "4096": 297.71,
+          "8192": 308.95
+        },
         "label": "G",
         "cents_from_tonic": 300.34,
         "cents_abs": 692.75,
@@ -523,6 +535,10 @@
           "E2": 504.23,
           "E3": 502.6
         },
+        "by_e2_window": {
+          "4096": 504.23,
+          "8192": 502.34
+        },
         "label": "A",
         "cents_from_tonic": 504.55,
         "cents_abs": 896.96,
@@ -595,6 +611,10 @@
           "E2": 708.68,
           "E3": 700.12
         },
+        "by_e2_window": {
+          "4096": 708.45,
+          "8192": 708.08
+        },
         "label": "B",
         "cents_from_tonic": 711.13,
         "cents_abs": 1103.55,
@@ -636,6 +656,10 @@
           "E1": 799.91,
           "E2": 787.89
         },
+        "by_e2_window": {
+          "4096": 787.89,
+          "8192": 788.96
+        },
         "label": "C",
         "cents_from_tonic": 788.33,
         "cents_abs": 1180.75,
@@ -674,6 +698,10 @@
         "id": "p13",
         "by_family": {
           "E2": 985.29
+        },
+        "by_e2_window": {
+          "4096": 985.29,
+          "8192": 985.61
         },
         "label": "D",
         "cents_from_tonic": 985.29,
@@ -5775,6 +5803,7 @@
         "p08 (G): estimator families disagree by 16 ¢ {'E1': 310.78, 'E2': 300.08, 'E3': 294.3}",
         "p11 (B): estimator families disagree by 11 ¢ {'E1': 711.13, 'E2': 708.68, 'E3': 700.12}",
         "p12 (C): estimator families disagree by 12 ¢ {'E1': 799.91, 'E2': 787.89}",
+        "p08 (G): E2 window sizes disagree by 11 ¢ {4096: 297.71, 8192: 308.95}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 110.3 Hz (A2) via temporal-cadence. cadence picked 327.8 Hz (E4), a fourth away — likely the dominant; resolved to the tonic. drone picked 328.5 Hz (E4), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (110.3 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

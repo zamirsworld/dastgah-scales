@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "said-hormozi/radif-of-persian-music-on-setar-ii/mahur-zarbi-ye-rak",
-    "generated_at": "2026-11-16T18:42:39+00:00",
+    "generated_at": "2026-11-16T20:58:39+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": 0.61,
           "E3": 0.56
         },
+        "by_e2_window": {
+          "4096": 0.61,
+          "8192": 0.88
+        },
         "label": "B",
         "cents_from_tonic": 0.61,
         "cents_abs": 1034.27,
@@ -218,6 +222,10 @@
           "E1": 212.43,
           "E2": 211.37,
           "E3": 211.18
+        },
+        "by_e2_window": {
+          "4096": 211.37,
+          "8192": 212.04
         },
         "label": "C#",
         "cents_from_tonic": 211.95,
@@ -352,6 +360,10 @@
           "E2": 405.34,
           "E3": 404.98
         },
+        "by_e2_window": {
+          "4096": 405.34,
+          "8192": 407.25
+        },
         "label": "D#",
         "cents_from_tonic": 405.27,
         "cents_abs": 238.93,
@@ -430,6 +442,10 @@
           "E2": 490.56,
           "E3": 496.79
         },
+        "by_e2_window": {
+          "4096": 490.56,
+          "8192": 501.51
+        },
         "label": "E",
         "cents_from_tonic": 492.27,
         "cents_abs": 325.93,
@@ -471,6 +487,10 @@
           "E1": 705.92,
           "E2": 704.83,
           "E3": 707.72
+        },
+        "by_e2_window": {
+          "4096": 704.83,
+          "8192": 705.69
         },
         "label": "F#",
         "cents_from_tonic": 705.69,
@@ -528,6 +548,10 @@
           "E1": 912.65,
           "E2": 914.28
         },
+        "by_e2_window": {
+          "4096": 914.05,
+          "8192": 916.87
+        },
         "label": "G#",
         "cents_from_tonic": 914.09,
         "cents_abs": 747.75,
@@ -582,6 +606,10 @@
           "E1": 983.95,
           "E2": 989.37
         },
+        "by_e2_window": {
+          "4096": 989.48,
+          "8192": 989.16
+        },
         "label": "A",
         "cents_from_tonic": 988.37,
         "cents_abs": 822.03,
@@ -621,6 +649,10 @@
         "by_family": {
           "E1": 1113.66,
           "E2": 1114.95
+        },
+        "by_e2_window": {
+          "4096": 1114.95,
+          "8192": 1114.89
         },
         "label": "A#",
         "cents_from_tonic": 1113.66,
@@ -3633,7 +3665,9 @@
     ],
     "hypotheses": [],
     "diagnostics": {
-      "flags": [],
+      "flags": [
+        "p07 (E): E2 window sizes disagree by 11 ¢ {4096: 490.56, 8192: 501.51}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one"
+      ],
       "freq_resolution_hz": 0.336456298828125,
       "e1_degrees": [
         0.0,

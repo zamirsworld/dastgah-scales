@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "said-hormozi/radif-of-persian-music-on-setar-ii/mahur-dad",
-    "generated_at": "2026-11-16T18:42:38+00:00",
+    "generated_at": "2026-11-16T20:58:37+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -149,6 +149,10 @@
           "E2": 211.44,
           "E3": 222.92
         },
+        "by_e2_window": {
+          "4096": 211.44,
+          "8192": 212.97
+        },
         "label": "C#",
         "cents_from_tonic": 211.44,
         "cents_abs": 38.93,
@@ -226,6 +230,10 @@
           "E1": 340.53,
           "E2": 349.87
         },
+        "by_e2_window": {
+          "4096": 349.87,
+          "8192": 352.92
+        },
         "label": "Ds",
         "cents_from_tonic": 349.87,
         "cents_abs": 177.36,
@@ -266,6 +274,10 @@
           "E1": 407.97,
           "E2": 405.59,
           "E3": 409.29
+        },
+        "by_e2_window": {
+          "4096": 405.55,
+          "8192": 395.44
         },
         "label": "D#",
         "cents_from_tonic": 405.59,
@@ -350,6 +362,10 @@
           "E2": 496.02,
           "E3": 500.57
         },
+        "by_e2_window": {
+          "4096": 496.0,
+          "8192": 502.59
+        },
         "label": "E",
         "cents_from_tonic": 496.48,
         "cents_abs": 323.97,
@@ -391,6 +407,10 @@
           "E1": 703.27,
           "E2": 703.86,
           "E3": 707.94
+        },
+        "by_e2_window": {
+          "4096": 703.86,
+          "8192": 704.76
         },
         "label": "F#",
         "cents_from_tonic": 703.86,
@@ -448,6 +468,10 @@
           "E1": 911.14,
           "E2": 915.16
         },
+        "by_e2_window": {
+          "4096": 915.11,
+          "8192": 915.38
+        },
         "label": "G#",
         "cents_from_tonic": 911.94,
         "cents_abs": 739.43,
@@ -487,6 +511,10 @@
         "by_family": {
           "E1": 1100.76,
           "E2": 1114.08
+        },
+        "by_e2_window": {
+          "4096": 1113.52,
+          "8192": 1109.39
         },
         "label": "A#",
         "cents_from_tonic": 1100.76,
@@ -528,6 +556,10 @@
           "E1": 1196.42,
           "E2": 1199.36,
           "E3": 1199.3
+        },
+        "by_e2_window": {
+          "4096": 1199.36,
+          "8192": 1199.78
         },
         "label": "B",
         "cents_from_tonic": 1199.33,
@@ -4354,6 +4386,7 @@
       "flags": [
         "p01 (C#): estimator families disagree by 16 ¢ {'E1': 207.04, 'E2': 211.44, 'E3': 222.92}",
         "p09 (A#): estimator families disagree by 13 ¢ {'E1': 1100.76, 'E2': 1114.08}",
+        "p04 (D#): E2 window sizes disagree by 10 ¢ {4096: 405.55, 8192: 395.44}; the shorter window reads higher: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 237.3 Hz (A#3) via temporal-cadence. cadence agrees (237.3 Hz). drone differs (267.9 Hz, 210¢ off). marginalized agrees (237.3 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,

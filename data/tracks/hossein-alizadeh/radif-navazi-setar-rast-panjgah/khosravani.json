@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.1",
+    "pipeline_version": "0.9.2",
     "track": "hossein-alizadeh/radif-navazi-setar-rast-panjgah/khosravani",
-    "generated_at": "2026-11-16T18:41:59+00:00",
+    "generated_at": "2026-11-16T20:57:58+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -132,6 +132,10 @@
           "E2": 1.56,
           "E3": 3.03
         },
+        "by_e2_window": {
+          "4096": 1.58,
+          "8192": 1.66
+        },
         "label": "D",
         "cents_from_tonic": 1.2,
         "cents_abs": 195.59,
@@ -173,6 +177,10 @@
           "E1": 205.77,
           "E2": 207.05,
           "E3": 201.76
+        },
+        "by_e2_window": {
+          "4096": 207.29,
+          "8192": 204.74
         },
         "label": "E",
         "cents_from_tonic": 205.77,
@@ -229,6 +237,10 @@
         "by_family": {
           "E1": 399.52,
           "E2": 397.21
+        },
+        "by_e2_window": {
+          "4096": 396.74,
+          "8192": 402.2
         },
         "label": "F#",
         "cents_from_tonic": 399.52,
@@ -323,6 +335,10 @@
           "E1": 498.66,
           "E2": 491.68
         },
+        "by_e2_window": {
+          "4096": 490.72,
+          "8192": 504.42
+        },
         "label": "G",
         "cents_from_tonic": 498.66,
         "cents_abs": 693.06,
@@ -363,6 +379,10 @@
           "E1": 708.89,
           "E2": 707.43,
           "E3": 703.61
+        },
+        "by_e2_window": {
+          "4096": 707.54,
+          "8192": 707.43
         },
         "label": "A",
         "cents_from_tonic": 707.54,
@@ -2236,6 +2256,7 @@
     "diagnostics": {
       "flags": [
         "p07 (B): estimator families disagree by 12 ¢ {'E1': 916.31, 'E2': 925.66, 'E3': 928.13}",
+        "p05 (G): E2 window sizes disagree by 14 ¢ {4096: 490.72, 8192: 504.42}; the shorter window reads lower: a string ringing near the note pulls the shorter window toward it, short notes blur the longer one",
         "tonic cross-checks disagree in E1-whole-mono-eb3f3c51296d, E1-whole-mono-198708ffe184: Tonic 220.4 Hz (A3) via temporal-cadence. cadence agrees (220.3 Hz). drone picked 329.6 Hz (E4), a fourth away — likely the dominant; resolved to the tonic. marginalized agrees (220.4 Hz)."
       ],
       "freq_resolution_hz": 0.336456298828125,
