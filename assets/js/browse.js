@@ -6,7 +6,7 @@
 // List: the same recordings as a sortable table with the strip in every row.
 // Filters dim rows on the wall (you keep your place) and remove rows from the list.
 
-import { sequence, stopSequence } from "./synth.js?v=21";
+import { sequence, stopSequence } from "./synth.js?v=22";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -146,8 +146,19 @@ const ORDER = {
   pitch: (t) => (t.has ? 1200 * Math.log2(t.hz / 16.3516) % 1200 : 9999),
 };
 
+// Every column gets the same height, from the window's height when the wall is drawn.
+// Shorter columns stand on the baseline with their guides running the full height;
+// longer ones scroll inside that height (their median row stays below, in view).
+const wallHeight = () => Math.round(Math.min(520, Math.max(320, window.innerHeight * 0.55)));
+
+function guidesSVG(h) {
+  let s = "";
+  for (let c = 0; c <= 1200; c += 100) s += `<line class="gd${c === 0 || c === 500 || c === 700 || c === 1200 ? " gd-k" : ""}" x1="${c}" x2="${c}" y1="0" y2="${h}"/>`;
+  return s;
+}
+
 function wallHTML() {
-  const key = ORDER[state.order] || ORDER.master, on = filtering();
+  const key = ORDER[state.order] || ORDER.master, on = filtering(), H = wallHeight();
   const pos = (c) => `${((c + 12) / 1224 * 100).toFixed(2)}%`;
   const cols = groups().map((g, gi) => {
     const items = g.items.filter((t) => t.has).sort((a, b) => key(a) - key(b));
@@ -160,17 +171,18 @@ function wallHTML() {
       body += `<g class="row${on && !hit ? " dim" : ""}" data-i="${t.i}" data-g="${gi}"><rect class="hit" x="-12" y="${y}" width="1224" height="${RH}"/>${ticks(t, y, RH)}</g>`;
       y += RH;
     });
+    const h = Math.max(y, H), pad = h - y, scrolls = y > H;
+    let med = "";
     const full = items.filter((t) => t.cents.length === 7);
-    if (g.med && full.length > 1) {          // the column's median scale, standing on the baseline
-      y += 6;
-      body += `<g class="med">${[0, 1, 2, 3, 4, 5, 6].map((k) => { const c = median(full.map((t) => t.cents[k])); return `<line x1="${c}" x2="${c}" y1="${y}" y2="${y + 13}"/>`; }).join("")}</g>`;
-      y += 14;
+    if (g.med && full.length > 1) {          // the column's median scale, on the baseline below the rows
+      med = `<svg class="wallsvg wmed" viewBox="-12 0 1224 20" height="20" preserveAspectRatio="none" aria-hidden="true">${guidesSVG(20)}` +
+        `<g class="med">${[0, 1, 2, 3, 4, 5, 6].map((k) => { const c = median(full.map((t) => t.cents[k])); return `<line x1="${c}" x2="${c}" y1="5" y2="18"/>`; }).join("")}</g></svg>`;
     }
-    let guides = "";
-    for (let c = 0; c <= 1200; c += 100) guides += `<line class="gd${c === 0 || c === 500 || c === 700 || c === 1200 ? " gd-k" : ""}" x1="${c}" x2="${c}" y1="0" y2="${y}"/>`;
     const name = g.href ? `<a href="${g.href}">${esc(g.name)}</a>` : esc(g.name);
-    return `<section class="wcol"><svg class="wallsvg" viewBox="-12 0 1224 ${y}" height="${y}" preserveAspectRatio="none" role="img"
-        aria-label="${esc(g.name)}: ${items.length} recordings, one row of scale degrees each">${guides}${body}</svg>
+    const label = `${esc(g.name)}: ${items.length} recordings, one row of scale degrees each`;
+    return `<section class="wcol"><div class="wscroll${scrolls ? " scrolls" : ""}" style="height:${H}px"${scrolls ? ` tabindex="0" role="region" aria-label="${label}, scrollable"` : ""}>
+        <svg class="wallsvg" viewBox="-12 0 1224 ${h}" height="${h}" preserveAspectRatio="none" role="img"
+        aria-label="${label}">${guidesSVG(h)}<g transform="translate(0 ${pad})">${body}</g></svg></div>${med}
       <div class="waxis" aria-hidden="true">${[0, 500, 700, 1200].map((c) => `<span style="left:${pos(c)}">${c}</span>`).join("")}</div>
       <h3>${name}${g.fa ? ` <bdi class="fa" lang="fa">${esc(g.fa)}</bdi>` : ""}<span class="wn">${on ? `${hits} / ` : ""}${items.length}</span></h3>
       <div class="wkind">${esc(g.kind)}</div></section>`;
@@ -275,6 +287,22 @@ export function wireBrowse(mode, { setCtx } = {}) {
   };
   const rowOf = (e) => { const el = e.target.closest("[data-i]"); return el && view.contains(el) ? el : null; };
 
+  // Scrolling columns: fade the edge that has more rows behind it; while filtering, bring
+  // each column's first match into view so a hit is never hidden below the fold.
+  const fades = (box) => {
+    box.classList.toggle("fade-top", box.scrollTop > 2);
+    box.classList.toggle("fade-bot", box.scrollTop + box.clientHeight < box.scrollHeight - 2);
+  };
+  const fit = () => {
+    view.querySelectorAll(".wscroll.scrolls").forEach((box) => {
+      const first = filtering() && box.querySelector(".row:not(.dim) .hit");
+      box.scrollTop = first ? Math.max(0, +first.getAttribute("y") - 12) : 0;
+      fades(box);
+    });
+  };
+  view.addEventListener("scroll", (e) => { if (e.target.classList && e.target.classList.contains("wscroll")) fades(e.target); }, true);
+  if (mode === "wall") fit();
+
   view.addEventListener("pointerdown", (e) => { pointer = e.pointerType || "mouse"; });
   view.addEventListener("pointerover", (e) => { const el = rowOf(e); if (el) show(T[+el.dataset.i], el); });
   view.addEventListener("focusin", (e) => { const el = rowOf(e); if (el) show(T[+el.dataset.i], el); });
@@ -311,6 +339,7 @@ export function wireBrowse(mode, { setCtx } = {}) {
     }
     view.innerHTML = mode === "wall" ? wallHTML() : listHTML();
     lit = null;
+    if (mode === "wall") fit();
   };
   fbody.addEventListener("click", (e) => {
     const b = e.target.closest("button[data-f]");

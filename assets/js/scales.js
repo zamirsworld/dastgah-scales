@@ -23,9 +23,9 @@
 // Step shades follow Farhat's interval classes, for reference only; note letters on the
 // sounding axis are 12-TET at A4 = 440 Hz, for reference only.
 
-import { pluck, sequence, stopSequence } from "./synth.js?v=21";
-import { FARHAT } from "./track.js?v=21";
-import { filterLibrary } from "./browse.js?v=21";
+import { pluck, sequence, stopSequence } from "./synth.js?v=22";
+import { FARHAT } from "./track.js?v=22";
+import { filterLibrary } from "./browse.js?v=22";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));

@@ -184,8 +184,18 @@ h3 { font-size: 1rem; margin: 18px 0 8px; }
   background: var(--surface); color: var(--text); width: 16rem; max-width: 100%; margin-inline-start: 6px; }
 .br-bar .btn { padding: 4px 11px; font-size: .88rem; }
 
-.wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(208px, 1fr)); gap: 36px 26px; align-items: end; margin-top: 14px; }
+.wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(208px, 1fr)); gap: 36px 26px; align-items: start; margin-top: 14px; }
 .wcol { min-width: 0; }
+/* every column the same height; longer ones scroll inside it (height set inline from the window) */
+.wscroll { overflow-x: hidden; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.wscroll.scrolls { overflow-y: auto; }
+.wscroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wscroll.fade-bot { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent); }
+.wscroll.fade-top { -webkit-mask-image: linear-gradient(to top, #000 calc(100% - 28px), transparent);
+  mask-image: linear-gradient(to top, #000 calc(100% - 28px), transparent); }
+.wscroll.fade-top.fade-bot { -webkit-mask-image: linear-gradient(to bottom, transparent, #000 28px, #000 calc(100% - 28px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 28px, #000 calc(100% - 28px), transparent); }
 svg.wallsvg, svg.strip { display: block; width: 100%; }
 svg.wallsvg line, svg.strip line { vector-effect: non-scaling-stroke; }
 .tk { stroke: var(--tick); stroke-width: 2; }
