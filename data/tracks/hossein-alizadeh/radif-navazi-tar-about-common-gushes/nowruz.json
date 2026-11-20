@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.2",
+    "pipeline_version": "0.9.3",
     "track": "hossein-alizadeh/radif-navazi-tar-about-common-gushes/nowruz",
-    "generated_at": "2026-11-19T01:39:57+00:00",
+    "generated_at": "2026-11-20T23:00:07+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -1474,11 +1474,11 @@
         },
         {
           "degree": 7,
-          "label": "Ek",
-          "cents_from_tonic": 1144.23,
-          "pitch_id": "p24",
-          "support": 0.78,
-          "status": "confirmed"
+          "label": "D#",
+          "cents_from_tonic": 1117.06,
+          "pitch_id": "p23",
+          "support": 0.48,
+          "status": "probable"
         }
       ],
       "steps_cents": [
@@ -1487,10 +1487,19 @@
         188.08,
         214.95,
         196.96,
-        247.63,
-        55.77
+        220.46,
+        82.94
       ],
       "variants": [
+        {
+          "degree": 1,
+          "pitch_id": "p24",
+          "label": "Ek",
+          "cents_from_tonic": 1144.23,
+          "support": 0.78,
+          "status": "confirmed",
+          "offset_cents": -55.77
+        },
         {
           "degree": 2,
           "pitch_id": "p05",
@@ -1552,16 +1561,7 @@
           "cents_from_tonic": 1091.16,
           "support": 0.68,
           "status": "confirmed",
-          "offset_cents": -53.07
-        },
-        {
-          "degree": 7,
-          "pitch_id": "p23",
-          "label": "D#",
-          "cents_from_tonic": 1117.06,
-          "support": 0.48,
-          "status": "probable",
-          "offset_cents": -27.17
+          "offset_cents": -25.9
         }
       ],
       "additional": [
@@ -2115,7 +2115,7 @@
           "main": true,
           "solid": true,
           "pitch_id": "p23",
-          "role": "variant",
+          "role": "degree",
           "degree": 7,
           "offset_cents": -0.9
         },
@@ -2131,7 +2131,7 @@
           "main": true,
           "solid": true,
           "pitch_id": "p23",
-          "role": "variant",
+          "role": "degree",
           "degree": 7,
           "offset_cents": -11.9
         },
@@ -2339,7 +2339,7 @@
           "main": true,
           "solid": true,
           "pitch_id": "p23",
-          "role": "variant",
+          "role": "degree",
           "degree": 7,
           "offset_cents": 7.5
         },
@@ -2371,8 +2371,8 @@
           "main": true,
           "solid": true,
           "pitch_id": "p24",
-          "role": "degree",
-          "degree": 7,
+          "role": "variant",
+          "degree": 1,
           "offset_cents": -4.5
         },
         {
@@ -2387,8 +2387,8 @@
           "main": true,
           "solid": true,
           "pitch_id": "p24",
-          "role": "degree",
-          "degree": 7,
+          "role": "variant",
+          "degree": 1,
           "offset_cents": -12.8
         },
         {
@@ -2739,8 +2739,8 @@
           "main": true,
           "solid": false,
           "pitch_id": "p24",
-          "role": "degree",
-          "degree": 7,
+          "role": "variant",
+          "degree": 1,
           "offset_cents": -1.1
         },
         {
@@ -2899,8 +2899,8 @@
           "main": true,
           "solid": false,
           "pitch_id": "p24",
-          "role": "degree",
-          "degree": 7,
+          "role": "variant",
+          "degree": 1,
           "offset_cents": -4.4
         },
         {
@@ -2931,8 +2931,8 @@
           "main": true,
           "solid": false,
           "pitch_id": "p24",
-          "role": "degree",
-          "degree": 7,
+          "role": "variant",
+          "degree": 1,
           "offset_cents": -5.8
         },
         {
@@ -2963,8 +2963,8 @@
           "main": true,
           "solid": true,
           "pitch_id": "p24",
-          "role": "degree",
-          "degree": 7,
+          "role": "variant",
+          "degree": 1,
           "offset_cents": -9.3
         },
         {
@@ -3566,7 +3566,7 @@
         "name": "12-tone equal temperament",
         "basis": "degrees",
         "description": "Reference only: distance from the semitone grid.",
-        "residual_rms": 18.71,
+        "residual_rms": 10.6,
         "assignment": [
           {
             "measured": 0.0,
@@ -3599,9 +3599,9 @@
             "residual": -3.4
           },
           {
-            "measured": 1144.2,
+            "measured": 1117.1,
             "model": 1100.0,
-            "residual": 44.2
+            "residual": 17.1
           }
         ]
       },
@@ -3610,7 +3610,7 @@
         "name": "Vaziri 24-tone equal temperament",
         "basis": "degrees",
         "description": "Quarter-tone grid (koron/sori = exactly 50 ¢ from the natural note).",
-        "residual_rms": 8.69,
+        "residual_rms": 10.6,
         "assignment": [
           {
             "measured": 0.0,
@@ -3643,9 +3643,9 @@
             "residual": -3.4
           },
           {
-            "measured": 1144.2,
-            "model": 1150.0,
-            "residual": -5.8
+            "measured": 1117.1,
+            "model": 1100.0,
+            "residual": 17.1
           }
         ]
       },
@@ -3654,7 +3654,7 @@
         "name": "Pythagorean / Safi al-Din",
         "basis": "degrees",
         "description": "Nearest note of the 17-note gamut generated by pure fifths (±8) from the tonic.",
-        "residual_rms": 15.1,
+        "residual_rms": 8.12,
         "assignment": [
           {
             "measured": 0.0,
@@ -3687,9 +3687,9 @@
             "residual": -9.3
           },
           {
-            "measured": 1144.2,
+            "measured": 1117.1,
             "model": 1109.8,
-            "residual": 34.5
+            "residual": 7.3
           }
         ]
       },
@@ -3698,7 +3698,7 @@
         "name": "Farhat interval classes",
         "basis": "steps",
         "description": "Interval classes Hormoz Farhat measured in performance practice (\"The Dastgah Concept in Persian Music\", 1990). Approximate centres.",
-        "residual_rms": 18.12,
+        "residual_rms": 11.65,
         "assignment": [
           {
             "measured": 215.4,
@@ -3731,16 +3731,16 @@
             "residual": -7.0
           },
           {
-            "measured": 247.6,
-            "class": "plus-tone",
-            "model": 270.0,
-            "residual": -22.4
+            "measured": 220.5,
+            "class": "whole-tone",
+            "model": 204.0,
+            "residual": 16.5
           },
           {
-            "measured": 55.8,
+            "measured": 82.9,
             "class": "semitone",
             "model": 90.0,
-            "residual": -34.2
+            "residual": -7.1
           }
         ]
       }
@@ -3771,5 +3771,5 @@
       "e1_degrees": []
     }
   },
-  "signature": {"n":54,"p":[[215,2,0.096,"F#"],[249,2,0.018,"Gk"],[297,3,0.068,"G"],[341,3,0.039,"Gs"],[446,4,0.006,"Ak"],[485,4,0.072,"A"],[537,4,0.008,"As"],[592,0,0.031,"Bb"],[700,5,0.205,"B"],[755,5,0.006,"Ck"],[837,6,0.015,"Cs"],[897,6,0.142,"C#"],[979,0,0.035,"D"],[1091,7,0.019,"D#"],[1117,7,0.04,"D#"],[1144,7,0.057,"Ek"],[1198,1,0.144,"E"]],"m":[[0,15,0,3],[11,12,3,0],[15,0,3,0],[0,16,0,2],[2,5,2,0],[5,2,0,2],[8,11,2,0],[11,8,0,2],[12,11,0,2],[0,2,1,0],[0,8,1,0],[1,0,0,1],[2,4,1,0],[2,15,0,1],[2,16,0,1],[3,7,1,0],[3,9,0,1],[4,13,1,0],[5,0,0,1],[6,8,1,0],[7,3,0,1],[7,8,1,0],[8,0,0,1],[8,2,0,1],[8,3,0,1],[8,5,0,1],[9,2,1,0],[10,8,0,1],[10,16,1,0],[11,7,0,1],[12,14,1,0],[13,1,1,0],[13,14,1,0],[14,10,0,1],[14,16,1,0],[15,11,0,1],[15,16,1,0],[16,6,0,1],[16,10,0,1],[16,11,0,1],[16,13,0,1],[16,15,0,1]]}
+  "signature": {"n":54,"p":[[215,2,0.096,"F#"],[249,2,0.018,"Gk"],[297,3,0.068,"G"],[341,3,0.039,"Gs"],[446,4,0.006,"Ak"],[485,4,0.072,"A"],[537,4,0.008,"As"],[592,0,0.031,"Bb"],[700,5,0.205,"B"],[755,5,0.006,"Ck"],[837,6,0.015,"Cs"],[897,6,0.142,"C#"],[979,0,0.035,"D"],[1091,7,0.019,"D#"],[1117,7,0.04,"D#"],[1144,1,0.057,"Ek"],[1198,1,0.144,"E"]],"m":[[0,15,0,3],[11,12,3,0],[15,0,3,0],[0,16,0,2],[2,5,2,0],[5,2,0,2],[8,11,2,0],[11,8,0,2],[12,11,0,2],[0,2,1,0],[0,8,1,0],[1,0,0,1],[2,4,1,0],[2,15,0,1],[2,16,0,1],[3,7,1,0],[3,9,0,1],[4,13,1,0],[5,0,0,1],[6,8,1,0],[7,3,0,1],[7,8,1,0],[8,0,0,1],[8,2,0,1],[8,3,0,1],[8,5,0,1],[9,2,1,0],[10,8,0,1],[10,16,1,0],[11,7,0,1],[12,14,1,0],[13,1,1,0],[13,14,1,0],[14,10,0,1],[14,16,1,0],[15,11,0,1],[15,16,1,0],[16,6,0,1],[16,10,0,1],[16,11,0,1],[16,13,0,1],[16,15,0,1]]}
 }

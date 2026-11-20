@@ -37,9 +37,9 @@
   },
   "consensus": {
     "schema_version": "1.0",
-    "pipeline_version": "0.9.2",
+    "pipeline_version": "0.9.3",
     "track": "nur-ali-borumand/mirza-abdollah-radif-vol-1/shur-dobeyti",
-    "generated_at": "2026-11-19T00:28:38+00:00",
+    "generated_at": "2026-11-20T23:00:38+00:00",
     "matrix": {
       "preset": "standard",
       "hash": "41e76dc61d8a",
@@ -71,7 +71,7 @@
         "agreement": true,
         "candidates": {},
         "vote_hz": 388.677,
-        "placement": "vote",
+        "placement": "register of p17",
         "votes": [
           {
             "run": "E1-whole-mono-eb3f3c51296d",
@@ -907,14 +907,6 @@
         },
         {
           "degree": 2,
-          "label": "Gs",
-          "cents_from_tonic": 65.27,
-          "pitch_id": "p01",
-          "support": 0.74,
-          "status": "confirmed"
-        },
-        {
-          "degree": 3,
           "label": "Bb",
           "cents_from_tonic": 287.69,
           "pitch_id": "p04",
@@ -922,7 +914,7 @@
           "status": "confirmed"
         },
         {
-          "degree": 4,
+          "degree": 3,
           "label": "C",
           "cents_from_tonic": 496.39,
           "pitch_id": "p07",
@@ -930,7 +922,7 @@
           "status": "confirmed"
         },
         {
-          "degree": 5,
+          "degree": 4,
           "label": "Dk",
           "cents_from_tonic": 637.51,
           "pitch_id": "p08",
@@ -938,7 +930,7 @@
           "status": "confirmed"
         },
         {
-          "degree": 6,
+          "degree": 5,
           "label": "Eb",
           "cents_from_tonic": 781.59,
           "pitch_id": "p09",
@@ -946,7 +938,7 @@
           "status": "confirmed"
         },
         {
-          "degree": 7,
+          "degree": 6,
           "label": "F",
           "cents_from_tonic": 992.07,
           "pitch_id": "p13",
@@ -955,15 +947,24 @@
         }
       ],
       "steps_cents": [
-        65.27,
-        222.42,
+        287.69,
         208.7,
         141.12,
         144.08,
         210.48,
         207.93
       ],
-      "variants": [],
+      "variants": [
+        {
+          "degree": 1,
+          "pitch_id": "p01",
+          "label": "Gs",
+          "cents_from_tonic": 65.27,
+          "support": 0.74,
+          "status": "confirmed",
+          "offset_cents": 65.27
+        }
+      ],
       "additional": []
     },
     "segments": {
@@ -1079,8 +1080,8 @@
           "main": true,
           "solid": false,
           "pitch_id": "p01",
-          "role": "degree",
-          "degree": 2,
+          "role": "variant",
+          "degree": 1,
           "offset_cents": -28.3
         },
         {
@@ -1144,7 +1145,7 @@
           "solid": false,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": -5.2
         },
         {
@@ -1160,7 +1161,7 @@
           "solid": false,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": -14.6
         },
         {
@@ -1176,7 +1177,7 @@
           "solid": false,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": 1.9
         },
         {
@@ -1192,7 +1193,7 @@
           "solid": true,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": -2.2
         },
         {
@@ -1208,7 +1209,7 @@
           "solid": false,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": 0.9
         },
         {
@@ -1224,7 +1225,7 @@
           "solid": true,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": -0.9
         },
         {
@@ -1240,7 +1241,7 @@
           "solid": true,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": -2.5
         },
         {
@@ -1256,7 +1257,7 @@
           "solid": false,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": -6.3
         },
         {
@@ -1272,7 +1273,7 @@
           "solid": false,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": 1.5
         },
         {
@@ -1288,7 +1289,7 @@
           "solid": false,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": -2.1
         },
         {
@@ -1304,7 +1305,7 @@
           "solid": true,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": 8.7
         },
         {
@@ -1320,7 +1321,7 @@
           "solid": true,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": -1.5
         },
         {
@@ -1336,7 +1337,7 @@
           "solid": true,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": -8.2
         },
         {
@@ -1352,7 +1353,7 @@
           "solid": false,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": -1.8
         },
         {
@@ -1368,7 +1369,7 @@
           "solid": false,
           "pitch_id": "p08",
           "role": "degree",
-          "degree": 5,
+          "degree": 4,
           "offset_cents": 1.1
         },
         {
@@ -1384,7 +1385,7 @@
           "solid": true,
           "pitch_id": "p07",
           "role": "degree",
-          "degree": 4,
+          "degree": 3,
           "offset_cents": -1.7
         },
         {
@@ -1400,7 +1401,7 @@
           "solid": true,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": 2.6
         },
         {
@@ -1416,7 +1417,7 @@
           "solid": true,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": 3.3
         },
         {
@@ -1432,7 +1433,7 @@
           "solid": true,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": 0.6
         },
         {
@@ -1448,7 +1449,7 @@
           "solid": false,
           "pitch_id": "p08",
           "role": "degree",
-          "degree": 5,
+          "degree": 4,
           "offset_cents": -2.6
         },
         {
@@ -1464,7 +1465,7 @@
           "solid": false,
           "pitch_id": "p08",
           "role": "degree",
-          "degree": 5,
+          "degree": 4,
           "offset_cents": -3.1
         },
         {
@@ -1480,7 +1481,7 @@
           "solid": false,
           "pitch_id": "p07",
           "role": "degree",
-          "degree": 4,
+          "degree": 3,
           "offset_cents": -8.6
         },
         {
@@ -1496,7 +1497,7 @@
           "solid": false,
           "pitch_id": "p08",
           "role": "degree",
-          "degree": 5,
+          "degree": 4,
           "offset_cents": -1.0
         },
         {
@@ -1512,7 +1513,7 @@
           "solid": false,
           "pitch_id": "p07",
           "role": "degree",
-          "degree": 4,
+          "degree": 3,
           "offset_cents": 7.1
         },
         {
@@ -1528,7 +1529,7 @@
           "solid": false,
           "pitch_id": "p08",
           "role": "degree",
-          "degree": 5,
+          "degree": 4,
           "offset_cents": 4.0
         },
         {
@@ -1544,7 +1545,7 @@
           "solid": false,
           "pitch_id": "p08",
           "role": "degree",
-          "degree": 5,
+          "degree": 4,
           "offset_cents": -2.5
         },
         {
@@ -1560,7 +1561,7 @@
           "solid": false,
           "pitch_id": "p07",
           "role": "degree",
-          "degree": 4,
+          "degree": 3,
           "offset_cents": 4.4
         },
         {
@@ -1576,7 +1577,7 @@
           "solid": false,
           "pitch_id": "p08",
           "role": "degree",
-          "degree": 5,
+          "degree": 4,
           "offset_cents": 0.4
         },
         {
@@ -1592,7 +1593,7 @@
           "solid": false,
           "pitch_id": "p07",
           "role": "degree",
-          "degree": 4,
+          "degree": 3,
           "offset_cents": -3.2
         },
         {
@@ -1608,7 +1609,7 @@
           "solid": false,
           "pitch_id": "p09",
           "role": "degree",
-          "degree": 6,
+          "degree": 5,
           "offset_cents": -4.0
         },
         {
@@ -1624,7 +1625,7 @@
           "solid": false,
           "pitch_id": "p08",
           "role": "degree",
-          "degree": 5,
+          "degree": 4,
           "offset_cents": -2.5
         },
         {
@@ -1640,7 +1641,7 @@
           "solid": false,
           "pitch_id": "p07",
           "role": "degree",
-          "degree": 4,
+          "degree": 3,
           "offset_cents": -7.1
         },
         {
@@ -1656,7 +1657,7 @@
           "solid": false,
           "pitch_id": "p07",
           "role": "degree",
-          "degree": 4,
+          "degree": 3,
           "offset_cents": -1.9
         },
         {
@@ -1672,7 +1673,7 @@
           "solid": false,
           "pitch_id": "p04",
           "role": "degree",
-          "degree": 3,
+          "degree": 2,
           "offset_cents": 4.0
         },
         {
@@ -1688,7 +1689,7 @@
           "solid": false,
           "pitch_id": "p13",
           "role": "degree",
-          "degree": 7,
+          "degree": 6,
           "offset_cents": 1.4
         }
       ],
@@ -1944,17 +1945,12 @@
         "name": "12-tone equal temperament",
         "basis": "degrees",
         "description": "Reference only: distance from the semitone grid.",
-        "residual_rms": 21.31,
+        "residual_rms": 18.14,
         "assignment": [
           {
             "measured": 0.0,
             "model": 0.0,
             "residual": 0.0
-          },
-          {
-            "measured": 65.3,
-            "model": 100.0,
-            "residual": -34.7
           },
           {
             "measured": 287.7,
@@ -1988,17 +1984,12 @@
         "name": "Vaziri 24-tone equal temperament",
         "basis": "degrees",
         "description": "Quarter-tone grid (koron/sori = exactly 50 ¢ from the natural note).",
-        "residual_rms": 11.68,
+        "residual_rms": 10.97,
         "assignment": [
           {
             "measured": 0.0,
             "model": 0.0,
             "residual": 0.0
-          },
-          {
-            "measured": 65.3,
-            "model": 50.0,
-            "residual": 15.3
           },
           {
             "measured": 287.7,
@@ -2032,17 +2023,12 @@
         "name": "Pythagorean / Safi al-Din",
         "basis": "degrees",
         "description": "Nearest note of the 17-note gamut generated by pure fifths (±8) from the tonic.",
-        "residual_rms": 14.44,
+        "residual_rms": 11.81,
         "assignment": [
           {
             "measured": 0.0,
             "model": 0.0,
             "residual": 0.0
-          },
-          {
-            "measured": 65.3,
-            "model": 90.2,
-            "residual": -25.0
           },
           {
             "measured": 287.7,
@@ -2076,19 +2062,13 @@
         "name": "Farhat interval classes",
         "basis": "steps",
         "description": "Interval classes Hormoz Farhat measured in performance practice (\"The Dastgah Concept in Persian Music\", 1990). Approximate centres.",
-        "residual_rms": 12.81,
+        "residual_rms": 9.25,
         "assignment": [
           {
-            "measured": 65.3,
-            "class": "semitone",
-            "model": 90.0,
-            "residual": -24.7
-          },
-          {
-            "measured": 222.4,
-            "class": "whole-tone",
-            "model": 204.0,
-            "residual": 18.4
+            "measured": 287.7,
+            "class": "plus-tone",
+            "model": 270.0,
+            "residual": 17.7
           },
           {
             "measured": 208.7,
@@ -2137,5 +2117,5 @@
       "e1_degrees": []
     }
   },
-  "signature": {"n":25,"p":[[65,2,0.014,"Gs"],[288,3,0.021,"Bb"],[412,0,0.01,"B"],[496,4,0.154,"C"],[638,5,0.135,"Dk"],[782,6,0.214,"Eb"],[992,7,0.322,"F"],[1200,1,0.13,"G"]],"m":[[4,3,0,6],[3,4,3,0],[5,4,0,3],[6,5,0,3],[3,5,2,0],[5,6,2,0],[0,7,0,1],[1,6,1,0],[2,7,1,0],[3,1,1,0],[7,0,1,0],[7,6,0,1]]}
+  "signature": {"n":25,"p":[[65,1,0.014,"Gs"],[288,2,0.021,"Bb"],[412,0,0.01,"B"],[496,3,0.154,"C"],[638,4,0.135,"Dk"],[782,5,0.214,"Eb"],[992,6,0.322,"F"],[1200,1,0.13,"G"]],"m":[[4,3,0,6],[3,4,3,0],[5,4,0,3],[6,5,0,3],[3,5,2,0],[5,6,2,0],[0,7,0,1],[1,6,1,0],[2,7,1,0],[3,1,1,0],[7,0,1,0],[7,6,0,1]]}
 }
